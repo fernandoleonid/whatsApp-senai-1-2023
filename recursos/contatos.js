@@ -1,6 +1,6 @@
 export const contatos = [
       {
-        "name": "Fernando Leonid",
+        "name": "Ana Maria",
         "description": "Frontend Developer",
         "image": "img/contact1.png",
         "messages": [
@@ -10,7 +10,7 @@ export const contatos = [
             "timestamp": "2022-02-17T14:20:00.000Z"
           },
           {
-            "sender": "Fernando Leonid",
+            "sender": "Ana Maria",
             "content": "Hi, I'm doing fine. Thanks for asking.",
             "timestamp": "2022-02-17T14:25:00.000Z"
           },
@@ -20,7 +20,7 @@ export const contatos = [
             "timestamp": "2022-02-17T14:30:00.000Z"
           },
           {
-            "sender": "Fernando Leonid",
+            "sender": "Ana Maria",
             "content": "Not yet. I'm thinking about going to the beach. What about you?",
             "timestamp": "2022-02-17T14:35:00.000Z"
           }
@@ -83,7 +83,7 @@ export const contatos = [
     {
     "name": "Sarah Lee",
     "description": "Software Engineer",
-    "image": "img/sarah_lee.jpg",
+    "image": "img/contact4.png",
     "messages": [
         {
         "sender": "me",
@@ -110,7 +110,7 @@ export const contatos = [
     {
     "name": "John Doe",
     "description": "Designer",
-    "image": "img/john_doe.jpg",
+    "image": "img/contact5.png",
     "messages": [
         {
         "sender": "John Doe",
@@ -137,7 +137,7 @@ export const contatos = [
     {
     "name": "Julia Smith",
     "description": "Product Manager",
-    "image": "img/julia_smith.jpg",
+    "image": "img/contact6.png",
     "messages": [
         {
         "sender": "Julia Smith",
@@ -164,7 +164,7 @@ export const contatos = [
     {
     "name": "Max Kellerman",
     "description": "Marketing Manager",
-    "image": "img/max_kellerman.jpg",
+    "image": "img/contact7.png",
     "messages": [
         {
         "sender": "Max Kellerman",

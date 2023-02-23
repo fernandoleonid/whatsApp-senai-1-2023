@@ -1,0 +1,16 @@
+body {
+    background-color: #D2DBDD;
+}
+
+header {
+    background-color: #00998B;
+    width: 100%;
+    height: 8rem;
+}
+
+main {
+    background-color: #F9FBFA;
+    width: 110rem;
+    height: 43.75rem;
+    margin: 80px 30px 30px 80px;
+}

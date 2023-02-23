@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 130px;
+    background-color: #00A884;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #E2E1DE;
+}
+
+.container__geral__interface{
+    transform: translateY(-140px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300, 1fr));
+    background-color: #F0F2F5;
+    width: 80vw;
+    height: 90vh;
+    place-content: center;
+    margin: 20px;
+}   

@@ -48,6 +48,7 @@ Você deverá desenvolver um clone do whatsApp responsivo. O projeto deverá ate
 Para entregar o seu projeto você deverá criar um Pull Request deste repositório, que deverá conter:
 - Código HTML, CSS e JS.
 - Arquivo README.md com link para github page, além do screenshot do **APP**, uma descrição do projeto, lista dos critérios (autoavaliação) e tudo o que foi utilizado no projeto.
+- Entrega final da próxima aula (referencia dia 23/02/2023)
 - O link do github pages deve seguir o exemplo abaixo:
 
 `https://fernandoleonid.github.io/whatsApp-senai-1-2023/turma/nome-do-aluno`

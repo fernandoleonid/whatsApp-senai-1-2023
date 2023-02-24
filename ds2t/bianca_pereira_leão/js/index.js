@@ -124,13 +124,14 @@ const criarChatItens = (chat) => {
   headerStatus.append(imgHeader)
 
   const img = document.createElement('img');
-  img.src = `./img/${header.image}`;
+  img.src = `./img/${chat.image}`;
+
+
   return header
 }
 
 const carregarChatItens = () => {
-  const chatContainer = document.getElementById('chatContainer');
+  const chatContainer = document.getElementById('headerChat');
   const cards = contatos.map(criarChatItens)
   chatContainer.replaceChildren(...cards)
-
 }

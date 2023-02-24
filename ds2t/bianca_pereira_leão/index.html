@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script src="https://kit.fontawesome.com/94e8bd423f.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/whatsappWeb.css">
+
+    <script src="./js/estilizacao.js" defer></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -23,7 +31,7 @@
 </head>
 
 <body class="h-100 py-5">
-    <main class="d-flex align-items-stretch h-100 w-75 mx-auto">
+    <main class="d-flex align-items-stretch  mx-auto">
         <section class="side bg-white border-right">
             <header class="d-flex">
                 <div class="profile-photo rounded-circle my-auto ml-2 mr-auto">
@@ -33,12 +41,25 @@
                     <a href="#" title="Status">
                         <i class="fas fa-circle-notch text-secondary"></i>
                     </a>
-                    <a href="#" title="New Chat">
+                    <a href="#" title="Nova conversa">
                         <i class="fas fa-comment-dots text-secondary"></i>
                     </a>
-                    <a href="#" title="Menu">
-                        <i class="fas fa-ellipsis-v text-secondary"></i>
-                    </a>
+                    <div class="dropdown d-flex">
+                        <button class="btn dropdown-toggle" type="button" id="menuDropdown" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v text-secondary" id="dropIcon" title="Mais opções"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="#">Novo grupo</a></li>
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Catálogo</a></li>
+                            <li><a class="dropdown-item" href="#">Mensagens favoritas</a></li>
+                            <li><a class="dropdown-item" href="#">Etiquetas</a></li>
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#">Desconectar</a></li>
+                        </ul>
+                    </div>
+
                 </nav>
 
             </header>
@@ -94,9 +115,9 @@
                     </div>
                     <div class="mr-auto">
                         <p class="mt-2 mb-0 text-secondary font-weight-bold">Amiga </p>
-                                <div class="last-message text-black-50">
-                                    <span>visto por último hoje às 20:09</span>
-                                </div>
+                        <div class="last-message text-black-50">
+                            <span>visto por último hoje às 20:09</span>
+                        </div>
                     </div>
                 </div>
 
@@ -114,7 +135,7 @@
 
 
             </header>
-            <section class="dialog flex-fill">
+            <section class="dialog flex-fill overflow-x-auto">
                 <div class="message me tail" data-time="15:34">Olá, estou bem e vc?</div>
                 <div class="message them" data-time="15:33">Tudo bem?</div>
                 <div class="message them tail" data-time="15:33">Oi</div>
@@ -132,24 +153,6 @@
             </footer>
         </section>
     </main>
-    <script>
-
-        const searchInput = document.querySelector('#inputSearch');
-        const searchIcon = document.querySelector('#search');
-        const arrowIcon = document.querySelector('#arrow');
-
-        searchInput.addEventListener('focus', function () {
-            searchIcon.style.display = 'none';
-            arrowIcon.style.display = 'inline-block';
-        });
-
-        searchInput.addEventListener('blur', function () {
-            searchIcon.style.display = 'inline-block';
-            arrowIcon.style.display = 'none';
-        });
-
-
-    </script>
 </body>
 
 </html>

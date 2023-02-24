@@ -29,35 +29,54 @@ const criaListaMensagem = (mensagem) => {
   guardaMediaBody.classList.add('d-flex');
   guardaMediaBody.classList.add('flex-column');
 
-  const nomeContato = document.createElement('h6');
-  nomeContato.classList.add('text-secondary');
-  nomeContato.classList.add('mb-1');
-  nomeContato.classList.add('mt-3');
-  nomeContato.textContent = mensagem.name;
+  const nomeContato = document.createElement('h6')
+  nomeContato.classList.add('text-secondary')
+  nomeContato.classList.add('mb-1')
+  nomeContato.classList.add('mt-3')
+  nomeContato.textContent = mensagem.name
 
-  const lastMessage = mensagem.messages[mensagem.messages.length - 1];
-  const lastMessageContent = lastMessage.content;
+  const lastMessage = mensagem.messages[mensagem.messages.length - 1]
+  const lastMessageContent = lastMessage.content
 
-  const lastMensagem = document.createElement('p');
-  lastMensagem.classList.add('last-message');
-  lastMensagem.classList.add('text-black-50');
-  lastMensagem.classList.add('pb-3');
-  lastMensagem.classList.add('mb-1');
-  lastMensagem.textContent = `${lastMessageContent}`;
+  const lastMessageTimestamp = new Date(lastMessage.timestamp)
+  const now = new Date()
 
-  guardaMediaBody.append(nomeContato, lastMensagem);
+  const spanHora = document.createElement('span')
+  spanHora.classList.add('last-message-time')
+
+  if (now - lastMessageTimestamp < 1000 * 60 * 60 * 24) {
+    // menos de 24 horas atrás
+    spanHora.textContent = lastMessageTimestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+  } else if (now - lastMessageTimestamp < 1000 * 60 * 60 * 48) {
+    // menos de 48 horas atrás
+    spanHora.textContent = 'Ontem'
+  } else {
+    // mais de 48 horas atrás
+    spanHora.textContent = lastMessageTimestamp.toLocaleDateString([], { month: 'numeric', day: 'numeric', year: '2-digit' })
+  }
+
+  const lastMensagem = document.createElement('p')
+  lastMensagem.classList.add('last-message')
+  lastMensagem.classList.add('text-black-50')
+  lastMensagem.classList.add('pb-3')
+  lastMensagem.classList.add('mb-1')
+  lastMensagem.textContent = lastMessageContent
+
+  guardaMediaBody.append(nomeContato, lastMensagem)
+  nomeContato.append(spanHora)
 
   list.append(listElement, foto, guardaMediaBody);
+
 
   return list;
 };
 
-  
+
 
 const carregarProdutos = () => {
-    const contacts = document.getElementById('contacts')
-    const cards = contatos.map(criaListaMensagem)
-    contacts.replaceChildren(...cards)
+  const contacts = document.getElementById('contacts')
+  const cards = contatos.map(criaListaMensagem)
+  contacts.replaceChildren(...cards)
 
 }
 carregarProdutos()

@@ -88,22 +88,22 @@ export const contatos = [
         {
         "sender": "me",
         "content": "Hey Sarah, como estão as coisas?",
-        "time": "10:00"
+        "timestamp": "2023-02-24T13:10:00.000Z"
         },
         {
         "sender": "Sarah Lee",
         "content": "Ei! Tudo bem por aqui e contigo?",
-        "time": "10:05"
+        "timestamp": "2023-02-24T33:15:00.000Z"
         },
         {
         "sender": "me",
         "content": "Estou bem também! O que tem feito ultimamente?",
-        "time": "10:10"
+        "timestamp": "2023-02-24T22:15:00.000Z"
         },
         {
         "sender": "Sarah Lee",
         "content": "Tenho trabalhado bastante, mas está tudo bem. E você?",
-        "time": "10:15"
+        "timestamp": "2023-02-24T13:10:00.000Z"
         }
     ]
     },
@@ -115,22 +115,22 @@ export const contatos = [
         {
         "sender": "John Doe",
         "content": "Oi, tudo bem?",
-        "time": "11:00"
+        "timestamp": "2023-01-15T13:10:00.000Z"
         },
         {
         "sender": "me",
         "content": "Tudo ótimo! E contigo?",
-        "time": "11:05"
+        "timestamp": "2023-01-15T10:22:00.000Z"
         },
         {
         "sender": "John Doe",
         "content": "Estou bem também! Viu aquela nova ferramenta de design?",
-        "time": "11:10"
+        "timestamp": "2023-01-15T13:15:00.000Z"
         },
         {
         "sender": "John Doe",
         "content": "Acho que você vai gostar!",
-        "time": "11:10"
+        "timestamp": "2023-01-15T13:18:00.000Z"
         }
     ]
     },
@@ -142,22 +142,22 @@ export const contatos = [
         {
         "sender": "Julia Smith",
         "content": "Oi, como está indo o projeto?",
-        "time": "12:00"
+        "timestamp": "2023-02-15T13:18:00.000Z"
         },
         {
         "sender": "me",
         "content": "Está indo bem, estamos quase terminando a fase de testes!",
-        "time": "12:05"
+        "timestamp": "2023-02-15T13:18:00.000Z"
         },
         {
         "sender": "Julia Smith",
         "content": "Ótimo! E como está o time?",
-        "time": "12:10"
+        "timestamp": "2023-02-15T13:18:00.000Z"
         },
         {
         "sender": "me",
         "content": "Todos estão trabalhando duro e focados no objetivo!",
-        "time": "12:15"
+        "timestamp": "2023-02-15T13:18:00.000Z"
         }
     ]
     },
@@ -169,17 +169,17 @@ export const contatos = [
         {
         "sender": "Max Kellerman",
         "content": "Ei! Vi que vocês estão com uma nova campanha no ar!",
-        "time": "13:00"
+        "timestamp": "2023-02-23T13:18:00.000Z"
         },
         {
         "sender": "me",
         "content": "Sim, estamos testando algumas coisas novas!",
-        "time": "13:05"
+        "timestamp": "2023-02-23T13:18:00.000Z"
         },
         {
         "sender": "Max Kellerman",
         "content": "Bom trabalho, fico feliz em ver vocês tentando coisas novas!",
-        "time": "13:10"
+        "timestamp": "2023-02-23T13:18:00.000Z"
         }
     ]
     }

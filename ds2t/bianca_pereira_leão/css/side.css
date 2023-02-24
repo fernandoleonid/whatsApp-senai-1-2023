@@ -48,6 +48,7 @@
 
 ul{
     display: flex;
+    gap: 15px;
 }
 
 .media-body {
@@ -55,4 +56,8 @@ ul{
     padding-right: 16px; 
     width: 100%;
   }
-  
+
+.last-message-time{
+    float: right;
+    font-size: 15px;
+}

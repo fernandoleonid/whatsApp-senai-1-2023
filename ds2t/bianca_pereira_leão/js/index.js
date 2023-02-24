@@ -39,6 +39,7 @@ const criaListaMensagem = (mensagem) => {
   const lastMessageContent = lastMessage.content
 
   const lastMessageTimestamp = new Date(lastMessage.timestamp)
+  
   const now = new Date()
 
   const spanHora = document.createElement('span')
@@ -54,6 +55,7 @@ const criaListaMensagem = (mensagem) => {
     // mais de 48 horas atrás
     spanHora.textContent = lastMessageTimestamp.toLocaleDateString([], { month: 'numeric', day: 'numeric', year: '2-digit' })
   }
+
 
   const lastMensagem = document.createElement('p')
   lastMensagem.classList.add('last-message')

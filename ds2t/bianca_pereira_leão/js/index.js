@@ -130,6 +130,29 @@ const criarChatItens = (chat) => {
 
   imgHeader.append(img)
 
+  const divPaiNomeDescricao = document.createElement('div');
+  divPaiNomeDescricao.classList.add('mr-auto')
+
+  const nomeContato = document.createElement('p')
+  nomeContato.classList.add('mt-2')
+  nomeContato.classList.add('mb-0')
+  nomeContato.classList.add('text-secondary')
+  nomeContato.classList.add('font-weight-bold')
+  nomeContato.textContent = chat.name
+
+  const divGuardaDescricao = document.createElement('div')
+  divGuardaDescricao.classList.add('last-message')
+  divGuardaDescricao.classList.add('text-black-50')
+  
+ 
+  const spanDescricao = document.createElement('span')
+  spanDescricao.textContent = chat.description
+
+  divGuardaDescricao.append(spanDescricao)
+
+
+  header.append(divPaiNomeDescricao,divGuardaDescricao)
+  divPaiNomeDescricao.append(nomeContato,spanDescricao)
 
   return header
 }

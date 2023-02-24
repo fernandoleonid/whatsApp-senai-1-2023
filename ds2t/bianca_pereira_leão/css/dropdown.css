@@ -24,10 +24,7 @@
     color: #464649;
   }
   
-  .dropdown-item:hover {
-    background-color: #f6f6f6;
- 
-  }
+
   .dropdown-menu li:hover {
     background-color: #f6f6f6;
   }

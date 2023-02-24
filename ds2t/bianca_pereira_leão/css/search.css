@@ -20,6 +20,7 @@
 }
 
 #arrow {
+    font-size: 1.3rem;
     display: none;
     color: #009688;
 }
@@ -48,4 +49,3 @@
 #inputSearch:focus:-ms-input-placeholder {
     color: transparent;
 }
-

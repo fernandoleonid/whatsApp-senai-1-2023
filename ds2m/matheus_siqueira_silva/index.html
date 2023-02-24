@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/2fe91c55ee.js" crossorigin="anonymous"></script>
+    <script src="./main.js" defer></script>
 
-    <title>WEB Whatsapp</title>
+    <title>Whatsapp Web</title>
 </head>
 <body>
     <header></header>
     <main>
-        <div class="container__geral__interface" id="container">
-            <div class="user__talked"></div>
-            <div class="chat__user"></div>
+        <div class="container__user__interface" id="container">
+            <div class="navegation__user">
+                <div class="your__user">
+                    <img src="/recursos/images/contact7.png" alt="" class="user__image">
+                    <i class="users fas fa-users"></i>
+                    <i class="comments fas fa-comments"></i>
+                    <i class="ellipsis fas fa-ellipsis-v"></i>
+                </div>
+                <div class="search">
+                    <input type="search" name="Search or start a new chat" id="users__search" >
+                </div>
+                <div class="user__talked" id="users">
+                    <img src="/recursos/images/contact1.png" alt="" class="user__image">
+                    <h1 class="user__name"></h1>
+                    <span class="user__conversation"></span>
+                </div>
+            </div>
+            <div class="chat__user" id="chat">
+                <input type="text">
+            </div>
         </div>
     </main>
 </body>

@@ -4,6 +4,8 @@ import { contatos } from "./contatos.js"
 
 console.log(contatos)
 
+// Função para criar a lista
+
 const criaListaMensagem = (mensagem) => {
   const list = document.createElement('ul');
   list.classList.add('list-unstyled');
@@ -39,7 +41,7 @@ const criaListaMensagem = (mensagem) => {
   const lastMessageContent = lastMessage.content
 
   const lastMessageTimestamp = new Date(lastMessage.timestamp)
-  
+
   const now = new Date()
 
   const spanHora = document.createElement('span')
@@ -74,11 +76,26 @@ const criaListaMensagem = (mensagem) => {
 };
 
 
+// Função que ordena os contatos de acordo com a data e hora da ultima mensagem
 
-const carregarProdutos = () => {
-  const contacts = document.getElementById('contacts')
-  const cards = contatos.map(criaListaMensagem)
-  contacts.replaceChildren(...cards)
+const ordenaContatosPorUltimaMensagem = (contatos) => {
+  return contatos.sort((a, b) => {
+    const ultimaMensagemA = a.messages[a.messages.length - 1];
+    const ultimaMensagemB = b.messages[b.messages.length - 1];
+    const dataUltimaMensagemA = new Date(ultimaMensagemA.timestamp);
+    const dataUltimaMensagemB = new Date(ultimaMensagemB.timestamp);
+    return dataUltimaMensagemB.getTime() - dataUltimaMensagemA.getTime();
+  });
+};
 
-}
-carregarProdutos()
+// Função para que a lista apareça
+
+const carregarLista = () => {
+  const contacts = document.getElementById('contacts');
+  const contatosOrdenados = ordenaContatosPorUltimaMensagem(contatos);
+  const cards = contatosOrdenados.map(criaListaMensagem);
+  contacts.replaceChildren(...cards);
+};
+
+
+carregarLista()

@@ -42,5 +42,15 @@
     font-size: 12px
 }
 
+.list-unstyled{
+    cursor: pointer;
+}
 
-  
+ul{
+    display: flex;
+}
+
+.widthLastMensagem{
+    width: 100%;
+    background-color: aquamarine;
+}

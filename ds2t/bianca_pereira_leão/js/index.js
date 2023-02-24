@@ -12,16 +12,13 @@ const criaListaMensagem = (mensagem) => {
     const listElement = document.createElement('li')
     listElement.classList.add('media')
 
-    const guardaImg = document.createElement('div')
-    guardaImg.classList.add('profile-photo')
-    guardaImg.classList.add('rounded-circle')
-    guardaImg.classList.add('mb-2')
-    guardaImg.classList.add('mt-3')
-    guardaImg.classList.add('ml-2')
-    guardaImg.classList.add('mr-3')
-
     const foto = document.createElement('img')
-    foto.classList.add('card__image')
+    foto.classList.add('profile-photo')
+    foto.classList.add('rounded-circle')
+    foto.classList.add('mb-2')
+    foto.classList.add('mt-3')
+    foto.classList.add('ml-2')
+    foto.classList.add('mr-3')
     foto.src = `./img/${mensagem.image}`
 
     const guardaMediaBody = document.createElement('div')
@@ -42,7 +39,7 @@ const criaListaMensagem = (mensagem) => {
     lastMensagem.classList.add('mb-1')
     lastMensagem.textContent = mensagem.messages[3]
 
-    list.append(listElement, guardaImg, foto, guardaMediaBody, nomeContato,lastMensagem)
+    list.append(listElement,  foto, guardaMediaBody, nomeContato,lastMensagem)
 
     return list
 

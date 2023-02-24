@@ -142,11 +142,12 @@ const criarChatItens = (chat) => {
 
   const divGuardaDescricao = document.createElement('div')
   divGuardaDescricao.classList.add('last-message')
-  divGuardaDescricao.classList.add('text-black-50')
+
   
  
   const spanDescricao = document.createElement('span')
-  spanDescricao.textContent = chat.description
+  spanDescricao.classList.add('text-secondary')
+  spanDescricao.textContent = chat.lastSeem
 
   divGuardaDescricao.append(spanDescricao)
 

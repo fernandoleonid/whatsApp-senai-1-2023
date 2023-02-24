@@ -3,6 +3,7 @@ export const contatos = [
         "name": "Ana Maria",
         "id": 1,
         "description": "Frontend Developer",
+        "lastSeem": "visto por último hoje às 18:40",
         "image": "../img/contact1.png",
         "messages": [
           {
@@ -31,6 +32,7 @@ export const contatos = [
         "name": "Jane Smith",
         "id": 2,
         "description": "UI Designer",
+        "lastSeem": "visto por último hoje às 12:40",
         "image": "../img/contact2.png",
         "messages": [
           {
@@ -59,6 +61,7 @@ export const contatos = [
         "name": "Mark Johnson",
         "id": 3,
         "description": "Backend Developer",
+        "lastSeem": "visto por último hoje às 19:48",
         "image": "../img/contact3.png",
         "messages": [
           {
@@ -87,6 +90,7 @@ export const contatos = [
     "name": "Sarah Lee",
     "id": 4,
     "description": "Software Engineer",
+    "lastSeem": "visto por último hoje às 18:40",
     "image": "../img/contact4.png",
     "messages": [
         {
@@ -115,6 +119,7 @@ export const contatos = [
     "name": "John Doe",
     "id": 5,
     "description": "Designer",
+    "lastSeem": "visto por último ontem às 13:40",
     "image": "../img/contact5.png",
     "messages": [
         {
@@ -143,6 +148,7 @@ export const contatos = [
     "name": "Julia Smith",
     "id": 6,
     "description": "Product Manager",
+    "lastSeem": "visto por último hoje às 18:44",
     "image": "../img/contact6.png",
     "messages": [
         {
@@ -171,6 +177,7 @@ export const contatos = [
     "name": "Max Kellerman",
     "id": 7,
     "description": "Marketing Manager",
+    "lastSeem": "visto por último hoje às 17:43",
     "image": "../img/contact7.png",
     "messages": [
         {

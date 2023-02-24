@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="pt-br" class="h-100">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- link font awesome -->
+
     <script src="https://kit.fontawesome.com/94e8bd423f.js" crossorigin="anonymous"></script>
+
+    <!-- link google fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
+    <!-- link arquivos css -->
+
+    <link rel="stylesheet" href="css/side.css">
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/whatsappWeb.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/chat.css">
+
+    <!-- link arquivos js -->
+
+    <script src="./js/index.js" defer type="module"></script>
 
     <script src="./js/estilizacao.js" defer></script>
 
@@ -107,6 +121,7 @@
                 </ul>
             </section>
         </section>
+
         <section class="chat flex-fill bg-light d-flex flex-column">
             <header class="d-flex">
                 <div class="status-friend">
@@ -131,7 +146,7 @@
                     <div class="dropdown d-flex">
                         <button class="btn dropdown-toggle" type="button" id="menuDropdown" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v text-secondary" id="dropIcon" title="Mais opções"></i> 
+                            <i class="fas fa-ellipsis-v text-secondary" id="dropIcon" title="Mais opções"></i>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="menuDropdown">
                             <li><a class="dropdown-item" href="#">Dados do contato</a></li>
@@ -145,7 +160,7 @@
                         </ul>
                     </div>
                     <a href="#" title="Menu" class="icon">
-                        
+
                     </a>
 
                 </nav>

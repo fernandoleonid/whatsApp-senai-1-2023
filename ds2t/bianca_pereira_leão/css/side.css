@@ -1,0 +1,44 @@
+.side {
+    width: 30%;
+}
+
+.side header {
+    height: 60px;
+    background-color: #ededed;
+}
+
+.side header .profile-photo {
+    height: 40px;
+    width: 40px;
+    background-color: #dddddd;
+}
+
+.side header a {
+    width: 50px;
+    text-align: center;
+}
+
+.side header a i {
+    font-size: 24px;
+    line-height: 60px;
+}
+
+.side .search-bar {
+    background-color: #f7f7f7;
+    height: 55px;
+}
+
+.side .search-bar .search-button-wrapper {
+    z-index: 9;
+}
+
+.side .contacts .profile-photo {
+    height: 50px;
+    width: 50px;
+    background-color: #dddddd;
+}
+
+.side .contacts .last-message {
+    font-size: 12px
+}
+

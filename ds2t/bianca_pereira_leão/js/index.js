@@ -11,7 +11,11 @@ const criaListaMensagem = (mensagem) => {
 
   const listElement = document.createElement('li');
   listElement.classList.add('media');
+  listElement.setAttribute('data-id', mensagem.id)
 
+  console.log(mensagem.id)
+
+  listElement.dataset.id = mensagem.id; // adiciona o data-id ao elemento
 
 
   const imagemElement = document.createElement('div');
@@ -71,7 +75,12 @@ const criaListaMensagem = (mensagem) => {
 
   list.append(listElement, foto, guardaMediaBody);
 
-  list.addEventListener('click', () => {
+  list.addEventListener('click', (event) => {
+    if (event.target.nodeName === listElement) {
+      const idProcurado = parseInt(event.currentTarget.dataset.id);
+      const pessoaEncontrada = contatos.find(pessoa => pessoa.id === idProcurado);
+      console.log(pessoaEncontrada);
+    }
     carregarChatItens()
   });
 
@@ -126,12 +135,16 @@ const criarChatItens = (chat) => {
   const img = document.createElement('img');
   img.src = `./img/${chat.image}`;
 
+  imgHeader.append(img)
+
 
   return header
 }
+
 
 const carregarChatItens = () => {
   const chatContainer = document.getElementById('headerChat');
   const cards = contatos.map(criarChatItens)
   chatContainer.replaceChildren(...cards)
 }
+

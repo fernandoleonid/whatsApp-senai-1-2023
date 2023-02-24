@@ -50,7 +50,9 @@ ul{
     display: flex;
 }
 
-.widthLastMensagem{
+.media-body {
+    border-bottom: 1px solid #dee2e6;
+    padding-right: 16px; 
     width: 100%;
-    background-color: aquamarine;
-}
+  }
+  

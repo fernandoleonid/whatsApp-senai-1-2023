@@ -299,8 +299,8 @@ img {
 
 .dropdown-menu{
     width: 15vw;
-    height: 40vh;
-    margin-left: -250px;
+    height: auto;
+    margin-left: -210px;
 }
 
 .dropdown-menu li{

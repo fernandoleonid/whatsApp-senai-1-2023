@@ -31,15 +31,22 @@ const criaListaMensagem = (mensagem) => {
     nomeContato.classList.add('mt-3')
     nomeContato.textContent = mensagem.name
 
+
+
+
+    const lastMessage = mensagem.messages[mensagem.messages.length - 1];
+    const lastMessageContent = lastMessage.content;
+    
     const lastMensagem = document.createElement('p')
     lastMensagem.classList.add('last-message')
     lastMensagem.classList.add('text-black-50')
     lastMensagem.classList.add('border-bottom')
     lastMensagem.classList.add('pb-3')
     lastMensagem.classList.add('mb-1')
-    lastMensagem.textContent = mensagem.messages[3]
+    lastMensagem.textContent = `${lastMessageContent}`;
+    
 
-    list.append(listElement,  foto, guardaMediaBody, nomeContato,lastMensagem)
+    list.append(listElement, foto, guardaMediaBody, nomeContato, lastMensagem)
 
     return list
 

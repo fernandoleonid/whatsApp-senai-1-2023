@@ -2,8 +2,6 @@
 
 import { contatos } from "./contatos.js"
 
-console.log(contatos)
-
 // Função para criar a lista
 
 const criaListaMensagem = (mensagem) => {
@@ -13,6 +11,8 @@ const criaListaMensagem = (mensagem) => {
 
   const listElement = document.createElement('li');
   listElement.classList.add('media');
+
+
 
   const imagemElement = document.createElement('div');
   imagemElement.classList.add('col-3');
@@ -71,6 +71,9 @@ const criaListaMensagem = (mensagem) => {
 
   list.append(listElement, foto, guardaMediaBody);
 
+  list.addEventListener('click', () => {
+    carregarChatItens()
+  });
 
   return list;
 };
@@ -99,3 +102,35 @@ const carregarLista = () => {
 
 
 carregarLista()
+
+
+// Função para criar chat
+
+const criarChatItens = (chat) => {
+  const header = document.createElement('header');
+  header.classList.add('d-flex');
+
+  const headerStatus = document.createElement('div');
+  headerStatus.classList.add('status-friend');
+
+  header.append(headerStatus)
+
+  const imgHeader = document.createElement('div');
+  imgHeader.classList.add('profile-photo')
+  imgHeader.classList.add('rounded-circle')
+  imgHeader.classList.add('my-auto')
+  imgHeader.classList.add('mx-2')
+
+  headerStatus.append(imgHeader)
+
+  const img = document.createElement('img');
+  img.src = `./img/${header.image}`;
+  return header
+}
+
+const carregarChatItens = () => {
+  const chatContainer = document.getElementById('chatContainer');
+  const cards = contatos.map(criarChatItens)
+  chatContainer.replaceChildren(...cards)
+
+}

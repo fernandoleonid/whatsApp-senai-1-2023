@@ -108,7 +108,8 @@
 
          <!-- O JS irá criar mais tarde -->
 
-        <section class="chat flex-fill bg-light d-flex flex-column">
+        <section class="chat flex-fill bg-light d-flex flex-column" id="chatContainer">
+
             <header class="d-flex">
                 <div class="status-friend">
                     <div class="profile-photo rounded-circle my-auto mx-2">
@@ -121,7 +122,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <nav class="groupIconMessage">
                     <a href="#" title="Search" class="icon-message">
@@ -145,13 +145,12 @@
                             <li><a class="dropdown-item" href="#">Bloquear</a></li>
                         </ul>
                     </div>
-                    <a href="#" title="Menu" class="icon">
-
-                    </a>
 
                 </nav>
 
             </header>
+
+            
 
              <!-- O JS irá criar mais tarde -->
              
@@ -160,9 +159,10 @@
                 <div class="message them" data-time="15:33">Tudo bem?</div>
                 <div class="message them tail" data-time="15:33">Oi</div>
             </section>
+
             <footer class="d-flex">
                 <a href="#" class="icon my-auto mx-4">
-                    <i class="far fa-grin text-secondary my-auto"></i>
+                    <i class="far fa-grin text-secondary my-auto" id="emoji-picker"></i>
                 </a>
                 <div class="form-group my-auto flex-fill" id="form-group">
                     <input type="text" class="form-control rounded-pill" id="message" placeholder="Mensagem">

@@ -11,11 +11,6 @@ const criaListaMensagem = (mensagem) => {
 
   const listElement = document.createElement('li');
   listElement.classList.add('media');
-  listElement.setAttribute('data-id', mensagem.id)
-
-  console.log(mensagem.id)
-
-  listElement.dataset.id = mensagem.id; // adiciona o data-id ao elemento
 
 
   const imagemElement = document.createElement('div');
@@ -75,14 +70,11 @@ const criaListaMensagem = (mensagem) => {
 
   list.append(listElement, foto, guardaMediaBody);
 
+
   list.addEventListener('click', (event) => {
-    if (event.target.nodeName === listElement) {
-      const idProcurado = parseInt(event.currentTarget.dataset.id);
-      const pessoaEncontrada = contatos.find(pessoa => pessoa.id === idProcurado);
-      console.log(pessoaEncontrada);
-    }
-    carregarChatItens()
+    carregarChatItens(mensagem.id);
   });
+
 
   return list;
 };
@@ -119,6 +111,7 @@ const criarChatItens = (chat) => {
   const header = document.createElement('header');
   header.classList.add('d-flex');
 
+
   const headerStatus = document.createElement('div');
   headerStatus.classList.add('status-friend');
 
@@ -142,9 +135,15 @@ const criarChatItens = (chat) => {
 }
 
 
-const carregarChatItens = () => {
+const carregarChatItens = (contatoId) => {
   const chatContainer = document.getElementById('headerChat');
-  const cards = contatos.map(criarChatItens)
-  chatContainer.replaceChildren(...cards)
-}
+  const contato = contatos.find(c => c.id === contatoId);
+  if (!contato) {
+    console.error(`Contato com ID ${contatoId} não encontrado.`);
+    return;
+  }
+  const header = criarChatItens(contato);
+  chatContainer.replaceChildren(header);
+};
+
 

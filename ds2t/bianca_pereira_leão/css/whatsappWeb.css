@@ -219,3 +219,21 @@ img{
     border-color: #ced4da;
   }
   
+  #search {
+    font-size: 1rem;
+  }
+  
+  #arrow {
+    display: none;
+    color: #009688;
+  }
+  
+  #search:focus ~ #arrow {
+    display: inline-block;
+  }
+  #search {
+    transition: width 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  

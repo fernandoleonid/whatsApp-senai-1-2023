@@ -109,13 +109,13 @@ carregarLista()
 
 const criarChatItens = (chat) => {
   const header = document.createElement('header');
-  header.classList.add('d-flex');
+  header.classList.add('d-flex', 'w-100');
 
 
   const headerStatus = document.createElement('div');
   headerStatus.classList.add('status-friend');
+  headerStatus.classList.add('ml-auto');
 
-  header.append(headerStatus)
 
   const imgHeader = document.createElement('div');
   imgHeader.classList.add('profile-photo')
@@ -123,12 +123,8 @@ const criarChatItens = (chat) => {
   imgHeader.classList.add('my-auto')
   imgHeader.classList.add('mx-2')
 
-  headerStatus.append(imgHeader)
-
   const img = document.createElement('img');
   img.src = `./img/${chat.image}`;
-
-  imgHeader.append(img)
 
   const divPaiNomeDescricao = document.createElement('div');
   divPaiNomeDescricao.classList.add('mr-auto')
@@ -143,17 +139,33 @@ const criarChatItens = (chat) => {
   const divGuardaDescricao = document.createElement('div')
   divGuardaDescricao.classList.add('last-message')
 
-  
- 
+
   const spanDescricao = document.createElement('span')
   spanDescricao.classList.add('text-secondary')
   spanDescricao.textContent = chat.lastSeem
 
+  const nav = document.createElement('nav')
+  nav.classList.add('groupIconMessage')
+
+  const aDaNav = document.createElement('a')
+  aDaNav.classList.add('icon-message')
+
+  const icone1 = document.createElement('i')
+  icone1.classList.add('fas')
+  icone1.classList.add('fa-search')
+  icone1.classList.add('text-secondary')
+
+
+
+  header.append(headerStatus,nav)
+  headerStatus.append(imgHeader,divPaiNomeDescricao)
+  imgHeader.append(img)
+
+  divPaiNomeDescricao.append(nomeContato,divGuardaDescricao)
   divGuardaDescricao.append(spanDescricao)
 
-
-  header.append(divPaiNomeDescricao,divGuardaDescricao)
-  divPaiNomeDescricao.append(nomeContato,spanDescricao)
+  nav.append(aDaNav)
+  aDaNav.append(icone1)
 
   return header
 }

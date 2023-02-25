@@ -1,0 +1,7 @@
+
+body{
+    background-color: #020202;
+}
+.profile p {
+    transform: rotate(-90deg)
+}

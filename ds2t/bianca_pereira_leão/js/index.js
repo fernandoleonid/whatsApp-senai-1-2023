@@ -73,6 +73,7 @@ const criaListaMensagem = (mensagem) => {
 
   list.addEventListener('click', (event) => {
     carregarChatItens(mensagem.id);
+    carregarMensagens(mensagem.id)
   });
 
 
@@ -92,7 +93,7 @@ const ordenaContatosPorUltimaMensagem = (contatos) => {
   });
 };
 
-// Função para que a lista apareça
+// Função para que a lista de contatos apareça
 
 const carregarLista = () => {
   const contacts = document.getElementById('contacts');
@@ -102,10 +103,7 @@ const carregarLista = () => {
 };
 
 
-carregarLista()
-
-
-// Função para criar chat
+// Função para criar headerDoChat
 
 const criarChatItens = (chat) => {
   const header = document.createElement('header');
@@ -156,7 +154,7 @@ const criarChatItens = (chat) => {
   icone1.classList.add('text-secondary')
   const divDropDown = document.createElement('div');
   divDropDown.classList.add('dropdown', 'd-flex');
-  
+
   const btn = document.createElement('button');
   btn.classList.add('btn', 'dropdown-toggle');
   btn.id = 'menuDropdown';
@@ -164,16 +162,16 @@ const criarChatItens = (chat) => {
   btn.setAttribute('data-toggle', 'dropdown');
   btn.setAttribute('aria-haspopup', 'true');
   btn.setAttribute('aria-expanded', 'false');
-  
+
   const icone2 = document.createElement('i');
   icone2.classList.add('fas', 'fa-ellipsis-v', 'text-secondary');
   icone2.id = 'dropIcon';
   icone2.setAttribute('title', 'Mais opções');
-  
+
   const ulDrop = document.createElement('ul');
   ulDrop.classList.add('dropdown-menu');
   ulDrop.setAttribute('aria-labelledby', 'menuDropdown');
-  
+
   const li1 = document.createElement('li');
   const li2 = document.createElement('li');
   const li3 = document.createElement('li');
@@ -182,7 +180,7 @@ const criarChatItens = (chat) => {
   const li6 = document.createElement('li');
   const li7 = document.createElement('li');
   const li8 = document.createElement('li');
-  
+
   const a1 = document.createElement('a');
   const a2 = document.createElement('a');
   const a3 = document.createElement('a');
@@ -191,7 +189,7 @@ const criarChatItens = (chat) => {
   const a6 = document.createElement('a');
   const a7 = document.createElement('a');
   const a8 = document.createElement('a');
-  
+
   a1.classList.add('dropdown-item');
   a2.classList.add('dropdown-item');
   a3.classList.add('dropdown-item');
@@ -200,7 +198,7 @@ const criarChatItens = (chat) => {
   a6.classList.add('dropdown-item');
   a7.classList.add('dropdown-item');
   a8.classList.add('dropdown-item');
-  
+
   a1.href = '#';
   a2.href = '#';
   a3.href = '#';
@@ -209,7 +207,7 @@ const criarChatItens = (chat) => {
   a6.href = '#';
   a7.href = '#';
   a8.href = '#';
-  
+
   a1.textContent = 'Dados do contato';
   a2.textContent = 'Selecionar mensagens';
   a3.textContent = 'Fechar conversa';
@@ -218,14 +216,14 @@ const criarChatItens = (chat) => {
   a6.textContent = 'Apagar conversa';
   a7.textContent = 'Denunciar';
   a8.textContent = 'Bloquear';
-  
+
   header.append(headerStatus, nav);
   headerStatus.append(imgHeader, divPaiNomeDescricao);
   imgHeader.append(img);
-  
+
   divPaiNomeDescricao.append(nomeContato, divGuardaDescricao);
   divGuardaDescricao.append(spanDescricao);
-  
+
   nav.append(aDaNav, divDropDown);
   aDaNav.append(icone1);
   divDropDown.append(btn, ulDrop);
@@ -234,7 +232,7 @@ const criarChatItens = (chat) => {
   nav.append(aDaNav, divDropDown)
   aDaNav.append(icone1)
   ulDrop.append(li1, li2, li3, li4, li5, li6, li7, li8);
-  
+
   li1.append(a1);
   li2.append(a2);
   li3.append(a3);
@@ -248,6 +246,7 @@ const criarChatItens = (chat) => {
   return header
 }
 
+// Essa função carrega o header das mensagens de cada contato
 
 const carregarChatItens = (contatoId) => {
   const chatContainer = document.getElementById('headerChat');
@@ -261,3 +260,47 @@ const carregarChatItens = (contatoId) => {
 };
 
 
+// Função para criar as mensagens
+
+const criarMensagens = (contatoId) => {
+  const mensagensContainer = document.getElementById('messages');
+ 
+  mensagensContainer.innerHTML = "";
+
+  const contato = contatos.find((contato) => contato.id === contatoId);
+
+  if (!contato) {
+    console.error(`Contato com ID ${contatoId} não encontrado`);
+    return;
+  }
+ 
+  contato.messages.forEach((mensagem) => {
+    const mensagemElement = document.createElement("div");
+    mensagemElement.classList.add("message");
+    mensagemElement.classList.add(mensagem.sender === "me" ? "me" : "them");
+    mensagemElement.classList.add(mensagem.timestamp === contato.messages[contato.messages.length - 1].timestamp ? "tail" : "");
+    mensagemElement.dataset.time = new Date(mensagem.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    mensagemElement.innerText = mensagem.content;
+    mensagensContainer.appendChild(mensagemElement);
+  });
+}
+
+
+
+// Essa função carrega as mensagens de cada contato
+
+const carregarMensagens = (contatoId) => {
+  const messageContainer = document.getElementById('messages');
+  const contato = contatos.find(c => c.id === contatoId);
+  if (!contato) {
+    console.error(`Contato com ID ${contatoId} não encontrado.`);
+    return;
+  }
+  const areaMessage = criarMensagens(contato);
+  messageContainer.replaceChildren(areaMessage)
+}
+
+
+// chamando função para aparecer lista de contatos
+
+carregarLista()

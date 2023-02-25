@@ -154,31 +154,96 @@ const criarChatItens = (chat) => {
   icone1.classList.add('fas')
   icone1.classList.add('fa-search')
   icone1.classList.add('text-secondary')
+  const divDropDown = document.createElement('div');
+  divDropDown.classList.add('dropdown', 'd-flex');
+  
+  const btn = document.createElement('button');
+  btn.classList.add('btn', 'dropdown-toggle');
+  btn.id = 'menuDropdown';
+  btn.type = 'button';
+  btn.setAttribute('data-toggle', 'dropdown');
+  btn.setAttribute('aria-haspopup', 'true');
+  btn.setAttribute('aria-expanded', 'false');
+  
+  const icone2 = document.createElement('i');
+  icone2.classList.add('fas', 'fa-ellipsis-v', 'text-secondary');
+  icone2.id = 'dropIcon';
+  icone2.setAttribute('title', 'Mais opções');
+  
+  const ulDrop = document.createElement('ul');
+  ulDrop.classList.add('dropdown-menu');
+  ulDrop.setAttribute('aria-labelledby', 'menuDropdown');
+  
+  const li1 = document.createElement('li');
+  const li2 = document.createElement('li');
+  const li3 = document.createElement('li');
+  const li4 = document.createElement('li');
+  const li5 = document.createElement('li');
+  const li6 = document.createElement('li');
+  const li7 = document.createElement('li');
+  const li8 = document.createElement('li');
+  
+  const a1 = document.createElement('a');
+  const a2 = document.createElement('a');
+  const a3 = document.createElement('a');
+  const a4 = document.createElement('a');
+  const a5 = document.createElement('a');
+  const a6 = document.createElement('a');
+  const a7 = document.createElement('a');
+  const a8 = document.createElement('a');
+  
+  a1.classList.add('dropdown-item');
+  a2.classList.add('dropdown-item');
+  a3.classList.add('dropdown-item');
+  a4.classList.add('dropdown-item');
+  a5.classList.add('dropdown-item');
+  a6.classList.add('dropdown-item');
+  a7.classList.add('dropdown-item');
+  a8.classList.add('dropdown-item');
+  
+  a1.href = '#';
+  a2.href = '#';
+  a3.href = '#';
+  a4.href = '#';
+  a5.href = '#';
+  a6.href = '#';
+  a7.href = '#';
+  a8.href = '#';
+  
+  a1.textContent = 'Dados do contato';
+  a2.textContent = 'Selecionar mensagens';
+  a3.textContent = 'Fechar conversa';
+  a4.textContent = 'Silenciar notificações';
+  a5.textContent = 'Limpar mensagens';
+  a6.textContent = 'Apagar conversa';
+  a7.textContent = 'Denunciar';
+  a8.textContent = 'Bloquear';
+  
+  header.append(headerStatus, nav);
+  headerStatus.append(imgHeader, divPaiNomeDescricao);
+  imgHeader.append(img);
+  
+  divPaiNomeDescricao.append(nomeContato, divGuardaDescricao);
+  divGuardaDescricao.append(spanDescricao);
+  
+  nav.append(aDaNav, divDropDown);
+  aDaNav.append(icone1);
+  divDropDown.append(btn, ulDrop);
+  btn.append(icone2);
 
-  const divDropDown = document.createElement('div')
-  divDropDown.classList.add('dropdown','d-flex')
-
-  const btn = document.createElement('button')
-  btn.classList.add('btn','dropdown-toggle')
-  btn.id = 'menuDropdown'
-
-  const icone2 = document.createElement('i')
-  icone2.classList.add('fas')
-  icone2.classList.add('fa-ellipsis-v')
-  icone2.classList.add('text-secondary')
-  icone2.id = 'dropIcon'
-
-  header.append(headerStatus,nav)
-  headerStatus.append(imgHeader,divPaiNomeDescricao)
-  imgHeader.append(img)
-
-  divPaiNomeDescricao.append(nomeContato,divGuardaDescricao)
-  divGuardaDescricao.append(spanDescricao)
-
-  nav.append(aDaNav,divDropDown)
+  nav.append(aDaNav, divDropDown)
   aDaNav.append(icone1)
-  divDropDown.append(btn)
-  btn.append(icone2)
+  ulDrop.append(li1, li2, li3, li4, li5, li6, li7, li8);
+  
+  li1.append(a1);
+  li2.append(a2);
+  li3.append(a3);
+  li4.append(a4);
+  li5.append(a5);
+  li6.append(a6);
+  li7.append(a7);
+  li8.append(a8);
+
 
   return header
 }

@@ -1,5 +1,11 @@
 #inputSearch {
     text-align: left;
+
+}
+
+#message{
+    width: 100%;
+    min-width: 40vw;
 }
 
 #inputSearch::placeholder {
@@ -47,4 +53,10 @@
 
 #inputSearch:focus:-ms-input-placeholder {
     color: transparent;
+}
+
+@media (max-width:500px) {
+    #inputSearch{
+        width: 85vw;
+    }
 }

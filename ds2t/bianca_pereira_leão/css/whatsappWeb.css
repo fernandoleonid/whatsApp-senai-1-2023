@@ -8,13 +8,14 @@
 body {
     background-color: #d6dbd9;
     position: relative;
+    overflow: hidden;
 
 }
 
 body::before {
     content: "";
     background-color: #009688;
-    height: 13%;
+    height: 10%;
     width: 100%;
     position: absolute;
     z-index: -1;
@@ -22,6 +23,7 @@ body::before {
 }
 
 main {
+    padding: .1% .8%;
     width: auto;
     height: auto;
     overflow: auto;

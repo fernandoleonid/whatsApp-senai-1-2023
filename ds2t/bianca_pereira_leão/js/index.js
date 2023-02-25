@@ -114,14 +114,13 @@ const criarChatItens = (chat) => {
   headerStatus.classList.add('status-friend');
   headerStatus.classList.add('ml-auto');
 
-
-  const imgHeader = document.createElement('div');
-  imgHeader.classList.add('profile-photo')
-  imgHeader.classList.add('rounded-circle')
-  imgHeader.classList.add('my-auto')
-  imgHeader.classList.add('mx-2')
-
   const img = document.createElement('img');
+  img.classList.add('profile-photo');
+  img.classList.add('rounded-circle');
+  img.classList.add('mb-2');
+  img.classList.add('mt-3');
+  img.classList.add('ml-2');
+  img.classList.add('mr-3');
   img.src = `./img/${chat.image}`;
 
   const divPaiNomeDescricao = document.createElement('div');
@@ -218,8 +217,7 @@ const criarChatItens = (chat) => {
   a8.textContent = 'Bloquear';
 
   header.append(headerStatus, nav);
-  headerStatus.append(imgHeader, divPaiNomeDescricao);
-  imgHeader.append(img);
+  headerStatus.append(img, divPaiNomeDescricao);
 
   divPaiNomeDescricao.append(nomeContato, divGuardaDescricao);
   divGuardaDescricao.append(spanDescricao);

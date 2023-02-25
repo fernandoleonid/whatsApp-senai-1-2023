@@ -73,7 +73,7 @@ const criaListaMensagem = (mensagem) => {
 
   list.addEventListener('click', (event) => {
     carregarChatItens(mensagem.id);
-    carregarMensagens(mensagem.id)
+    carregarMensagens(mensagem.id);
   });
 
 
@@ -262,18 +262,10 @@ const carregarChatItens = (contatoId) => {
 
 // Função para criar as mensagens
 
-const criarMensagens = (contatoId) => {
+const criarMensagens = (contato) => {
   const mensagensContainer = document.getElementById('messages');
- 
   mensagensContainer.innerHTML = "";
 
-  const contato = contatos.find((contato) => contato.id === contatoId);
-
-  if (!contato) {
-    console.error(`Contato com ID ${contatoId} não encontrado`);
-    return;
-  }
- 
   contato.messages.forEach((mensagem) => {
     const mensagemElement = document.createElement("div");
     mensagemElement.classList.add("message");
@@ -283,7 +275,9 @@ const criarMensagens = (contatoId) => {
     mensagemElement.innerText = mensagem.content;
     mensagensContainer.appendChild(mensagemElement);
   });
-}
+};
+
+
 
 
 
@@ -296,8 +290,7 @@ const carregarMensagens = (contatoId) => {
     console.error(`Contato com ID ${contatoId} não encontrado.`);
     return;
   }
-  const areaMessage = criarMensagens(contato);
-  messageContainer.replaceChildren(areaMessage)
+  criarMensagens(contato);
 }
 
 

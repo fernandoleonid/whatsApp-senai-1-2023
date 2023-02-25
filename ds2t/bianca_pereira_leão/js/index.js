@@ -155,7 +155,18 @@ const criarChatItens = (chat) => {
   icone1.classList.add('fa-search')
   icone1.classList.add('text-secondary')
 
+  const divDropDown = document.createElement('div')
+  divDropDown.classList.add('dropdown','d-flex')
 
+  const btn = document.createElement('button')
+  btn.classList.add('btn','dropdown-toggle')
+  btn.id = 'menuDropdown'
+
+  const icone2 = document.createElement('i')
+  icone2.classList.add('fas')
+  icone2.classList.add('fa-ellipsis-v')
+  icone2.classList.add('text-secondary')
+  icone2.id = 'dropIcon'
 
   header.append(headerStatus,nav)
   headerStatus.append(imgHeader,divPaiNomeDescricao)
@@ -164,8 +175,10 @@ const criarChatItens = (chat) => {
   divPaiNomeDescricao.append(nomeContato,divGuardaDescricao)
   divGuardaDescricao.append(spanDescricao)
 
-  nav.append(aDaNav)
+  nav.append(aDaNav,divDropDown)
   aDaNav.append(icone1)
+  divDropDown.append(btn)
+  btn.append(icone2)
 
   return header
 }

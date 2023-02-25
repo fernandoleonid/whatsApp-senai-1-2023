@@ -3,6 +3,9 @@
     background-color: #ededed;
 }
 
+.chat{
+    width: auto;
+}
 .chat header .profile-photo {
     height: 40px;
     width: 40px;

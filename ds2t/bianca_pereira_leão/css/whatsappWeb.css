@@ -8,12 +8,13 @@
 body {
     background-color: #d6dbd9;
     position: relative;
+
 }
 
 body::before {
     content: "";
     background-color: #009688;
-    height: 163px;
+    height: 13%;
     width: 100%;
     position: absolute;
     z-index: -1;
@@ -21,8 +22,9 @@ body::before {
 }
 
 main {
-    width: 95%;
-    height: 90vh;
+    width: auto;
+    height: auto;
+    overflow: auto;
 }
 
 img {
@@ -35,3 +37,5 @@ img {
     display: flex;
     gap: 5px;
 }
+
+  

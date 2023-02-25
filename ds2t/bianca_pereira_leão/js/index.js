@@ -278,9 +278,6 @@ const criarMensagens = (contato) => {
 };
 
 
-
-
-
 // Essa função carrega as mensagens de cada contato
 
 const carregarMensagens = (contatoId) => {

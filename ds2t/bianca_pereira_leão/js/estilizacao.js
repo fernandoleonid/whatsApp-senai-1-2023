@@ -20,3 +20,4 @@ searchInput.addEventListener('blur', function () {
     searchIcon.style.display = 'inline-block';
     arrowIcon.style.display = 'none';
 });
+

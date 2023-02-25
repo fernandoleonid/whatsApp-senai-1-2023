@@ -292,3 +292,9 @@ const carregarMensagens = (contatoId) => {
 // chamando função para aparecer lista de contatos
 
 carregarLista()
+
+
+
+
+
+

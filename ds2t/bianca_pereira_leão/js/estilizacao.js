@@ -21,3 +21,38 @@ searchInput.addEventListener('blur', function () {
     arrowIcon.style.display = 'none';
 });
 
+
+
+// função para aparecer emojis
+
+
+const emojiButton = document.querySelector('#emoji-picker-btn');
+const emojiList = document.querySelector('#emoji-list');
+const guardaEmoji = document.querySelector('#guarda-emoji');
+const emojis = ['😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊'];
+let isEmojiListVisible = false;
+
+emojiButton.addEventListener('click', () => {
+  if (isEmojiListVisible) {
+    emojiList.style.display = 'none';
+    guardaEmoji.classList.remove('show-emoji-list');
+  } else {
+    emojiList.style.display = 'block';
+    guardaEmoji.classList.add('show-emoji-list');
+  }
+  isEmojiListVisible = !isEmojiListVisible;
+});
+
+emojis.forEach(emoji => {
+  const span = document.createElement('span');
+  span.innerHTML = emoji;
+  span.classList.add('emoji');
+  span.addEventListener('click', () => {
+    const input = document.querySelector('#message-input');
+    input.value += emoji;
+    emojiList.style.display = 'none';
+    guardaEmoji.classList.remove('show-emoji-list');
+    isEmojiListVisible = false;
+  });
+  emojiList.appendChild(span);
+});

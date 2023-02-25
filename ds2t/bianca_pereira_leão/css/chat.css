@@ -104,3 +104,43 @@ nav,
 .status-friend {
     display: flex;
 }
+
+#emoji-list {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .emoji {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+#guarda-emoji{
+    display: flex;
+    flex-direction: column;
+}
+
+#emoji-list {
+    position: absolute;
+    left: 35%;
+    top: 80%;
+    max-width: 450px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  #guarda-emoji.show-emoji-list #emoji-list {
+    display: block;
+  }
+  

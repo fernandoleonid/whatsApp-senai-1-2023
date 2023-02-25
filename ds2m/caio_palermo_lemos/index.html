@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c0e5486155.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>WhatsApp</title>
+  </head>
+  <body>
+    <main>
+      <section class="chats">
+        <div class="chats__profile-options">
+          <i class="fas fa-user" id="profile-options__profile"></i>
+          <i class="fas fa-users" id="profile-options__communities"></i>
+          <img
+            src="./img/status-icon.svg"
+            alt=""
+            class="profile-options__status"
+          />
+          <img
+            src="./img/new-messages-icon.svg"
+            alt=""
+            class="profile-options__new-conversation"
+          />
+          <i class="fas fa-ellipsis-v" id="profile-options__more-options"></i>
+        </div>
+        <div class="chats__filter">
+          <div class="filter__input-container">
+            <input
+              type="text"
+              class="filter__input"
+              placeholder="Pesquisar ou começar uma nova conversa"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass"
+              id="filter__icon-search"
+            ></i>
+          </div>
+          <img src="./img/filter-icon.svg" alt="" class="filter__icon-filter" />
+        </div>
+        <div class="chats__chats-container">
+          <div class="chat">
+            <img src="./img/branca.jpg" alt="" class="chat__image" />
+            <div class="chat__content">
+              <span class="chat__name">Branca</span>
+              <p class="chat__text">Chuchu, suas telas estão prontas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="messages">
+        <div class="messages__receiver">
+          <div class="receiver__profile">
+            <img src="./img/branca.jpg" alt="" class="profile__image" />
+            <p class="profile__name">Branca</p>
+          </div>
+          <div class="receiver__options">
+            <i class="fa-solid fa-magnifying-glass" id="options__search"></i>
+            <i class="fas fa-ellipsis-v" id="options__more-options"></i>
+          </div>
+        </div>
+        <div class="messages__conversations"></div>
+        <div class="messages__interactions">
+          <i class="fas fa-laugh"></i>
+          <i class="fas fa-paperclip"></i>
+          <input
+            type="text"
+            name=""
+            class="interactions__send-mesage"
+            placeholder="Mensagem"
+          />
+          <i class="fas fa-microphone"></i>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

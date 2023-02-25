@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #111B21;
+    --second-color: #202C33;
+    --third-color: #8696A0;
+    --icon-color: #AEBAC1;
+    --name-color: #E9EDEF;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 96vh;
+    width: 85vw;
+}
+
+.contact__container{
+    grid-column: 1;
+    background-color: var(--primary-color);
+}
+
+.conversation{
+    grid-column: 2;
+    background-image: url(/img/fundo.jpeg);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    background-color: var(--second-color);
+    justify-content: space-between;
+    padding: 0px 30px 0px 10px;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.3rem;
+    gap: 30px;
+    color: var(--icon-color);
+}
+
+.profile__picture{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}

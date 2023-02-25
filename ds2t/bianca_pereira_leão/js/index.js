@@ -270,7 +270,7 @@ const criarMensagens = (contato) => {
     const mensagemElement = document.createElement("div");
     mensagemElement.classList.add("message");
     mensagemElement.classList.add(mensagem.sender === "me" ? "me" : "them");
-    mensagemElement.classList.add(mensagem.timestamp === contato.messages[contato.messages.length - 1].timestamp ? "tail" : "");
+    mensagemElement.classList.add(mensagem.timestamp === contato.messages[contato.messages.length - 1].timestamp ? "tail" : "not-tail");
     mensagemElement.dataset.time = new Date(mensagem.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     mensagemElement.innerText = mensagem.content;
     mensagensContainer.appendChild(mensagemElement);

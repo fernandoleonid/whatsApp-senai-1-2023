@@ -29,7 +29,7 @@ searchInput.addEventListener('blur', function () {
 const emojiButton = document.querySelector('#emoji-picker-btn');
 const emojiList = document.querySelector('#emoji-list');
 const guardaEmoji = document.querySelector('#guarda-emoji');
-const emojis = ['😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊'];
+const emojis = ['😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊', '🎠','🚓','🚇','❤️','🧡','💛','💚','💙','💜','🤎','🖤'];
 let isEmojiListVisible = false;
 
 emojiButton.addEventListener('click', () => {

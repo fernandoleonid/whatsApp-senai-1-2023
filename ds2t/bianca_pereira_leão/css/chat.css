@@ -130,14 +130,14 @@ nav,
 }
 
 #emoji-list {
-    position: absolute;
-    left: 35%;
-    top: 80%;
-    max-width: 450px;
     height: auto;
     border: none;
     box-shadow: none;
     background-color: transparent;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 1%;
+    width: fit-content;
   }
   
   #guarda-emoji.show-emoji-list #emoji-list {

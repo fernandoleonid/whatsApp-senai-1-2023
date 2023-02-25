@@ -1,0 +1,17 @@
+header{
+    height: 100px;
+    background: #CFFF8D;
+}
+main{
+    display: grid;
+    place-content: center;
+}
+footer{
+    font-size: 2rem;
+    display: flex;
+    place-content: end;
+    margin-right: 30px;
+}
+.git{
+    color: #CFFF8D;
+}

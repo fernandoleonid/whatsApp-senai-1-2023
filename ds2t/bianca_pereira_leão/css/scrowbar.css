@@ -4,8 +4,7 @@
 }
 
 #contacts::-webkit-scrollbar {
-  width: 4px; 
-  height: 3px;
+  width: 6px; 
 }
 
 #contacts::-webkit-scrollbar-thumb {

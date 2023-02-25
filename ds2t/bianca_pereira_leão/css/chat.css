@@ -3,9 +3,10 @@
     background-color: #ededed;
 }
 
-.chat{
+.chat {
     width: auto;
 }
+
 .chat header .profile-photo {
     height: 40px;
     width: 40px;
@@ -35,6 +36,8 @@
     border-radius: 5px;
     padding: 7px 50px 7px 10px;
     position: relative;
+    font-size: 0.625rem;
+    font-size: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
 }
 
 .chat .dialog .message::after {
@@ -42,7 +45,8 @@
     position: absolute;
     bottom: 2px;
     right: 6px;
-    font-size: 11px;
+    font-size: 0.5rem;
+    font-size: clamp(0.5rem, 0.4625rem + 0.1875vw, 0.6875rem);
 }
 
 .chat .dialog .me {

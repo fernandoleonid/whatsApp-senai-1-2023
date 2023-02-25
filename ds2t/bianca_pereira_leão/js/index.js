@@ -266,7 +266,7 @@ const criarMensagens = (contato) => {
   const mensagensContainer = document.getElementById('messages');
   mensagensContainer.innerHTML = "";
 
-  contato.messages.forEach((mensagem) => {
+  contato.messages.reverse().forEach((mensagem) => {
     const mensagemElement = document.createElement("div");
     mensagemElement.classList.add("message");
     mensagemElement.classList.add(mensagem.sender === "me" ? "me" : "them");

@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav main main"
+    "nav main main"
+    "nav section section";
+    grid-template-rows: 100px 1fr 1fr 100px ;
+    grid-template-columns: 10%;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main{
+    grid-area: main;
+    display:flex;
+    background-color: hotpink;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    grid-area: nav;
+    background-color: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+section{
+    grid-area: section;
+    background-color: darkkhaki;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}

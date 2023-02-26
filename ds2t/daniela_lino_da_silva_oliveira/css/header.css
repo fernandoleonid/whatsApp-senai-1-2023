@@ -1,0 +1,37 @@
+.search__box{
+    border-radius: 15px;
+    background-color: #FFE7B3;
+    height: 80px;
+    min-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    gap: 0.5rem;
+    
+}
+.search__itens{
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;  
+    display: flex;
+    min-width: 60%;
+    gap: 0.5rem;
+}
+.entrada__texto{
+    background: transparent;
+    border: transparent;
+    min-width: 80%;
+    height: 70px;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    outline: 0;
+}
+.fa-solid{
+    font-size: 2rem;
+    color: #E67F0D;
+    width: 3rem;
+}
+.img__logo{
+    margin: 1rem;
+}

@@ -19,15 +19,3 @@ var span = temaModal.getElementsByClassName("close")[0];
 span.onclick = function() {
   temaModal.style.display = "none";
 }
-
-var okBtn = temaModal.getElementById("okBtn");
-okBtn.onclick = function() {
-  // Faça algo aqui
-  temaModal.style.display = "none";
-}
-
-// Quando o usuário clicar no botão "Cancelar", não faça nada e feche a janela modal
-var cancelBtn = temaModal.getElementById("cancelBtn");
-cancelBtn.onclick = function() {
-  temaModal.style.display = "none";
-}

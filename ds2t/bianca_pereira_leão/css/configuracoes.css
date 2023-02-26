@@ -171,6 +171,19 @@ ul{
   .ok-button:hover{
     background-color: #005452;
   }
+  
+  
+  .form-check-input[type="radio"]:checked {
+    background-color: #008069;
+  }
+
+  .form-check-label{
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+  }
+  
+  
 
 @media (max-width:500px) {
     #configuracoes{

@@ -8,9 +8,19 @@
       src="https://kit.fontawesome.com/c0e5486155.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="imagem/png" href="./img/whatsapp.png" />
+    <script src="./js/app.js" defer type="module"></script>
+    <script src="./js/adicionarAtivo.js" defer></script>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
     <title>WhatsApp</title>
   </head>
   <body>
@@ -31,13 +41,27 @@
           />
           <i class="fas fa-ellipsis-v" id="profile-options__more-options"></i>
         </div>
+        <div class="chats__profile-options-mobile">
+          <span class="profile-options-mobile__text">WhatsApp</span>
+          <div class="profile-options-mobile__icons">
+            <i class="fas fa-camera"></i>
+            <i class="fa-solid fa-magnifying-glass" id="options__search"></i>
+            <i
+              class="fas fa-ellipsis-v"
+              id="profile-options-mobile__more-options"
+            ></i>
+          </div>
+        </div>
+        <div class="chats__user-interactions">
+          <i class="fas fa-users" id="user-interactions__communities"></i>
+          <span class="user-interactions__conversations">Conversas</span>
+          <span class="user-interactions__status">Status</span>
+          <span class="user-interactions__calls">Chamadas</span>
+        </div>
         <div class="chats__filter">
           <div class="filter__input-container">
-            <input
-              type="text"
-              class="filter__input"
-              placeholder="Pesquisar ou começar uma nova conversa"
-            />
+            <input type="text" class="filter__input" />
+            <!-- placeholder="Pesquisar ou começar uma nova conversa" -->
             <i
               class="fa-solid fa-magnifying-glass"
               id="filter__icon-search"
@@ -45,15 +69,7 @@
           </div>
           <img src="./img/filter-icon.svg" alt="" class="filter__icon-filter" />
         </div>
-        <div class="chats__chats-container">
-          <div class="chat">
-            <img src="./img/branca.jpg" alt="" class="chat__image" />
-            <div class="chat__content">
-              <span class="chat__name">Branca</span>
-              <p class="chat__text">Chuchu, suas telas estão prontas</p>
-            </div>
-          </div>
-        </div>
+        <div class="chats__chats-container"></div>
       </section>
       <section class="messages">
         <div class="messages__receiver">
@@ -66,7 +82,20 @@
             <i class="fas fa-ellipsis-v" id="options__more-options"></i>
           </div>
         </div>
-        <div class="messages__conversations"></div>
+        <div class="messages__conversations">
+          <div class="message-sender-container">
+            <div class="message__sender tri-right left-top">
+              <p class="message__content">Chuchu, suas telas estão prontas</p>
+              <span class="message__time">11:21 AM</span>
+            </div>
+          </div>
+          <div class="message-receiver-container">
+            <div class="message__receiver tri-right right-top">
+              <p class="message__content">Que belezinha!</p>
+              <span class="message__time">13:54 PM</span>
+            </div>
+          </div>
+        </div>
         <div class="messages__interactions">
           <i class="fas fa-laugh"></i>
           <i class="fas fa-paperclip"></i>

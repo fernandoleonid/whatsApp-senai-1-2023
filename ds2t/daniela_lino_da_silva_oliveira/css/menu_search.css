@@ -6,13 +6,7 @@
     justify-content: flex-start;
     font-size: .75rem;
     outline: 0;
-    width: 5rem;
-}
-
-.fa-caret-down{
-    width: 1rem;
-    font-size: 1rem;
-
+    width: 7.5rem;
 }
 
 .search_group{
@@ -32,46 +26,7 @@
     justify-content: space-between;
     gap: 0.5rem;
     box-shadow: 0px 2px 5px #C0A599;
-    list-style: none;
     margin: .5rem;
 }
 
-.search_box__contacts li {
-    position: relative;
-    float: left;
-}
 
-.search_box__contacts li a {
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    font-size: .9rem;
-    padding: 5px 10px;
-    display: block;
-}
-
-.search_box__contacts li a:hover {
-    background: transparent;
-    color: #E67F0D;
-    text-shadow: 0px 0px 5px #fff;
-}
-
-.search_box__contacts li ul {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    background-color: #fff;
-    display: none;
-}
-
-.search_box__contacts li:hover ul,
-.search_box__contacts li.over ul {
-    display: block;
-}
-
-.search_box__contacts li ul li {
-    border: 1px solid #c0c0c0;
-    display: block;
-    width: 150px;
-}

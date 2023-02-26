@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/contatos.css">
     <link rel="stylesheet" href="./css/menu_search.css">
+    <link rel="stylesheet" href="./css/user_profile.css">
     <title>WhatsApp Web</title>
 </head>
 
@@ -29,12 +30,13 @@
     </header>
     <nav>
         <div class="contact__box" id="contact__box">
-            <div class="user__profile" id="user__profile">
-                <div class="search_box__contacts">
-                    <div class="search_group">
-                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                        <input type="text" class="search_contacts__entry" id="search_contacts__entry"
-                            placeholder="Achar alguém...">
+            <div class="user_profile__box" id="user_profile__box">
+                <div class="user_profile">
+                    
+                    <img src="./img/man(1).png" class="user_img" alt="Foto de perfil do usuário">
+                    <div class="user_info">
+                        <h3 class="user_name" id="user_name">usuário</h3>
+                        <span class="status_user">Offline</span>
                     </div>
                     <li><a href="#"><i class="fas fa-caret-down"></i></a>
                         <ul>
@@ -43,6 +45,14 @@
                             <li><a href="#">Todas as mensagens</a></li>
                         </ul>
                     </li>
+                </div>
+                <div class="search_box__contacts">
+                    <div class="search_group">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="search_contacts__entry" id="search_contacts__entry"
+                            placeholder="Procurar Mensagem...">
+                    </div>
+                    
                 </div>
 
             </div>

@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: 0;
 }
+
+header{
+    display: flex;
+    height: 85px;
+    background-color: #00a884;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    /* width: 64px; */
+    gap: 40px;
+    padding-left: 15px; 
+}
+.icon__menu{
+    display: flex;
+    width: 190px;
+    
+}

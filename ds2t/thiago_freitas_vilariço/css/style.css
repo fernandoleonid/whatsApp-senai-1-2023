@@ -1,0 +1,90 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#00A884 0%, #00A884 127px, #eae6df 127px, #d1d7db 100%);
+}
+.container{
+    display: grid;
+    width: 1600px;
+    height: 897px;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "container-esquerdo container-direito";
+    grid-template-columns: 480px 1fr;
+}
+.container-esquerdo{
+    background-color: #ffffff;
+}
+.container-direito{
+    background-color: #efeae2;
+}
+/* .container-direito::before{
+    background-image: url(../img/fundo-mensagens.png);
+    position: absolute;
+    content: "";
+    opacity: 0.1;
+    width: 1120px;
+    height: 897px;
+} */
+.header-esquerdo{
+    display: flex;
+    width: 100%;
+    height: 59px;
+    background-color: #F0F2F5;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-perfil{
+    display: flex;
+    width: 190px;
+    justify-content: space-around;
+    margin-right: 16px;
+}
+.img-perfil{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.nav-perfil i{
+    display: flex;
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+.barra-pesquisa{
+    display: flex;
+    width: 100%;
+    height: 49px;
+    align-items: center;
+    justify-content: space-around;
+}
+.caixa-pesquisa{
+    width: 420px;
+    border: none;
+    outline: 0;
+    background-color: #F0F2F5;
+    height: 35px;
+    border-radius: 8px;
+    font-size: .9rem;
+    padding-left: 64px;
+}
+.pesquisa i{
+    position: absolute;
+    color: #54656f;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.filtro i{
+    font-size: 20px;
+    color: #54656f;
+    margin-right: 8px;
+    cursor: pointer;
+}

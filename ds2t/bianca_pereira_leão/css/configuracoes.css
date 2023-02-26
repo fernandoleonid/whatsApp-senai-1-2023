@@ -69,7 +69,6 @@ ul{
   border-bottom: 1px solid #ccc ;
   padding-bottom: 20px;
   font-size: 1.2rem;
-  
 }
 
 .main-content ul{
@@ -78,16 +77,60 @@ ul{
   padding-left: 0px;
   
 }
+.main-content ul:hover{
+    background-color: #ffff;
+    cursor: pointer;
+}
 .main-content ul li a{
  display: flex;
  gap: 1vw;
+}
 
+.main-content ul li:hover{
+ background-color: #f6f6f6;
 }
 
 .aboutme{
     display: flex;
     gap: 2vw;
 }
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    margin-top: 35vh;
+    width: 80vw;
+    padding: 15px;
+    padding: 15px 200px;
+    border: 1px solid #888;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
 @media (max-width:500px) {
     #configuracoes{

@@ -43,6 +43,8 @@
 
     <script src="./js/estilizacao.js" defer></script>
 
+    <script src="./js/configuracoes.js" defer></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -84,7 +86,7 @@
                             <li><a href="#"><i class="fas fa-bell" style="color: gray;"></i>Notificações</a></li>
                             <li><a href="#"><i class="fas fa-lock" style="color: gray;"></i>Privacidade</a></li>
                             <li><a href="#"><i class="fas fa-shield-alt" style="color: gray;"></i>Segurança</a></li>
-                            <li><a href="#"><i class="fas fa-toggle-on" style="color: gray;"></i>Tema</a></li>
+                            <li><a href="#" id="tema-link"><i class="fas fa-toggle-on" style="color: gray;"></i>Tema</a></li>
                             <li><a href="#"><i class="fas fa-comment-alt" style="color: gray;"></i>Papel de parede de conversa</a></li>
                             <li><a href="#"><i class="fas fa-arrow-down" style="color: gray;"></i>Donwload automático de arquivos de mídia</a></li>
                             <li><a href="#"><i class="far fa-file" style="color: gray;"></i>Solicitar dados da conta</a></li>
@@ -94,6 +96,14 @@
                     </div>
                 </div>
             </div>
+            <div id="tema-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Este é um diálogo modal. Clique em "OK" ou "Cancelar" para fechá-lo.</p>
+                  <button id="okBtn">OK</button>
+                  <button id="cancelBtn">Cancelar</button>
+                </div>
+              </div>
         </div>
         <section class="side bg-white border-right " id="secaoPrincipal">
             <header class="d-flex">

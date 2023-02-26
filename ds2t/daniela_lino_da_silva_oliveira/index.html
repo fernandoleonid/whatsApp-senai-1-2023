@@ -12,26 +12,43 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/contatos.css">
+    <link rel="stylesheet" href="./css/menu_search.css">
     <title>WhatsApp Web</title>
 </head>
 
 <body>
     <header>
-        <div class="search__box">
+        <div class="search__box" id="search__box">
             <div class="search__itens">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="entrada__texto" placeholder="Pesquisar ou uniciar conversa..."></div>
+                <input type="text" class="search__entry" id="search__entry"
+                    placeholder="Pesquisar ou uniciar conversa...">
+            </div>
             <img src="./img/logo.png" alt="Logo da empresa" class="img__logo">
         </div>
     </header>
     <nav>
-        <div class="contatos__box">
-            <div class="perfil__usuario">
-                Usuário
+        <div class="contact__box" id="contact__box">
+            <div class="user__profile" id="user__profile">
+                <div class="search_box__contacts">
+                    <div class="search_group">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="search_contacts__entry" id="search_contacts__entry"
+                            placeholder="Achar alguém...">
+                    </div>
+                    <li><a href="#"><i class="fas fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="#">Mensagens lidas</a></li>
+                            <li><a href="#">Mensagens não lidas</a></li>
+                            <li><a href="#">Todas as mensagens</a></li>
+                        </ul>
+                    </li>
+                </div>
+
             </div>
-            <nav class="lista__contatos">
+            <section class="contacts__list" id="contacts__list">
                 contatos
-            </nav>
+            </section>
         </div>
     </nav>
     <main>
@@ -43,7 +60,7 @@
         </div>
 
     </main>
-    <section>SECTION</section>
+    <div class="message__entry">SECTION</div>
 </body>
 
 </html>

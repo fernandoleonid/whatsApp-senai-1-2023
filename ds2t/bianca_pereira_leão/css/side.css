@@ -4,7 +4,6 @@
 
 .side header {
     height: 60px;
-    background-color: #ededed;
 }
 
 .side header .profile-photo {
@@ -24,7 +23,6 @@
 }
 
 .side .search-bar {
-    background-color: #f7f7f7;
     height: 55px;
 }
 

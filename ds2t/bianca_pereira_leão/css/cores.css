@@ -1,0 +1,22 @@
+.backgroundClaroBody{
+    background-color: #d6dbd9;
+}
+
+.backgroundEscuroBody{
+    background-color: #111b21;
+}
+
+.backgroundClaroSideHeader{
+    background-color: #ededed;
+}
+.backgroundClaroSearchBar{
+    background-color: #f7f7f7;
+}
+
+.imgClara{
+    background: url(../img/bg.png) repeat;
+}
+
+.imgEscura{
+    background: url(../img/bg2.PNG);
+}

@@ -24,7 +24,7 @@
 }
 
 .chat .dialog {
-    background: url(../img/bg.png) repeat;
+
     display: flex;
     flex-direction: column-reverse;
     padding: 50px;

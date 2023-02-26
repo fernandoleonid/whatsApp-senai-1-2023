@@ -14,10 +14,8 @@ a{
 }
 
 body {
-    background-color: #d6dbd9;
     position: relative;
     overflow: hidden;
-
 }
 
 body::before {

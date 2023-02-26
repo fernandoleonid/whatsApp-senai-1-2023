@@ -62,9 +62,26 @@
 
 <body class="h-100 py-5 ">
     <main class="d-flex align-items-stretch  mx-auto">
-        <section class="side bg-white border-right ">
+        <div id="configuracoes" style="display:none;">
+            <header id="headerConfiguracoes">
+                <button>
+                    <i class="fas fa-arrow-left" id="back"></i>
+                </button>
+                <h3>Configurações</h3>
+            </header>
+           <div class="content-container-configuracoes">
+            <div class="me-container">
+                <img src="./img/WhatsApp Image 2022-10-03 at 15.00 1 (1).png" alt="Minha foto de perfil" id="perfilConfiguracoes">
+                <div class="text-me">
+                    <span class="font-weight-bold">bibis</span>
+                    <span class="text-secondary">15.10.22</span>
+                </div>
+            </div>
+           </div>
+        </div>
+        <section class="side bg-white border-right " id="secaoPrincipal">
             <header class="d-flex">
-                <div class="profile-photo rounded-circle my-auto ml-2 mr-auto">
+                <div class="profile-photo rounded-circle my-auto ml-2 mr-auto" id="divPerfil">
                     <img src="./img/WhatsApp Image 2022-10-03 at 15.00 1 (1).png" alt="Minha foto de perfil">
                 </div>
                 <nav>
@@ -85,7 +102,7 @@
                             <li><a class="dropdown-item" href="#">Catálogo</a></li>
                             <li><a class="dropdown-item" href="#">Mensagens favoritas</a></li>
                             <li><a class="dropdown-item" href="#">Etiquetas</a></li>
-                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarConfiguracoes()">Configurações</a></li>
                             <li><a class="dropdown-item" href="#">Desconectar</a></li>
                         </ul>
                     </div>
@@ -93,6 +110,8 @@
                 </nav>
 
             </header>
+
+             
             <div class="search-bar w-100 py-2 px-3">
                 <div class="input-group">
 

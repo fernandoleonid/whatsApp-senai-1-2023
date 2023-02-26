@@ -15,7 +15,7 @@ body {
 body::before {
     content: "";
     background-color: #009688;
-    height: 10%;
+    height: 18%;
     width: 100%;
     position: absolute;
     z-index: -1;
@@ -40,4 +40,66 @@ img {
     gap: 5px;
 }
 
-  
+#divPerfil{
+    margin-left: 16px;
+}
+
+#configuracoes{
+    background-color: #ffff;
+    height: 100vh;
+    width: 35vw;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+#headerConfiguracoes{
+    display: flex;
+    background-color: #008069;
+    height: 14%;
+    justify-content: start;
+    gap: 2vw;
+    padding-left: 1.65vw;
+    padding-top: 6vh;
+    color: #ffff;
+}
+
+#headerConfiguracoes button{
+    background-color: transparent;
+    border: none;
+    height: auto;
+}
+
+#back{
+    color: #ffff;
+    font-size: 20px;
+    
+}
+
+h3{
+    display: grid;
+    place-self: center;
+   cursor: context-menu;
+   font-weight: bold;
+}
+
+#perfilConfiguracoes{
+    width: 100px;
+}
+
+.me-container{
+    display: flex;
+    padding: 4%;
+    gap: 2vw;
+}
+
+.text-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width:500px) {
+    #configuracoes{
+        width: 100vw;
+    }
+}

@@ -5,20 +5,20 @@ const searchIcon = document.querySelector('#search');
 const arrowIcon = document.querySelector('#arrow');
 
 searchInput.addEventListener('focus', function () {
-    const iconWidth = searchIcon.offsetWidth;
-    const paddingLeft = iconWidth + 40;
-    searchInput.style.paddingLeft = `${paddingLeft}px`;
-    searchIcon.style.display = 'none';
-    arrowIcon.style.display = 'inline-block';
+  const iconWidth = searchIcon.offsetWidth;
+  const paddingLeft = iconWidth + 40;
+  searchInput.style.paddingLeft = `${paddingLeft}px`;
+  searchIcon.style.display = 'none';
+  arrowIcon.style.display = 'inline-block';
 });
 
 searchInput.addEventListener('blur', function () {
 
-    const iconWidth = searchIcon.offsetWidth;
-    const paddingLeft = iconWidth + 0;
-    searchInput.style.paddingLeft = `${paddingLeft}px`;
-    searchIcon.style.display = 'inline-block';
-    arrowIcon.style.display = 'none';
+  const iconWidth = searchIcon.offsetWidth;
+  const paddingLeft = iconWidth + 0;
+  searchInput.style.paddingLeft = `${paddingLeft}px`;
+  searchIcon.style.display = 'inline-block';
+  arrowIcon.style.display = 'none';
 });
 
 
@@ -29,7 +29,7 @@ searchInput.addEventListener('blur', function () {
 const emojiButton = document.querySelector('#emoji-picker-btn');
 const emojiList = document.querySelector('#emoji-list');
 const guardaEmoji = document.querySelector('#guarda-emoji');
-const emojis = ['😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊', '🎠','🚓','🚇','❤️','🧡','💛','💚','💙','💜','🤎','🖤'];
+const emojis = ['😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊', '🎠', '🚓', '🚇', '❤️', '🧡', '💛', '💚', '💙', '💜', '🤎', '🖤'];
 let isEmojiListVisible = false;
 
 emojiButton.addEventListener('click', () => {
@@ -56,3 +56,26 @@ emojis.forEach(emoji => {
   });
   emojiList.appendChild(span);
 });
+
+
+function mostrarConfiguracoes() {
+  var configuracoes = document.getElementById("configuracoes");
+  var conteudoOriginal = document.getElementById('secaoPrincipal')
+  if (configuracoes.style.display === "none") {
+    configuracoes.style.display = "block";
+    conteudoOriginal.style.display = 'none'
+  } else {
+    configuracoes.style.display = "none";
+  }
+}
+
+document.getElementById("back").addEventListener("click", function () {
+
+  var conteudoOriginal = document.getElementById("secaoPrincipal");
+
+  var configuracoes = document.getElementById("configuracoes");
+  configuracoes.style.display = "none";
+  conteudoOriginal.style.display = "block";
+});
+
+

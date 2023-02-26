@@ -78,77 +78,85 @@ chargeProfile();
 
 // AQUI TA DANDO A MERDA
 
-// }
+// let i = 0;
 
-//cria funcao englobando for e o createMessages que nela vai ter
-//contatos e nao no createMessages
+const fazerTudo = function (message) {
+  for (let i = 0; contatos[0].messages.length > i; i++) {
+    let array = [];
+    const createMessages = function () {
+      message = contatos[0].messages[i];
 
-for (let i = 0; contatos[0].messages.length > i; i++) {
-  const createMessages = function (message) {
-    message = contatos[0].messages[i];
-    let messagesConversations = document.createElement("div");
-    messagesConversations.classList.add(".messages__conversations");
+      let messagesConversations = document.createElement("div");
+      messagesConversations.classList.add("messages__conversations");
 
-    let messageSenderContainer = document.createElement("div");
-    messageSenderContainer.classList.add("message-sender-container");
+      let messageSenderContainer = document.createElement("div");
+      messageSenderContainer.classList.add("message-sender-container");
 
-    let messageSender = document.createElement("div");
-    messageSender.classList.add("message__sender");
-    messageSender.classList.add("tri-right");
-    messageSender.classList.add("left-top");
+      let messageSender = document.createElement("div");
+      messageSender.classList.add("message__sender");
+      messageSender.classList.add("tri-right");
+      messageSender.classList.add("left-top");
 
-    let messageReceiver = document.createElement("div");
-    messageReceiver.classList.add("message__receiver");
-    messageReceiver.classList.add("tri-right");
-    messageReceiver.classList.add("right-top");
+      let messageReceiver = document.createElement("div");
+      messageReceiver.classList.add("message__receiver");
+      messageReceiver.classList.add("tri-right");
+      messageReceiver.classList.add("right-top");
 
-    let messageContent = document.createElement("p");
-    messageContent.classList.add("message__content");
-    messageContent.textContent = message.content;
+      let messageContent = document.createElement("p");
+      messageContent.classList.add("message__content");
+      messageContent.textContent = message.content;
 
-    let messageTime = document.createElement("span");
-    messageTime.classList.add("message__time");
-    messageTime.textContent = message.timestamp;
+      let messageTime = document.createElement("span");
+      messageTime.classList.add("message__time");
+      messageTime.textContent = message.timestamp;
 
-    let messageReceiverContainer = document.createElement("div");
-    messageReceiverContainer.classList.add("message-receiver-container");
+      let messageReceiverContainer = document.createElement("div");
+      messageReceiverContainer.classList.add("message-receiver-container");
 
-    // if (message.sender == "me") {
-    //   console.log("alooooooo");
-    //   messageContent.classList.add("message__content");
-    //   messageContent.textContent = message.content;
+      if (message.sender == "me") {
+        messageContent.classList.add("message__content");
+        messageContent.textContent = message.content;
 
-    //   messageTime.classList.add("message__time");
-    //   messageTime.textContent = message.timestamp;
+        messageTime.classList.add("message__time");
+        messageTime.textContent = message.timestamp;
+        messageSender.append(messageContent, messageTime);
 
-    //   messageSender.append(messageContent, messageTime);
-    // } else {
-    //   console.log("sendererererer");
-    //   messageContent.classList.add("message__content");
-    //   messageContent.textContent = message.content;
+        // messagesConversations.removeChild(messageReceiver);
+      } else {
+        messageContent.classList.add("message__content");
+        messageContent.textContent = message.content;
 
-    //   messageTime.classList.add("message__time");
-    //   messageTime.textContent = message.timestamp;
-    //   messageReceiver.append(messageContent, messageTime);
-    // }
+        messageTime.classList.add("message__time");
+        messageTime.textContent = message.timestamp;
+        messageReceiver.append(messageContent, messageTime);
+      }
 
-    messageSender.append(messageContent, messageTime);
+      messageSenderContainer.append(messageSender);
+      messageReceiverContainer.append(messageReceiver);
 
-    // messageReceiver.append(messageContent, messageTime);
-    messageSenderContainer.append(messageSender);
-    // messageReceiverContainer.append(messageReceiver);
+      messagesConversations.append(
+        messageSenderContainer,
+        messageReceiverContainer
+      );
+      return messagesConversations;
+    };
+    array[i] = createMessages();
+    console.log(array[2]);
+    console.log(i);
+    console.log(array);
 
-    messagesConversations.append(
-      messageSenderContainer
-      // messageReceiverContainer
+    const messagesConversations = document.querySelector(
+      ".messages__conversations"
     );
-    return messagesConversations;
-  };
 
-  createMessages(message);
+    if (array.includes("undefined")) {
+      console.log("tem");
+    }
+    messagesConversations.appendChild(array[i]);
+  }
+};
 
-  console.log(i);
-}
+fazerTudo(contatos);
 
 const chargeMessages = function () {
   const handleClick = function (event) {
@@ -182,30 +190,6 @@ const chargeMessages = function () {
 
 chargeMessages();
 
-// const handleClick = function (event) {
-//   let text = event.currentTarget.innerText.split(`\n`)[0];
-
-//   let indice = 0;
-//   indice = contatos.findIndex((contato) => {
-//     return contato.name == text;
-//   });
-//   console.log(indice);
-
-//   console.log("MENSAGENS NNNNN" + contatos[indice].messages);
-// };
-
-// const chats = document.querySelectorAll(".chat");
-// chats.forEach((chat) => {
-//   chat.addEventListener("click", handleClick);
-// });
-
-// const object = contatos[0].messages;
-// const object = contatos[0].messages.length;
-// console.log(object);
-// console.log(object[0]);
-// console.log(object[0].content);
-
-// contatos.forEach((contato) => {
-//   // console.log(contato.messages);
-//   // console.log(contato);
-// });
+const object = contatos[0].messages.length;
+console.log(object);
+console.log(object[0]);

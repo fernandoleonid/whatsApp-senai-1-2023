@@ -11,12 +11,6 @@ body {
 }
 
 header {
-    background-color: #455a64;
-    height: 100vh;
-}
-
-main {
-    background-color: green;
     height: 100vh;
 }
 
@@ -34,7 +28,8 @@ main {
     gap: 50px;
 }
 
-header img {
+header img,
+main img {
     width: 60px;
     height: 60px;
 }
@@ -61,8 +56,9 @@ header span {
 }
 
 .contact {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #455a64;
-    color: #fff;
+    color: #000;
     display: flex;
     align-items: center;
     height: 92px;
@@ -71,6 +67,44 @@ header span {
     border-bottom: 1px solid #000;
 }
 
+.contact__container {
+    cursor: pointer;
+}
+
 .contact__image {
     border-radius: 50%;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 'header''main''footer';
+    grid-template-rows: 85px 1fr 85px;
+    background-color: green;
+    height: 100vh;
+}
+
+.main__header {
+    background-color: #263238;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 65px 1fr 65px;
+    gap: 20px;
+    padding: 10px 20px;
+    align-items: center;
+    color: #b0bec5;
+}
+
+.main__icons {
+    display: flex;
+    font-size: 24px;
+    color: #b0bec5;
+    gap: 40px;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main__footer {
+    grid-area: footer;
 }

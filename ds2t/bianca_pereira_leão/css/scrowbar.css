@@ -20,3 +20,11 @@
     background-color: #ccc; 
   }
   
+  #configuracoes::-webkit-scrollbar {
+    width: 6px; 
+  }
+  
+  #configuracoes::-webkit-scrollbar-thumb {
+    background-color: #ccc; 
+  }
+  

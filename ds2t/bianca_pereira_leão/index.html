@@ -24,6 +24,7 @@
 
     <!-- link arquivos css -->
 
+    <link rel="stylesheet" href="./css/configuracoes.css">
     <link rel="stylesheet" href="css/side.css">
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/whatsappWeb.css">
@@ -31,8 +32,6 @@
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/chat.css">
     <link rel="stylesheet" href="./css/scrowbar.css">
-
-
 
 
     <!-- link arquivos js -->
@@ -62,22 +61,29 @@
 
 <body class="h-100 py-5 ">
     <main class="d-flex align-items-stretch  mx-auto">
-        <div id="configuracoes" style="display:none;">
+        <div id="configuracoes" style="display:none;" class="overflow-y-auto">
             <header id="headerConfiguracoes">
                 <button>
                     <i class="fas fa-arrow-left" id="back"></i>
                 </button>
                 <h3>Configurações</h3>
             </header>
-           <div class="content-container-configuracoes">
-            <div class="me-container">
-                <img src="./img/WhatsApp Image 2022-10-03 at 15.00 1 (1).png" alt="Minha foto de perfil" id="perfilConfiguracoes">
-                <div class="text-me">
-                    <span class="font-weight-bold">bibis</span>
-                    <span class="text-secondary">15.10.22</span>
+            <div class="content-container-configuracoes">
+                <div class="me-container">
+                    <img src="./img/WhatsApp Image 2022-10-03 at 15.00 1 (1).png" alt="Minha foto de perfil"
+                        id="perfilConfiguracoes">
+                    <div class="text-me">
+                        <span class="font-weight-bold">bibis</span>
+                        <span class="text-secondary">15.10.22 <i class="far fa-heart"></i></span>
+                    </div>
+                    <div class="main-content">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-bell" style="color: gray;"></i></a></li>
+                            <li><a href="#"><i class="fas fa-lock" style="color: gray;"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-           </div>
         </div>
         <section class="side bg-white border-right " id="secaoPrincipal">
             <header class="d-flex">
@@ -102,7 +108,8 @@
                             <li><a class="dropdown-item" href="#">Catálogo</a></li>
                             <li><a class="dropdown-item" href="#">Mensagens favoritas</a></li>
                             <li><a class="dropdown-item" href="#">Etiquetas</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="mostrarConfiguracoes()">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarConfiguracoes()">Configurações</a>
+                            </li>
                             <li><a class="dropdown-item" href="#">Desconectar</a></li>
                         </ul>
                     </div>
@@ -111,7 +118,7 @@
 
             </header>
 
-             
+
             <div class="search-bar w-100 py-2 px-3">
                 <div class="input-group">
 
@@ -142,7 +149,7 @@
             <footer class="d-flex">
 
 
-                
+
                 <a href="#" class="icon my-auto mx-4" id="guarda-emoji">
                     <div id="emoji-list"></div>
                     <i class="far fa-grin text-secondary my-auto" id="emoji-picker-btn"></i>

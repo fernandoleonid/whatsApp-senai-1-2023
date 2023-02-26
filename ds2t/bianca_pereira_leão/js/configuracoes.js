@@ -15,7 +15,7 @@ window.onclick = function(event) {
     temaModal.style.display = "none";
   }
 }
-var span = temaModal.getElementsByClassName("close")[0];
+var span = temaModal.getElementsByClassName("cancel-button")[0];
 span.onclick = function() {
   temaModal.style.display = "none";
 }

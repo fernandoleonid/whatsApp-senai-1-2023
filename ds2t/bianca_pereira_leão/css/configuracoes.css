@@ -4,6 +4,8 @@
     width: 35vw;
     border-radius: 5px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #headerConfiguracoes{
@@ -42,6 +44,7 @@ h3{
 
 .me-container{
     display: flex;
+    flex-direction: column;
     padding: 4%;
     gap: 2vw;
 }
@@ -54,6 +57,32 @@ h3{
 
 ul{
     list-style: none;
+}
+
+
+.content-container-configuracoes{
+    display: flex;
+    flex-direction: column;
+    background-color: tomato;
+    height: 100%;
+}
+
+.me-container{
+   background-color: gold;
+}
+
+.main-content {
+  background-color: palevioletred;
+}
+
+.main-content ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme{
+    display: flex;
+    gap: 2vw;
 }
 
 @media (max-width:500px) {

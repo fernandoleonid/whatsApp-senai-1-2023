@@ -12,7 +12,7 @@ body{
     "nav main main"
     "nav section section";
     grid-template-rows: 100px 1fr 1fr 100px ;
-    grid-template-columns: 10%;
+    grid-template-columns: 20%;
 }
 
 header{
@@ -34,7 +34,6 @@ main{
 
 nav{
     grid-area: nav;
-    background-color: darkgreen;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -63,21 +63,25 @@ ul{
 .content-container-configuracoes{
     display: flex;
     flex-direction: column;
-    background-color: tomato;
-    height: 100%;
 }
 
-.me-container{
-   background-color: gold;
-}
-
-.main-content {
-  background-color: palevioletred;
+.main-content ul li{
+  border-bottom: 1px solid #ccc ;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  
 }
 
 .main-content ul{
   display: flex;
   flex-direction: column;
+  padding-left: 0px;
+  
+}
+.main-content ul li a{
+ display: flex;
+ gap: 1vw;
+
 }
 
 .aboutme{

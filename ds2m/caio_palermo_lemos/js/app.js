@@ -33,6 +33,7 @@ const chargeContacts = function () {
   const chatsContainer = document.querySelector(".chats__chats-container");
   const chats = contatos.map(createChat);
 
+  console.log("CHATS: " + chats);
   chatsContainer.replaceChildren(...chats);
 };
 
@@ -78,87 +79,96 @@ chargeProfile();
 
 // AQUI TA DANDO A MERDA
 
-// let i = 0;
-
 const fazerTudo = function (message) {
-  for (let i = 0; contatos[0].messages.length > i; i++) {
-    let array = [];
-    const createMessages = function () {
-      message = contatos[0].messages[i];
-
-      let messagesConversations = document.createElement("div");
-      messagesConversations.classList.add("messages__conversations");
-
-      let messageSenderContainer = document.createElement("div");
-      messageSenderContainer.classList.add("message-sender-container");
-
-      let messageSender = document.createElement("div");
-      messageSender.classList.add("message__sender");
-      messageSender.classList.add("tri-right");
-      messageSender.classList.add("left-top");
-
-      let messageReceiver = document.createElement("div");
-      messageReceiver.classList.add("message__receiver");
-      messageReceiver.classList.add("tri-right");
-      messageReceiver.classList.add("right-top");
-
-      let messageContent = document.createElement("p");
-      messageContent.classList.add("message__content");
-      messageContent.textContent = message.content;
-
-      let messageTime = document.createElement("span");
-      messageTime.classList.add("message__time");
-      messageTime.textContent = message.timestamp;
-
-      let messageReceiverContainer = document.createElement("div");
-      messageReceiverContainer.classList.add("message-receiver-container");
-
-      if (message.sender == "me") {
-        messageContent.classList.add("message__content");
-        messageContent.textContent = message.content;
-
-        messageTime.classList.add("message__time");
-        messageTime.textContent = message.timestamp;
-        messageSender.append(messageContent, messageTime);
-
-        // messagesConversations.removeChild(messageReceiver);
-      } else {
-        messageContent.classList.add("message__content");
-        messageContent.textContent = message.content;
-
-        messageTime.classList.add("message__time");
-        messageTime.textContent = message.timestamp;
-        messageReceiver.append(messageContent, messageTime);
-      }
-
-      messageSenderContainer.append(messageSender);
-      messageReceiverContainer.append(messageReceiver);
-
-      messagesConversations.append(
-        messageSenderContainer,
-        messageReceiverContainer
-      );
-      return messagesConversations;
-    };
-    array[i] = createMessages();
-    console.log(array[2]);
-    console.log(i);
-    console.log(array);
-
-    const messagesConversations = document.querySelector(
-      ".messages__conversations"
+  const fazerLoop = function (indice) {
+    const messagesConversationsContainer = document.querySelector(
+      ".messages__conversations-container"
     );
+    for (let i = 0; contatos[indice].messages.length > i; i++) {
+      let array = [];
+      const createMessages = function () {
+        message = contatos[indice].messages[i];
 
-    if (array.includes("undefined")) {
-      console.log("tem");
+        let messagesConversations = document.createElement("div");
+        messagesConversations.classList.add("messages__conversations");
+
+        let messageSenderContainer = document.createElement("div");
+        messageSenderContainer.classList.add("message-sender-container");
+
+        let messageSender = document.createElement("div");
+        messageSender.classList.add("message__sender");
+        messageSender.classList.add("tri-right");
+        messageSender.classList.add("left-top");
+
+        let messageReceiver = document.createElement("div");
+        messageReceiver.classList.add("message__receiver");
+        messageReceiver.classList.add("tri-right");
+        messageReceiver.classList.add("right-top");
+
+        let messageContent = document.createElement("p");
+        messageContent.classList.add("message__content");
+        messageContent.textContent = message.content;
+
+        let messageTime = document.createElement("span");
+        messageTime.classList.add("message__time");
+        messageTime.textContent = message.timestamp;
+
+        let messageReceiverContainer = document.createElement("div");
+        messageReceiverContainer.classList.add("message-receiver-container");
+
+        if (message.sender == "me") {
+          messageContent.classList.add("message__content");
+          messageContent.textContent = message.content;
+
+          messageTime.classList.add("message__time");
+          messageTime.textContent = message.timestamp;
+          messageSender.replaceChildren(messageContent, messageTime);
+
+          messageReceiverContainer.classList.add("none");
+        } else {
+          messageContent.classList.add("message__content");
+          messageContent.textContent = message.content;
+
+          messageTime.classList.add("message__time");
+          messageTime.textContent = message.timestamp;
+          messageReceiver.replaceChildren(messageContent, messageTime);
+
+          messageSenderContainer.classList.add("none");
+        }
+
+        messageSenderContainer.replaceChildren(messageSender);
+        messageReceiverContainer.replaceChildren(messageReceiver);
+
+        messagesConversations.replaceChildren(
+          messageSenderContainer,
+          messageReceiverContainer
+        );
+
+        return messagesConversations;
+      };
+      array[i] = createMessages();
+
+      const messagesConversations = document.querySelector(
+        ".messages__conversations"
+      );
+
+      array[i] = createMessages();
+
+      let filtro = array.filter((item) => {
+        return item;
+      });
+      console.log("arrayadwe: " + filtro);
+
+      filtro.forEach((item) => {
+        // console.log("item: " + item.);
+      });
+
+      messagesConversations.replaceChildren(...filtro);
+
+      // messagesConversations.append(array[i]);
+      // messagesConversations.replaceChildren(...array);
     }
-    messagesConversations.appendChild(array[i]);
-  }
-};
-
-fazerTudo(contatos);
-
-const chargeMessages = function () {
+  };
   const handleClick = function (event) {
     let text = event.currentTarget.innerText.split(`\n`)[0];
 
@@ -168,18 +178,9 @@ const chargeMessages = function () {
     });
     console.log(indice);
 
-    const object = contatos[indice].messages;
-    console.log("MENSAGENS AAAA" + object[0]);
-
-    const messagesConversations = document.querySelector(
-      ".messages__conversations"
-    );
-    const mensagens = contatos.map(createMessages);
-    messagesConversations.replaceChildren(`INDICE ${indice}`);
-    messagesConversations.replaceChildren(...mensagens);
-    console.log("MENSAGEM FINAL: " + mensagens[0]);
-
     showContactMessages(contatos);
+
+    fazerLoop(indice);
   };
 
   const chats = document.querySelectorAll(".chat");
@@ -188,8 +189,4 @@ const chargeMessages = function () {
   });
 };
 
-chargeMessages();
-
-const object = contatos[0].messages.length;
-console.log(object);
-console.log(object[0]);
+fazerTudo(contatos);

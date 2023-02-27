@@ -316,3 +316,7 @@ img {
 .interactions__send-mesage::placeholder {
   color: var(--text-subcolor);
 }
+
+.none {
+  display: none;
+}

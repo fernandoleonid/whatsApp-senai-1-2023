@@ -26,6 +26,31 @@
     background-color: #425F57;
     height: 70px;
 }
+.card{
+    display: flex;
+    color: #749F82;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.4);
+    cursor: pointer;
+    padding-left: 10px;
+    height: 60px;
+    align-items: center;
+}
+.card-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.card-identification{
+    padding-left: 20px;
+}
+.card-title{
+    font-weight: 500;
+}
+.time{
+    align-self: flex-start;
+    margin-left: 12rem;
+    margin-top: 2px;
+}
 
 @media (max-width: 640px){
     .chat{

@@ -157,13 +157,18 @@ const fazerTudo = function (message) {
       let filtro = array.filter((item) => {
         return item;
       });
-      console.log("arrayadwe: " + filtro);
 
-      filtro.forEach((item) => {
-        // console.log("item: " + item.);
+      let teste = array.forEach((item, index, array) => {
+        console.log("item: " + item);
+        console.log("index: " + index);
+        array.filter((valor) => {
+          console.log("valor: " + valor);
+          return valor;
+        });
+        array += array[index + 1];
+        console.log("array: " + array);
       });
-
-      messagesConversations.replaceChildren(...filtro);
+      messagesConversations.replaceChildren(...array);
 
       // messagesConversations.append(array[i]);
       // messagesConversations.replaceChildren(...array);

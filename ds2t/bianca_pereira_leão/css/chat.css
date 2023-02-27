@@ -1,6 +1,5 @@
 .chat header {
     height: 60px;
-    background-color: #ededed;
 }
 
 .chat {
@@ -83,7 +82,6 @@
 
 .chat footer {
     height: 60px;
-    background-color: #ededed;
 }
 
 .chat footer .icon {

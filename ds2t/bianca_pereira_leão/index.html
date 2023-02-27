@@ -59,7 +59,7 @@
 </head>
 
 
-<body class="h-100 py-5 backgroundClaroBody">
+<body class="h-100 py-5 backgroundClaroBody" id="bodyId">
     <main class="d-flex align-items-stretch  mx-auto">
         <div id="configuracoes" style="display:none;" class="overflow-y-auto">
             <header id="headerConfiguracoes">
@@ -120,7 +120,7 @@
             </div>
         </div>
         <section class="side bg-white border-right " id="secaoPrincipal">
-            <header class="d-flex backgroundClaroSideHeader">
+            <header class="d-flex backgroundClaroSideHeader" id="sideHeader">
                 <div class="profile-photo rounded-circle my-auto ml-2 mr-auto" id="divPerfil">
                     <img src="./img/WhatsApp Image 2022-10-03 at 15.00 1 (1).png" alt="Minha foto de perfil">
                 </div>
@@ -153,7 +153,7 @@
             </header>
 
 
-            <div class="search-bar w-100 py-2 px-3 backgroundClaroSearchBar">
+            <div class="search-bar w-100 py-2 px-3 backgroundClaroSearchBar"  id="search-bar">
                 <div class="input-group">
 
                     <div class="input-group-prepend position-absolute search-button-wrapper">
@@ -176,11 +176,11 @@
 
         <section class="chat flex-fill bg-light d-flex flex-column" id="chatContainer">
 
-            <header class="d-flex" id="headerChat"></header>
+            <header class="d-flex backgroundClaroSideHeader" id="headerChat"></header>
 
             <section class="dialog flex-fill overflow-x-auto imgClara" id="messages"></section>
 
-            <footer class="d-flex">
+            <footer class="d-flex backgroundClaroSideHeader" id="chatFooter">
 
 
 

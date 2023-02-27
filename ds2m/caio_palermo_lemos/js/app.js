@@ -196,16 +196,38 @@ const fazerTudo = function (message) {
 
 fazerTudo(contatos);
 
-const teste = function () {
+const alternarBackground = function () {
   const chatsContainer = document.querySelector(".chats__chats-container");
   const chats = document.querySelector(".chats");
   const chatsFilter = document.querySelector(".chats__filter");
   const messages = document.querySelector(".messages");
+  const messagesReceiver = document.querySelector(".messages__receiver");
+  const messagesConversationsContainer = document.querySelector(
+    ".messages__conversations-container"
+  );
+  const messagesInteractions = document.querySelector(
+    ".messages__interactions"
+  );
+  const messagesBackground = document.querySelector(
+    ".messages__background-default"
+  );
+
+  messagesReceiver.classList.add("none");
+  messagesConversationsContainer.classList.add("none");
+  messagesInteractions.classList.add("none");
 
   const handleClick = function () {
     if (window.matchMedia("(max-width: 980px)").matches) {
       chats.classList.add("none"); //certo
-      messages.classList.add('block')
+      messages.classList.add("block"); //certo
+      messagesReceiver.classList.add("block");
+      messagesConversationsContainer.classList.add("block");
+      messagesInteractions.classList.add("block");
+    } else {
+      messagesReceiver.classList.add("block");
+      messagesConversationsContainer.classList.add("block");
+      messagesInteractions.classList.add("block");
+      messagesBackground.classList.add("none");
     }
   };
 
@@ -218,24 +240,4 @@ const teste = function () {
   chatsContainer.addEventListener("click", handleClick);
 };
 
-teste();
-
-const alternarBlockNone = function() {
-
-  const messagesBackground = document.querySelector('.messages__background-default')
-  // .messages__background-default {
-  //   display: block;
-  // }
-  
-  // .messages__receiver {
-  //   display: none !important;
-  // }
-  
-  // .messages__conversations-container {
-  //   display: none !important;
-  // }
-  
-  // .messages__interactions {
-  //   display: none !important;
-  // }
-}
+alternarBackground();

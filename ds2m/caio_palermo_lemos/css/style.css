@@ -2,7 +2,8 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-img, i:hover {
+img,
+i:hover {
   cursor: pointer;
 }
 
@@ -122,23 +123,24 @@ img {
   height: 99.5%;
 }
 
- .messages__background-default {
+.messages__background-default {
   display: block;
 }
 
 .messages__receiver {
-  display: none !important;
+  display: none;
 }
 
 .messages__conversations-container {
-  display: none !important;
+  display: none;
 }
 
 .messages__interactions {
-  display: none !important;
+  display: none;
 }
 
-.chats__user-interactions i,span:hover {
+.chats__user-interactions i,
+span:hover {
   cursor: pointer;
 }
 

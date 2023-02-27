@@ -5,12 +5,20 @@
     min-height: 100vh;
   }
 
-  .chats__filter {
+  .messages__background-default {
     display: none;
   }
 
-  .messages {
-    display: none;
+  .messages__receiver {
+    display: block;
+  }
+
+  .messages__conversations-container {
+    display: block;
+  }
+
+  .messages__interactions {
+    display: block;
   }
 
   .chats__profile-options {
@@ -40,5 +48,9 @@
     font-size: 1.5rem;
     padding: 12px 0px;
     background-color: var(--secondary-color);
+  }
+
+  .filter__input {
+    width: 75vw;
   }
 }

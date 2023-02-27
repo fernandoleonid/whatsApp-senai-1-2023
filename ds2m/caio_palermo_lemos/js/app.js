@@ -195,3 +195,27 @@ const fazerTudo = function (message) {
 };
 
 fazerTudo(contatos);
+
+const teste = function () {
+  const chatsContainer = document.querySelector(".chats__chats-container");
+  const chats = document.querySelector(".chats");
+  const chatsFilter = document.querySelector(".chats__filter");
+  const messages = document.querySelector(".messages");
+
+  const handleClick = function () {
+    if (window.matchMedia("(max-width: 980px)").matches) {
+      chats.classList.add("none"); //certo
+      messages.classList.add('block')
+    }
+  };
+
+  if (window.matchMedia("(min-width: 980px)").matches) {
+    chatsContainer.classList.remove("none");
+    chats.classList.remove("none");
+    chatsFilter.classList.remove("none");
+  }
+
+  chatsContainer.addEventListener("click", handleClick);
+};
+
+teste();

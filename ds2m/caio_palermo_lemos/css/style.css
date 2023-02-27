@@ -123,10 +123,9 @@ img {
 }
 
  .messages__background-default {
-  display: none;
+  display: block;
 }
 
-/*
 .messages__receiver {
   display: none !important;
 }
@@ -137,7 +136,7 @@ img {
 
 .messages__interactions {
   display: none !important;
-} */
+}
 
 .chats__user-interactions i,span:hover {
   cursor: pointer;
@@ -358,9 +357,9 @@ img {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .block {
-  display: block;
+  display: block !important;
 }

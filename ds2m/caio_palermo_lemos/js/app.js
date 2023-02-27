@@ -219,3 +219,23 @@ const teste = function () {
 };
 
 teste();
+
+const alternarBlockNone = function() {
+
+  const messagesBackground = document.querySelector('.messages__background-default')
+  // .messages__background-default {
+  //   display: block;
+  // }
+  
+  // .messages__receiver {
+  //   display: none !important;
+  // }
+  
+  // .messages__conversations-container {
+  //   display: none !important;
+  // }
+  
+  // .messages__interactions {
+  //   display: none !important;
+  // }
+}

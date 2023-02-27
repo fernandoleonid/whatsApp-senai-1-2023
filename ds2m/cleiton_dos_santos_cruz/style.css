@@ -64,7 +64,6 @@ header span {
 
 .contact {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--backContact__color);
     color: #000;
     display: flex;
     align-items: center;
@@ -72,10 +71,11 @@ header span {
     padding: 10px 15px;
     gap: 30px;
     border-bottom: 1px solid #000;
+    cursor: pointer;
 }
 
-.contact__container {
-    cursor: pointer;
+.contact:hover {
+    border: 5px solid #000;
 }
 
 .contact__image {
@@ -85,7 +85,7 @@ header span {
 main {
     display: grid;
     grid-template-areas: 'header''main''footer';
-    grid-template-rows: 85px 1fr 85px;
+    grid-template-rows: 85px 1fr 65px;
     background-color: green;
     height: 100vh;
 }
@@ -115,4 +115,6 @@ main {
 .main__footer {
     grid-area: footer;
     background-color: var(--primary__color);
+    display: grid;
+    grid-template-columns: ;
 }

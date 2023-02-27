@@ -80,8 +80,12 @@ body{
     width: 100%;
     gap: 30px;
     border: 1px solid #0005;
+    box-shadow: inset 0 0 20px #0005;
+}
+.contact__container_selected{
     box-shadow: inset 0 0 10px #fff2;
 }
+
 .contact__text{
     display: flex;
     flex-direction: column;

@@ -18,6 +18,19 @@
     height: 869px;
     background: #F5FFFB;
     display: flex;
+    align-items: center;
+    place-content: center;
+}
+.miss{
+    color: #749F82;
+    font-size: 1rem;
+    text-align: center;
+}
+.now{
+    color: #425F57;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
 }
 .avatar{
     display: grid;
@@ -51,6 +64,7 @@
     margin-left: 12rem;
     margin-top: 2px;
 }
+
 
 @media (max-width: 640px){
     .chat{

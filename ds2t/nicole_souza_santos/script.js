@@ -22,16 +22,17 @@ const criarContatos = (contatos) => {
     cardMessage.textContent = contatos.description
 
     cardIdentificador.append(cardTitle, cardMessage)
+    console.log(cardMessage)
 
-    // const time = document.createElement('span')
+
+    const time = document.createElement('span')
     // time.classList.add('time')
-    // time.textContent = contatos.messages.time
+    // time.textContent = contatos.messages['time']
+    // onsole.log(time)
 
-    card.append(foto, cardIdentificador)
+    card.append(foto, cardIdentificador, time)
     return card
 }
-
-
 
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
@@ -40,13 +41,17 @@ const carregarCards = () => {
     container.replaceChildren(...cards)
 }
 
+const carregarMensagens = () => {
+
+}
+
 carregarCards()
 
 
 
-// carregue e exiba contatos primeiro
+
+// criar logica para horario
 // exibir conversa
 // troca de tema
-// criar logica para horario
 // comece trabalhar na versão mobile seguindo essa mesma lógica
 // vc consegue (vc precisa pq não tem saida :))

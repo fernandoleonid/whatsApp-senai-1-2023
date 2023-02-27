@@ -18,9 +18,8 @@ body {
     overflow: hidden;
 }
 
-body::before {
+.header-body {
     content: "";
-    background-color: #009688;
     height: 18%;
     width: 100%;
     position: absolute;

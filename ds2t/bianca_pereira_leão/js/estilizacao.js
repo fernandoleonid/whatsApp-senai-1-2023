@@ -79,3 +79,18 @@ document.getElementById("back").addEventListener("click", function () {
 });
 
 
+// função para permissão de audio usando navigator.mediaDevices
+
+const btnMicrophone = document.getElementById("btn-microphone");
+
+btnMicrophone.addEventListener("click", () => {
+    navigator.mediaDevices.getUserMedia({audio: true})
+    .then(stream => {
+        
+    })
+    .catch(error => {
+        
+    });
+});
+
+

@@ -6,6 +6,22 @@
     background-color: #111b21;
 }
 
+.bgWhiteUl{
+    background-color: #ffff;
+}
+.bgdarkUl{
+    background-color: #111b21;
+}
+.bgdarkUl:hover{
+    background-color: #202c33;
+}
+.bgWhiteUl:hover{
+    background-color: #f1f1f1;
+}
+
+.backgroudGreenHeaderBody{
+    background-color: #009688;
+}
 .backgroundClaroSideHeader{
     background-color: #ededed;
 }

@@ -38,7 +38,9 @@ const headerChat = document.getElementById('headerChat')
 const chatFooter = document.getElementById('chatFooter')
 const chatContainer = document.getElementById('chatContainer')
 const searchBar = document.getElementById('search-bar')
+const headerBody = document.getElementById('headerBody')
 const okButton = document.querySelector('.ok-button');
+const ul = document.getElementById('listaId')
 
 okButton.addEventListener('click', function() {
   const input = document.querySelector('input[name="cor"]:checked');
@@ -58,6 +60,8 @@ okButton.addEventListener('click', function() {
     chatContainer.classList.add('backgroundEscuroSideHeader')
     side.classList.add('backgroundEscuroBody')
     body.classList.add('backgroundEscuroBody');
+    headerBody.classList.remove('backgroudGreenHeaderBody')
+    headerBody.classList.add('backgroundEscuroBody')
     messagesGroup.classList.add('imgEscura');
     modalContent.id = 'backgroundColorModalContent2'
 
@@ -77,6 +81,8 @@ okButton.addEventListener('click', function() {
     chatContainer.classList.add('backgroundEscuroSideHeader')
     body.classList.remove('backgroundEscuroBody');
     body.classList.add('backgroundClaroBody');
+    headerBody.classList.add('backgroudGreenHeaderBody')
+    headerBody.classList.remove('backgroundEscuroBody')
     messagesGroup.classList.add('imgClara');
     modalContent.id = 'backgroundColorModalContent'
   }

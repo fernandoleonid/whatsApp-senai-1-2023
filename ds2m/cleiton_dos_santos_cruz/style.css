@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary__color: #263238;
+    --font__color: #b0bec5;
+    --backContact__color: #455a64;
+}
+
 body {
     display: grid;
     grid-template-areas: 'header main';
@@ -12,10 +18,11 @@ body {
 
 header {
     height: 100vh;
+    background-color: var(--backContact__color);
 }
 
 .panel__header {
-    background-color: #263238;
+    background-color: var(--primary__color);
     padding: 10px 16px;
     display: flex;
     flex-direction: row;
@@ -36,7 +43,7 @@ main img {
 
 header span {
     font-size: 24px;
-    color: #b0bec5;
+    color: var(--font__color);
 }
 
 .panel__header__finder {
@@ -57,7 +64,7 @@ header span {
 
 .contact {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #455a64;
+    background-color: var(--backContact__color);
     color: #000;
     display: flex;
     align-items: center;
@@ -84,20 +91,20 @@ main {
 }
 
 .main__header {
-    background-color: #263238;
+    background-color: var(--primary__color);
     grid-area: header;
     display: grid;
     grid-template-columns: 65px 1fr 65px;
     gap: 20px;
     padding: 10px 20px;
     align-items: center;
-    color: #b0bec5;
+    color: var(--font__color);
 }
 
 .main__icons {
     display: flex;
     font-size: 24px;
-    color: #b0bec5;
+    color: var(--font__color);
     gap: 40px;
 }
 
@@ -107,4 +114,5 @@ main {
 
 .main__footer {
     grid-area: footer;
+    background-color: var(--primary__color);
 }

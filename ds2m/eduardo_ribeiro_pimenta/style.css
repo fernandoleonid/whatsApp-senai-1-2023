@@ -6,26 +6,37 @@
 .pure-g {
     flex-flow: nowrap;
 }
+
+
 body{
     height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 300;
+    
+}
+h5{
+    font-weight: 400;
 }
 
 #nav{
-   height: 100%;
-   min-width: 300px;
-   max-width: 500px;
+    height: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    border-right: 0.5px solid rgb(77, 76, 76);
+
 }
 #nav__header{
     min-height: 70px;
     height: 10vh;
-    background-color: #26242b;
+    background-color: #2A2F33;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 .nav__main_image{
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 60px;
+    min-width: 60px;
     height: 8vh;
     display: grid;
     place-items: center;
@@ -34,11 +45,12 @@ body{
 }
 #nav__header_image:hover{
     cursor: pointer;
+    opacity: 60%;
 }
 
 #nav__header_image{
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 60px;
+    min-width: 60px;
     height: 7vh;
     display: grid;
     place-items: center;
@@ -69,8 +81,12 @@ body{
     cursor: pointer;
 }
 
+.nav__icons i:hover{
+    opacity: 60%;
+}
+
 #nav__main{
-    background-color: #5a5468;
+    background-color: #131C21;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -78,12 +94,13 @@ body{
 }
 
 .contact__container:hover{
-    background-color: #4b4656;
+    background-color: #384043;
     width: 100%;
 }
 .contact__container{
     display: flex;
     flex-direction: row;
+    min-height: 90px;
     align-items: center;
     height: 100px;
     width: 95%;
@@ -107,4 +124,24 @@ body{
 .contact__name{
     color: #fff;
     font-size: 1.2rem;
+}
+
+#main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    background-color: #2A2F33;
+    min-height: 70px;
+    height: 12vh;
+}
+.main{
+    height: 100%;
+    background-color:  #0C1417;
+}
+.footer{
+    height: 9vh;
+    background-color: #1C2427;
 }

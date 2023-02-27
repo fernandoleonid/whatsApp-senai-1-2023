@@ -30,6 +30,7 @@ function closeTemaModal() {
 // ação do ok-button
 
 const messagesGroup = document.getElementById('messages')
+const modalContent = document.getElementById('backgroundColorModalContent')
 
 const okButton = document.querySelector('.ok-button');
 
@@ -38,9 +39,12 @@ okButton.addEventListener('click', function() {
   if (input && input.value === 'escuro') {
     messagesGroup.classList.add('imgEscura');
     messagesGroup.classList.remove('imgClara');
+    modalContent.id = 'backgroundColorModalContent2'
+
   } else {
     messagesGroup.classList.add('imgClara');
     messagesGroup.classList.remove('imgEscura');
+    modalContent.id = 'backgroundColorModalContent'
   }
   closeTemaModal();
 });

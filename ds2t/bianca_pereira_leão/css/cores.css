@@ -20,3 +20,10 @@
 .imgEscura{
     background: url(../img/bg2.PNG);
 }
+
+#backgroundColorModalContent{
+    background-color: white;
+  }
+#backgroundColorModalContent2{
+    background-color: #3b4a54;
+  }

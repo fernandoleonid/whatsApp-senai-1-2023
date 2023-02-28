@@ -1,1 +1,6 @@
-bianca_pereira_leão/
+# WhatsApp Web Clone 
+
+![Imagem do Projeto](./img/projetoFundoClaro.PNG)
+
+
+

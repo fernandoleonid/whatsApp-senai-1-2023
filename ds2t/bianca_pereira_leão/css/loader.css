@@ -62,7 +62,7 @@
     bottom: 0;
     width: 0%;
     background: linear-gradient(to right, #009688, #009688);
-    animation: fill 3s linear forwards;
+    animation: fill 2.9s linear forwards;
   }
   
   @keyframes fill {

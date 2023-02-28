@@ -60,7 +60,7 @@ const criaListaMensagem = (mensagem) => {
 
   const lastMensagem = document.createElement('p')
   lastMensagem.classList.add('last-message')
-  lastMensagem.classList.add('text-black-50')
+  lastMensagem.classList.add('text-secondary')
   lastMensagem.classList.add('pb-3')
   lastMensagem.classList.add('mb-1')
   lastMensagem.textContent = lastMessageContent

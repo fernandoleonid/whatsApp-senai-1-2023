@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    height: 85px;
+    background-color: #00a884; 
+}
+
+.container_search{
+    flex-direction: row;
+    display: flex;
+    height: 50px;
+    width: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2fr);
+    flex-direction: column; 
+    gap: 5px;
+    padding: 16px;
+    border: 1px solid grey; 
+}
+
+.card{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+    width: 45%;
+    gap: 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px #0010;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card__image{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.card__titulo{
+    font-size: 1.25rem;
+}
+
+.card__profissao{
+    font-size: 1.15rem;
+    text-align: justify;
+}
+
+footer{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    width: 100%;
+    color: black;
+    gap: 12px;
+    height: 50px;
+    background-color: #00a884; 
+} 
+
+@media(max-width: 640px) {
+
+    /* header{
+
+    } */
+}

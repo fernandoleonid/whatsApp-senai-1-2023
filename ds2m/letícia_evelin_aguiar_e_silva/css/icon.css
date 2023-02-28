@@ -1,0 +1,38 @@
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 15px; 
+}
+.icon__menu{
+    display: flex;
+    width: 190px;  
+}
+
+.mobile{
+    display: none;
+}
+.mobile__title{
+    display: none;
+}
+
+
+@media(max-width: 640px){
+.icon{
+    display: none;
+}
+.mobile{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding-left: 15px; 
+    color: white;
+}
+.mobile__title{
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    width: 150px;
+}
+
+}

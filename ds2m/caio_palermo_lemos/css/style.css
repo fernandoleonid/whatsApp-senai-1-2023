@@ -205,8 +205,10 @@ span:hover {
 }
 
 .receiver__profile {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  width: 100%;
 }
 
 .profile__image {

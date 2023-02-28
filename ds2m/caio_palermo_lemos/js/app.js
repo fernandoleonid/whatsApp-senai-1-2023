@@ -114,6 +114,17 @@ chargeProfile();
 // AQUI TA DANDO A MERDA
 
 const fazerTudo = function (message) {
+  function convertTZ(date, tzString) {
+    return new Date(
+      (typeof date === "string" ? new Date(date) : date).toLocaleString(
+        "en-US",
+        {
+          timeZone: tzString,
+        }
+      )
+    );
+  }
+
   const fazerLoop = function (indice) {
     const messagesConversationsContainer = document.querySelector(
       ".messages__conversations-container"
@@ -145,7 +156,11 @@ const fazerTudo = function (message) {
 
         let messageTime = document.createElement("span");
         messageTime.classList.add("message__time");
-        messageTime.textContent = message.timestamp;
+        const dataConvertida = convertTZ(
+          message.timestamp,
+          "America/Sao_Paulo"
+        );
+        messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
 
         let messageReceiverContainer = document.createElement("div");
         messageReceiverContainer.classList.add("message-receiver-container");
@@ -155,7 +170,9 @@ const fazerTudo = function (message) {
           messageContent.textContent = message.content;
 
           messageTime.classList.add("message__time");
-          messageTime.textContent = message.timestamp;
+          messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
+          // messageTime.textContent = message.time;
+
           messageSender.replaceChildren(messageContent, messageTime);
 
           messageReceiverContainer.classList.add("none");
@@ -164,7 +181,7 @@ const fazerTudo = function (message) {
           messageContent.textContent = message.content;
 
           messageTime.classList.add("message__time");
-          messageTime.textContent = message.timestamp;
+          messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
           messageReceiver.replaceChildren(messageContent, messageTime);
 
           messageSenderContainer.classList.add("none");
@@ -275,3 +292,11 @@ const alternarBackground = function () {
 };
 
 alternarBackground();
+
+contatos.forEach((contato) => {
+  contato.messages.forEach((message) => {
+    console.log(message.timestamp);
+  });
+});
+
+// console.log(`${convertedDate.getHours()}:${convertedDate.getMinutes()}`); // 17

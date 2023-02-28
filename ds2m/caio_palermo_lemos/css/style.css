@@ -235,11 +235,13 @@ span:hover {
 
 .messages__conversations-container {
   padding-top: 25px;
+  min-height: 80vh;
   max-height: 80vh;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  overflow: auto;
 }
 
 .messages__conversations {
@@ -364,4 +366,8 @@ span:hover {
 
 .block {
   display: block !important;
+}
+
+.flex {
+  display: flex !important;
 }

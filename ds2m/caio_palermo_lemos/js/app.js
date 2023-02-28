@@ -154,20 +154,20 @@ const fazerTudo = function (message) {
 
       array[i] = createMessages();
 
-      let filtro = array.filter((item) => {
-        return item;
-      });
+      // let filtro = array.filter((item) => {
+      //   return item;
+      // });
 
-      let teste = array.forEach((item, index, array) => {
-        console.log("item: " + item);
-        console.log("index: " + index);
-        array.filter((valor) => {
-          console.log("valor: " + valor);
-          return valor;
-        });
-        array += array[index + 1];
-        console.log("array: " + array);
-      });
+      // let teste = array.forEach((item, index, array) => {
+      //   console.log("item: " + item);
+      //   console.log("index: " + index);
+      //   array.filter((valor) => {
+      //     console.log("valor: " + valor);
+      //     return valor;
+      //   });
+      //   array += array[index + 1];
+      //   console.log("array: " + array);
+      // });
       messagesConversations.replaceChildren(...array);
 
       // messagesConversations.append(array[i]);
@@ -220,13 +220,13 @@ const alternarBackground = function () {
     if (window.matchMedia("(max-width: 980px)").matches) {
       chats.classList.add("none"); //certo
       messages.classList.add("block"); //certo
-      messagesReceiver.classList.add("block");
+      messagesReceiver.classList.add("flex");
       messagesConversationsContainer.classList.add("block");
-      messagesInteractions.classList.add("block");
+      messagesInteractions.classList.add("flex");
     } else {
-      messagesReceiver.classList.add("block");
+      messagesReceiver.classList.add("flex");
       messagesConversationsContainer.classList.add("block");
-      messagesInteractions.classList.add("block");
+      messagesInteractions.classList.add("flex");
       messagesBackground.classList.add("none");
     }
   };

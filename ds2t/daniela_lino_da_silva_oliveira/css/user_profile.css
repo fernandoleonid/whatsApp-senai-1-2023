@@ -1,4 +1,4 @@
-.user_profile{
+.user_profile {
     display: flex;
     font-family: 'Roboto', sans-serif;
     align-items: center;
@@ -8,21 +8,32 @@
     margin: 1rem;
     list-style: none;
 }
-.user_info{
+
+.user_info {
     align-items: center;
     justify-content: flex-end;
     height: 50%;
 }
-.user_info span{
+
+.user_info span {
     font-size: .9rem;
 }
-.user_img{
+
+.fa-sharp {
+    font-size: 1rem;
+    color: #E67F0D;
+    width: 2rem;
+}
+
+.user_img {
     height: 4rem;
     margin: .5rem;
 }
-.user_profile__box{
+
+.user_profile__box {
     justify-content: space-around;
 }
+
 .user_profile li {
     position: relative;
     float: left;
@@ -58,11 +69,12 @@
 }
 
 .user_profile li ul li {
-    border: 1px solid #c0c0c0;
+    border: .5px solid #c0c0c0;
     display: block;
     width: 150px;
 }
-.fa-caret-down{
+
+.fa-caret-down {
     width: 1rem;
     font-size: 1rem;
     margin-left: 2rem;

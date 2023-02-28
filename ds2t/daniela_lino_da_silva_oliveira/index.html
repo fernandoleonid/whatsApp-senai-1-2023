@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/e04fba6142.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="index.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/contatos.css">
@@ -32,7 +32,7 @@
         <div class="contact__box" id="contact__box">
             <div class="user_profile__box" id="user_profile__box">
                 <div class="user_profile">
-                    
+
                     <img src="./img/man(1).png" class="user_img" alt="Foto de perfil do usuário">
                     <div class="user_info">
                         <h3 class="user_name" id="user_name">usuário</h3>
@@ -40,9 +40,9 @@
                     </div>
                     <li><a href="#"><i class="fas fa-caret-down"></i></a>
                         <ul>
-                            <li><a href="#">Mensagens lidas</a></li>
-                            <li><a href="#">Mensagens não lidas</a></li>
-                            <li><a href="#">Todas as mensagens</a></li>
+                            <li><a href="#not_read__messages">Mensagens lidas</a></li>
+                            <li><a href="#read__messages">Mensagens não lidas</a></li>
+                            <li><a href="#all_messages">Todas as mensagens</a></li>
                         </ul>
                     </li>
                 </div>
@@ -52,12 +52,13 @@
                         <input type="text" class="search_contacts__entry" id="search_contacts__entry"
                             placeholder="Procurar Mensagem...">
                     </div>
-                    
+
                 </div>
 
             </div>
             <section class="contacts__list" id="contacts__list">
-                contatos
+                <div class="contacts__container" id="contacts__container">
+                </div>
             </section>
         </div>
     </nav>

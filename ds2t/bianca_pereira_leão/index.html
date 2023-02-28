@@ -24,6 +24,7 @@
 
     <!-- link arquivos css -->
     <link rel="stylesheet" href="./css/cores.css">
+    <link rel="stylesheet" href="./css/loader.css">
     <link rel="stylesheet" href="./css/configuracoes.css">
     <link rel="stylesheet" href="css/side.css">
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
@@ -36,6 +37,7 @@
 
     <!-- link arquivos js -->
 
+    <script src="./js/loading.js" defer></script>
 
     <script src="./js/index.js" defer type="module"></script>
 
@@ -60,8 +62,21 @@
 
 
 <body class="h-100 py-5 backgroundClaroBody" id="bodyId">
+   
+    <div id="loading" class="backgroundClaroBody">
+
+        <div class="textLoader">
+            <div class="whatsapp-loading">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="progress-bar"></div>
+            <h5>WhatsApp</h5>
+            <span class="text-secondary"><i class="fas fa-lock"></i>Protegido com a criptografia de ponta a ponta</span>
+        </div>
+      </div>
+
     <div class="header-body backgroudGreenHeaderBody" id="headerBody"></div>
-    <main class="d-flex align-items-stretch  mx-auto">
+    <main class="d-flex align-items-stretch  mx-auto" id="conteudo">
         <div id="configuracoes" style="display:none;" class="overflow-y-auto">
             <header id="headerConfiguracoes">
                 <button>

@@ -156,11 +156,11 @@ const fazerTudo = function (message) {
 
         let messageTime = document.createElement("span");
         messageTime.classList.add("message__time");
+
         const dataConvertida = convertTZ(
           message.timestamp,
           "America/Sao_Paulo"
         );
-        messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
 
         let messageReceiverContainer = document.createElement("div");
         messageReceiverContainer.classList.add("message-receiver-container");
@@ -169,9 +169,13 @@ const fazerTudo = function (message) {
           messageContent.classList.add("message__content");
           messageContent.textContent = message.content;
 
-          messageTime.classList.add("message__time");
-          messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
-          // messageTime.textContent = message.time;
+          if (message.hasOwnProperty(time)) {
+            messageTime.classList.add("message__time");
+            messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
+          }
+          if (message.hasOwnProperty(timestamp)) {
+            messageTime.textContent = message.time;
+          }
 
           messageSender.replaceChildren(messageContent, messageTime);
 
@@ -180,8 +184,14 @@ const fazerTudo = function (message) {
           messageContent.classList.add("message__content");
           messageContent.textContent = message.content;
 
-          messageTime.classList.add("message__time");
-          messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
+          if (message.hasOwnProperty(time)) {
+            messageTime.classList.add("message__time");
+            messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
+          }
+          if (message.hasOwnProperty(timestamp)) {
+            messageTime.textContent = message.time;
+          }
+
           messageReceiver.replaceChildren(messageContent, messageTime);
 
           messageSenderContainer.classList.add("none");

@@ -1,0 +1,9 @@
+.chats__user-interactions {
+  display: none;
+}
+
+.user-interactions__conversations::after {
+  content: "";
+  display: block;
+  border: 1px solid var(--text-color);
+}

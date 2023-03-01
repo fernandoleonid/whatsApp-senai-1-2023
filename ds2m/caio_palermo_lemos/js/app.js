@@ -1,33 +1,11 @@
 "use strict";
 
 import { contatos } from "./contatos.js";
-import { showContactMessages } from "./click-chat.js";
-
-const createChat = function (contact) {
-  const chat = document.createElement("div");
-  chat.classList.add("chat");
-
-  const chatImage = document.createElement("img");
-  chatImage.classList.add("chat__image");
-  chatImage.src = `./${contact.image}`;
-
-  const chatContent = document.createElement("div");
-  chatContent.classList.add("chat__content");
-
-  const chatName = document.createElement("span");
-  chatName.classList.add("chat__name");
-  chatName.textContent = contact.name;
-
-  const chatText = document.createElement("p");
-  chatText.classList.add("chat__text");
-  chatText.textContent = contact.description;
-
-  chatContent.append(chatName, chatText);
-
-  chat.append(chatImage, chatContent);
-
-  return chat;
-};
+import { createChat } from "./create-chat.js";
+import { showContactMessages } from "./show-contact-messages.js";
+import { changeElements } from "./change-elements.js";
+import { createMessagesReceiver } from "./create-messages-receiver.js";
+import { returnIcon } from "./return.js";
 
 const chargeContacts = function () {
   const chatsContainer = document.querySelector(".chats__chats-container");
@@ -35,57 +13,6 @@ const chargeContacts = function () {
 
   console.log("CHATS: " + chats);
   chatsContainer.replaceChildren(...chats);
-};
-
-// const createMessagesReceiver = function (receiver) {
-//   const receiverProfile = document.createElement("div");
-//   receiverProfile.classList.add("receiver__profile");
-
-//   const profileImage = document.createElement("img");
-//   profileImage.classList.add("profile__image");
-//   profileImage.src = `./${receiver.image}`;
-
-//   const profileName = document.createElement("p");
-//   profileName.classList.add("profile__name");
-//   profileName.textContent = receiver.name;
-
-//   receiverProfile.append(profileImage, profileName);
-
-//   return receiverProfile;
-// };
-
-const createMessagesReceiver = function (receiver) {
-  // <div class="receiver__options">
-  //   <i class="fa-solid fa-magnifying-glass" id="options__search"></i>
-  //   <i class="fas fa-ellipsis-v" id="options__more-options"></i>
-  // </div>;
-  const receiverProfile = document.createElement("div");
-  receiverProfile.classList.add("receiver__profile");
-
-  const receiverOptions = document.createElement("div");
-  receiverOptions.classList.add("receiver__options");
-
-  const optionsSearch = document.createElement("i");
-  optionsSearch.classList.add("fa-solid");
-  optionsSearch.classList.add("fa-magnifying-glass");
-
-  const moreOptions = document.createElement("i");
-  moreOptions.classList.add("fas");
-  moreOptions.classList.add("fa-ellipsis-v");
-
-  receiverOptions.append(optionsSearch, moreOptions);
-
-  const profileImage = document.createElement("img");
-  profileImage.classList.add("profile__image");
-  profileImage.src = `./${receiver.image}`;
-
-  const profileName = document.createElement("p");
-  profileName.classList.add("profile__name");
-  profileName.textContent = receiver.name;
-
-  receiverProfile.append(profileImage, profileName, receiverOptions);
-
-  return receiverProfile;
 };
 
 const chargeProfile = function () {
@@ -110,20 +37,20 @@ const chargeProfile = function () {
 
 chargeContacts();
 chargeProfile();
+changeElements();
 
 // AQUI TA DANDO A MERDA
-
 const fazerTudo = function (message) {
-  function convertTZ(date, tzString) {
-    return new Date(
-      (typeof date === "string" ? new Date(date) : date).toLocaleString(
-        "en-US",
-        {
-          timeZone: tzString,
-        }
-      )
-    );
-  }
+  // function convertTZ(date, tzString) {
+  //   return new Date(
+  //     (typeof date === "string" ? new Date(date) : date).toLocaleString(
+  //       "en-US",
+  //       {
+  //         timeZone: tzString,
+  //       }
+  //     )
+  //   );
+  // }
 
   const fazerLoop = function (indice) {
     const messagesConversationsContainer = document.querySelector(
@@ -157,10 +84,10 @@ const fazerTudo = function (message) {
         let messageTime = document.createElement("span");
         messageTime.classList.add("message__time");
 
-        const dataConvertida = convertTZ(
-          message.timestamp,
-          "America/Sao_Paulo"
-        );
+        // const dataConvertida = convertTZ(
+        //   message.timestamp,
+        //   "America/Sao_Paulo"
+        // );
 
         let messageReceiverContainer = document.createElement("div");
         messageReceiverContainer.classList.add("message-receiver-container");
@@ -169,13 +96,8 @@ const fazerTudo = function (message) {
           messageContent.classList.add("message__content");
           messageContent.textContent = message.content;
 
-          if (message.hasOwnProperty(time)) {
-            messageTime.classList.add("message__time");
-            messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
-          }
-          if (message.hasOwnProperty(timestamp)) {
-            messageTime.textContent = message.time;
-          }
+          messageTime.classList.add("message__time");
+          messageTime.textContent = message.time;
 
           messageSender.replaceChildren(messageContent, messageTime);
 
@@ -184,13 +106,16 @@ const fazerTudo = function (message) {
           messageContent.classList.add("message__content");
           messageContent.textContent = message.content;
 
-          if (message.hasOwnProperty(time)) {
-            messageTime.classList.add("message__time");
-            messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
-          }
-          if (message.hasOwnProperty(timestamp)) {
-            messageTime.textContent = message.time;
-          }
+          // if (message.hasOwnProperty(time)) {
+          //   messageTime.classList.add("message__time");
+          //   messageTime.textContent = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
+          // }
+          // if (message.hasOwnProperty(timestamp)) {
+          //   messageTime.textContent = message.time;
+          // }
+
+          messageTime.classList.add("message__time");
+          messageTime.textContent = message.time;
 
           messageReceiver.replaceChildren(messageContent, messageTime);
 
@@ -257,56 +182,11 @@ const fazerTudo = function (message) {
 
 fazerTudo(contatos);
 
-const alternarBackground = function () {
-  const chatsContainer = document.querySelector(".chats__chats-container");
-  const chats = document.querySelector(".chats");
-  const chatsFilter = document.querySelector(".chats__filter");
-  const messages = document.querySelector(".messages");
-  const messagesReceiver = document.querySelector(".messages__receiver");
-  const messagesConversationsContainer = document.querySelector(
-    ".messages__conversations-container"
-  );
-  const messagesInteractions = document.querySelector(
-    ".messages__interactions"
-  );
-  const messagesBackground = document.querySelector(
-    ".messages__background-default"
-  );
-
-  messagesReceiver.classList.add("none");
-  messagesConversationsContainer.classList.add("none");
-  messagesInteractions.classList.add("none");
-
-  const handleClick = function () {
-    if (window.matchMedia("(max-width: 980px)").matches) {
-      chats.classList.add("none"); //certo
-      messages.classList.add("block"); //certo
-      messagesReceiver.classList.add("flex");
-      messagesConversationsContainer.classList.add("block");
-      messagesInteractions.classList.add("flex");
-    } else {
-      messagesReceiver.classList.add("flex");
-      messagesConversationsContainer.classList.add("block");
-      messagesInteractions.classList.add("flex");
-      messagesBackground.classList.add("none");
-    }
-  };
-
-  if (window.matchMedia("(min-width: 980px)").matches) {
-    chatsContainer.classList.remove("none");
-    chats.classList.remove("none");
-    chatsFilter.classList.remove("none");
-  }
-
-  chatsContainer.addEventListener("click", handleClick);
-};
-
-alternarBackground();
-
-contatos.forEach((contato) => {
-  contato.messages.forEach((message) => {
-    console.log(message.timestamp);
-  });
-});
+returnIcon();
+// contatos.forEach((contato) => {
+//   contato.messages.forEach((message) => {
+//     console.log(message.timestamp);
+//   });
+// });
 
 // console.log(`${convertedDate.getHours()}:${convertedDate.getMinutes()}`); // 17

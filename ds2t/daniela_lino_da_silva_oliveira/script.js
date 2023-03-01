@@ -1,24 +1,36 @@
 'use strict'
+import { contatos } from "../../recursos/contatos.js";
+console.log(contatos)
 
-import { contatos } from "./contatos.js"
-console.log(2)
-
-const criarContato = (contatos) => {
-    const contato = document.createElement('div')
-    contato.classList.add('contact')
+const criarContato = (contato) => {
+    const cardContact = document.createElement('div')
+    cardContact.classList.add('contact')
 
     const foto = document.createElement('img')
     foto.classList.add('contact__image')
-    foto.src = `../../recursos/${contatos.image}`
+    foto.src = `../../recursos/${contato.image}`
 
-    contato.append(foto);
+    const cardTitle = document.createElement('div')
+    cardTitle.classList.add('card__title')
 
-    return contato;
+    const nameContact = document.createElement('h5')
+    nameContact.classList.add('contact__name')
+    nameContact.textContent = contato.name
+
+    const contactDescription = document.createElement('span')
+    contactDescription.classList.add('contact__description')
+    contactDescription.textContent = contato.description
+
+    cardTitle.append(nameContact, contactDescription)
+    cardContact.append(foto, cardTitle);
+
+    return cardContact;
 }
 const carregarContatos = () => {
     const containerContatos = document.getElementById('contacts__container')
-    const contatos = contatos.map(criarContato);
+    const cardsContato = contatos.map(criarContato);
 
-    containerContatos.replaceChild(...contatos);
+    containerContatos.replaceChildren(...cardsContato);
+    console.log('ok')
 }
 carregarContatos()

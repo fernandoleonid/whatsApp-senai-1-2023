@@ -4,16 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "nav main main"
-    "nav main main"
-    "nav chat chat";
-    grid-template-rows: 100px 1fr 1fr 100px ;
-    grid-template-columns: 20%;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
@@ -21,6 +15,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center; 
+    position: relative;
 }
 
 main{
@@ -31,6 +26,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 nav{
@@ -38,8 +34,21 @@ nav{
     display: flex;
     width: 100%;
     font-size: 2rem;
+    position: relative;
 }
-
+.screen_chat{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav main main"
+    "nav main main"
+    "nav chat chat";
+    grid-template-rows: 100px 1fr 1fr 100px ;
+    grid-template-columns: 20%;
+    position: fixed;
+}
 .message__entry{
     grid-area: chat;
     background-color: darkkhaki;
@@ -47,4 +56,5 @@ nav{
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    
 }

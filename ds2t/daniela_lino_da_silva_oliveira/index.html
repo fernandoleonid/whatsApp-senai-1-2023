@@ -18,60 +18,62 @@
 </head>
 
 <body>
-    <header>
-        <div class="search__box" id="search__box">
-            <div class="search__itens">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="search__entry" id="search__entry"
-                    placeholder="Pesquisar ou uniciar conversa...">
+    <div class="screen_chat">
+        <header>
+            <div class="search__box" id="search__box">
+                <div class="search__itens">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="search__entry" id="search__entry"
+                        placeholder="Pesquisar ou uniciar conversa...">
+                </div>
+                <img src="./img/logo.png" alt="Logo da empresa" class="img__logo">
             </div>
-            <img src="./img/logo.png" alt="Logo da empresa" class="img__logo">
-        </div>
-    </header>
-    <nav>
-        <div class="contact__box" id="contact__box">
-            <div class="user_profile__box" id="user_profile__box">
-                <div class="user_profile">
+        </header>
+        <nav>
+            <div class="contact__box" id="contact__box">
+                <div class="user_profile__box" id="user_profile__box">
+                    <div class="user_profile">
 
-                    <img src="./img/man(1).png" class="user_img" alt="Foto de perfil do usuário">
-                    <div class="user_info">
-                        <h3 class="user_name" id="user_name">usuário</h3>
-                        <span class="status_user">Offline</span>
+                        <img src="./img/man(1).png" class="user_img" alt="Foto de perfil do usuário">
+                        <div class="user_info">
+                            <h3 class="user_name" id="user_name">usuário</h3>
+                            <span class="status_user">Offline</span>
+                        </div>
+                        <li><a href="#"><i class="fas fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="#not_read__messages">Mensagens lidas</a></li>
+                                <li><a href="#read__messages">Mensagens não lidas</a></li>
+                                <li><a href="#all_messages">Todas as mensagens</a></li>
+                            </ul>
+                        </li>
                     </div>
-                    <li><a href="#"><i class="fas fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="#not_read__messages">Mensagens lidas</a></li>
-                            <li><a href="#read__messages">Mensagens não lidas</a></li>
-                            <li><a href="#all_messages">Todas as mensagens</a></li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="search_box__contacts">
-                    <div class="search_group">
-                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                        <input type="text" class="search_contacts__entry" id="search_contacts__entry"
-                            placeholder="Procurar Mensagem...">
+                    <div class="search_box__contacts">
+                        <div class="search_group">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            <input type="text" class="search_contacts__entry" id="search_contacts__entry"
+                                placeholder="Procurar Mensagem...">
+                        </div>
+
                     </div>
 
                 </div>
-
+                <section class="contacts__list" id="contacts__list">
+                    <div class="contacts__container" id="contacts__container">
+                    </div>
+                </section>
             </div>
-            <section class="contacts__list" id="contacts__list">
-                <div class="contacts__container" id="contacts__container">
-                </div>
-            </section>
-        </div>
-    </nav>
-    <main>
-        <div class="article">
-            <P>ARTICLE</P>
-        </div>
-        <div class="aside">
-            <p>ASIDE</p>
-        </div>
+        </nav>
+        <main>
+            <div class="article">
+                <P>ARTICLE</P>
+            </div>
+            <div class="aside">
+                <p>ASIDE</p>
+            </div>
 
-    </main>
-    <div class="message__entry">SECTION</div>
+        </main>
+        <div class="message__entry">SECTION</div>
+    </div>
 </body>
 
 </html>

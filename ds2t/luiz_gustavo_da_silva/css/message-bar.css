@@ -1,0 +1,33 @@
+.message__bar{
+    height: 4rem;
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.message__bar i{
+    font-size: 1.5rem;
+    color: #8696A0;
+    cursor: pointer;
+}
+
+
+.message__bar input{
+    width: 85%;
+    outline: none;
+    border: none;
+    background-color: #2A3942;
+    padding: 6px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+    color: #f6f6f6;
+}
+
+input::placeholder{
+    font-size: 15px;
+    font-weight: 400;
+    color: #8696A0;
+}

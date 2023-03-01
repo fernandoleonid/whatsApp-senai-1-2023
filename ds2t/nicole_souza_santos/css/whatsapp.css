@@ -19,7 +19,7 @@
     background: #F5FFFB;
     display: flex;
     align-items: center;
-    place-content: center;
+    justify-content: center;
 }
 .miss{
     color: #749F82;
@@ -67,7 +67,44 @@
     margin-top: 2px;
 }
 
-
+.mensagens{
+    display: none;
+    flex-direction: column;
+    align-self: end;
+    word-break: break-word;
+}
+.other-user{
+    display: grid;
+    justify-self: right;
+    margin-right: 29rem;
+}
+.other-user .content{
+    background-color: #425F57;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+.other-user .timer-timestamp {
+    font-size: 10px;
+    text-align: start;
+    margin-left: 10px;
+}
+.me{
+    display: grid;
+    place-content: end;
+}
+.me .content{
+    background-color:#749F82;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    margin-left: 29rem;
+}
+.me .timer-timestamp{
+    font-size: 10px;
+    text-align: end;
+    margin-right: 10px;
+}
 
 
 @media (max-width: 640px){

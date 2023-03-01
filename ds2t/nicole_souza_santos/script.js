@@ -3,15 +3,11 @@
 import { contatos } from "./contatos.js"
 console.log(contatos)
 
-
 const criarContatos = (contatos) => {
     const card = document.createElement('a')
     card.classList.add('card')
     card.setAttribute('id', 'card')
     card.setAttribute('href', '#')
-    card.addEventListener('click', function () {
-        carregarMensagens()
-    })
 
     const foto = document.createElement('img')
     foto.classList.add('card-icon')
@@ -39,42 +35,77 @@ const criarContatos = (contatos) => {
     while (cont < tempo.length) {
         time.textContent = contatos.messages[cont]['time']
         cont++
-
     }
-    // while (cont < tempo.length) {
-    //     time.textContent = contatos.messages[cont]['timestamp']
-    //     cont++
-    // }
+
+    let conat = 0
+    while (conat < tempo.length) {
+
+        console.log(contatos.messages[conat].content)
+        console.log(contatos.messages[conat].sender)
+        conat++
+    }
+
+
+
+
+    card.addEventListener('click', function () {
+        carregarMensagens()
+    })
 
     card.append(foto, cardIdentificador, time)
     return card
 }
+
+
 
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
     const cards = contatos.map(criarContatos)
 
     container.replaceChildren(...cards)
+    console.log(cards.length)
 }
-carregarCards()
 
-const card = document.getElementById('card')
-const plane = document.getElementById('welcome')
+const criarMensagens = (contatos) => {
+    const other = document.createElement('div')
+    other.classList.add('other-user')
 
-const carregarMensagens = () => {
+    const sender = document.createElement('p')
+    sender.classList.add('sender')
+    sender.textContent = contatos.messages
+
+    // isto serve para criar as mensagens enviadas
+
+
+
+    other.append(sender)
+    console.log(messages)
+
+}
+
+const carregarMensagens = (contatos) => {
+    const plane = document.getElementById('welcome')
+    const messagesChat = document.getElementById('messages')
+
     plane.style.display = 'none'
+    messagesChat.style.display = 'flex'
 
     console.log('click')
+
+    const mensagens = contatos.map(criarMensagens)
+    messagesChat.replaceChildren(...mensagens)
+
+
+
 }
 
-// card.addEventListener('click', carregarMensagens)
+
+carregarCards()
 
 
 
 
-
+// tarefas:
+// saber como comparar chaves e passar array para map
 // criar logica para horario
 // exibir conversa
-// troca de tema
-// comece trabalhar na versão mobile seguindo essa mesma lógica
-// vc consegue (vc precisa pq não tem saida :))

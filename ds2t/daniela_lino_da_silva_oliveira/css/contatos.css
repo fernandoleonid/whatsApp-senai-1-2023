@@ -5,25 +5,20 @@
 }
 
 .user_profile__box {
-    min-height: 25vh;
+    min-height: 20vh;
 }
 
 .contacts__list {
-    min-height: 75vh;
+    min-height: 80vh;
     margin: 3%;
     border-top: 1px solid #958F83;
-    align-items: center;
-    justify-content: center;
 }
 
 .contacts__container {
     width: 100%;
-    height: 30rem;
+    height: 33rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    position: relative;
-    justify-content: center;
-    align-items: center;
 }
 
 .contacts__container::-webkit-scrollbar {
@@ -48,7 +43,6 @@
     align-self: center;
     display: flex;
     border-radius: 100%;
-    /* border: 1px solid #E67F0D; */
 }
 
 .card__title {

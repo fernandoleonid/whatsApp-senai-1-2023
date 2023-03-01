@@ -1,0 +1,16 @@
+.chat__box{
+    height: 100%;
+    width: 100%;
+    margin: 1rem;
+    border-radius: 5px;
+    border: 1px solid #958F83;
+}
+.contact__profile{
+    box-shadow: 0px 2px 5px #C0A599;
+    height: 15%;
+    width: 100%;
+}
+.messages_place{
+    height: 85%;
+    width: 100%;
+}

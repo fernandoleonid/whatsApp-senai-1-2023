@@ -23,6 +23,7 @@ const criaListaMensagem = (mensagem) => {
   foto.classList.add('mt-3');
   foto.classList.add('ml-2');
   foto.classList.add('mr-3');
+  foto.alt = 'foto de perfil do usuário'
   foto.src = `./img/${mensagem.image}`;
 
   const guardaMediaBody = document.createElement('div');
@@ -121,6 +122,7 @@ const criarChatItens = (chat) => {
   img.classList.add('mt-3');
   img.classList.add('ml-2');
   img.classList.add('mr-3');
+  img.alt = 'foto de perfil';
   img.src = `./img/${chat.image}`;
 
   const divPaiNomeDescricao = document.createElement('div');

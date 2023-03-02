@@ -4,7 +4,7 @@ export const contatos = [
         "id": 1,
         "description": "Frontend Developer",
         "lastSeem": "visto por último hoje às 18:40",
-        "image": "../img/contact1.png",
+        "image": "../img/contact1.webp",
         "messages": [
           {
             "sender": "me",
@@ -33,7 +33,7 @@ export const contatos = [
         "id": 2,
         "description": "UI Designer",
         "lastSeem": "visto por último hoje às 12:40",
-        "image": "../img/contact2.png",
+        "image": "../img/contact2.webp",
         "messages": [
           {
             "sender": "me",
@@ -62,7 +62,7 @@ export const contatos = [
         "id": 3,
         "description": "Backend Developer",
         "lastSeem": "visto por último hoje às 19:48",
-        "image": "../img/contact3.png",
+        "image": "../img/contact3.webp",
         "messages": [
           {
             "sender": "me",
@@ -91,7 +91,7 @@ export const contatos = [
     "id": 4,
     "description": "Software Engineer",
     "lastSeem": "visto por último hoje às 18:40",
-    "image": "../img/contact4.png",
+    "image": "../img/contact4.webp",
     "messages": [
         {
         "sender": "me",
@@ -120,7 +120,7 @@ export const contatos = [
     "id": 5,
     "description": "Designer",
     "lastSeem": "visto por último ontem às 13:40",
-    "image": "../img/contact5.png",
+    "image": "../img/contact5.webp",
     "messages": [
         {
         "sender": "John Doe",
@@ -149,7 +149,7 @@ export const contatos = [
     "id": 6,
     "description": "Product Manager",
     "lastSeem": "visto por último hoje às 18:44",
-    "image": "../img/contact6.png",
+    "image": "../img/contact6.webp",
     "messages": [
         {
         "sender": "Julia Smith",
@@ -178,7 +178,7 @@ export const contatos = [
     "id": 7,
     "description": "Marketing Manager",
     "lastSeem": "visto por último hoje às 17:43",
-    "image": "../img/contact7.png",
+    "image": "../img/contact7.webp",
     "messages": [
         {
         "sender": "Max Kellerman",

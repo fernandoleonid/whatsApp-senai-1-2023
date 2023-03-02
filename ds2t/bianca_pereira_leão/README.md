@@ -6,8 +6,9 @@
 
 
 ## Critérios de Avaliação
+
 [X]Codificou o app conforme o original?<br>
-[]Nomeou as classes CSS utilizando o padrão BEM?<br>
+[ ]Nomeou as classes CSS utilizando o padrão BEM?<br>
 [X] O app está responsivo?<br>
 [X] Utilizou algum framework CSS?<br>
 [X] Consumiu o JSON para mostrar todos os contatos?<br>
@@ -21,6 +22,15 @@
 [X] Existe um link para o github page no README?<br>
 [X] Existe um link do autor do projeto no README?<br>
 [X]Fez a autoavaliação?<br>
+
+## Tecnologias utilizadas 
+
+- HTML
+- CSS
+- JavaScript
+- FrameWork Bootstrap 
+- JSON
+
 
 ## Autora 
 Meu nome é Bianca Leão e sou estudante de desenvolvimento de sistemas no SENAI Jandira. Eu tenho grande interesse em desenvolvimento web e fiquei muito feliz em participar do projeto clone do WhatsApp Web proposto pelo professor Fernando Leonid. Se quiser conferir meus outros projetos, fique à vontade para acessar meu perfil no GitHub: [biancaLeao](https://github.com/leaobia)

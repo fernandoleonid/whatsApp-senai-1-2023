@@ -1,0 +1,11 @@
+.info{
+    display: flex;
+    align-items: center;
+    align-self: baseline;
+    width: 25vw;
+    height: 7vh;
+    border-radius: 10px 10px 0px 0px;
+}
+.info__picture{
+    margin-left: 2px;
+}

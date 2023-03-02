@@ -1,10 +1,12 @@
 'use strict'
 
 import { contatos } from "./contatos.js"
-console.log(contatos)
+// console.log(contatos[1].messages)
 
-const criarContatos = (contatos) => {
+const criarContatos = (contatos, indice) => {
+    
     const card = document.createElement('a')
+
     card.classList.add('card')
     card.setAttribute('id', 'card')
     card.setAttribute('href', '#')
@@ -27,22 +29,24 @@ const criarContatos = (contatos) => {
     cardIdentificador.append(cardTitle, cardMessage)
     console.log(cardMessage)
 
-    const time = document.createElement('span')
-    time.classList.add('time')
     let cont = 0
-    let tempo = contatos.messages
+    let timer = contatos.messages
+    const time = document.createElement('span')
+    
 
-    while (cont < tempo.length) {
+    while (cont < timer.length) {
+        time.classList.add('time')
+        
         time.textContent = contatos.messages[cont]['time']
+        console.log(time)
         cont++
     }
 
-    card.addEventListener('click', function () {
-        carregarMensagens()
-    })
-
+    console.log(indice)
+    card.onclick = () => (carregarMensagens(indice))
     card.append(foto, cardIdentificador, time)
     return card
+
 }
 
 const carregarCards = () => {
@@ -50,43 +54,71 @@ const carregarCards = () => {
     const cards = contatos.map(criarContatos)
 
     container.replaceChildren(...cards)
-    console.log(cards.length)
+    
 }
 
-const criarMensagens = (contatos) => {
-    const other = document.createElement('div')
-    other.classList.add('other-user')
+const criarMensagens = (json) => {
+    const senderMessage = json.messages
+    
 
-    const sender = document.createElement('p')
-    sender.classList.add('sender')
-    const content = document.createElement('p')
-    content.classList.add('content')
+    for (let conat = 0; conat < senderMessage.length; conat++) {
+        if (senderMessage[conat].sender == 'me') {
 
-    // sender.textContent = contatos.messages
-    // isto serve para criar as mensagens enviadas
 
+            const user = document.createElement('div')
+            user.classList.add('me')
+            
+
+            const sender = document.createElement('p')
+            sender.classList.add('sender')
+
+            const content = document.createElement('p')
+            content.classList.add('content')
+            content.textContent = senderMessage[conat].content
+
+            const timer = document.createElement('p')
+            timer.classList.add('timer-timestamp')
+            timer.textContent = senderMessage[conat].time
+            
+            user.append(sender, content)
+            
+
+            return user
+        
+
+        } else if (senderMessage[conat].sender != 'me') {
+
+            const other = document.createElement('div')
+            other.classList.add('other-user')
+            
+            const content = document.createElement('p')
+            content.classList.add('content')
+            content.textContent = senderMessage[conat].content
+
+            other.append(content)
+            
+            return other
+        }
+    }
+    
+}
+
+const mensagens = () =>{
     let conat = 0
-    while (conat < tempo.length) {
-
-        content.textContent = contatos.messages[conat].content
-        console.log(contatos.messages[conat].content)
-        sender.textContent = contatos.messages[conat].sender
+    while (conat < contatos.length) {
+        console.log(contatos[conat].messages)
         conat++
     }
 
-    other.append(sender, content, sender)
-    console.log(messages)
-
 }
 
-const carregarMensagens = (contatos) => {
+const carregarMensagens = (indice) => {
     const plane = document.getElementById('welcome')
     const messagesChat = document.getElementById('messages')
-
+    
     plane.style.display = 'none'
-    messagesChat.style.display = 'flex'
 
-    console.log('click')
+    console.log(contatos[indice].messages)
 
     const mensagens = contatos.map(criarMensagens)
     messagesChat.replaceChildren(...mensagens)
@@ -98,7 +130,7 @@ carregarCards()
 
 
 
+
+
 // tarefas:
-// saber como comparar chaves e passar array para map
-// criar logica para horario
-// exibir conversa
+// imprimir todas as mensagens de acordo com a conversa

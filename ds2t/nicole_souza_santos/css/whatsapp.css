@@ -10,24 +10,28 @@
     height: 869px;
     border: 1px solid #979797;
     border-right: none;
-    background: #F5FFFB;
+    background: #252525;
 }
 .chat{
     border: 1px solid #979797;
     width: 788px;
     height: 869px;
-    background: #F5FFFB;
+    background: #252525;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.chat img{
+    width: 312px;
+    height: 312px;
+}
 .miss{
-    color: #749F82;
+    color: #865DFF;
     font-size: 1rem;
     text-align: center;
 }
 .now{
-    color: #425F57;
+    color: #FFA3FD;
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
@@ -36,12 +40,12 @@
     display: grid;
     align-items: center;
     padding-left: 21px;
-    background-color: #425F57;
+    background-color: #865DFF;
     height: 70px;
 }
 .card{
     display: flex;
-    color: #749F82;
+    color: #865DFF;
     border-bottom: 1px solid rgba(151, 151, 151, 0.4);
     padding-left: 10px;
     height: 60px;
@@ -68,7 +72,7 @@
 }
 
 .mensagens{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-self: end;
     word-break: break-word;
@@ -79,7 +83,7 @@
     margin-right: 29rem;
 }
 .other-user .content{
-    background-color: #425F57;
+    background-color: #191825;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;
@@ -94,7 +98,7 @@
     place-content: end;
 }
 .me .content{
-    background-color:#749F82;
+    background-color:#865DFF;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;

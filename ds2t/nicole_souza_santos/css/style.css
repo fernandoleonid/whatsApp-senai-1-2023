@@ -1,17 +1,19 @@
 header{
     height: 100px;
-    background: #CFFF8D;
+    background: #191825;
 }
 main{
     display: grid;
     place-content: center;
+    background: #252525;
 }
 footer{
     font-size: 2rem;
     display: flex;
     place-content: end;
-    margin-right: 30px;
+    background: #252525;
 }
 .git{
-    color: #CFFF8D;
+    color: #865DFF;
+    margin-right: 30px;
 }

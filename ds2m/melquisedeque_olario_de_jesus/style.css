@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "content";
+    background-color: beige;
+}
+
+header{
+    place-content: center;
+    height: 15vh;
+    background-color: lightskyblue ;
+    box-shadow: 4px 4px 8px gray ;
+    grid-area: content;
+}
+
+main{
+    height: 98vh;
+    width: 90vw;
+    grid-area: content;
+    display: flex;
+    justify-self: center;
+}
+
+.container{
+    grid-area: content;
+    background-color: burlywood;
+    height: 91vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.aba{
+    grid-area: content;
+    background-color: pink;
+    box-shadow: 4px 4px 8px gray;
+    height: 91vh;
+    width: 30vw;
+}

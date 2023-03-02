@@ -1,6 +1,6 @@
 'use strict'
 
-import {contatos} from "./contatos.js"
+import {contatos} from "../js/contatos.js"
 
 const criaContato = (contato) => {
     const active = document.createElement('div')
@@ -8,7 +8,7 @@ const criaContato = (contato) => {
 
     const foto = document.createElement('img')
     foto.classList.add('profile')
-    foto.src = `./recursos/images/${contato.image}`
+    foto.src = `../img/${contato.image}`
 
     const nome = document.createElement('h4')
     nome.classList.add('listHead')

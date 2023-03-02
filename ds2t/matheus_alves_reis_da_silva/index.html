@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon-whatsapp.png" type="image/x-icon">
     <link rel="stylesheet" href="https://kit.fontawesome.com/30058942d9.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <script src="./index.js" defer type="module"></script>
+    <script src="./js/index.js" defer type="module"></script>
     <title>WhatsApp Web</title>
 </head>
 
@@ -34,21 +35,17 @@
                 <i title="Filtro de conversas não lidas" class="fa-solid fa-filter"></i>
             </div>
             <!-- Lista das conversas e grupos -->
-            <div class="chat_list">
-                <!-- <div class="block active">
-                    <div class="imgBox">
-                        <img src="./recursos/images/contact1.png" class="profile" alt="">
-                    </div>
-                    <div class="details">
-                        <div class="listHead">
-                            <h4>Amarilda</h4>
-                            <p class="time">02:23</p>
+            <ul class="chat_list">
+                <div class="chat_active">
+                    <img src="./img/contact1.png" class="img_contact" alt="">
+                    <div class="chat_details">
+                        <div class="chat_profile">
+                            <h4 class="name_contact">Amarilda</h4>
+                            <p class="message_contact">opa</p>
                         </div>
-                        <div class="message_p">
-                            <p>opa</p>
-                        </div>
+                        <p class="time_contact">02:23</p>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- <div class="block unread">
                     <div class="imgBox">
@@ -65,15 +62,15 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
+            </ul>
 
         </div>
 
         <div class="body_right">
-            <!-- <div class="header">
-                <div class="imgText">
-                    <div title="Dados do perfil" class="userImg">
-                        <img src="./recursos/images/contact1.png" alt="" class="profile">
+            <div class="header_right">
+                <div class="contact_right_info">
+                    <div title="Dados do perfil" class="contact_right_img">
+                        <img src="./img/contact1.png" alt="" class="img_contact">
                     </div>
                     <h4>Amarilda <span>online</span></h4>
                 </div>
@@ -81,10 +78,10 @@
                     <li><i title="Pesquisar..." class="fa-solid fa-magnifying-glass"></i></li>
                     <li><i title="Mais opções" class="fa-solid fa-ellipsis-vertical"></i></li>
                 </ul>
-            </div> -->
+            </div>
 
             <!-- Caixa de mensagens -->
-            <!-- <div class="chatbox">
+            <div class="chatbox">
                 <div class="message my_msg">
                     <p>teste <span>02:22</span></p>
                 </div>
@@ -95,15 +92,15 @@
                     <p>opa <span>02:23</span></p>
                 </div>
                 
-            </div> -->
+            </div>
 
             <!-- Input da caixa de mensagens -->
-            <!-- <div class="chat_input">
+            <div class="chat_input">
                 <i title="Emotes" class="fa-regular fa-face-smile"></i>
                 <i title="Anexar" class="fa-solid fa-paperclip"></i>
                 <input title="Escreva sua mensagem" type="text" placeholder="Mensagem">
                 <i class="fa-solid fa-microphone"></i>
-            </div> -->
+            </div>
         </div>
     </div>
 

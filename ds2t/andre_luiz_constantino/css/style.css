@@ -31,6 +31,7 @@ a{
     border-right: 2px solid black;
 }
 
+
 .my-profile__container{
     height: 8vh;
     width: 100%;
@@ -46,13 +47,14 @@ a{
 }
 
 .my-profile__image{
+    cursor: pointer;
     height: 5.4vh;
 }
 
-.white-theme_image{
-    height: 3.6vh;
+.white-theme__image{
+    cursor: pointer;
 }
 
-.black-theme_image{
-    height: 3.6vh;
+.black-theme__image{
+    cursor: pointer;
 }

@@ -154,14 +154,15 @@ const fazerTudo = function (message) {
       //   array += array[index + 1];
       //   console.log("array: " + array);
       // });
-      messagesConversations.replaceChildren(...array);
+      // messagesConversations.replaceChildren(...array);
 
-      // messagesConversations.append(array[i]);
+      messagesConversations.append(array[i]);
       // messagesConversations.replaceChildren(...array);
     }
   };
   const handleClick = function (event) {
     let text = event.currentTarget.innerText.split(`\n`)[0];
+    console.log(text);
 
     let indice = 0;
     indice = contatos.findIndex((contato) => {
@@ -190,3 +191,15 @@ returnIcon();
 // });
 
 // console.log(`${convertedDate.getHours()}:${convertedDate.getMinutes()}`); // 17
+
+const buscar = function (contatos) {
+  let nome = 'Ana';
+  const chats = document.querySelectorAll(".chat__name");
+
+  contatos.forEach(item => {
+    if(item.name.startsWith('Ana'))
+    console.log(item.name);
+  })
+};
+
+buscar(contatos)

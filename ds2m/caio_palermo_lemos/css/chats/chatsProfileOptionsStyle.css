@@ -8,6 +8,21 @@
   background-color: var(--secondary-color);
 }
 
+#profile-options__change-color::after {
+  margin-top: 8px;
+  content: "";
+  display: block;
+  border-bottom: 3px solid transparent;
+}
+
+#profile-options__change-color:hover::after {
+  margin-top: 8px;
+  content: "";
+  display: block;
+  border-bottom: 3px solid var(--text-color);
+  transition: all 0.5s;
+}
+
 .chats__profile-options-mobile {
   display: none;
 }

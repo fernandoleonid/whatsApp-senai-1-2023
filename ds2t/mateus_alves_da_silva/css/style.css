@@ -1,0 +1,194 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(
+        #009688 0%,
+        #009688 130px,
+        #D9DBD5 130px,
+        #D9DBD5 100%)
+}
+
+.container{
+    display: grid;
+    width: 95vw;
+    max-width: 100%;
+    height: 95vh;
+    background-color: #ffffffff;
+    grid-template-areas: 
+    'container_contatos container_mensagens';
+    grid-template-columns: 480px 1fr;
+}
+
+.container_contatos{
+    grid-area: container_contatos;
+    background-color: #ffffffff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.container_mensagens{
+    grid-area: container_mensagens;
+    position: relative;
+    flex: 70%;
+    background-color: #e5ddd5;
+}
+
+.header_contatos{
+    display: flex;
+    width: 100%;
+    height: 59px;
+    background-color: #f0f2f5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacao_perfil{
+    display: flex;
+    width: 190px;
+    justify-content: space-around;
+    margin-right: 16px;
+}
+
+.navegacao_perfil i{
+    display: flex;
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.imagem_perfil{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.barra_pesquisa{
+    display: flex;
+    width: 100%;
+    height: 49px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pesquisa i{
+    position: absolute;
+    color: #54656f;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.filtro i{
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.caixa_pesquisa{
+    width: 380px;
+    border: none;
+    outline: 0;
+    background-color: #F0F2F5;
+    height: 35px;
+    border-radius: 8px;
+    font-size: .9rem;
+    padding-left: 64px;
+    text-overflow: ellipsis;
+}
+
+/* Cards de conversas */
+
+.chat_list{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contato_list:hover{
+    background: #e9edef;
+}
+
+.contato_list{
+    display: flex;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.imagem_contato{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.chat_detail{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.descricao_contato{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aaa;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    font-size: 0.9rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Lado direito******************************************************************************************* */
+
+.header_mensagens{
+    display: flex;
+    width: 100%;
+    height: 59px;
+    background: #F0F2F5;
+    align-items: center;
+    justify-content: space-between;
+    border-left: .5px solid #d1d7db;
+}
+
+.container_header{
+    display: flex;
+}
+
+.nav_perfil_direito{
+    display: flex;
+    gap: 32px;
+    padding-right: 16px;
+}
+
+.nav_perfil_direito i{
+    font-size: 18px;
+    color: #54656f;
+}
+
+.container_perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 8px;
+}
+
+.info_nome{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info_conversa{
+    color: #3B4A54;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}

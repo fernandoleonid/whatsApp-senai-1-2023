@@ -13,9 +13,9 @@
 </head>
 <body>
     
-    <header>
+    <!-- <header> -->
         
-        <div class="icon">
+        <!-- <div class="icon">
             <div class="icon__menu">
                 <img src="./img/do-utilizador.png" alt="icon__menu">
             </div>
@@ -32,39 +32,69 @@
             <img src="./img/search.png" alt="pesquisa">
             <img src="./img/tres-pontos.png" alt="mais_opcoes">
         </div>
-       
-    </header>
+        -->
+    <!-- </header> -->
 
-    <main>
-        <div class="barra_pesquisa">
-            <div class="container_search">
-                <div class="img_search"><img src="./img/search.png" alt="search"></div>
-                <div id="search"><input type="text" id="text__search" placeholder ="Pesquisar ou começar uma nova conversa"></div>
-            
+    <main> 
+        <div class="principal" id="principal">
+            <div class="header">
+                <div class="icon">
+                    <div class="icon__menu">
+                        <img src="./img/do-utilizador.png" alt="icon__menu">
+                    </div>
+                    <img src="./img/grupo.png" alt="grupo">
+                    <img src="./img/status.png" alt="status">
+                    <img src="./img/conversando.png" alt="add_conversas">
+                    <img src="./img/tres-pontos.png" alt="mais_opcoes">
+                </div>
+        
+                <div class="mobile">
+                    <h1 class="mobile__title">WhatsApp</h1>
+                    <img src="./img/camera.png" alt="camera">
+                    <img src="./img/search.png" alt="pesquisa">
+                    <img src="./img/tres-pontos.png" alt="mais_opcoes">
+                </div> 
+            </div>
+
+            <div class="barra_pesquisa">
+                <div class="container_search">
+                    <div class="img_search"><img src="./img/search.png" alt="search"></div>
+                    <div id="search"><input type="text" id="text__search" class = 'pesquisa'placeholder ="Pesquisar ou começar uma nova conversa"></div>
+                    <div class="img_filter"><img src="./img/filter-results-button.png" alt=""></div>
+                </div>
+            </div>
+    
+            <div class="container" id="container">
+                <!-- <div class="container-contatos">
+                    <div class="card">
+                        <img src="./img/contact1.png" class="img_usuario" alt="usuario">
+                        <div class="titulo_texto">
+                            <h5 id="card__titulo">
+                                Ana Maria
+                            </h5>
+                            <p id="texto">
+                                Front-end
+                            </p>
+                        </div>
+                    </div>  -->
             </div>
         </div>
 
-        <div class="container" id="container">
-            <!-- <div class="container-contatos"> -->
-                <!-- <div class="lista">
-                    <img src="./img/contact1.png" class="img_usuario" alt="usuario">
-                    <div class="titulo_texto">
-                        <h5 id="lista_titulo">
-                            Ana Maria
-                        </h5>
-                        <p id="texto">
-                            Front-end
-                        </p>
-                    </div>
-                </div> -->
-            <!-- </div> -->
+        <div class="mensagens" id="mensagens">
+            
+          <div class="header_msg">
+            <div class="header__icon">
+                <img src="./img/search.png" alt="">
+                <img src="./img/tres-pontos.png" alt="">
+            </div>
+            
+          </div>
         </div>
-
     </main>
 
     <footer>
         <i class="fas fa-lock"></i>
-        <p>Protegido com a criptografia de ponta a ponta.</p> 
+        <p>Protegido com a criptografia de ponta a ponta.</p>
     </footer>
 
 </body>

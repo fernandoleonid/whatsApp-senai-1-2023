@@ -37,17 +37,6 @@ const criarContatos = (contatos) => {
         cont++
     }
 
-    let conat = 0
-    while (conat < tempo.length) {
-
-        console.log(contatos.messages[conat].content)
-        console.log(contatos.messages[conat].sender)
-        conat++
-    }
-
-
-
-
     card.addEventListener('click', function () {
         carregarMensagens()
     })
@@ -55,8 +44,6 @@ const criarContatos = (contatos) => {
     card.append(foto, cardIdentificador, time)
     return card
 }
-
-
 
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
@@ -72,13 +59,22 @@ const criarMensagens = (contatos) => {
 
     const sender = document.createElement('p')
     sender.classList.add('sender')
-    sender.textContent = contatos.messages
+    const content = document.createElement('p')
+    content.classList.add('content')
 
+    // sender.textContent = contatos.messages
     // isto serve para criar as mensagens enviadas
 
+    let conat = 0
+    while (conat < tempo.length) {
 
+        content.textContent = contatos.messages[conat].content
+        console.log(contatos.messages[conat].content)
+        sender.textContent = contatos.messages[conat].sender
+        conat++
+    }
 
-    other.append(sender)
+    other.append(sender, content, sender)
     console.log(messages)
 
 }
@@ -95,10 +91,7 @@ const carregarMensagens = (contatos) => {
     const mensagens = contatos.map(criarMensagens)
     messagesChat.replaceChildren(...mensagens)
 
-
-
 }
-
 
 carregarCards()
 

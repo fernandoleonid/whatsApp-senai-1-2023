@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-areas: 'content';
+}
+
+header{
+    grid-area: content;
+    display: grid;
+    height: 150px;
+    font-size: 1.5rem;
+    box-shadow: 4px 4px 8px #1C5875;
+    background-color: #3BB6F5;
+}
+
+main{
+    display: grid;
+    grid-area: content;
+    grid-template-areas:
+    'menu menu_conversa' 
+    'contatos mensagem';
+    grid-template-columns: 0.8fr 2fr ;
+    grid-template-rows: 0.2fr 0.3fr ;
+    background-color: #DCEFF8;
+    height: 850px;
+    width: 94%;
+    z-index: 1;
+    place-self: center;
+    margin-top: 40px;
+    box-shadow: 2px 1px 1px 3px #DBF2F5 ;
+}
+
+.container{
+    grid-area: contatos;
+    display: grid;
+    gap: 2px;
+    margin-top: 1px;
+    margin-right: 3px;
+}
+
+.card{
+    display: flex;
+    gap: 5px;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    box-shadow: 0px 0px 3px #0006;
+    cursor: pointer;
+}
+
+.menu{
+    grid-area: menu;
+    background-color: #a0c3f0;
+    display: grid;
+    margin-right: 1px;
+}
+.menu_conversa{
+    grid-area: menu_conversa;
+    background-color:#a0c3f0;
+    display: grid;
+}
+.mensagem{
+    grid-area: mensagem;
+    display: grid;
+    background-color: darkmagenta;
+    
+}
+
+.card__image{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 100%;
+}
+.card__name{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+

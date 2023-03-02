@@ -1,0 +1,33 @@
+.upper-info{
+    height: 8vh;
+    width: 30vw;
+    background-color: #46645e;
+    margin-top: 3vh;
+    margin-left: 3vw;
+}
+.imgs{
+    height: 60px;
+    width: 20vw;
+    margin-left: 10vw;
+    margin-top: -5vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile-img{
+    height: 44px;
+    width: 44px;
+    margin-top: 2vh;
+    margin-left: 1vw;
+}
+.users-img{
+    height: 40px;
+    width: 40px;
+}
+.newmg-img{
+    height: 40px;
+    width: 40px;
+}
+.settings-img{
+    height: 40px;
+    width: 40px;
+}

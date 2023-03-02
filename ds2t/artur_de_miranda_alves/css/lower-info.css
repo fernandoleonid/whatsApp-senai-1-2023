@@ -1,0 +1,93 @@
+.lower-info{
+    display: grid;
+    grid-template-areas:
+    "left right"
+    "left info";
+}
+.left-side{
+    grid-area: left;
+    height: 85vh;
+    width: 30vw;
+    margin-left: 3vw;
+    background-color: #70958E;
+    border: 4px solid#446d65;
+    box-shadow: 3px 3px #79a89f;
+}
+.search-bar{
+    position: relative;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    width: 27vw;
+    height: 5vh;
+    background-color: #dbdbdb;
+    border-radius: 50px;
+}
+.right-side{
+   grid-area: right;
+    height: 20vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15vh;
+}
+.info-text{
+    grid-area: info;
+    width: 800px;
+    margin-left: 6vw;
+    margin-top: -4vh;
+
+}
+.title-info{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+.desc-info{
+    display: grid;
+    grid-template-areas: 
+    "info1"
+    "info2"
+    "info3";
+    justify-content: center;
+ 
+}
+.info-1{
+    grid-area: info1;
+    font-family: 'Kanit', sans-serif;
+    color: #ffffff;
+}
+.info-2{
+    grid-area: info2;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    color: #ffffff;
+}
+.info-3{
+    grid-area: info3;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    color: #ffffff;
+}
+.bar-text{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.4vh;
+    padding-right: 4vw;
+    font-size: .90rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(128, 123, 123);
+
+}
+.icon-search{
+    position: absolute;
+    margin-top: 1.5vh;
+    margin-left: 1vw;
+}

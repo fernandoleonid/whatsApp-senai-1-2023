@@ -17,23 +17,22 @@ body{
     
 }
 
-
 header{
-    background-color: var(--header-color);
     width: 534px;
     height: 97px;
-    left: 41px;
-    top: 32px;
     background: #000000;
+}
+.t-border-and-color{
+    background-color: var(--header-color);
     border: 1px solid #202020;
     border-radius: 10px;
 }
-.home{
+.t-align-section { 
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
-}
+}   
 .contacts{
     gap: 16px;
 }
@@ -72,6 +71,13 @@ header{
 .chat{
     grid-area: chat;
     background-color: aquamarine;
+
+}
+.chat__header{
+    background-color:tomato;
+}
+.chat__space{
+    background-color: tomato;
 }
 .contacts{
     display: flex;

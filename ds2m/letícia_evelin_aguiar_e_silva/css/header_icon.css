@@ -1,0 +1,21 @@
+.mensagens{
+    width: 100%;
+    background-color: black;
+}
+
+.header_msg{
+    display: flex;
+    height: 67px;
+    background-color: whitesmoke;
+}
+.header__icon{
+    display: flex;
+    height: 30px;
+    gap: 15px;
+    margin-top: 1%;
+    margin-left: 90%;
+}
+
+.msg{
+    background-color: aqua;
+}

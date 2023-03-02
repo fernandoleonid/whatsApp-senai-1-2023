@@ -1,72 +1,84 @@
 /* .media__header */
+
 .media__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 16px;
-  padding-right: 16px;
-  height: 75px;
-  background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 75px;
+    background-color: var(--primary-color);
 }
+
 .contact-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .media__header__icons {
-  color: #667781;
-  font-size: 1.25rem;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+    color: #667781;
+    font-size: 1.25rem;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .media__search {
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  color: #667781;
-  border-bottom: 1px solid #0001;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #667781;
+    border: 1px solid #0001;
 }
 
 #input__search {
-  background-image: url('../recursos/images/search.png');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 1.3em;
-  padding-left: 2em;
-  width: 350px;
-  height: 35px;
-  border-radius: 6px;
-  background-color: var(--primary-color);
-  border: none;
+    background-image: url('../recursos/images/search.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 1.3em;
+    padding-left: 2em;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    border: none;
 }
 
 .media__contacts {
-  display: flex;
-  height: 75px;
-  align-items: center;
-  justify-content: start;
-  padding-left: 16px;
-  gap: 16px;
+    display: flex;
+    height: 75px;
+    align-items: center;
+    justify-content: start;
+    padding-left: 16px;
+    gap: 16px;
+    border: .5px solid #0001;
+    width: 100%;
+    text-align: left;
+}
+
+.media__contacts:hover {
+    background-color: honeydew;
+    cursor: pointer;
 }
 
 .messages {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border-bottom: 1px solid #0001;
-  height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
 }
+
 .messages__name {
-  font-size: 1rem;
-  font-weight: 600;
+    font-size: 1rem;
+    font-weight: 600;
 }
+
 .messages__description {
-  font-size: 0.75rem;
+    font-size: 0.75rem;
+    color: gray;
 }

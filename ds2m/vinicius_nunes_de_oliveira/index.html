@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./app.js" defer type="module"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media__header.css" />
+    <link rel="stylesheet" href="./css/inside-message.css" />
 
-    <link
-      rel="shortcut icon"
-      type="imagem/x-icon"
-      href="./recursos/images/logoWhatsApp.png"
-    />
-    <script
-      src="https://kit.fontawesome.com/0efc108669.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="shortcut icon" type="imagem/x-icon" href="./recursos/image/logoWhatsApp.png" />
+    <script src="https://kit.fontawesome.com/0efc108669.js" crossorigin="anonymous"></script>
     <title>WhatsApp</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <main>
-      <div class="media">
-        <div class="media__header">
-          <img src="./recursos/image/contact5.png" alt="" class="contact-img" />
-          <div class="media__header__icons">
-            <i class="fas fa-users"></i>
-            <i class="fas fa-circle-notch"></i>
-            <i class="far fa-comment-dots"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
-        <div class="media__search">
-          <div class="input">
-            <input
-              type="text"
-              name="teste"
-              id="input__search"
-              placeholder="Procure alguém para conversar"
-            />
-          </div>
-          <i class="fas fa-filter"></i>
-        </div>
-        <div class="container" id="container">
-          <div class="media__contacts">
-            <img
-              src="./recursos/image/contact4.png"
-              alt=""
-              class="contact-img"
-            />
-            <div class="messages">
-              <h5 class="messages__name">Ariel</h5>
-              <span class="messages__description"
-                >Hello Leonid, how are you doing today?</span
-              >
+        <div class="media">
+            <div class="media__header">
+                <img src="./recursos/image/contact5.png" alt="" class="contact-img" />
+                <div class="media__header__icons">
+                    <i class="fas fa-users"></i>
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="far fa-comment-dots"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
             </div>
-          </div>
+            <div class="media__search">
+                <div class="input">
+                    <input type="text" name="teste" id="input__search" placeholder="Procure alguém para conversar" />
+                </div>
+                <i class="fas fa-filter"></i>
+            </div>
+            <div class="container" id="container">
+            </div>
         </div>
-      </div>
-      <div class="inside-message"></div>
+        <div class="inside-message">
+            <div class="message__header">
+                <div class="group">
+                    <img src="./img/contact1.png" alt="" class="contact-img">
+                    <div class="header__contact">
+                        <h5 class="messages__name">Ana Maria</h5>
+                        <span class="messages__description">Frontend Developer</span>
+                    </div>
+                </div>
+
+                <div class="header__icon">
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="message__content"></div>
+            <div class="message__footer">
+                <i class="far fa-smile"></i>
+                <input type="text">
+                <i class="fas fa-microphone"></i>
+            </div>
+        </div>
     </main>
-  </body>
+</body>
+
 </html>

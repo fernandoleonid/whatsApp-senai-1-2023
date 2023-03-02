@@ -2,7 +2,10 @@
 
 import {contatos} from "./contatos.js"
 
-const criarCard = (contato) => {
+const container = document.getElementById('container')
+
+const criarCard = (contato, indice) => {
+
     const mensagem = document.createElement('ul')
     mensagem.classList.add('container-mensagens')
 
@@ -16,9 +19,6 @@ const criarCard = (contato) => {
     const informacao = document.createElement('div')
     informacao.classList.add('container-info')
 
-    const perfil = document.createElement('div')
-    perfil.classList.add('container-perfil')
-
     const nome = document.createElement('span')
     nome.textContent = contato.name
 
@@ -26,26 +26,18 @@ const criarCard = (contato) => {
     descricao.classList.add('info-conversa')
     descricao.textContent = contato.description
 
-    const hora = document.createElement('div')
-    hora.classList.add('hora')
-    hora.textContent = contato.hora
-
     mensagem.append(conversa)
 
-    conversa.append(foto, informacao, nome, hora)
+    conversa.append(foto, informacao, nome)
 
-    informacao.append(perfil)
-
-    perfil.append(nome, descricao)
+    informacao.append(nome, descricao)
 
     return mensagem
 
 }
 
 const carregarContatos = () => {
-    const container = document.getElementById('container')
     const contatosMensagens = contatos.map(criarCard)
-
     container.replaceChildren(...contatosMensagens)
 }
 

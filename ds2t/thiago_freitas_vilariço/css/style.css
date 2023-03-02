@@ -25,14 +25,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-/* .container-direito::before{
-    background-image: url(../img/fundo-mensagens.png);
-    position: absolute;
-    content: "";
-    opacity: 0.1;
-    width: 1114px;
-    height: 908px;
-} */
 .header-esquerdo{
     display: flex;
     width: 100%;
@@ -113,15 +105,11 @@ body{
 }
 .container-info{
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid #d1d7db;
     padding-bottom: 8px;
-}
-.container-perfil{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
     padding-left: 8px;
 }
 .info-nome{
@@ -131,10 +119,6 @@ body{
     color: #3B4A54;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
-}
-.hora{
-    color: #667781;
-    font-size: 14px;
 }
 .header-direito{
     display: flex;
@@ -147,6 +131,12 @@ body{
 }
 .container-header{
     display: flex;
+}
+.container-perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 8px;
 }
 .nav-perfil-direito{
     display: flex;

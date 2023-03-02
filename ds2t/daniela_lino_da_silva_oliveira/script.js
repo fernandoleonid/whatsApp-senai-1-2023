@@ -1,7 +1,7 @@
 'use strict'
 import { contatos } from "../../recursos/contatos.js";
 
-const criarContato = (contato) => {
+const criarContato = (contato, indice) => {
 
 
     const cardContact = document.createElement('div')
@@ -24,9 +24,14 @@ const criarContato = (contato) => {
     contactDescription.textContent = contato.description
 
     cardTitle.append(nameContact, contactDescription);
+    cardContact.onclick = () => (carregarChat(indice))
     cardContact.append(foto, cardTitle);
 
     return cardContact;
+
+    
+
+
 }
 const carregarContatos = () => {
     const containerContatos = document.getElementById('contacts__container')
@@ -35,17 +40,23 @@ const carregarContatos = () => {
     containerContatos.replaceChildren(...cardsContato);
 }
 const criarChat = (json) => {
+    const jsonName = json
     const nomeContato = json.name
     const senderMessage = json.messages
-    // const nomeContato = json.name
-    // const senderMessage = json.messages.sender
+    
+
     console.log(senderMessage[2].sender)
 
 
-
+    // for (let index = 0; index < json.length; index++) {
+    //     const element = array[index];
+        
+    // }
     for (let cont = 0; cont < senderMessage.length; cont++) {
+
         const cardChat = document.createElement('div');
         cardChat.classList.add('chat_place');
+
         console.log(3)
         console.log(senderMessage[1].sender)
 
@@ -86,16 +97,13 @@ const criarChat = (json) => {
 
 }
 
-
-
-
-const carregarChat = () => {
+const carregarChat = (indice) => {
     const containerChat = document.getElementById('messages_place')
     const cardsChat = contatos.map(criarChat);
 
     containerChat.replaceChildren(...cardsChat);
 }
-const contactClick = () => {
+const contactClick = (indice) => {
     const contatoExistente = document.getElementById('contact');
     contatoExistente.addEventListener('click', carregarChat)
 }

@@ -21,6 +21,9 @@ body{
 .container-direito{
     grid-area: container-direito;
     background-color: #efeae2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* .container-direito::before{
     background-image: url(../img/fundo-mensagens.png);
@@ -98,6 +101,10 @@ body{
 .container-conversas{
     display: flex;
     padding: 14px;
+    cursor: pointer;
+}
+.container-conversas:hover{
+    background-color: #e9edef;
 }
 .img-chat{
     width: 49px;
@@ -114,16 +121,93 @@ body{
 .container-perfil{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     padding-left: 8px;
+}
+.info-nome{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .info-conversa{
     color: #3B4A54;
     font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .hora{
     color: #667781;
     font-size: 14px;
+}
+.header-direito{
+    display: flex;
+    width: 100%;
+    height: 59px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F0F2F5;
+    border-left: .5px solid #d1d7db;
+}
+.container-header{
+    display: flex;
+}
+.nav-perfil-direito{
+    display: flex;
+    gap: 32px;
+    padding-right: 16px;
+}
+.nav-perfil-direito i {
+    font-size: 18px;
+    color: #54656f;
+}
+/* .container-mensagens-direita {
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 32px;
+}
+.caixa {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.caixa p {
+    padding: 8px;
+    background-color: #d9fdd3;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.caixa p span {
+    font-size: 0.7rem;
+    opacity: 0.5;
+}  
+.mensagem-minha {
+    justify-content: flex-end;
+} 
+.mensagem-sua {
+    justify-content: flex-start;
+} 
+.mensagem-sua p {
+    background-color: #fff;
+    text-align: left;
+} */
+.footer-direito{
+    display: flex;
+    width: 100%;
+    height: 64px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F0F2F5;
+    gap: 16px;
+    padding: 16px;
+}
+.footer-direito i{
+    font-size: 24px;
+    color: #54656f;
+}
+.caixa-pesquisa-direita{
+    width: 100%;
+    border: none;
+    outline: 0;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding-left: 16px;
 }
 /* TABLET */
 @media (max-width:960px){

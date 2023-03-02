@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/icon-whatsapp.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/30058942d9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://kit.fontawesome.com/30058942d9.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <script src="./js/index.js" defer type="module"></script>
@@ -14,10 +15,11 @@
 <body>
     <div class="container">
         <div class="body_left">
+
             <!-- Header do WhatsApp (Comunidades, Status, Nova Conversa e mais opções) -->
             <div class="header_left">
                 <div class="user_profile">
-                    <img src="./img/profile.jpg" alt="" class="img_profile">
+                    <img title="Imagem de perfil" src="./img/profile.jpg" alt="" class="img_profile">
                 </div>
                 <ul class="nav_icons">
                     <li><i title="Comunidadades" class="fa-solid fa-users"></i></li>
@@ -26,6 +28,7 @@
                     <li><i title="Mais opções" class="fa-solid fa-ellipsis-vertical"></i></li>
                 </ul>
             </div>
+
             <!-- Barra de pesquisa de chats ou grupos -->
             <div class="search_chat">
                 <div>
@@ -34,18 +37,19 @@
                 </div>
                 <i title="Filtro de conversas não lidas" class="fa-solid fa-filter"></i>
             </div>
+
             <!-- Lista das conversas e grupos -->
-            <ul class="chat_list">
-                <div class="chat_active">
+            <ul class="chat_list" id="chat_messages">
+                <!-- <div class="chat_active">
                     <img src="./img/contact1.png" class="img_contact" alt="">
                     <div class="chat_details">
-                        <div class="chat_profile">
-                            <h4 class="name_contact">Amarilda</h4>
-                            <p class="message_contact">opa</p>
+                            <span class="name_contact">Ana Maria</span>
+                            <span class="message_contact">Frontend Developer</span>
+                        <div class="time">
+                            18:30
                         </div>
-                        <p class="time_contact">02:23</p>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- <div class="block unread">
                     <div class="imgBox">
@@ -72,7 +76,7 @@
                     <div title="Dados do perfil" class="contact_right_img">
                         <img src="./img/contact1.png" alt="" class="img_contact">
                     </div>
-                    <h4>Amarilda <span>online</span></h4>
+                    <h4>Ana Maria <span>online</span></h4>
                 </div>
                 <ul class="nav_icons">
                     <li><i title="Pesquisar..." class="fa-solid fa-magnifying-glass"></i></li>
@@ -104,7 +108,6 @@
         </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/30058942d9.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

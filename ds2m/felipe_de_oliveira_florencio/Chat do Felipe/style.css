@@ -1,7 +1,22 @@
 
 body{
-    background-color: #020202;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vw 1fr;
+    grid-template-areas: 
+        "home chat chat"
+        "home chat chat";
 }
+
 .profile p {
     transform: rotate(-90deg)
+}
+
+.home{
+    grid-area: home;
+    background-color: aqua;
+}
+.chat{
+    grid-area: chat;
+    background-color: aquamarine;
 }

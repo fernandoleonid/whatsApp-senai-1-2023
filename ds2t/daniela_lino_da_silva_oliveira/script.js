@@ -39,7 +39,7 @@ const criarChat = (json) => {
     const senderMessage = json.messages
     // const nomeContato = json.name
     // const senderMessage = json.messages.sender
-    console.log(senderMessage.lenght)
+    console.log(senderMessage[2].sender)
 
 
 
@@ -48,7 +48,8 @@ const criarChat = (json) => {
         cardChat.classList.add('chat_place');
         console.log(3)
         console.log(senderMessage[1].sender)
-        if (senderMessage[cont].sender != nomeContato) {
+
+        if (senderMessage[cont].sender === 'me') {
             console.log('ok')
             const messageRight = document.createElement('div')
             messageRight.classList.add('right__messages')
@@ -60,10 +61,11 @@ const criarChat = (json) => {
             messageContentRight.classList.add('message')
             messageContentRight.textContent = senderMessage[cont].content
 
-            messageRight.append(userMessage, messageContentRight);
+            userMessage.append(messageContentRight);
+            messageRight.append(userMessage);
             cardChat.append(messageRight);
             return cardChat;
-        } else {
+        } else if(senderMessage[cont].sender !== 'me'){
             const messageLeft = document.createElement('div')
             messageLeft.classList.add('left__messages')
 
@@ -74,8 +76,8 @@ const criarChat = (json) => {
             messageContentLeft.classList.add('message')
             messageContentLeft.textContent = senderMessage[cont].content
 
-            messageLeft.append(contactMessage, messageContentLeft);
-
+            contactMessage.append(messageContentLeft);
+            messageLeft.append(contactMessage);
             cardChat.append(messageLeft);
             return cardChat;
         }

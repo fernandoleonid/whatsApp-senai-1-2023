@@ -5,6 +5,13 @@
     border-radius: 5px;
     border: 1px solid #958F83;
     background-color: #FFEEE6;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.chat__box::-webkit-scrollbar-thumb {
+    background-color: #958F83;
+    border-radius: 22px;
+    border: 3px solid #fff;
 }
 
 .contact__profile {
@@ -12,6 +19,7 @@
     height: 15%;
     width: 100%;
     background-color: #fff;
+    position: absolute;
 }
 /* .show_profile{
     box-shadow: 0px 2px 5px #000;
@@ -21,11 +29,11 @@
 } */
 
 .messages_place {
-    height: 85%;
+    height: 60%;
     width: 100%;
 }
 .chat_place {
-    height: 100%;
+    height: max-content;
     width: 100%;
 }
 
@@ -44,24 +52,23 @@
 .user__message,
 .contact__message {
     border-radius: 2px;
-    border-top: 10px solid #EEA04E;
     max-width: 20rem;
     height: max-content;
     width: max-content;
     display: flex;
     font-size: 1rem;
-    white-space: normal
-}
-
-.contact__message {
-    border-left: 10px solid transparent;
-    margin: .5rem;
-    background-color: #EEA04E;
-    background-clip: padding-box;
 }
 
 .user__message {
+    border-top: 10px solid #fff;
     border-right: 10px solid transparent;
+    margin: 10px;
+    background-color:#fff;
+    background-clip: padding-box;
+}
+.contact__message {
+    border-top: 10px solid #EEA04E;
+    border-left: 10px solid transparent;
     margin: 10px;
     background-color: #EEA04E;
     background-clip: padding-box;

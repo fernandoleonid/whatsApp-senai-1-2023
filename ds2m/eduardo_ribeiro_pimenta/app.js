@@ -52,8 +52,7 @@ const mudarFundo = (card) => {
     containerUnselect.classList.remove('selected')
     containerSelected.classList.add('selected')
     last = card.currentTarget.id
-    console.log(last)
-    console.log(card.currentTarget.id)
+
 
 }
 

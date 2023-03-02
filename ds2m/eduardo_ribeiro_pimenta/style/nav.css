@@ -75,6 +75,7 @@
     align-items: center;
     overflow-y: auto;
     scroll-behavior: smooth;
+
 }
 .nav__search{
     height: 60px;
@@ -105,6 +106,7 @@
 .contact__container:hover{
     background-color: #384043;
     width: 100%;
+    cursor: default;
 }
 .contact__container{
     display: flex;

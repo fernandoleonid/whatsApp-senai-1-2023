@@ -1,0 +1,12 @@
+.messsage__baloon__me{
+    height: 100px;
+    width: 300px;
+    background-color: teal;
+    border-radius: 20px 20px 20px 20px;
+}
+.messsage__baloon{
+    height: 100px;
+    width: 300px;
+    background-color: thistle;
+    border-radius: 20px 20px 20px 20px;
+}

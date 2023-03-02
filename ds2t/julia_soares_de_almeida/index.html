@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer type="module"></script>
     <title>WhatsApp</title>
 </head>
 
@@ -16,12 +17,19 @@
         <div class="box-left">
             <div class="header">
                 <div class="user_img">
-                    <img src="./img/user.jpeg" alt="" class="cover">
+                    <img src="./img/user.jpeg" alt="" class="img__user">
                 </div>
                 <ul class="icons">
-                    <li class="icons__icons"><ion-icon name="camera-outline"></ion-icon></ion-icon></li>
-                    <li class="icons__icons"><ion-icon name="chatbox"></ion-icon></li>
-                    <li class="icons__icons"><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                    <li class="icons__icons">
+                        <ion-icon name="camera-outline"></ion-icon>
+                        </ion-icon>
+                    </li>
+                    <li class="icons__icons">
+                        <ion-icon name="chatbox"></ion-icon>
+                    </li>
+                    <li class="icons__icons">
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    </li>
                 </ul>
             </div>
 
@@ -33,130 +41,22 @@
             </div>
 
             <!-- Messages-->
-            <div class="chatlist">
+            <ul class="chatlist" id="card">
 
-                <div class="block unread">
+                <!-- <div class="card" >
 
-                    <div class="imgbx">
-                        <img src="./img/contact7.png" alt="" class="cover">
+                    <div class="img__card">
+                        <img src="./img/contact7.png" alt="" class="img__user">
                     </div>
 
-                    <div class="details">
-                        <div class="listhead">
+                        <div class="div__card">
                             <h4>Max Kellerman</h4>
-                            <p class="time">13:10</p>
+                            <p class="description">Bom trabalho, fico feliz em ver vocês te...</p>
                         </div>
 
-                        <div class="message">
-                            <p>Bom trabalho, fico feliz em ver vocês te...</p>
-                        </div>
-                    </div>
+                </div> -->
 
-                </div>
-
-                <div class="block unread">
-                    <div class="imgbx">
-                        <img src="./img/contact6.png" alt="" class="cover">
-                    </div>
-
-                    <div class="details">
-                        <div class="listhead">
-                            <h4>Julia Smith</h4>
-                            <p class="time">12:15</p>
-                        </div>
-
-                        <div class="message">
-                            <p>Todos estão trabalhando duro e focados...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block unread">
-                    <div class="imgbx">
-                        <img src="./img/contact5.png" alt="" class="cover">
-                    </div>
-
-                    <div class="details">
-                        <div class="listhead">
-                            <h4>John Doe</h4>
-                            <p class="time">11:10</p>
-                        </div>
-
-                        <div class="message">
-                            <p>Acho que você vai gostar!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block unread">
-                    <div class="imgbx">
-                        <img src="./img/contact4.png" alt="" class="cover">
-                    </div>
-
-                    <div class="details">
-                        <div class="listhead">
-                            <h4>Sarah Lee</h4>
-                            <p class="time">10:15</p>
-                        </div>
-
-                        <div class="message">
-                            <p>Tenho trabalhado bastante, mas está tud...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block unread">
-                    <div class="imgbx">
-                        <img src="./img/contact3.png" alt="" class="cover">
-                    </div>
-
-                    <div class="details">
-                        <div class="listhead">
-                            <h4>Mark Johnson</h4>
-                            <p class="time">15/02/2022</p>
-                        </div>
-
-                        <div class="message">
-                            <p>Yes, we're making good progress. We sh...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block unread">
-                    <div class="imgbx">
-                        <img src="./img/contact2.png" alt="" class="cover">
-                    </div>
-
-                    <div class="details">
-                        <div class="listhead">
-                            <h4>Jane Smith</h4>
-                            <p class="time">16/02/2022</p>
-                        </div>
-
-                        <div class="message">
-                            <p>Yes, I have. They look great!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block unread">
-                    <div class="imgbx">
-                        <img src="./img/contact1.png" alt="" class="cover">
-                    </div>
-
-                    <div class="details">
-                        <div class="listhead">
-                            <h4>Ana Maria</h4>
-                            <p class="time">17/02/2022</p>
-                        </div>
-
-                        <div class="message">
-                            <p>Not yet. I'm thinking about going to the...</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            </ul>
         </div>
 
 
@@ -193,21 +93,30 @@
                     </div>
 
                     <ul class="icons">
-                        <li><ion-icon name="videocam"></ion-icon></li>
-                        <li><ion-icon name="call"></ion-icon></li>
-                        <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
-                        
+                        <li>
+                            <ion-icon name="videocam"></ion-icon>
+                        </li>
+                        <li>
+                            <ion-icon name="call"></ion-icon>
+                        </li>
+                        <li>
+                            <ion-icon name="ellipsis-vertical"></ion-icon>
+                        </li>
+
                     </ul>
+
+                    <!-- <img src="./img/background.png" alt="" class="background-msg"> -->
 
                 </div>
 
-                <!-- <img src="./img/background.png" alt="" class="background-msg"> -->
 
                 <div class="chatbox-input">
                     <ion-icon name="happy-outline"></ion-icon>
                     <ion-icon name="attach-outline"></ion-icon>
                     <input type="text" placeholder="Menssage">
                     <ion-icon name="mic-outline"></ion-icon>
+
+                    
 
                 </div>
             </div>

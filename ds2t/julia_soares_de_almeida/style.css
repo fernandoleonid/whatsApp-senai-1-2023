@@ -20,8 +20,6 @@ body {
     width: 1396px;
     max-width: 100%;
     height: calc(100vh - 40px);
-    background: #fff;
-    /* box-shadow:0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px 0 rgba(0,0,0,0.06); */
 }
 
 
@@ -29,8 +27,9 @@ body {
     position: relative;
     flex: 30%;
     background: #111B21;
-    /* border-right: 1px solid rgba(0,0,0,0.2);
-    overflow-y: scroll ;
+    width: 100vw;
+    /* border-right: 1px solid rgba(0,0,0,0.2); */
+    /* overflow-y: scroll ;
     scrollbar-color: #111B21; */
     overflow-x: hidden;
 }
@@ -54,15 +53,6 @@ body {
     overflow: hidden;
     border-radius: 50%;
     cursor: pointer;
-}
-
-.cover {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .icons {
@@ -113,14 +103,15 @@ body {
     color: #D1D7DB;
 }
 
-.chatlist .block {
+.card {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     cursor: pointer;
+    
+
 }
 
 
@@ -128,7 +119,7 @@ body {
     background: #202C33;
 }
 
-.imgbx {
+.img__card {
     position: relative;
     min-width: 45px;
     height: 45px;
@@ -137,18 +128,27 @@ body {
     margin-right: 10px;
 }
 
-.details {
+
+.img__user {
     position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.div__card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1.5px solid #202C33;
     width: 100%;
 }
 
-.listhead {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-
-.listhead h4 {
+.name__card {
     font-size: 1.1em;
     font-weight: 600;
     color: #D1D7DB;
@@ -159,14 +159,11 @@ body {
     color: #D1D7DB;
 }
 
-.message {
+.description {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.message p {
-    color: #D1D7DB;
+    color: #8696A0;
     overflow: hidden;
 }
 
@@ -174,10 +171,11 @@ body {
     position: relative;
     flex: 70%;
     background: #202C33;
+    
 }
 
 
-.box-right::before {
+/* .box-right::before {
     content: '';
     position: absolute;
     top: 0;
@@ -185,22 +183,26 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0.3;
-}
+    
+} */
 
 .box-right-start {
-    display: column;
+     /* display: none; */
     width: 100%;
     height: 100%;
+
 }
 
 .box-start-img {
     display: flex;
-    padding-left: 25%;
+    grid-area: img;
+    padding-left: 20%;
     padding-top: 50px;
     height: 50%;
 }
 
 .box-start-text span {
+    grid-area: text;
     font-size: 2.5rem;
     padding-left: 35%;
     padding-top: 100px;
@@ -208,6 +210,7 @@ body {
 
 .box-start-text p {
     display: column;
+    grid-area: footer;
     font-size: 1.1rem;
     padding-left: 15%;
     padding-top: 10px;
@@ -217,8 +220,8 @@ body {
 .encryption {
     display: flex;
     color: #8696A0;
-    padding-top: 20%;
-    padding-left: 25%;
+    padding-top: 25%;
+    padding-left: 20%;
 }
 
 .box-right-open {

@@ -1,0 +1,38 @@
+.container{
+    grid-area: content;
+    width: 97vw;
+    height: 90vh;
+    background-color: #f0f2f2;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    box-shadow: 2px 2px 2px 2px #f0f2f2;
+}
+
+.container__chat{
+    height: 95vh;
+    width: 27vw;
+    background-color: #ffff;
+}
+
+.chat{
+    height: 7vh;
+    width: 27vw;
+    background-color: #e9edef;
+    box-shadow: 1px 1px 1px #e9edef;
+}
+
+.photo{
+    width: 5vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+}
+
+.img__photo{
+    height: 5vh;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+}

@@ -21,15 +21,15 @@
     <link rel="stylesheet" href="./css/message-bar.css">
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
-    <script src="./main.js" defer type="module"></script>
+    <script src="./js/main.js" defer type="module"></script>
     <title>WhatsApp</title>
 </head>
 
 <body>
     <main>
-        <section class="contact__container">
-            <div class="profile">
-                <img src="./img/foto-de-perfil.jpeg" alt="foto de perfil" class="profile__picture">
+        <section class="contato__container">
+            <div class="perfil">
+                <img src="./img/foto-de-perfil.jpeg" alt="foto de perfil" class="foto__perfil">
                 <div class="icons">
                     <i class="fa-solid fa-users"></i>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -41,82 +41,46 @@
                     <input type="text" placeholder="Pesquisar ou começar uma nova conversa">
                 </div>
             </div>
-            <ul class="contacts">
-                <li class="chat" id="chat1">
-                    <img src="./recursos/images/contact1.png" alt="contato1" class="contact__photo" id="contact1">
-                    <div class="contact__conversation" id="contact__conversation-1">
-                        <h1 class="contact__name">Ana Maria</h1>
-                        <p class="description" id="description">Frontend Developer</p>
+            <ul class="contatos" id="contatos">
+                <!-- <li class="chat" id="chat">
+                    <img src="./recursos/images/contact1.png" alt="contato1" class="foto__contato" id="contact1">
+                    <div class="conversa__contato" id="contact__conversation-1">
+                        <h1 class="nome__contato">Ana Maria</h1>
+                        <p class="ultima__mensagem" id="description">Frontend Developer</p>
                     </div>
-                </li>
-                <li class="chat" id="chat2">
-                    <img src="./recursos/images/contact2.png" alt="contato1" class="contact__photo" id="contact1">
-                    <div class="contact__conversation" id="contact__conversation-1">
-                        <h1 class="contact__name">Jane Smith</h1>
-                        <p class="description" id="description">UI Designer</p>
-                    </div>
-                </li>
-                <li class="chat" id="chat3">
-                    <img src="./recursos/images/contact3.png" alt="contato1" class="contact__photo" id="contact1">
-                    <div class="contact__conversation" id="contact__conversation-1">
-                        <h1 class="contact__name">Mark Johnson</h1>
-                        <p class="description" id="description">Backend Developer</p>
-                    </div>
-                </li>
-                <li class="chat" id="chat4">
-                    <img src="./recursos/images/contact4.png" alt="contato1" class="contact__photo" id="contact1">
-                    <div class="contact__conversation" id="contact__conversation-1">
-                        <h1 class="contact__name">Sarah Lee</h1>
-                        <p class="description" id="description">Software Engineer</p>
-                    </div>
-                </li>
-                <li class="chat" id="chat5">
-                    <img src="./recursos/images/contact5.png" alt="contato1" class="contact__photo" id="contact1">
-                    <div class="contact__conversation" id="contact__conversation-1">
-                        <h1 class="contact__name">John Doe</h1>
-                        <p class="description" id="description">Designer</p>
-                    </div>
-                </li>
-                <li class="chat" id="chat6">
-                    <img src="./recursos/images/contact6.png" alt="contato1" class="contact__photo" id="contact1">
-                    <div class="contact__conversation" id="contact__conversation-1">
-                        <h1 class="contact__name">Julia Smith</h1>
-                        <p class="description" id="description">Product Manager</p>
-                    </div>
-                </li>
-                <li class="chat" id="chat7">
-                    <img src="./recursos/images/contact7.png" alt="contato1" class="contact__photo" id="contact1">
-                    <div class="contact__conversation" id="contact__conversation-1">
-                        <h1 class="contact__name">Max Kellerman</h1>
-                        <p class="description" id="description">Marketing Manager</p>
-                    </div>
-                </li>
+                </li> -->
             </ul>
         </section>
-        <section class="conversation">
-            <div class="header__chat">
-                <img src="./recursos/images/contact1.png" alt="contato1" class="contact__photo__teste" id="contact1">
-                <div class="contact__conversation__teste" id="contact__conversation-1">
-                    <h1 class="contact__name__teste">Ana Maria</h1>
-                    <p class="description__teste" id="description">Frontend Developer</p>
+        <section class="conversa" id="conversa">
+            <!-- <div class="header__chat">
+                <img src="./img/contact1.png" alt="contato1" class="foto__contato__chat">
+                <div class="contato__chat">
+                    <h1 class="nome__contato__chat">Ana Maria</h1>
+                    <p class="descricao__contato__chat" id="description">Frontend Developer</p>
                 </div>
             </div>
             <div class="main__chat">
-                <div class="messages__contact">
-                    <p class="message__chat">Not yet. I'm thinking about going to the beach. What about you?</p>
-                    <span class="time__chat">14:35</span>
+                <div class="contact__container">
+                    <div class="messages__contact">
+                        <p class="message__chat__contact">Not yet. I'm thinking about going to the beach. What about
+                            you?
+                        </p>
+                        <span class="time__chat__contact">14:35</span>
+                    </div>
                 </div>
-                <div class="messages__me">
-                    <p class="message__chat">Not yet. I'm thinking about going to the beach. What about you?</p>
-                    <span class="time__chat">14:35</span>
+                <div class="me__container">
+                    <div class="messages__me">
+                        <p class="message__chat__me">Not yet. I'm thinking about going to the beach. What about you?</p>
+                        <span class="time__chat__me">14:30</span>
+                    </div>
                 </div>
-                <div class="messages__contact">
-                    <p class="message__chat">Not yet. I'm thinking about going to the beach. What about you?</p>
-                    <span class="time__chat">14:35</span>
-                </div>
-                <div class="messages__me">
-                    <p class="message__chat">Not yet. I'm thinking about going to the beach. What about you?</p>
-                    <span class="time__chat">14:35</span>
+                <div class="contact__container">
+                    <div class="messages__contact">
+                        <p class="message__chat__contact">Not yet. I'm thinking about going to the beach. What about
+                            you?
+                        </p>
+                        <span class="time__chat__contact">14:35</span>
+                    </div>
                 </div>
             </div>
             <div class="message__bar">
@@ -124,7 +88,7 @@
                 <i class="fa-sharp fa-solid fa-paperclip"></i>
                 <input type="text" placeholder="Mensagem">
                 <i class="fa-solid fa-microphone"></i>
-            </div>
+            </div> -->
         </section>
     </main>
 </body>

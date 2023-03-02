@@ -28,17 +28,17 @@ main{
     width: 85vw;
 }
 
-.contact__container{
+.contato__container{
     grid-column: 1;
     background-color: var(--primary-color);
 }
 
-.conversation{
+.conversa{
     grid-column: 2;
     background-image: url(/img/fundo.jpeg);
 }
 
-.profile{
+.perfil{
     display: flex;
     align-items: center;
     height: 3.5rem;
@@ -54,7 +54,7 @@ main{
     color: var(--icon-color);
 }
 
-.profile__picture{
+.foto__perfil{
     width: 40px;
     height: 40px;
     border-radius: 100%;

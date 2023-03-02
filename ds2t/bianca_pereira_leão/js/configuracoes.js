@@ -41,10 +41,13 @@ const searchBar = document.getElementById('search-bar')
 const headerBody = document.getElementById('headerBody')
 const okButton = document.querySelector('.ok-button');
 const ul = document.getElementById('listaId')
+const contConfig = document.getElementById('contentConfig')
 
 okButton.addEventListener('click', function() {
   const input = document.querySelector('input[name="cor"]:checked');
   if (input && input.value === 'escuro') {
+    contConfig.classList.remove('backgroundColorConfigContent')
+    contConfig.classList.add('backgroundColorConfigContent2')
     messagesGroup.classList.remove('imgClara');
     body.classList.remove('backgroundClaroBody');
     side.classList.remove('bg-white')
@@ -69,6 +72,8 @@ okButton.addEventListener('click', function() {
     messagesGroup.classList.remove('imgEscura');
     side.classList.remove('backgroundEscuroBody')
     side.classList.add('bg-white')
+    contConfig.classList.remove('backgroundColorConfigContent2')
+    contConfig.classList.add('backgroundColorConfigContent')
     sideHeader.classList.remove('backgroundEscuroSideHeader')
     sideHeader.classList.add('backgroundClaroSideHeader')
     headerChat.classList.remove('backgroundEscuroSideHeader')

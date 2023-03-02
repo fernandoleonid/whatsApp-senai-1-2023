@@ -44,9 +44,20 @@
     background: url(../img/bg2.PNG);
 }
 
+.tomato{
+    background-color: tomato;
+}
+
 #backgroundColorModalContent{
     background-color: white;
   }
 #backgroundColorModalContent2{
+    background-color: #3b4a54;
+  }
+
+.backgroundColorConfigContent{
+    background-color: white;
+  }
+.backgroundColorConfigContent2{
     background-color: #3b4a54;
   }

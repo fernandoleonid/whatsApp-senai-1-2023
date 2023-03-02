@@ -78,16 +78,11 @@ ul{
   
 }
 .main-content ul:hover{
-    background-color: #ffff;
     cursor: pointer;
 }
 .main-content ul li a{
  display: flex;
  gap: 1vw;
-}
-
-.main-content ul li:hover{
- background-color: #f6f6f6;
 }
 
 .aboutme{

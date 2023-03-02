@@ -60,7 +60,10 @@ ul{
     font-size: 12px;
 }
 
-
+.status-friend{
+    display: flex;
+    gap: 10px;
+}
 
 
 

@@ -23,6 +23,10 @@
 [X] Existe um link do autor do projeto no README?<br>
 [X]Fez a autoavaliação?<br>
 
+## LightHouse
+
+![Imagem nota Lighthouse](./img/lighthouse.PNG)
+
 ## Tecnologias utilizadas 
 
 - HTML

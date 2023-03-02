@@ -1,22 +1,79 @@
+:root{
+    --background-color : #090909;
+    --header-color : #00000025;
+    --pure-white: #FFFFFF;
+    --body-grey: #1E1E1E;
+}
 
 body{
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 5vw 1fr;
     grid-template-areas: 
         "home chat chat"
         "home chat chat";
+    background-color: var(--body-grey);
+    
 }
 
-.profile p {
-    transform: rotate(-90deg)
-}
 
+header{
+    background-color: var(--header-color);
+    width: 534px;
+    height: 97px;
+    left: 41px;
+    top: 32px;
+    background: #000000;
+    border: 1px solid #202020;
+    border-radius: 10px;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.contacts{
+    gap: 16px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #99FFAF;
+}
+/* .logo__image{
+
+} */
+.profile{
+    display: flex;
+}
+.profile__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--pure-white);
+    transform: rotate(-90deg);
+}
 .home{
     grid-area: home;
-    background-color: aqua;
+    background-color: var(--background-color);
 }
 .chat{
     grid-area: chat;
     background-color: aquamarine;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
 }

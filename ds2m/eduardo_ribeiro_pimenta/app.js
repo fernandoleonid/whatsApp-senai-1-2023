@@ -1,10 +1,14 @@
 'use strict'
 
 import {contatos} from "./recursos/contatos.js"
-
+var id = 0
 const criarContainer = (contato) => {
     const container = document.createElement('div')
     container.classList.add('contact__container')
+    container.style.backgroundColor
+    container.setAttribute('id',id)
+    id++
+    container.addEventListener("click", mudarFundo)
 
     const imageHolder = document.createElement('div')
     imageHolder.classList.add('nav__image_holder')
@@ -39,6 +43,18 @@ const carregarMensagens = () => {
     const cards = contatos.map( criarContainer )
 
     navMain.replaceChildren(...cards)
+}
+
+var last = 0
+const mudarFundo = (card) => {
+    let containerUnselect = document.getElementById(last)
+    let containerSelected = document.getElementById(card.currentTarget.id)
+    containerUnselect.classList.remove('selected')
+    containerSelected.classList.add('selected')
+    last = card.currentTarget.id
+    console.log(last)
+    console.log(card.currentTarget.id)
+
 }
 
 carregarMensagens()

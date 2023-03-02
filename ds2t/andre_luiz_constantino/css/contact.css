@@ -1,0 +1,37 @@
+.contacts__container{
+    height: 83vh;
+    border-radius: 0px 0px 0px 29px;
+}
+
+.contact-card__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 7vh;
+    width: 100%;
+}
+
+.contact-card__image{
+    height: 4.2vh;
+    border-radius: 50%;
+    place-self: left;
+}
+
+.contact-card__name{
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.contact-card__description{
+    font-weight: 400;
+    font-size: 0.75rem;  
+}
+
+.contact-card__container:hover{
+    background-color: #001B26;
+    transition: .3s;
+    color: #fff;
+}

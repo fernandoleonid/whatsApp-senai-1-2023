@@ -5,10 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Web</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script src="./js/script.js" defer type="module"></script>
 </head>
 <body>
-    
+
+    <section class="container">
+
+        <div class="container__aside">
+            
+            <header>
+                <img src="./recursos/img/me.png" alt="Foto do dono do perfil" class="img__owner">
+
+                <ol class="header__container">
+                    <li><ion-icon name="camera-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbox-outline"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical-outline"></ion-icon></li>
+                </ol>
+            </header>
+            <div class="aside__pesquisa">
+                <ion-icon name="search-outline" class="lupa"></ion-icon>
+                <input type="text" id="pesquisa" placeholder="Pesquisar ou começar uma nova conversa" class="pesquisa">
+                <ion-icon name="filter-outline" class="filter"></ion-icon>
+            </div>
+            <div id="container__card" class="container__card">
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./recursos/img/contact1.png" class="img__owner" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h4 class="name">Bonitinho</h4>
+                        <p class="description">ola ola ola</p>
+                    </div>
+                    
+                </div>
+                
+               
+                
+            </div>
+            
+        </div>
+
+
+        <div class="container__main">
+            <div class="container__inicial">
+                <img src="./recursos/img/Capturar.PNG" alt="svg">
+                <h1 class="main__title">WhatsApp Web</h1>
+
+                <span class="text">Envie e receba mensagens sem precisar manter seu celular conectado à internet.</span>
+                <span class="text">Use o WhatsApp em até quatro aparelhos conectados e um celular ao mesmo tempo.</span>
+
+                <div class="prot">
+                <img src="./recursos/img/padlock.png" alt="">
+                <span class="text__prot">Protegido com a criptografia de ponta a ponta</span>
+                </div>
+                
+            </div>
+            
+        </div>  
+
+
+
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

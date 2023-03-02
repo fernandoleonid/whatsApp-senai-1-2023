@@ -1,16 +1,74 @@
-.chat__box{
+.chat__box {
     height: 100%;
     width: 100%;
     margin: 1rem;
     border-radius: 5px;
     border: 1px solid #958F83;
+    background-color: #FFEEE6;
 }
-.contact__profile{
-    box-shadow: 0px 2px 5px #C0A599;
+
+.contact__profile {
+    box-shadow: 0px 1px 5px #000;
     height: 15%;
     width: 100%;
+    background-color: #fff;
 }
-.messages_place{
+/* .show_profile{
+    box-shadow: 0px 2px 5px #000;
+        height: 15%;
+        width: 100%;
+
+} */
+
+.messages_place {
     height: 85%;
     width: 100%;
+}
+.chat_place {
+    height: 100%;
+    width: 100%;
+}
+
+.left__messages {
+    justify-content: start;
+    display: flex;
+    min-width: 100%;
+}
+
+.right__messages {
+    justify-content: end;
+    display: flex;
+    min-width: 100%;
+}
+
+.user__message,
+.contact__message {
+    border-radius: 2px;
+    border-top: 10px solid #EEA04E;
+    max-width: 20rem;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    font-size: 1rem;
+    white-space: normal
+}
+
+.contact__message {
+    border-left: 10px solid transparent;
+    margin: .5rem;
+    background-color: #EEA04E;
+    background-clip: padding-box;
+}
+
+.user__message {
+    border-right: 10px solid transparent;
+    margin: 10px;
+    background-color: #EEA04E;
+    background-clip: padding-box;
+}
+
+.message {
+    margin: 10px;
+    max-width: 90%;
+    word-wrap: break-word;
 }

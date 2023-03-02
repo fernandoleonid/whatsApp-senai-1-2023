@@ -1,16 +1,36 @@
 .chats{
     height: 100%;
     width: 75%;
-    background-color: #F0F2F5;
+    background-color: #fff;
     border-radius: 10px;
     border: 1px #f0f2f5 solid;
 }
 .chats__info{
     display: flex;
     flex-direction: row;
+    background-color: #F0F2F5;
+    height: 7vh;
+    width: 100%;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
 }
 .chats__info img{
     width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 1px #F0F2F5 solid;
+}
+.chats__info h3{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.chats__info p{
+    font-size: .8rem;
+    color: gray;
+}
+.chats__info i{
+    width: 100%;
+    font-size: 1.2rem;
+    color: #54656F;
+    justify-self: end;
 }

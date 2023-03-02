@@ -2,6 +2,7 @@
 
 import { contatos } from "./contatos.js"
 
+
 const criarContato = (contato) => {
     const contact = document.createElement('div')
     contact.classList.add('contact')
@@ -31,6 +32,44 @@ const carregarContatos = () => {
     const contacts = contatos.map(criarContato)
 
     container.replaceChildren(...contacts)
+
+    contacts.forEach(cards => {
+
+        cards.onclick
+
+    })
 }
+
+const trocarContato = (contat) => {
+
+    const elemento = document.createElement('h3')
+    elemento.classList.add('main__contact__container')
+    elemento.textContent = contat.name
+
+    var texto = document.getElementById('name__main');
+    texto.innerHTML = elemento.textContent
+    console.log('Foi???S');
+
+}
+
+// const carContatos = () => {
+//     const containero = document.getElementById('container__main')
+//     contatos.forEach(dadosContatos => {
+//         console.log(dadosContatos.name);
+
+//         if (dadosContatos.name == contatos.name) {
+//             console.log(dadosContatos.name);
+//         } else
+//             console.log('Erro');
+
+
+//     })
+
+//     containero.replaceChild(contactso)
+//     console.log(contactso);
+
+// }
+
+// container.addEventListener('click', carContatos)
 
 carregarContatos()

@@ -1,0 +1,16 @@
+.chats{
+    height: 100%;
+    width: 75%;
+    background-color: #F0F2F5;
+    border-radius: 10px;
+    border: 1px #f0f2f5 solid;
+}
+.chats__info{
+    display: flex;
+    flex-direction: row;
+}
+.chats__info img{
+    width: 50px;
+    border-radius: 50%;
+    border: 1px #F0F2F5 solid;
+}

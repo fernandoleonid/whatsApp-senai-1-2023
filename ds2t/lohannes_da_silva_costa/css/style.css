@@ -123,6 +123,11 @@ body{
     padding: 15px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     cursor: pointer;
+    transition: all .5s;
+}
+
+.chatlist .block:hover{
+    background: rgb(228, 228, 228);
 }
 
 .chatlist .block .imgbx{
@@ -201,7 +206,7 @@ body{
     font-size: 1.5rem;
     margin-right: 20px;
     color: rgb(29, 29, 29);
-    transition: all .5s;
+    transition: all .2s;
     cursor: pointer;
 }
 

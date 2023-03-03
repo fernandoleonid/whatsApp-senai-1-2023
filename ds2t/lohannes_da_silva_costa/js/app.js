@@ -11,7 +11,7 @@ const criaContato = ( contato ) => {
 
     const image = document.createElement('img')
     image.classList.add('cover')
-    image.src = `./img/${contato.image}`
+    image.src = `./${contato.image}`
 
     const detail = document.createElement('div')
     detail.classList.add('details')

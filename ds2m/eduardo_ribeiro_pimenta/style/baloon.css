@@ -1,7 +1,7 @@
 .messsage__baloon__me{
     height: fit-content;
     width: fit-content;
-    background-color: teal;
+    background-color: #00B09C;
     border-radius: 20px 20px 0px 20px;
     max-width: 50%;
     display: flex;
@@ -10,7 +10,7 @@
 .messsage__baloon{
     height: fit-content;
     width: fit-content;
-    background-color: thistle;
+    background-color: #252D30;
     border-radius: 20px 20px 20px 0px;
     place-self: flex-start;
     max-width: 50%;

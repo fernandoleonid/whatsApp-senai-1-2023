@@ -15,9 +15,11 @@ const criarCard = (contato) => {
     name.classList.add('card__name')
     name.textContent = contato.name 
 
+    const description = document.createElement('h1')
+    description.classList.add('card__description')
+    description.textContent = contato.description
 
-
-    card.append(img, name)
+    card.append(img, name, description)
 
     return card
 }

@@ -2,6 +2,14 @@
 
 import { contatos } from "./contatos.js"
 
+let cont = 0;
+const adicionarId = (contato) => {
+  contato.id = cont++;
+  return contato;
+};
+
+const contatosComId = contatos.map(adicionarId);
+
 // Função para criar a lista
 
 const criaListaMensagem = (mensagem) => {
@@ -250,7 +258,8 @@ const criarChatItens = (chat) => {
 
 const carregarChatItens = (contatoId) => {
   const chatContainer = document.getElementById('headerChat');
-  const contato = contatos.find(c => c.id === contatoId);
+  const contatoIndex = contatoId - 1;
+  const contato = contatosComId[contatoIndex];
   if (!contato) {
     console.error(`Contato com ID ${contatoId} não encontrado.`);
     return;
@@ -270,12 +279,20 @@ const criarMensagens = (contato) => {
     const mensagemElement = document.createElement("div");
     mensagemElement.classList.add("message");
     mensagemElement.classList.add(mensagem.sender === "me" ? "me" : "them");
-    mensagemElement.classList.add(mensagem.timestamp === contato.messages[contato.messages.length - 1].timestamp ? "tail" : "not-tail");
-    mensagemElement.dataset.time = new Date(mensagem.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    const messageTime = Date.parse(mensagem.timestamp);
+    if (!isNaN(messageTime)) {
+      mensagemElement.classList.add(messageTime === contato.messages[contato.messages.length - 1].timestamp ? "tail" : "not-tail");
+      mensagemElement.dataset.time = new Date(messageTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    } else {
+      console.error(`Data inválida: ${mensagem.timestamp}`);
+    }
+
     mensagemElement.innerText = mensagem.content;
     mensagensContainer.appendChild(mensagemElement);
   });
 };
+
 
 
 // Essa função carrega as mensagens de cada contato

@@ -2,15 +2,14 @@
 
 import {contatos} from "./contatos.js"
 
-const container = document.getElementById('container')
-
 const criarCard = (contato, indice) => {
-
-    const mensagem = document.createElement('ul')
-    mensagem.classList.add('container-mensagens')
 
     const conversa = document.createElement('div')
     conversa.classList.add('container-conversas')
+
+    conversa.addEventListener('click', (event) => {
+        console.log(contatos[indice])
+    })
 
     const foto = document.createElement('img')
     foto.classList.add('img-chat')
@@ -26,19 +25,35 @@ const criarCard = (contato, indice) => {
     descricao.classList.add('info-conversa')
     descricao.textContent = contato.description
 
-    mensagem.append(conversa)
-
     conversa.append(foto, informacao, nome)
 
     informacao.append(nome, descricao)
 
-    return mensagem
+    return conversa
 
 }
 
 const carregarContatos = () => {
+    const container = document.getElementById('container-mensagens')
     const contatosMensagens = contatos.map(criarCard)
     container.replaceChildren(...contatosMensagens)
 }
 
+const carregarMensagens = () => {
+    const mensagem = document.getElementById('mensagem')
+    const conversas = contatos.map(criarConversa)
+    mensagem.replaceChildren(...conversas)
+}
+
+// var div = document.getElementById('container-mensagens') 
+
+// div.addEventListener('click', function() {
+
+//     var container = document.getElementById('container-chat')
+
+//     container.classList.toggle('hide');
+
+// })
+
 carregarContatos()
+carregarMensagens()

@@ -147,35 +147,42 @@ body{
     font-size: 18px;
     color: #54656f;
 }
-/* .container-mensagens-direita {
-    width: 100%;
+.container-mensagens-direita {
+    display: flex;
     height: calc(100% - 120px);
-    padding: 32px;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
 }
-.caixa {
+.caixa-mensagens-minha {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+}
+.msg-minha{
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #d9fdd3;
+}
+.hora-minha{
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+.caixa-mensagens-sua {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
 }
-.caixa p {
+.msg-sua{
     padding: 8px;
-    background-color: #d9fdd3;
     border-radius: 8px;
     font-size: 1rem;
+    background-color: #ffffff;
 }
-.caixa p span {
+.hora-sua{
     font-size: 0.7rem;
     opacity: 0.5;
-}  
-.mensagem-minha {
-    justify-content: flex-end;
-} 
-.mensagem-sua {
-    justify-content: flex-start;
-} 
-.mensagem-sua p {
-    background-color: #fff;
-    text-align: left;
-} */
+}
 .footer-direito{
     display: flex;
     width: 100%;
@@ -199,6 +206,9 @@ body{
     font-size: 1rem;
     padding-left: 16px;
 }
+/* .hide{
+    display: none;
+} */
 /* TABLET */
 @media (max-width:960px){
     .container{
@@ -206,11 +216,15 @@ body{
         height: 100%;
         display: grid;
         grid-template-areas: 
-        "container-esquerdo";
-        grid-template-columns: 1fr;
+        "container-esquerdo" "container-direito";
+        grid-template-columns: 1fr 1fr;
     }
     .container-direito{
-        display: none;
+        width: 100vw;
+        height: 100vh;
+    }
+    .container-esquerdo{
+        height: 100vh;
     }
     .caixa-pesquisa{
         width: 80vw;

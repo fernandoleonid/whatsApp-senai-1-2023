@@ -140,10 +140,11 @@ body {
 
 .chat__list .block .img__bx {
     position: relative;
-    width: 45px;
+    min-width: 45px;
     height: 45px;
     overflow: hidden;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 .chat__list .block .details {

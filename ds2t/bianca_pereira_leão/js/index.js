@@ -2,7 +2,7 @@
 
 import { contatos } from "./contatos.js"
 
-let cont = 0;
+let cont = 1;
 const adicionarId = (contato) => {
   contato.id = cont++;
   return contato;
@@ -149,7 +149,7 @@ const criarChatItens = (chat) => {
 
   const spanDescricao = document.createElement('span')
   spanDescricao.classList.add('text-secondary')
-  spanDescricao.textContent = chat.lastSeem
+  spanDescricao.textContent = chat.description
 
   const nav = document.createElement('nav')
   nav.classList.add('groupIconMessage')
@@ -287,7 +287,8 @@ const criarMensagens = (contato) => {
     } else {
       console.error(`Data inválida: ${mensagem.timestamp}`);
     }
-
+    console.log(mensagem.timestamp)
+    console.log(mensagem.time)
     mensagemElement.innerText = mensagem.content;
     mensagensContainer.appendChild(mensagemElement);
   });

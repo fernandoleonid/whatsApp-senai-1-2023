@@ -49,29 +49,18 @@ const criarHeader = (indice) => {
     containerPerfil.classList.add('container-perfil')
 
     const infoNome = document.createElement('span')
-    infoNome.classList.add('nome')
+    infoNome.classList.add('info-nome')
     infoNome.textContent = contatos[indice].name
 
     const infoConversa = document.createElement('span')
     infoConversa.classList.add('info-conversa')
     infoConversa.textContent = 'online'
 
-    // const perfilIcon = document.createElement('ul')
-    // perfilIcon.classList.add('nav-perfil-direito')
-
-    // const icon1 = document.createElement('li')
-    // icon1.classList.add('fa-solid fa-magnifying-glass')
-
-    // const icon2 = document.createElement('li')
-    // icon2.classList.add('fa-solid fa-ellipsis-vertical')
-
     header.append(containerHeader)
 
     containerHeader.append(imagemPerfil, containerPerfil)
 
     containerPerfil.append(infoNome, infoConversa)
-
-    // perfilIcon.append(icon1, icon2)
 
     return header
 
@@ -84,4 +73,3 @@ const carregarContatos = () => {
 }
 
 carregarContatos()
-criarHeader()

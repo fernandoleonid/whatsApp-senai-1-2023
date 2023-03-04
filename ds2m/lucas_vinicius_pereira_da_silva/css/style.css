@@ -19,3 +19,20 @@ main{
     justify-self: center;
 }
 
+.aaa{
+    width: 12vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menus{
+    font-size: 1.1rem;
+    color: gray;
+    width: 12vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+

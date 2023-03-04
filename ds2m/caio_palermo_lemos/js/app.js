@@ -11,7 +11,6 @@ const chargeContacts = function () {
   const chatsContainer = document.querySelector(".chats__chats-container");
   const chats = contatos.map(createChat);
 
-  console.log("CHATS: " + chats);
   chatsContainer.replaceChildren(...chats);
 };
 
@@ -53,11 +52,7 @@ const fazerTudo = function (message) {
   // }
 
   const fazerLoop = function (indice) {
-    const messagesConversationsContainer = document.querySelector(
-      ".messages__conversations-container"
-    );
     for (let i = 0; contatos[indice].messages.length > i; i++) {
-      let array = [];
       const createMessages = function () {
         message = contatos[indice].messages[i];
 
@@ -132,35 +127,18 @@ const fazerTudo = function (message) {
 
         return messagesConversations;
       };
-      array[i] = createMessages();
 
-      const messagesConversations = document.querySelector(
-        ".messages__conversations"
+      const messagesConversationsContainer = document.querySelector(
+        ".messages__conversations-container"
       );
 
-      array[i] = createMessages();
-
-      // let filtro = array.filter((item) => {
-      //   return item;
-      // });
-
-      // let teste = array.forEach((item, index, array) => {
-      //   console.log("item: " + item);
-      //   console.log("index: " + index);
-      //   array.filter((valor) => {
-      //     console.log("valor: " + valor);
-      //     return valor;
-      //   });
-      //   array += array[index + 1];
-      //   console.log("array: " + array);
-      // });
-      // messagesConversations.replaceChildren(...array);
-
-      messagesConversations.append(array[i]);
-      // messagesConversations.replaceChildren(...array);
+      messagesConversationsContainer.append(createMessages());
     }
   };
   const handleClick = function (event) {
+    const messagesConversationsContainer = document.querySelector(
+      ".messages__conversations-container"
+    );
     let text = event.currentTarget.innerText.split(`\n`)[0];
     console.log(text);
 
@@ -169,6 +147,8 @@ const fazerTudo = function (message) {
       return contato.name == text;
     });
     console.log(indice);
+
+    messagesConversationsContainer.innerHTML = "";
 
     showContactMessages(contatos);
 
@@ -192,14 +172,14 @@ returnIcon();
 
 // console.log(`${convertedDate.getHours()}:${convertedDate.getMinutes()}`); // 17
 
+//BARRA DE PESQUISAR
 const buscar = function (contatos) {
-  let nome = 'Ana';
+  let nome = "Ana";
   const chats = document.querySelectorAll(".chat__name");
 
-  contatos.forEach(item => {
-    if(item.name.startsWith('Ana'))
-    console.log(item.name);
-  })
+  contatos.forEach((item) => {
+    if (item.name.startsWith("Ana")) console.log(item.name);
+  });
 };
 
-buscar(contatos)
+buscar(contatos);

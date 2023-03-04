@@ -31,3 +31,7 @@ input::placeholder{
     font-weight: 400;
     color: #8696A0;
 }
+
+.message__bar__none{
+    display: none;
+}

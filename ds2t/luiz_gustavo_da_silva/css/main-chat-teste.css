@@ -1,6 +1,6 @@
 .main__chat {
     background-color: #0B141A;
-    height: 49rem;
+    height: 51rem;
     display: flex;
     padding-bottom: 20px;
     padding-left: 60px;
@@ -12,19 +12,19 @@
     gap: 10px;
 }
 
-.contact__container{
+.container__contato{
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
 
-.me__container{
+.container__me{
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.messages__contact{
+.mensagens__contato{
     color: #E9EDEF;
     background-color:var(--second-color);
     position: relative;
@@ -34,14 +34,14 @@
     border-radius: 7.5px;
 }
 
-.time__chat__contact{
+.hora__chat__contato{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     font-size: 11px;
 }
 
-.messages__me{
+.mensagens__me{
     color: #E9EDEF;
     background-color:#005C4B;
     position: relative;
@@ -51,17 +51,17 @@
     border-radius: 7.5px;
 }
 
-.message__chat__me{
+.chat__mensagens__me{
     font-size: 14px;
     padding-right: 20px;
 }
 
-.message__chat__contact{
+.chat__mensagens__contato{
     font-size: 14px;
     padding-right: 20px;
 }
 
-.time__chat__me{
+.hora__chat__me{
     width: 100%;
     display: flex;
     justify-content: flex-end;

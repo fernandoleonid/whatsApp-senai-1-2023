@@ -36,6 +36,9 @@ main{
 .conversa{
     grid-column: 2;
     background-image: url(/img/fundo.jpeg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .perfil{

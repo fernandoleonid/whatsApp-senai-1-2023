@@ -12,6 +12,7 @@
     padding-left: 10px;
     height: 7vh;
     width: 100%;
+    cursor: pointer;
 }
 
 .contact-card__image{

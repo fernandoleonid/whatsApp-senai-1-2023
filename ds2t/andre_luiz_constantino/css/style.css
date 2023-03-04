@@ -59,4 +59,6 @@ a{
     cursor: pointer;
 }
 
-
+.hide {
+    display: none;
+}

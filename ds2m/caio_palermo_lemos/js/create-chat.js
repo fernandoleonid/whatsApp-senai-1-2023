@@ -5,6 +5,7 @@ export const createChat = function (contact) {
   const chatImage = document.createElement("img");
   chatImage.classList.add("chat__image");
   chatImage.src = `./${contact.image}`;
+  chatImage.alt = `${contact.name} Image`;
 
   const chatContent = document.createElement("div");
   chatContent.classList.add("chat__content");

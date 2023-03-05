@@ -20,6 +20,10 @@ export const createChat = function (contact) {
   chatText.classList.add("chat__text");
   chatText.textContent = contact.description;
 
+  const chatTime = document.createElement("span");
+  chatTime.classList.add("chat__time");
+  // chatTime.textContent = contact.
+
   chatContent.append(chatName, chatText);
 
   chat.append(chatImage, chatContent);

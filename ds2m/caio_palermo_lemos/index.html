@@ -17,6 +17,7 @@
     />
     <link rel="icon" type="imagem/png" href="./img/whatsapp.png" />
     <script src="./js/app.js" defer type="module"></script>
+    <script src="./js/search-contact.js" defer></script>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/displays.css" />
@@ -61,18 +62,15 @@
           </div>
         </div>
         <div class="chats__user-interactions">
-          <i class="fas fa-users" id="user-interactions__communities"></i>
+          <i class="fa-solid fa-sun" id="profile-options__change-color"></i>
           <span class="user-interactions__conversations">Conversas</span>
           <span class="user-interactions__status">Status</span>
           <span class="user-interactions__calls">Chamadas</span>
         </div>
         <div class="chats__filter">
           <div class="filter__input-container">
-            <input
-              type="search"
-              class="filter__input"
-              placeholder="Pesquisar"
-            />
+            <input class="filter__input" placeholder="Pesquisar" />
+            <!-- type="search" -->
             <i
               class="fa-solid fa-magnifying-glass"
               id="filter__icon-search"

@@ -1,3 +1,5 @@
+"use strict";
+
 //BARRA DE PESQUISAR
 // const buscar = function () {
 //   const filterInput = document.querySelector(".filter__input");

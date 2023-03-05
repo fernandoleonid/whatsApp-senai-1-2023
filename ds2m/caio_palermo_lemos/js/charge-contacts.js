@@ -1,3 +1,5 @@
+"use strict";
+
 import { createChat } from "./create-chat.js";
 
 export const chargeContacts = function (contatos) {

@@ -1,3 +1,5 @@
+"use strict";
+
 export const createChat = function (contact) {
   const chat = document.createElement("div");
   chat.classList.add("chat");

@@ -1,3 +1,5 @@
+"use strict";
+
 export const changeElements = function () {
   const chatsContainer = document.querySelector(".chats__chats-container");
   const chats = document.querySelector(".chats");

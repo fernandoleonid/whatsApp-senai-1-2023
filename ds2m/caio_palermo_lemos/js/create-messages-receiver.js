@@ -1,3 +1,5 @@
+"use strict";
+
 export const createMessagesReceiver = function (receiver) {
   const receiverProfile = document.createElement("div");
   receiverProfile.classList.add("receiver__profile");

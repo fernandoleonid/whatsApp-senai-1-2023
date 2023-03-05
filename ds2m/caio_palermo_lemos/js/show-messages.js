@@ -1,3 +1,5 @@
+"use strict";
+
 import { fazerLoop } from "./create-messages.js";
 
 export const showMessages = function (contatos) {

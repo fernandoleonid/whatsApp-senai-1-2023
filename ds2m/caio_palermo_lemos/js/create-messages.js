@@ -1,3 +1,5 @@
+"use strict";
+
 import { contatos } from "./contatos.js";
 import { convertTZ } from "./convert-timezone.js";
 
@@ -38,8 +40,27 @@ export const fazerLoop = function (indice) {
             message.timestamp,
             "America/Sao_Paulo"
           );
-          message.timestamp = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
-          messageTime.textContent = message.timestamp;
+          let time = {
+            time: (message.timestamp = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`),
+          };
+
+          delete message.timestamp;
+          Object.assign(message, time);
+
+          if (
+            message.time.split(":")[0].length < 2 &&
+            message.time.split(":")[1].length < 2
+          ) {
+            message.time = `0${dataConvertida.getHours()}:0${dataConvertida.getMinutes()}`;
+          }
+          if (message.time.split(":")[1].length < 2) {
+            message.time = `${dataConvertida.getHours()}:0${dataConvertida.getMinutes()}`;
+          }
+          if (message.time.split(":")[0].length < 2) {
+            message.time = `0${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
+          }
+
+          messageTime.textContent = message.time;
         }
         if (message.hasOwnProperty("time")) {
           messageTime.textContent = message.time;
@@ -59,8 +80,27 @@ export const fazerLoop = function (indice) {
             message.timestamp,
             "America/Sao_Paulo"
           );
-          message.timestamp = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
-          messageTime.textContent = message.timestamp;
+          let time = {
+            time: (message.timestamp = `${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`),
+          };
+
+          delete message.timestamp;
+          Object.assign(message, time);
+
+          if (
+            message.time.split(":")[0].length < 2 &&
+            message.time.split(":")[1].length < 2
+          ) {
+            message.time = `0${dataConvertida.getHours()}:0${dataConvertida.getMinutes()}`;
+          }
+          if (message.time.split(":")[1].length < 2) {
+            message.time = `${dataConvertida.getHours()}:0${dataConvertida.getMinutes()}`;
+          }
+          if (message.time.split(":")[0].length < 2) {
+            message.time = `0${dataConvertida.getHours()}:${dataConvertida.getMinutes()}`;
+          }
+
+          messageTime.textContent = message.time;
         }
         if (message.hasOwnProperty("time")) {
           messageTime.textContent = message.time;

@@ -1,3 +1,5 @@
+"use strict";
+
 import { createMessagesReceiver } from "./create-messages-receiver.js";
 
 export const chargeProfile = function (contatos) {

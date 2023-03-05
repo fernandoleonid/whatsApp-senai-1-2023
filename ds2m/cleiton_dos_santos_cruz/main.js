@@ -91,35 +91,36 @@ const carregarContatos = () => {
                 let cont = 0
                 let contatosWhile = contatos[contact.id].messages.length
                 while (cont <= contatosWhile) {
-                    const mainMensagemContato = document.createElement('div')
-                    mainMensagemContato.classList.add('main__mensagem__contact')
 
-                    const mainMensagemSender = document.createElement('div')
-                    mainMensagemSender.classList.add('main__mensagem__sender')
+                    // const mainMensagemSender = document.createElement('div')
+                    // mainMensagemSender.classList.add('main__mensagem__sender')
+                    // mainMensagemSender.textContent = contatos[contact.id].messages[cont].sender
 
                     const mainMensagemMensagem = document.createElement('div')
                     mainMensagemMensagem.classList.add('main__mensagem__mensagem')
+                    mainMensagemMensagem.textContent = contatos[contact.id].messages[cont].content
+
 
                     const mainMensagemHora = document.createElement('div')
                     mainMensagemHora.classList.add('main__mensagem__hora')
-
-                    console.log(contatos[contact.id].messages[cont].content);
-
-                    // if (contatos[contact.id].messages[cont].sender != me)
-                    //     mainMensagemSender.textContent = contatos[contact.id].messages[cont].sender
-                    // else
-                    mainMensagemSender.textContent = contatos[contact.id].messages[cont].sender
-
-                    mainMensagemMensagem.textContent = contatos[contact.id].messages[cont].content
                     if (contatos[contact.id].messages[cont].time == undefined)
                         mainMensagemHora.textContent = contatos[contact.id].messages[cont].timestamp
                     else
                         mainMensagemHora.textContent = contatos[contact.id].messages[cont].time
 
+
+                    const mainMensagemContato = document.createElement('div')
+
+                    if (contatos[contact.id].messages[cont].sender != "me")
+                        mainMensagemContato.classList.add('main__mensagem__contact')
+                    else
+                        mainMensagemContato.classList.add('main__mensagem__contact__end')
+
+
                     const mainMensagem = document.createElement('div')
                     mainMensagem.classList.add('main__mensagem')
 
-                    mainMensagemContato.append(mainMensagemSender, mainMensagemMensagem, mainMensagemHora)
+                    mainMensagemContato.append(mainMensagemMensagem, mainMensagemHora)
 
                     arrayMensagem.push(mainMensagemContato)
                     mainMensagem.append(...arrayMensagem)

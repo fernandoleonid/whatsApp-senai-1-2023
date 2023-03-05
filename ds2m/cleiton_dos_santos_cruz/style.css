@@ -10,6 +10,10 @@
     --backContact__color: #455a64;
 }
 
+html {
+    background-color: var(--primary__color);
+}
+
 body {
     display: grid;
     grid-template-areas: 'header main';
@@ -19,6 +23,20 @@ body {
 header {
     height: 100vh;
     background-color: var(--backContact__color);
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--backContact__color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--backContact__color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary__color);
 }
 
 .panel__header {
@@ -72,6 +90,8 @@ header span {
     gap: 30px;
     border-bottom: 1px solid #000;
     cursor: pointer;
+    width: 100%;
+    background-color: var(--backContact__color);
 }
 
 .contact:hover {
@@ -83,11 +103,11 @@ header span {
 }
 
 main {
-    display: grid;
     grid-template-areas: 'header''main''footer';
     grid-template-rows: 85px 1fr 65px;
-    background-color: green;
+    background-color: var(--primary__color);
     height: 100vh;
+    display: none;
 }
 
 .main__header {
@@ -110,6 +130,7 @@ main {
 
 .main__mensagem {
     grid-area: main;
+    height: 100%;
     background-image: url(./img/noite.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,6 +142,7 @@ main {
 .main__mensagem__contact {
     background-color: var(--font__color);
     max-width: 500px;
+    margin: 5px;
 }
 
 .main__mensagem__sender {

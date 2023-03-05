@@ -22,8 +22,9 @@ body{
     grid-area: container-direito;
     background-color: #efeae2;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
+    background-image: url(../img/fundo-whats.png);
 }
 .header-esquerdo{
     display: flex;
@@ -160,12 +161,13 @@ body{
     justify-content: flex-end;
 }
 .msg-minha{
-    padding: 8px;
+    padding: 12px;
     border-radius: 8px;
     font-size: 1rem;
     background-color: #d9fdd3;
 }
 .hora-minha{
+    padding-left: 4px;
     font-size: 0.7rem;
     opacity: 0.5;
 }
@@ -174,12 +176,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .msg-sua{
-    padding: 8px;
+    padding: 12px;
     border-radius: 8px;
     font-size: 1rem;
     background-color: #ffffff;
 }
 .hora-sua{
+    padding-left: 4px;
     font-size: 0.7rem;
     opacity: 0.5;
 }

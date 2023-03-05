@@ -9,3 +9,8 @@
 .flex {
   display: flex !important;
 }
+
+.flex-messages {
+  display: flex !important;
+  justify-content: flex-end;
+}

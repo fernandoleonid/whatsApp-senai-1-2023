@@ -27,12 +27,12 @@ export const changeElements = function () {
       chats.classList.add("none"); //certo
       messages.classList.add("block"); //certo
       messagesReceiver.classList.add("flex");
-      messagesConversationsContainer.classList.add("block");
+      messagesConversationsContainer.classList.add("flex-messages");
       messagesInteractions.classList.add("flex");
       returnIcon.classList.add("block");
     } else {
       messagesReceiver.classList.add("flex");
-      messagesConversationsContainer.classList.add("block");
+      messagesConversationsContainer.classList.add("flex-messages");
       messagesInteractions.classList.add("flex");
       messagesBackground.classList.add("none");
     }

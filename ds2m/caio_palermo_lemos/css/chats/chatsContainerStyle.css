@@ -42,8 +42,8 @@ span:hover {
 .chat__content {
   padding: 16px 0px 16px 0px;
   margin-left: 28px;
-  border-top: 1px solid #384045;
-  border-bottom: 1px solid #384045;
+  border-top: 1px solid var(--separator-color);
+  border-bottom: 1px solid var(--separator-color);
 }
 
 .chat__name {

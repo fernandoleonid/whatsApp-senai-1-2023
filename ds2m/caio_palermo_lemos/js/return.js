@@ -11,12 +11,12 @@ export const returnIcon = function () {
     ".messages__interactions"
   );
 
-  const handleClickReturn = function (event) {
+  const handleClickReturn = function () {
     const chats = document.querySelector(".chats");
     chats.classList.remove("none");
     returnIcon.classList.remove("block");
     messages.classList.remove("block");
-    messagesConversations.classList.remove("block");
+    messagesConversations.classList.remove("flex-messages");
     messagesInteractions.classList.remove("flex");
     messagesReceiver.classList.remove("flex");
   };

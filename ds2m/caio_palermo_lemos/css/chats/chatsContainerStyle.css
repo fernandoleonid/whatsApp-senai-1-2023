@@ -30,7 +30,6 @@ span:hover {
 
 .chat:hover {
   background-color: var(--secondary-color);
-  border: none;
 }
 
 .chat__image {
@@ -42,7 +41,6 @@ span:hover {
 .chat__content {
   padding: 16px 0px 16px 0px;
   margin-left: 28px;
-  border-top: 1px solid var(--separator-color);
   border-bottom: 1px solid var(--separator-color);
 }
 

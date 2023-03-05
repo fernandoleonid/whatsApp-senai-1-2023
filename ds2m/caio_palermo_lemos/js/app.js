@@ -8,9 +8,9 @@ import { chargeProfile } from "./charge-profile.js";
 import { showMessages } from "./show-messages.js";
 import { changeColors } from "./change-colors.js";
 
+changeColors();
 chargeContacts(contatos);
 chargeProfile(contatos);
 showMessages(contatos);
 changeElements();
 returnIcon();
-changeColors();

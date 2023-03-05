@@ -1,8 +1,5 @@
 .messages__background-default {
+  display: block;
   width: 100%;
   height: 99.9%;
-}
-
-.messages__background-default {
-  display: block;
 }

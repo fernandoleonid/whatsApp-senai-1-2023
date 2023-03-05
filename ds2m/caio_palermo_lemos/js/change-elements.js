@@ -4,7 +4,6 @@ export const changeElements = function () {
   const chatsContainer = document.querySelector(".chats__chats-container");
   const chats = document.querySelector(".chats");
   const chatsFilter = document.querySelector(".chats__filter");
-  const messages = document.querySelector(".messages");
   const messagesReceiver = document.querySelector(".messages__receiver");
   const messagesConversationsContainer = document.querySelector(
     ".messages__conversations-container"
@@ -24,8 +23,7 @@ export const changeElements = function () {
 
   const handleClick = function () {
     if (window.matchMedia("(max-width: 980px)").matches) {
-      chats.classList.add("none"); //certo
-      messages.classList.add("block"); //certo
+      chats.classList.add("none");
       messagesReceiver.classList.add("flex");
       messagesConversationsContainer.classList.add("flex-messages");
       messagesInteractions.classList.add("flex");

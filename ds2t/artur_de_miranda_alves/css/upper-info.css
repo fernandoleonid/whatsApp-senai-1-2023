@@ -1,7 +1,7 @@
 .upper-info{
     height: 8vh;
     width: 30vw;
-    background-color: #46645e;
+    background-color: #50706a;
     margin-top: 3vh;
     margin-left: 3vw;
 }
@@ -30,4 +30,33 @@
 .settings-img{
     height: 40px;
     width: 40px;
+}
+@media(max-width: 640px){
+    .upper-info{
+        width: 96vw;
+       
+    }
+    .imgs{
+        margin-left: 50vw;
+        width: 40vw;
+        margin-top: -5.5vh;
+    }
+    .profile-img{
+        height: 33px;
+        width: 33px;
+        margin-top: 2vh;
+        margin-left: 3vw;
+    }
+    .users-img{
+        height: 30px;
+        width: 30px;
+    }
+    .newmg-img{
+        height: 30px;
+        width: 30px;
+    }
+    .settings-img{
+        height: 30px;
+        width: 30px;
+    }
 }

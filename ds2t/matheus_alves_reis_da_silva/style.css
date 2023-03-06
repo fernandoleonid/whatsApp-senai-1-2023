@@ -101,6 +101,19 @@ body {
     margin-left: 22px;
 }
 
+.nav_icons_right {
+    display: flex;
+}
+
+.nav_icons_right li {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.25rem;
+    margin-left: 22px;
+}
+
 .search_chat {
     position: relative;
     width: 100%;
@@ -148,6 +161,16 @@ body {
 .chat_list {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+}
+
+.chat_list::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.chat_list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .chat_active {
@@ -228,22 +251,23 @@ body {
 }
 
 .contact_right_info {
-    position: relative;
     display: flex;
     align-items: center;
 }
 
-.contact_right_info h4 {
+.contact_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.name_contact_right  {
     font-weight: 500;
     line-height: 1.2rem;
-    margin-left: 15px;
     cursor: pointer;
 }
 
-.contact_right_info h4 span {
+.status_contact_right {
     font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
     color: #555;
 }
 
@@ -257,14 +281,34 @@ body {
     background-image: url(./img/cover-wpp.png);
 }
 
-.message {
+.chatbox::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.chatbox {
     position: relative;
     display: flex;
     width: 100%;
     margin: 5px 0;
 }
 
-.message p {
+.my_message {
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background: #dcf8c8;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.friend_message {
     position: relative;
     right: 0;
     text-align: right;
@@ -280,7 +324,7 @@ body {
     flex-direction: column;
 }
 
-.message p::before {
+/* .my_message .text_myMessage::before {
     content: "";
     position: absolute;
     top: 0;
@@ -294,7 +338,7 @@ body {
         transparent 50%, 
         transparent
         );
-}
+} */
 
 .message p span {
     display: block;
@@ -303,20 +347,20 @@ body {
     opacity: 0.5;
 }
 
-.my_msg {
+.text_myMessage {
     justify-content: flex-end;
 }
 
-.friend_msg {
+.text_friendMessage {
     justify-content: flex-start;
 }
 
-.friend_msg p {
+/* .text_friendMessage {
     background: #fff;
     text-align: left;
-}
+} */
 
-.message.friend_msg p::before {
+.friend_message .text_friendMessage .span::before {
     content: "";
     position: absolute;
     top: 0;

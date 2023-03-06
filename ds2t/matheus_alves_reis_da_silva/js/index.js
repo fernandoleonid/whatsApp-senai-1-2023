@@ -1,10 +1,17 @@
 'use strict'
 
-import {contatos} from "./contatos.js"
+import { contatos } from "./contatos.js"
 
-const criaContato = (contato) => {
+const createContact = (contato, index) => {
     const messages_chat = document.createElement('ul')
     messages_chat.classList.add('chat_list')
+    messages_chat.style.overflowY = 'auto'
+
+    messages_chat.addEventListener('click', () => {
+        var container_right = document.getElementById('chat_right')
+        container_right.replaceChildren(createHeaderRight(index))
+        container_right.appendChild(createMessages(index))
+    })
 
     const chat = document.createElement('div')
     chat.classList.add('chat_active')
@@ -32,27 +39,97 @@ const criaContato = (contato) => {
     return messages_chat
 }
 
+const createHeaderRight = (index) => {
+    const headerRight = document.createElement('div')
+    headerRight.classList.add('header_right')
+
+    const contactRightInfo = document.createElement('div')
+    contactRightInfo.classList.add('contact_right_info')
+
+    const contactRightImg = document.createElement('img')
+    contactRightImg.classList.add('img_contact')
+    contactRightImg.src = `./${contatos[index].image}`
+
+    const contactRightText = document.createElement('div')
+    contactRightText.classList.add('contact_text')
+
+    const contactRightName = document.createElement('h4')
+    contactRightName.classList.add('name_contact_right')
+    contactRightName.textContent = contatos[index].name
+
+    const contactRightStatus = document.createElement('span')
+    contactRightStatus.classList.add('status_contact_right')
+    contactRightStatus.textContent = contatos[index].description
+
+    headerRight.append(contactRightInfo)
+
+    contactRightInfo.append(contactRightImg, contactRightText)
+
+    contactRightText.append(contactRightName, contactRightStatus)
+
+    return headerRight
+}
+
 const carregarContatos = () => {
     const chat_messages = document.getElementById('chat_messages')
-    const contactsMessages = contatos.map(criaContato)
+    const contactsMessages = contatos.map(createContact)
 
     chat_messages.replaceChildren(...contactsMessages)
 }
 
-const adicionarMensagem = (sender, content, time) => {
-    const remetente = remetente.textContent(contato.sender)
-    const conteudo = content.textContent(contato.content)
-    const hora = content.textContent(contato.time)
+const createMessages = (index) => {
 
-}    
+    const chatBox = document.createElement('div')
+    chatBox.classList.add('chatbox');
 
-const handleClick = () => {
-    const sender = prompt ('me')
-    const content = prompt ('Hello Leonid')
-    const time = prompt ('22:20')
+    const myMessages = document.createElement('div')
+    myMessages.classList.add('my_message')
 
-    adicionarMensagem(sender, content, time)
+    const friendMessages = document.createElement('div')
+    friendMessages.classList.add('friend_message')
+
+    const textMyMessage = document.createElement('span')
+    textMyMessage.classList.add('text_myMessage')
+
+    const hourMyMessage = document.createElement('span')
+    hourMyMessage.classList.add('hour_myMessage')
+
+    const textFriendMessage = document.createElement('span')
+    textFriendMessage.classList.add('text_friendMessage')
+
+    const hourFriendMessage = document.createElement('span')
+    hourFriendMessage.classList.add('hour_friendMessage')
+
+
+    contatos[index].messages.forEach((message) => {
+
+        if (message.sender == 'me') {
+
+            textMyMessage.classList.add('text_myMessage')
+            textMyMessage.textContent = message.content
+
+            hourMyMessage.classList.add('hour_myMessage')
+            hourMyMessage.textContent = message.time
+
+        } else if (message.sender == contatos[index].name) {
+
+            textFriendMessage.classList.add('text_friendMessage')
+            textFriendMessage.textContent = message.content
+
+            hourFriendMessage.classList.add('hour_friendMessage')
+            hourFriendMessage.textContent = message.time
+
+        }
+    })
+
+    chatBox.append(myMessages, friendMessages)
+
+    myMessages.append(textMyMessage, hourMyMessage)
+
+    friendMessages.append(textFriendMessage, hourFriendMessage)
+
+    return chatBox
+
 }
 
-addEventListener('click', handleClick)
 carregarContatos()

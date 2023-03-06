@@ -22,7 +22,7 @@ body {
     grid-template-areas: 
         "main"
         "footer";
-        grid-template-rows: 1fr 70px;
+    grid-template-rows: 1fr 70px;
     height: 100%;
     width: 100%;
     background-color: var(--background-tela-inicial);
@@ -41,13 +41,48 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 16px;
-    color: var(--text-color)
+    color: var(--text-color);
+}
+
+.section-tela-inicial__text div {
+    font-size: 0.90rem;
+}
+
+.section-tela-inicial__text--title {
+    font-weight: 300;
+    font-size: 2rem;
 }
 
 .section-tela-inicial__footer{
     place-self: start center;
+    color: var(--text-color);
+}
+
+.section-tela-inicial__footer--criptography {
+    font-size: 0.90rem;
 }
 
 .aside {
-    background-color: var(--background-aside);
+    display: grid;
+    grid-template-areas: 
+        "aside-header"
+        "aside-search-area"
+        "aside-main";
+    grid-template-rows: 60px 50px 1fr;
+    background-color: var(--background-color-white);
+}
+
+.aside__header {
+    grid-area: aside-header;
+    background-color: aqua;
+}
+
+.aside__search-area {
+    grid-area: aside-search-area;
+    background-color: aquamarine;
+}
+
+.aside__main {
+    grid-area: aside-main;
+    background-color: brown;
 }

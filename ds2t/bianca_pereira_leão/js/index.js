@@ -269,11 +269,10 @@ const criarMensagens = (contato) => {
     mensagemElement.classList.add("message");
     mensagemElement.classList.add(mensagem.sender === "me" ? "me" : "them");
 
-    const messageTime = Date.parse(mensagem.time);
+    const messageTime = mensagem.time;
 
     mensagemElement.classList.add(messageTime === contato.messages[contato.messages.length - 1].time ? "tail" : "not-tail");
-    mensagemElement.dataset.time = new Date(messageTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
+    mensagemElement.dataset.time = messageTime
 
     mensagemElement.innerText = mensagem.content;
     mensagensContainer.appendChild(mensagemElement);

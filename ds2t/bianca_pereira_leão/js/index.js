@@ -48,24 +48,13 @@ const criaListaMensagem = (mensagem) => {
   const lastMessage = mensagem.messages[mensagem.messages.length - 1]
   const lastMessageContent = lastMessage.content
 
-  const lastMessageTimestamp = new Date(lastMessage.timestamp)
+  const lastMessageTimestamp = lastMessage.time
 
   const now = new Date()
 
   const spanHora = document.createElement('span')
   spanHora.classList.add('last-message-time')
-
-  if (now - lastMessageTimestamp < 1000 * 60 * 60 * 24) {
-    // menos de 24 horas atrás
-    spanHora.textContent = lastMessageTimestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-  } else if (now - lastMessageTimestamp < 1000 * 60 * 60 * 48) {
-    // menos de 48 horas atrás
-    spanHora.textContent = 'Ontem'
-  } else {
-    // mais de 48 horas atrás
-    spanHora.textContent = lastMessageTimestamp.toLocaleDateString([], { month: 'numeric', day: 'numeric', year: '2-digit' })
-  }
-
+  spanHora.textContent = lastMessageTimestamp
 
   const lastMensagem = document.createElement('p')
   lastMensagem.classList.add('last-message')
@@ -96,8 +85,8 @@ const ordenaContatosPorUltimaMensagem = (contatos) => {
   return contatos.sort((a, b) => {
     const ultimaMensagemA = a.messages[a.messages.length - 1];
     const ultimaMensagemB = b.messages[b.messages.length - 1];
-    const dataUltimaMensagemA = new Date(ultimaMensagemA.timestamp);
-    const dataUltimaMensagemB = new Date(ultimaMensagemB.timestamp);
+    const dataUltimaMensagemA = new Date(ultimaMensagemA.time);
+    const dataUltimaMensagemB = new Date(ultimaMensagemB.time);
     return dataUltimaMensagemB.getTime() - dataUltimaMensagemA.getTime();
   });
 };
@@ -280,15 +269,12 @@ const criarMensagens = (contato) => {
     mensagemElement.classList.add("message");
     mensagemElement.classList.add(mensagem.sender === "me" ? "me" : "them");
 
-    const messageTime = Date.parse(mensagem.timestamp);
-    if (!isNaN(messageTime)) {
-      mensagemElement.classList.add(messageTime === contato.messages[contato.messages.length - 1].timestamp ? "tail" : "not-tail");
-      mensagemElement.dataset.time = new Date(messageTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    } else {
-      console.error(`Data inválida: ${mensagem.timestamp}`);
-    }
-    console.log(mensagem.timestamp)
-    console.log(mensagem.time)
+    const messageTime = Date.parse(mensagem.time);
+
+    mensagemElement.classList.add(messageTime === contato.messages[contato.messages.length - 1].time ? "tail" : "not-tail");
+    mensagemElement.dataset.time = new Date(messageTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+
     mensagemElement.innerText = mensagem.content;
     mensagensContainer.appendChild(mensagemElement);
   });

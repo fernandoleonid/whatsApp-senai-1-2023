@@ -1,45 +1,22 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-main{
-    display: flex;
-    flex-direction: row;
-    background-color: red;
-}
-.area-contatos{
-    display: flex;
-    flex-direction: column;
-    background-color: rebeccapurple;
-    height: 100vh;
-    width: 30vw;
 
+:root {
+    --primary__color: gray;
+    --font__color: #b0bec5;
+    --backContact__color: rgb(21, 145, 21);
 }
-.conversas{
-    height: 100vh; 
-    width: 70vw;
-    background-color: wheat;
+
+html {
+    background-color: var(--primary__color);
 }
-.header-conversa{
-    height: 10vh;
-    width: 100%;
-    background-color:red;
+
+body {
+    display: grid;
+    grid-template-areas: 'header main';
+    grid-template-columns: minmax(300px, 400px) minmax(400px, 1fr);
 }
-.main-conversas{
-    height: 80vh;
-    background-color: aquamarine;
-}
-.area-escrita{
-    background-color: brown;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 10vh;
-}
-.textField-conversas{
-    width: 50vw;
-    height: 8vh;
-    border-radius: 5%;
-}
+

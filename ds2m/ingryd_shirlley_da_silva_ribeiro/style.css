@@ -11,7 +11,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+        background: linear-gradient(#00a884 0%, #00a884 130px, #d9dbd5 130px, #d9dbd5 100%);
     }
     
     .container {
@@ -273,7 +273,7 @@
         right: -12px;
         width: 20px;
         height: 20px;
-        background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50, transparent 50%, transparent);
+        background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
     }
     
     .message p span {
@@ -303,7 +303,7 @@
         left: -12px;
         width: 20px;
         height: 20px;
-        background: linear-gradient(225deg, #fff 0%, #fff 50, transparent 50%, transparent);
+        background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
     }
     
     .chatbox__input {

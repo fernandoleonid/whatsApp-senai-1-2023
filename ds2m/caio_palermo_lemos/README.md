@@ -6,7 +6,7 @@
 
 ![Screenshot](./img/SCREENSHOT.PNG)
 
-[Clique aqui](https://fernandoleonid.github.io/whatsApp-senai-1-2023/ds2m/caiopalermo/) para visitar o site.
+[Clique aqui](https://hasegawataizou.github.io/whatsApp-senai-1-2023/ds2m/caio_palermo_lemos) para visitar o site.
 
 ---
 

@@ -1,7 +1,7 @@
 export const contatos = [
   {
     name: "Ana Maria",
-    description: "Frontend Developer",
+    description: "Frontend Developer 222",
     image: "img/contact1.png",
     messages: [
       {

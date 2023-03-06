@@ -4,7 +4,10 @@ import { contatos } from "./contatos.js"
 
 let i = 0
 
+
 const criarContato = (contato) => {
+
+
     const contact = document.createElement('button')
     contact.classList.add('contact')
 
@@ -154,6 +157,46 @@ const carregarContatos = () => {
 
 }
 
+const lightTheme = {
+    '--primary__color': '#00bfa5',
+    '--font__color': '#fff',
+    '--backContact__color': '#9e9e9e',
+    '--backImage': 'url(../img/dia.jpg)',
+    '--backFinder': '#757575',
 
+}
+
+const darkTheme = {
+    '--primary__color': '#263238',
+    '--font__color': '#b0bec5',
+    '--backContact__color': '#455a64',
+    '--backImage': 'url(../img/noite.jpg)',
+    '--backFinder': '#37474f',
+
+}
+
+const chk = document.getElementById('chk')
+const rootElement = document.documentElement
+
+chk.addEventListener('change', function() {
+    const isChecked = chk.checked
+
+    isChecked ? changeTheme(lightTheme) : changeTheme(darkTheme)
+
+
+})
+
+function changeTheme(theme) {
+
+    for (let prop in theme) {
+        changeProperty(prop, theme[prop])
+    }
+
+}
+
+function changeProperty(property, value) {
+    rootElement.style.setProperty(property, value)
+
+}
 
 carregarContatos()

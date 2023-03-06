@@ -1,6 +1,6 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js"
 
 let cont = 1;
 const adicionarId = (contato) => {
@@ -9,6 +9,7 @@ const adicionarId = (contato) => {
 };
 
 const contatosComId = contatos.map(adicionarId);
+const main = document.getElementById('conteudo')
 
 // Função para criar a lista
 
@@ -32,7 +33,7 @@ const criaListaMensagem = (mensagem) => {
   foto.classList.add('ml-2');
   foto.classList.add('mr-3');
   foto.alt = 'foto de perfil do usuário'
-  foto.src = `./img/${mensagem.image}`;
+  foto.src = `../${mensagem.image}`;
 
   const guardaMediaBody = document.createElement('div');
   guardaMediaBody.classList.add('media-body');
@@ -68,10 +69,12 @@ const criaListaMensagem = (mensagem) => {
 
   list.append(listElement, foto, guardaMediaBody);
 
-
+ 
   list.addEventListener('click', (event) => {
     carregarChatItens(mensagem.id);
     carregarMensagens(mensagem.id);
+    main.classList.remove('eixoX2')
+    main.classList.add('eixoX')
   });
 
 
@@ -120,7 +123,7 @@ const criarChatItens = (chat) => {
   img.classList.add('ml-2');
   img.classList.add('mr-3');
   img.alt = 'foto de perfil';
-  img.src = `./img/${chat.image}`;
+  img.src = `../${chat.image}`;
 
   const divPaiNomeDescricao = document.createElement('div');
   divPaiNomeDescricao.classList.add('mr-auto')

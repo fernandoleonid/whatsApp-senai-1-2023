@@ -13,6 +13,7 @@ Embora você ainda não tenha acesso às funções de envio de mensagens, seu ob
 - [Situação de Aprendizagem Somativa!](#situação-de-aprendizagem-somativa)
 - [Sumário](#sumário)
 - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
+  - [Obs.: importe o arquivo contatos.js do seguinte endereço: https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js](#obs-importe-o-arquivo-contatosjs-do-seguinte-endereço-httpsfernandoleonidgithubiowhatsapp-senai-1-2023recursoscontatosjs)
 - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
 - [Durante o desenvolvimento](#durante-o-desenvolvimento)
 - [Entrega do projeto](#entrega-do-projeto)
@@ -27,6 +28,8 @@ Você deverá desenvolver um clone do whatsApp responsivo. O projeto deverá ate
 - Interface baseada no endereço https://web.whatsapp.com/
 - Consumir os dados do arquivos contatos.js
 - Seguir as boas práticas como semântica e acessibilidade;
+
+Obs.: importe o arquivo contatos.js do seguinte endereço: https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js
 ---
 # Antes de começar a desenvolver
 

@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 const filter = document.querySelector(".filter__input");
 const targets = document.querySelectorAll(".chat");

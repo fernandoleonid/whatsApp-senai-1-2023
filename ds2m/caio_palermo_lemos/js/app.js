@@ -1,6 +1,6 @@
 "use strict";
 
-import { contatos } from "./contatos.js";
+import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js";
 import { changeElements } from "./change-elements.js";
 import { returnIcon } from "./return.js";
 import { chargeContacts } from "./charge-contacts.js";

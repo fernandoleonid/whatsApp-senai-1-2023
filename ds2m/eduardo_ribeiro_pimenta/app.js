@@ -9,6 +9,7 @@ const criarContainer = (contato) => {
     container.setAttribute('id',id)
     id++
     container.addEventListener("click", mudarFundo)
+    container.addEventListener("click", criarMensagens)
 
     const imageHolder = document.createElement('div')
     imageHolder.classList.add('nav__image_holder')
@@ -38,10 +39,31 @@ const criarContainer = (contato) => {
 
 }
 
+const criarMensagens = (contato) => {
+    const contactHeader = document.getElementsByClassName("contact__header")
+    const contactText = document.createElement('div')
+    const name = document.createElement('h5')
+    contactText.classList.add("contact__text")
+    name.classList.add('contact__name', 'main__name')
+    name.textContent = "aaaaaaaaaa"
+    contactText.append(name)
+    console.log(contato.currentTarget.)
+
+    contatos.map( (contatoSelecionado) => {
+        if(contatoSelecionado.name == contato.currentTarget.child){
+            name.textContent = contato.target.textContent
+        }else{
+            console.log(false)
+        }
+    })
+    contactHeader[0].replaceChildren(contactText)
+
+}
+
 const carregarMensagens = () => {
     const navMain = document.getElementById('nav__main')
     const cards = contatos.map( criarContainer )
-
+   
     navMain.replaceChildren(...cards)
 }
 
@@ -57,3 +79,4 @@ const mudarFundo = (card) => {
 }
 
 carregarMensagens()
+

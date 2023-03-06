@@ -1,97 +1,159 @@
-"use strict"
+'use strict'
 
-import {contatos} from "./contatos.js"
+import { contatos } from "./contatos.js"
 
+let i = 0
 
-const criarUser = (contato) => {
+const criarContato = (contato) => {
+    const contact = document.createElement('button')
+    contact.classList.add('contact')
 
-    const button = document.createElement("button")
-    button.classList.add('button')
-    
+    const img = document.createElement('img')
+    img.classList.add('contact__image')
+    img.src = `./${contato.image}`
 
-    const contact = document.createElement("div")
-    contact.classList.add("user")
-    
+    const containerContact = document.createElement('div')
+    containerContact.classList.add('contact__container')
 
-    const userIdent = document.createElement("div")
-    userIdent.classList.add("user_identification")
-    
-    const userPhoto = document.createElement("div")
-    userPhoto.classList.add("photo_user")
-   
-    const image_user = document.createElement("img")
-    image_user.classList.add("image_user")
-    image_user.src = `./${contato.image}`
-    
-    
-
-    const nameUser = document.createElement("div")
-    nameUser.classList.add("name_user")
-    
-
-    const name = document.createElement("h5")
-    name.classList.add("name")
+    const name = document.createElement('h3')
+    name.classList.add('contact__name')
     name.textContent = contato.name
 
-    const textPrimary = document.createElement("p")
-    textPrimary.classList.add("text_primay")
+    const description = document.createElement('div')
+    description.classList.add('contact__descripiton')
+    description.textContent = contato.description
 
-
-
-    
-    const header_chat = document.createElement("div")
-    header_chat.classList.add("header_chat")
-
-    const user_identification_chat = document.createElement("div")
-    user_identification_chat.classList.add("user_identification_chat")
-
-    // const photo_user_chat = document.createElement("div")
-    // photo_user_chat.classList.add(photo_user_chat)
-
-    const image_user_chat = document.createElement("img")
-    image_user_chat.src = `./${contato.image}`
-
-    const name_user_chat = document.createElement("div")
-    name_user_chat.classList.add("name_user_chat")
-
-    const name_chat = document.createElement("h5")
-    name_chat.classList.add("name_chat")
-    name_chat.textContent = contato.name
-
-
-
-
-    
-    name_user_chat.append(name_chat)    
-
-
-
-
-    button.append(contact)
-    contact.append(userIdent)
-
-    userIdent.append(userPhoto,nameUser)
-
-    userPhoto.append(image_user)
-
-    image_user.textContent
-
-    nameUser.append(name,textPrimary)
-
-    console.log(button) 
-    return button
-    
+    containerContact.append(name, description)
+    contact.append(img, containerContact)
+    contact.id = i++
+        return contact
 }
 
-const carregarContatos = () => {const users = document.getElementById("users")
-const contacts = contatos.map(criarUser)
-    users.replaceChildren(...contacts)
+const carregarContatos = () => {
+    const container = document.getElementById('container')
+    const contacts = contatos.map(criarContato)
+
+    container.replaceChildren(...contacts)
+
+    contacts.forEach(contact => {
+
+        contact.onclick = () => {
+
+            // console.log(contatos[contact.id].messages.length);
+            // console.log(contatos[contact.id].messages[2].time);
+
+            function puxarContatoMain() {
+                document.getElementById('main').style.display = "grid";
+
+
+                const mainHeader = document.createElement('div')
+                mainHeader.classList.add('main__header')
+
+                const image = document.createElement('img')
+                image.classList.add('contact__image')
+                image.src = `./${contatos[contact.id].image}`
+
+                const containerMain = document.createElement('div')
+                containerMain.classList.add('main__contact__container')
+
+                const contactName = document.createElement('h3')
+                contactName.classList.add('contact__name__main')
+                contactName.textContent = contatos[contact.id].name
+
+                const descriptionMain = document.createElement('div')
+                descriptionMain.classList.add('contact__description')
+                descriptionMain.textContent = contatos[contact.id].description
+
+                const mainIcons = document.createElement('div')
+                mainIcons.classList.add('main__icons')
+
+                const lente = document.createElement('i')
+                lente.classList.add('fa-solid')
+                lente.classList.add('fa-magnifying-glass')
+
+                const elipse = document.createElement('i')
+                elipse.classList.add('fas')
+                elipse.classList.add('fa-ellipsis-v')
+
+
+                containerMain.append(contactName, descriptionMain)
+                mainIcons.append(lente, elipse)
+                mainHeader.append(image, containerMain, mainIcons)
+
+                const containerMessage = document.getElementById('inside__message')
+
+                containerMessage.replaceChildren(mainHeader)
+            }
+
+            function puxarMensagemMain() {
+
+                let arrayMensagem = []
+                let cont = 0
+                let contatosWhile = contatos[contact.id].messages.length
+                while (cont <= contatosWhile) {
+
+                    // const mainMensagemSender = document.createElement('div')
+                    // mainMensagemSender.classList.add('main__mensagem__sender')
+                    // mainMensagemSender.textContent = contatos[contact.id].messages[cont].sender
+
+                    const mainMensagemMensagem = document.createElement('div')
+                    mainMensagemMensagem.classList.add('main__mensagem__mensagem')
+                    mainMensagemMensagem.textContent = contatos[contact.id].messages[cont].content
+
+
+                    const mainMensagemHora = document.createElement('div')
+                    mainMensagemHora.classList.add('main__mensagem__hora')
+                    if (contatos[contact.id].messages[cont].time == undefined)
+                        mainMensagemHora.textContent = contatos[contact.id].messages[cont].timestamp
+                    else
+                        mainMensagemHora.textContent = contatos[contact.id].messages[cont].time
+
+
+                    const mainMensagemContato = document.createElement('div')
+
+                    if (contatos[contact.id].messages[cont].sender != "me")
+                        mainMensagemContato.classList.add('main__mensagem__contact')
+                    else
+                        mainMensagemContato.classList.add('main__mensagem__contact__end')
+
+
+                    const mainMensagem = document.createElement('div')
+                    mainMensagem.classList.add('main__mensagem')
+
+                    mainMensagemContato.append(mainMensagemMensagem, mainMensagemHora)
+
+                    arrayMensagem.push(mainMensagemContato)
+                    mainMensagem.append(...arrayMensagem)
+
+
+                    const offsideMensagem = document.getElementById('offside__message')
+
+                    offsideMensagem.replaceChildren(mainMensagem)
+
+
+
+                    cont += 1
+                }
+
+
+
+                console.log(contatosWhile);
+                console.log(contatos[contact.id].messages[cont].sender);
+
+
+
+            }
+
+            puxarContatoMain()
+            puxarMensagemMain()
+        }
+
+
+
+    });
 
 }
-   
-    
+
+
+
 carregarContatos()
-// //header_chat.append(user_identification_chat)
-// user_identification_chat.append(photo_user_chat,name_user_chat)
-// photo_user_chat.append(image_user_chat)
-// name_user_chat.append(name_chat)    

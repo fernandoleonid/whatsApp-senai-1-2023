@@ -30,6 +30,7 @@ const carregarHeader = (indice) => {
 }
 
 const carregarMain = (indice, indiceMensagem) => {
+
     const mainChat = document.createElement('div')
     mainChat.classList.add('main__chat')
 
@@ -39,54 +40,66 @@ const carregarMain = (indice, indiceMensagem) => {
     const containerMe = document.createElement('div')
     containerMe.classList.add('container__me')
 
-    const mensagensContato = document.createElement('div')
-    mensagensContato.classList.add('mensagens__contato')
+    // const mensagensContato = document.createElement('div')
+    // mensagensContato.classList.add('mensagens__contato')
 
-    const mensagensMe = document.createElement('div')
-    mensagensMe.classList.add('mensagens__me')
+    // const mensagensMe = document.createElement('div')
+    // mensagensMe.classList.add('mensagens__me')
 
-    const chatMensagensContato = document.createElement('p')
-    const horaChatContato = document.createElement('span')
+    // const chatMensagensContato = document.createElement('p')
+    // const horaChatContato = document.createElement('span')
 
-    const chatMensagensMe = document.createElement('p')
-    const horaChatMe = document.createElement('span')
+    // const chatMensagensMe = document.createElement('p')
+    // const horaChatMe = document.createElement('span')
 
     contatos[indice].messages.forEach((mensagem) => {
-        let cont = 0
-        while (cont < contatos[indice].messages.length) {
+        const chatMensagensContato = document.createElement('p')
+        const horaChatContato = document.createElement('span')
+        const mensagensContato = document.createElement('div')
+        mensagensContato.classList.add('mensagens__contato')
+        const mensagensMe = document.createElement('div')
+        mensagensMe.classList.add('mensagens__me')
 
-            if (mensagem.sender == 'me') {
-                chatMensagensContato.classList.add('chat__mensagens__contato')
-                chatMensagensContato.textContent = mensagem.content
 
-                horaChatContato.classList.add('hora__chat__contato')
-                horaChatContato.textContent = mensagem.time
-                console.log(chatMensagensContato + horaChatContato)
+        if (mensagem.sender == 'me') {
+            chatMensagensContato.classList.add('chat__mensagens__contato')
+            chatMensagensContato.textContent = mensagem.content
 
-            } else if (mensagem.sender == contatos[indice].name) {
-                chatMensagensMe.classList.add('chat__mensagens__me')
-                chatMensagensMe.textContent = mensagem.content
+            horaChatContato.classList.add('hora__chat__contato')
+            horaChatContato.textContent = mensagem.time
 
-                horaChatMe.classList.add('hora__chat__me')
-                horaChatMe.textContent = mensagem.time
-                console.log(chatMensagensMe + horaChatMe)
+            mensagensContato.append(chatMensagensContato, horaChatContato)
+            containerContato.append(mensagensContato)
+            console.log(mensagensContato);
+            console.log(chatMensagensContato + horaChatContato)
 
-            } else {
-                console.log('ERRO: Mensagem não encontrada')
-            }
-            cont++
+        } else {
+            const chatMensagensMe = document.createElement('p')
+            const horaChatMe = document.createElement('span')
+            chatMensagensMe.classList.add('chat__mensagens__me')
+            chatMensagensMe.textContent = mensagem.content
+
+            horaChatMe.classList.add('hora__chat__me')
+            horaChatMe.textContent = mensagem.time
+            mensagensMe.append(chatMensagensMe, horaChatMe)
+            containerMe.append(mensagensMe)
+            console.log(mensagensMe);
+            console.log(chatMensagensMe + horaChatMe)
+
         }
+        mainChat.append(containerContato, containerMe)
     })
 
-    mensagensMe.append(chatMensagensMe, horaChatMe)
-    containerMe.append(mensagensMe)
+    // mensagensMe.append(chatMensagensMe, horaChatMe)
+    // containerMe.append(mensagensMe)
 
-    mensagensContato.append(chatMensagensContato, horaChatContato)
-    containerContato.append(mensagensContato)
+    // mensagensContato.append(chatMensagensContato, horaChatContato)
+    // containerContato.append(mensagensContato)
 
-    mainChat.append(containerContato, containerMe)
+    // mainChat.append(containerContato, containerMe)
 
-    return arrayContatos
+
+    return mainChat
 
 }
 
@@ -123,10 +136,9 @@ const listaDeContatos = (contato, indice) => {
     chatContato.classList.add('chat')
     chatContato.addEventListener('click', (event) => {
         const containerTeste = document.getElementById('conversa')
-        containerTeste.append(carregarHeader(indice), carregarMain(indice), carregarMessageBar())
+        containerTeste.replaceChildren(carregarHeader(indice), carregarMain(indice), carregarMessageBar())
         console.log(contatos[indice].messages[1].content)
     })
-
 
     const fotoContato = document.createElement('img')
     fotoContato.classList.add('foto__contato')

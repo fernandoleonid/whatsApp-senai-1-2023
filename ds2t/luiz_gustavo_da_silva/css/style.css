@@ -24,7 +24,7 @@ body{
 main{
     display: grid;
     grid-template-columns: 30% 70%;
-    height: 96vh;
+    height: 98vh;
     width: 85vw;
 }
 

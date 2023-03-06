@@ -1,0 +1,21 @@
+@media (max-width:640px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+    }
+    .main__header,
+    .main__footer {
+        width: 100vw;
+    }
+    .main__footer__envio {
+        gap: 5px;
+        width: 250px;
+    }
+    .main__footer {
+        gap: 0px;
+    }
+    .camp__main {}
+}

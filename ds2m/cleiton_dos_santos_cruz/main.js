@@ -5,9 +5,8 @@ import { contatos } from "./contatos.js"
 let i = 0
 
 
+
 const criarContato = (contato) => {
-
-
     const contact = document.createElement('button')
     contact.classList.add('contact')
 

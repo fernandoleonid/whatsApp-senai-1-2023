@@ -34,4 +34,5 @@ main {
     background-color: var(--primary__color);
     height: 100%;
     display: none;
+    overflow-y: scroll;
 }

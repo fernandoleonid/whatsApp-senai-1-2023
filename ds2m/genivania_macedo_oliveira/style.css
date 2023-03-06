@@ -84,8 +84,8 @@ main {
     width: 100%;
     padding-left: 10px;
     padding-right: 20px;
-    
 }
+
 .icon__mensagem{
     flex-direction: row;
     display: flex;
@@ -93,12 +93,14 @@ main {
     padding-left: 10px;
     padding-right: 20px;
     align-items: center;
-    gap: 50px;
+    gap: 50px;  
 }
+
 .mensagem {
     grid-area: mensagem;
-    display: grid;
+    display: flex;
     background-color: #0001;
+    flex-direction: column;
 }
 
 .card__image {
@@ -121,4 +123,30 @@ main {
 .card__description {
     grid-area: funcao;
     font-size: 1rem;
+}
+.text{
+    display: flex;
+    height: 100%;
+}
+
+footer{
+    background-color: rgb(197, 187, 194);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.digitar__mensagem{
+    background-color: rgb(201, 168, 191);
+    height: 40px;
+    width: 90%;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #a8a5a5;
+    border-radius: 10px;
+    padding-left: 10px;
 }

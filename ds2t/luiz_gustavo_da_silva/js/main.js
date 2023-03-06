@@ -26,7 +26,6 @@ const carregarHeader = (indice) => {
     contatoChat.append(nomeContatoChat, descricaoContatoChat)
 
     return headerChat
-
 }
 
 const carregarMain = (indice, indiceMensagem) => {
@@ -34,29 +33,19 @@ const carregarMain = (indice, indiceMensagem) => {
     const mainChat = document.createElement('div')
     mainChat.classList.add('main__chat')
 
-    const containerContato = document.createElement('div')
-    containerContato.classList.add('container__contato')
-
-    const containerMe = document.createElement('div')
-    containerMe.classList.add('container__me')
-
-    // const mensagensContato = document.createElement('div')
-    // mensagensContato.classList.add('mensagens__contato')
-
-    // const mensagensMe = document.createElement('div')
-    // mensagensMe.classList.add('mensagens__me')
-
-    // const chatMensagensContato = document.createElement('p')
-    // const horaChatContato = document.createElement('span')
-
-    // const chatMensagensMe = document.createElement('p')
-    // const horaChatMe = document.createElement('span')
-
     contatos[indice].messages.forEach((mensagem) => {
+        const containerContato = document.createElement('div')
+        containerContato.classList.add('container__contato')
+
+        const containerMe = document.createElement('div')
+        containerMe.classList.add('container__me')
+
         const chatMensagensContato = document.createElement('p')
         const horaChatContato = document.createElement('span')
+
         const mensagensContato = document.createElement('div')
         mensagensContato.classList.add('mensagens__contato')
+
         const mensagensMe = document.createElement('div')
         mensagensMe.classList.add('mensagens__me')
 
@@ -69,69 +58,44 @@ const carregarMain = (indice, indiceMensagem) => {
             horaChatContato.textContent = mensagem.time
 
             mensagensContato.append(chatMensagensContato, horaChatContato)
+
             containerContato.append(mensagensContato)
+
             console.log(mensagensContato);
             console.log(chatMensagensContato + horaChatContato)
 
         } else {
             const chatMensagensMe = document.createElement('p')
             const horaChatMe = document.createElement('span')
+
             chatMensagensMe.classList.add('chat__mensagens__me')
             chatMensagensMe.textContent = mensagem.content
 
             horaChatMe.classList.add('hora__chat__me')
             horaChatMe.textContent = mensagem.time
+
             mensagensMe.append(chatMensagensMe, horaChatMe)
+
             containerMe.append(mensagensMe)
+
             console.log(mensagensMe);
             console.log(chatMensagensMe + horaChatMe)
 
         }
         mainChat.append(containerContato, containerMe)
     })
-
-    // mensagensMe.append(chatMensagensMe, horaChatMe)
-    // containerMe.append(mensagensMe)
-
-    // mensagensContato.append(chatMensagensContato, horaChatContato)
-    // containerContato.append(mensagensContato)
-
-    // mainChat.append(containerContato, containerMe)
-
-
     return mainChat
-
 }
 
 const carregarMessageBar = () => {
     const message__bar = document.getElementById('messageBar')
     message__bar.classList.remove('message__bar__none')
     message__bar.classList.add('message__bar')
-
-    // const messageBar = document.createElement('div')
-    // messageBar.classList.add('message__bar')
-
-    // const emoji = document.createElement('i')
-    // emoji.classList.add('fa-regular fa-face-laugh')
-
-    // const clip = document.createElement('i')
-    // clip.classList.add('fa-sharp fa-solid fa-paperclip')
-
-    // const inputMensagem = document.createElement('input')
-    // inputMensagem.placeholder = 'Mensagem'
-
-    // const microfone = document.createElement(i)
-    // microfone.classList.add('fa-solid fa-microphone')
-
-    // messageBar.append(emoji, clip, inputMensagem, microfone)
-
     return messageBar
-
 }
 
 const listaDeContatos = (contato, indice) => {
     const chatContato = document.createElement('li')
-
 
     chatContato.classList.add('chat')
     chatContato.addEventListener('click', (event) => {
@@ -151,8 +115,6 @@ const listaDeContatos = (contato, indice) => {
     nomeContato.classList.add('nome__contato')
     nomeContato.textContent = contato.name
 
-    // const lastMessage = contatos.messages[contatos.messages.length - 1]
-    // const lastMessageContent = lastMessage.content
     const ultimaMesssagem = document.createElement('p')
     ultimaMesssagem.classList.add('ultima__mensagem')
     ultimaMesssagem.textContent = contato.messages[contato.messages.length - 1].content

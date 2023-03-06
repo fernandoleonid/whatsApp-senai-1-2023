@@ -9,8 +9,7 @@ const criarCard = (contato, indice) => {
 
     conversa.addEventListener('click', (event) => {
         var container = document.getElementById('container-chat')
-        container.appendChild(criarMensagem(indice))
-        container.appendChild(criarHeader(indice))
+        container.replaceChildren(criarHeader(indice), criarMensagem(indice), carregarBarraDeMensagem())
     })
 
     const foto = document.createElement('img')
@@ -70,29 +69,33 @@ const criarHeader = (indice) => {
 
 const criarMensagem = (indice) => {
 
+    const containerDireita = document.getElementById('container-chat')
+    containerDireita.classList.remove('container-direito-none')
+    containerDireita.classList.add('container-direito');
+
     const containerMensagensDireita = document.createElement('div')
     containerMensagensDireita.classList.add('container-mensagens-direita');
 
-    const caixaMensagensMinha = document.createElement('div')
-    caixaMensagensMinha.classList.add('caixa-mensagens-minha')
-
-    const caixaMensagensSua = document.createElement('div')
-    caixaMensagensSua.classList.add('caixa-mensagens-sua')
-
-    const msgMinha = document.createElement('p')
-    msgMinha.classList.add('msg-minha')
-
-    const horaMinha = document.createElement('span')
-    horaMinha.classList.add('hora-minha')
-
-    const msgSua = document.createElement('p')
-    msgSua.classList.add('msg-sua')
-
-    const horaSua = document.createElement('span')
-    horaSua.classList.add('hora-sua')
-
     contatos[indice].messages.forEach((mensagem) => {
-        
+
+        const caixaMensagensMinha = document.createElement('div')
+        caixaMensagensMinha.classList.add('caixa-mensagens-minha')
+
+        const caixaMensagensSua = document.createElement('div')
+        caixaMensagensSua.classList.add('caixa-mensagens-sua')
+
+        const msgMinha = document.createElement('p')
+        msgMinha.classList.add('msg-minha')
+
+        const horaMinha = document.createElement('span')
+        horaMinha.classList.add('hora-minha')
+
+        const msgSua = document.createElement('p')
+        msgSua.classList.add('msg-sua')
+
+        const horaSua = document.createElement('span')
+        horaSua.classList.add('hora-sua')
+
         if (mensagem.sender == 'me') {
 
             msgMinha.classList.add('msg-minha')
@@ -100,6 +103,12 @@ const criarMensagem = (indice) => {
 
             horaMinha.classList.add('hora-minha')
             horaMinha.textContent = mensagem.time
+
+            containerDireita.appendChild(containerMensagensDireita)
+
+            containerMensagensDireita.append(caixaMensagensMinha, caixaMensagensSua)
+
+            caixaMensagensMinha.append(msgMinha, horaMinha)
 
         } else if (mensagem.sender == contatos[indice].name) {
 
@@ -109,15 +118,15 @@ const criarMensagem = (indice) => {
             horaSua.classList.add('hora-sua')
             horaSua.textContent = mensagem.time
 
+            containerDireita.appendChild(containerMensagensDireita)
+
+            containerMensagensDireita.append(caixaMensagensMinha, caixaMensagensSua)
+
+            caixaMensagensSua.append(msgSua, horaSua)
+
         }
     })
-
-    containerMensagensDireita.append(caixaMensagensMinha, caixaMensagensSua)
-
-    caixaMensagensMinha.append(msgMinha, horaMinha)
-
-    caixaMensagensSua.append(msgSua, horaSua)
-
+    
     return containerMensagensDireita
 
 }
@@ -126,6 +135,13 @@ const carregarContatos = () => {
     const container = document.getElementById('container-mensagens')
     const contatosMensagens = contatos.map(criarCard)
     container.replaceChildren(...contatosMensagens)
+}
+
+const carregarBarraDeMensagem = () => {
+    const barraMensagem = document.getElementById('footer')
+    barraMensagem.classList.remove('footer-direito-none')
+    barraMensagem.classList.add('footer-direito')
+    return footer
 }
 
 carregarContatos()

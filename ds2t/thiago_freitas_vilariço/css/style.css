@@ -58,7 +58,7 @@ body{
     background-color: #F0F2F5;
     justify-content: space-between;
     align-items: center;
-    border-right: .5px solid #d1d7db;
+    border-right : .5px solid #d1d7db;
 }
 .nav-perfil{
     display: flex;

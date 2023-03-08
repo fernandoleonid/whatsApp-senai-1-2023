@@ -1,0 +1,66 @@
+.container {
+    display: grid;
+    width: 85vw;
+    height: 95vh;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "body_left body_right";
+    grid-template-columns: 500px 1fr;
+}
+
+.container_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F2F5;
+    border-bottom: solid 6px #25d366;
+}
+
+.container_home_resources {
+    font-size: 32px;
+    color: #41525D;
+}
+
+.message_home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.description_home {
+    font-size: 14px;
+    color: #667781;
+    text-align: center;
+}
+
+.footer_home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #667781;
+}
+
+/* TABLET */
+@media (max-width:960px){
+    .container{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "body_left";
+        grid-template-columns: 1fr;
+    }
+    .body_right{
+        display: none;
+    }
+    .search_chat{
+        width: 100vw;
+    }
+}
+/* MOBILE */
+@media (max-width:640px){
+  
+}

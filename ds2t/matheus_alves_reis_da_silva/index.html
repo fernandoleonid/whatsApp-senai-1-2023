@@ -7,7 +7,12 @@
     <link rel="shortcut icon" href="./img/icon-whatsapp.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/30058942d9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://kit.fontawesome.com/30058942d9.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/body_left.css">
+    <link rel="stylesheet" href="./css/body_right.css">
+    <link rel="stylesheet" href="./css/chatbox.css">
     <script src="./js/index.js" defer type="module"></script>
     <title>WhatsApp Web</title>
 </head>
@@ -50,27 +55,31 @@
                         </div>
                     </div>
                 </div> -->
-
-                <!-- <div class="block unread">
-                    <div class="imgBox">
-                        <img src="./img/contact5.png" class="profile" alt="">
-                    </div>
-                    <div class="details">
-                        <div class="listHead">
-                            <h4>Teste</h4>
-                            <p class="time">20:50</p>
-                        </div>
-                        <div class="message_p">
-                            <p class="unread">Fala parceiroooo</p>
-                            <b>1</b>
-                        </div>
-                    </div>
-                </div> -->
             </ul>
-
         </div>
 
-        <div class="body_right" id="chat_right">
+        <!-- Container principal para exibir a foto e a mensagem ao entrar no app -->
+        <div class="container_home" id="container_right_home">
+            <div class="container_home_resources">
+                <img src="./img/notebook_phone_wpp.png" alt="Foto de um notebook e um celular, original do WhatsApp."
+                    class="img_home">
+                <div class="message_home">
+                    <p class="title_home">WhatsApp Web</p>
+                    <div class="description_home">
+                        <p class="first_message_home">Envie e receba mensagens sem precisar manter seu celular conectad
+                            á internet.</p>
+                        <p class="second_message_home">Use o WhatsApp em até quatro aparelhos conectados e um celular ao
+                            mesmo tempo.</p>
+                    </div>
+                    <footer class="footer_home">
+                        <i class="fa-solid fa-lock"></i>
+                        <p class="footer_message">Protegido com a criptografia de ponta a ponta</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="body_right"> -->
             <!-- <div class="header_right">
                 <div class="contact_right_info">
                     <div title="Dados do perfil" class="contact_right_img">
@@ -82,7 +91,7 @@
                     </div> 
                 </div>
 
-                <ul class="nav_icons" id="nav_icons">
+                <ul class="nav_icons_right">
                     <li><i title="Pesquisar..." class="fa-solid fa-magnifying-glass"></i></li>
                     <li><i title="Mais opções" class="fa-solid fa-ellipsis-vertical"></i></li>
                 </ul>
@@ -91,16 +100,18 @@
             <!-- Caixa de mensagens -->
             <!-- <div class="chatbox" id="chatbox">
                 <div class="my_message">
-                    <span class="text_myMessage">teste <span class="hour_myMessage">02:22</span></span>
+                    <span class="text_myMessage">teste</span>
+                    <span class="hour_myMessage">02:22</span>
                 </div>
                 <div class="friend_message">
-                    <span class="text_friendMessage">opa <span class="hour_friendMessage">02:22</span></span>
+                    <span class="text_friendMessage">opa</span>
+                    <span class="hour_friendMessage">02:22</span>
                 </div>
                 
             </div> -->
 
             <!-- Input da caixa de mensagens -->
-            <!-- <div class="chat_input">
+            <!-- <div class="chat_input_none" id="chatInput">
                 <i title="Emotes" class="fa-regular fa-face-smile"></i>
                 <i title="Anexar" class="fa-solid fa-paperclip"></i>
                 <input title="Escreva sua mensagem" type="text" placeholder="Mensagem">

@@ -1,16 +1,15 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import {contatos} from "./contatos.js"
 
 const createContact = (contato, index) => {
     const messages_chat = document.createElement('ul')
     messages_chat.classList.add('chat_list')
     messages_chat.style.overflowY = 'auto'
 
-    messages_chat.addEventListener('click', () => {
-        var container_right = document.getElementById('chat_right')
-        container_right.replaceChildren(createHeaderRight(index))
-        container_right.appendChild(createMessages(index))
+    messages_chat.addEventListener('click', (event) => {
+        var container_right = document.getElementById('container_right_home')
+        container_right.replaceChildren(createHeaderRight(index), createMessages(index))
     })
 
     const chat = document.createElement('div')
@@ -70,38 +69,34 @@ const createHeaderRight = (index) => {
     return headerRight
 }
 
-const carregarContatos = () => {
-    const chat_messages = document.getElementById('chat_messages')
-    const contactsMessages = contatos.map(createContact)
-
-    chat_messages.replaceChildren(...contactsMessages)
-}
-
 const createMessages = (index) => {
 
+    const chatContainerRight = document.createElement('container_home')
+    chatContainerRight.classList.remove('container_right_home')
+    chatContainerRight.classList.add('body_right');
+
     const chatBox = document.createElement('div')
-    chatBox.classList.add('chatbox');
-
-    const myMessages = document.createElement('div')
-    myMessages.classList.add('my_message')
-
-    const friendMessages = document.createElement('div')
-    friendMessages.classList.add('friend_message')
-
-    const textMyMessage = document.createElement('span')
-    textMyMessage.classList.add('text_myMessage')
-
-    const hourMyMessage = document.createElement('span')
-    hourMyMessage.classList.add('hour_myMessage')
-
-    const textFriendMessage = document.createElement('span')
-    textFriendMessage.classList.add('text_friendMessage')
-
-    const hourFriendMessage = document.createElement('span')
-    hourFriendMessage.classList.add('hour_friendMessage')
-
+    chatBox.classList.add('chatbox')
 
     contatos[index].messages.forEach((message) => {
+
+        const myMessages = document.createElement('div')
+        myMessages.classList.add('my_message')
+
+        const friendMessages = document.createElement('div')
+        friendMessages.classList.add('friend_message')
+
+        const textMyMessage = document.createElement('span')
+        textMyMessage.classList.add('text_myMessage')
+
+        const hourMyMessage = document.createElement('span')
+        hourMyMessage.classList.add('hour_myMessage')
+
+        const textFriendMessage = document.createElement('span')
+        textFriendMessage.classList.add('text_friendMessage')
+
+        const hourFriendMessage = document.createElement('span')
+        hourFriendMessage.classList.add('hour_friendMessage')
 
         if (message.sender == 'me') {
 
@@ -111,6 +106,12 @@ const createMessages = (index) => {
             hourMyMessage.classList.add('hour_myMessage')
             hourMyMessage.textContent = message.time
 
+            chatContainerRight.appendChild(chatBox)
+
+            chatBox.append(myMessages, friendMessages)
+
+            myMessages.append(textMyMessage, hourMyMessage)
+
         } else if (message.sender == contatos[index].name) {
 
             textFriendMessage.classList.add('text_friendMessage')
@@ -119,17 +120,30 @@ const createMessages = (index) => {
             hourFriendMessage.classList.add('hour_friendMessage')
             hourFriendMessage.textContent = message.time
 
+            chatContainerRight.appendChild(chatBox)
+
+            chatBox.append(myMessages, friendMessages)
+
+            friendMessages.append(textFriendMessage, hourFriendMessage)
+
         }
     })
 
-    chatBox.append(myMessages, friendMessages)
-
-    myMessages.append(textMyMessage, hourMyMessage)
-
-    friendMessages.append(textFriendMessage, hourFriendMessage)
-
-    return chatBox
-
+    return chatContainerRight
 }
+
+const carregarContatos = () => {
+    const chat_messages = document.getElementById('chat_messages')
+    const contactsMessages = contatos.map(createContact)
+
+    chat_messages.replaceChildren(...contactsMessages)
+}
+
+// const createMessageBar = () => {
+//     const messageBar = document.getElementById('chatInput')
+//     messageBar.classList.remove('chat_input_none')
+//     messageBar.classList.add('chat_input')
+//     return chatInput
+// }
 
 carregarContatos()

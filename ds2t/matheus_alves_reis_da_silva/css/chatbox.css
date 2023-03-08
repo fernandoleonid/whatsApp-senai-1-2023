@@ -1,0 +1,56 @@
+/* Caixa de mensagens */
+.chatbox {
+    display: flex;
+    height: calc(100% - 120px);
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+.chatbox::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.my_message {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.my_message:hover {
+    background-color: #e9edef;
+}
+
+.text_myMessage {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #d9fdd3;
+}
+
+.hour_myMessage {
+    padding-left: 4px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+.friend_message {
+    display: flex;
+}
+
+.text_friendMessage {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.hour_friendMessage {
+    padding-left: 4px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}

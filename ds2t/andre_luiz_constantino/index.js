@@ -70,41 +70,33 @@ const carregarMensagensComHeader = (indice) => {
     const messagesContainer = document.createElement('div')
     container.classList.add('container-messages')
     messagesContainer.classList.add('messages__container')
-    
+
     juntarTextos.append(nomeDoPerfil, descricaoDoPerfil)
     juntarImagemComTextos.append(imagemDePerfil, juntarTextos)
     header.append(juntarImagemComTextos)
 
-    container.append(header)
 
-    contatos[indice].messages.forEach(function (contato) {
+    contatos[indice].messages.forEach(function (mensagem){
         //Processo para criar uma div
         const divMensagem = document.createElement('div')
-        divMensagem.classList.add('message-text-contact__container')
+        if(mensagem.sender == 'me'){
+            divMensagem.classList.add('message-text-contact__container')
+        } else {
+            divMensagem.classList.add('message-text__container')
+        }
 
         const textMensagem = document.createElement('p')
-        textMensagem.textContent = 'texto'
-        
+        textMensagem.textContent = mensagem.content
+
         const textHorario = document.createElement('span')
-        textHorario.textContent = '14:20'
+        textHorario.textContent = mensagem.time
 
-        const divMensagem2 = document.createElement('div')
-        divMensagem2.classList.add('message-text__container')
-
-        const textMensagem2 = document.createElement('p')
-        textMensagem2.textContent = 'texto'
-
-        const textHorario2 = document.createElement('span')
-        textHorario2.textContent = '14:20'
-
-        
         divMensagem.append(textMensagem, textHorario)
-        divMensagem2.append(textMensagem2, textHorario2)
-        messagesContainer.append(divMensagem, divMensagem2)
+        messagesContainer.append(divMensagem)
         containerMessages.append(messagesContainer)
+        indice++
     })
-
-    
+    container.append(header)
 }
 
 carregarContato()

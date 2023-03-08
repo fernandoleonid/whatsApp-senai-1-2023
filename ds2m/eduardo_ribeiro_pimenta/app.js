@@ -39,28 +39,39 @@ const criarContainer = (contato) => {
 
 }
 
-const criarMensagens = (contato) => {
+const criarMensagens = (contatoSelecionado) => {
+
     const contactHeader = document.getElementsByClassName("contact__header")
     const contactText = document.createElement('div')
-    const name = document.createElement('h5')
     contactText.classList.add("contact__text")
+    const imageHolder = document.createElement('div')
+    imageHolder.classList.add("nav__image_holder")
+    const image = document.createElement('img')
+    image.setAttribute('id',"nav__header_image")
+    const name = document.createElement('h5')
     name.classList.add('contact__name', 'main__name')
-    name.textContent = "aaaaaaaaaa"
-    contactText.append(name)
-    console.log(contato.currentTarget.)
+    let selecionadoNome = contatoSelecionado.currentTarget.children[1].children[0].textContent
+    
 
-    contatos.map( (contatoSelecionado) => {
-        if(contatoSelecionado.name == contato.currentTarget.child){
-            name.textContent = contato.target.textContent
+    imageHolder.append(image)
+    contactText.append(name)
+    console.log(selecionadoNome)
+
+    contatos.map( (contatos) => {
+        if(contatos.name == selecionadoNome ){
+            name.textContent = selecionadoNome
+            image.setAttribute('src',"./recursos/" + contatos.image)
+            console.log(contatos.messages)
+            carregarMenssagens(contatos.messages)
         }else{
             console.log(false)
         }
     })
-    contactHeader[0].replaceChildren(contactText)
+    contactHeader[0].replaceChildren(imageHolder,contactText)
 
 }
 
-const carregarMensagens = () => {
+const carregarCards = () => {
     const navMain = document.getElementById('nav__main')
     const cards = contatos.map( criarContainer )
    
@@ -77,6 +88,52 @@ const mudarFundo = (card) => {
 
 
 }
+const carregarMenssagens = (menssagens) => {
+    const contactMain = document.getElementsByClassName("main")
+    const contactMessages = menssagens.map((message) => {
+        if(message.sender == "me"){
+            const ballon = document.createElement('div')
+            ballon.classList.add("messsage__baloon__me")
+            const messageContent = document.createElement('p')
+            messageContent.textContent = message.content
+            messageContent.classList.add("baloon_text")
+            ballon.append(messageContent)
+            const time = document.createElement('span')
+            if(message.timestamp != undefined){
+                time.textContent = message.timestamp.slice(11,16)
+            }else{
+                time.textContent = message.time
+            }
+            
+            time.classList.add("baloon_time")
+            ballon.append(time)
+            
+            return ballon
+            
+        }else{
+            const ballon = document.createElement('div')
+            ballon.classList.add("messsage__baloon")
+            const messageContent = document.createElement('p')
+            messageContent.textContent = message.content
+            messageContent.classList.add("baloon_text")
+            ballon.append(messageContent)
+            const time = document.createElement('span')
+            if(message.timestamp != undefined){
+                time.textContent = message.timestamp.slice(11,16)
+            }else{
+                time.textContent = message.time
+            }
+            time.classList.add("baloon_time")
+            ballon.append(time)
+            
+            return ballon
 
-carregarMensagens()
+        }
+    })
+    console.log(contactMessages)
+    contactMain[0].replaceChildren(...contactMessages.reverse())
+}
+
+
+carregarCards()
 

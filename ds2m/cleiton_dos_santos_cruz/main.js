@@ -1,6 +1,6 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js"
 
 let i = 0
 
@@ -157,11 +157,11 @@ const carregarContatos = () => {
 }
 
 const lightTheme = {
-    '--primary__color': '#00bfa5',
+    '--primary__color': '#26CE4B',
     '--font__color': '#fff',
-    '--backContact__color': '#9e9e9e',
+    '--backContact__color': '#98D1A4',
     '--backImage': 'url(../img/dia.jpg)',
-    '--backFinder': '#757575',
+    '--backFinder': '#62B774',
 
 }
 

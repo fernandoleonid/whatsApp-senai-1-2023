@@ -33,7 +33,7 @@ header span {
 }
 
 .camp__finder {
-    background-color: #78909c;
+    background-color:var(--font__color);
     width: 300px;
     height: 40px;
     border-radius: 8px;

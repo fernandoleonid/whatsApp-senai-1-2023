@@ -36,3 +36,7 @@ main {
     display: none;
     overflow-y: scroll;
 }
+
+#display__none{
+    display: none;
+}

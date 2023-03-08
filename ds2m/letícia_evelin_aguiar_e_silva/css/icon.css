@@ -10,7 +10,11 @@
     display: flex;
     width: 190px;  
 }
-
+.header__principal{
+    display: flex;
+    width: 190px;   
+    gap: 40px;
+}
 .mobile{
     display: none;
 }

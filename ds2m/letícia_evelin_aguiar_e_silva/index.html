@@ -9,34 +9,13 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header_icon.css">
     <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/mensagens.css">
     <script src="https://kit.fontawesome.com/b94100b9f6.js" crossorigin="anonymous"></script>
     <script src="./index.js" defer type="module"></script>
     <title>WhatsApp</title>
 </head>
 <body>
     
-    <!-- <header> -->
-        
-        <!-- <div class="icon">
-            <div class="icon__menu">
-                <img src="./img/do-utilizador.png" alt="icon__menu">
-            </div>
-            <img src="./img/grupo.png" alt="grupo">
-            <img src="./img/status.png" alt="status">
-            <img src="./img/conversando.png" alt="add_conversas">
-            <img src="./img/tres-pontos.png" alt="mais_opcoes">
-        </div>
-
-         
-        <div class="mobile">
-            <h1 class="mobile__title">WhatsApp</h1>
-            <img src="./img/camera.png" alt="camera">
-            <img src="./img/search.png" alt="pesquisa">
-            <img src="./img/tres-pontos.png" alt="mais_opcoes">
-        </div>
-        -->
-    <!-- </header> -->
-
     <main> 
         <div class="principal" id="principal">
             <div class="header">
@@ -44,17 +23,38 @@
                     <div class="icon__menu">
                         <img src="./img/do-utilizador.png" alt="icon__menu">
                     </div>
-                    <img src="./img/grupo.png" alt="grupo">
-                    <img src="./img/status.png" alt="status">
-                    <img src="./img/conversando.png" alt="add_conversas">
-                    <img src="./img/tres-pontos.png" alt="mais_opcoes">
+                    <ul class="header__principal">
+                        <li>
+                            <img src="./img/grupo.png" alt="grupo">
+                        </li>
+                        <li>
+                            <img src="./img/status.png" alt="status">
+                        </li>
+                        <li>
+                            <img src="./img/conversando.png" alt="add_conversas">
+                        </li>
+                        <li>
+                            <img src="./img/tres-pontos.png" alt="mais_opcoes">
+                        </li>
+                    </ul>
+                 
                 </div>
         
                 <div class="mobile">
                     <h1 class="mobile__title">WhatsApp</h1>
-                    <img src="./img/camera.png" alt="camera">
-                    <img src="./img/search.png" alt="pesquisa">
-                    <img src="./img/tres-pontos.png" alt="mais_opcoes">
+                    
+                    <ul class="mobile__icons">
+                        <li>
+                            <img src="./img/camera.png" alt="camera">
+                        </li>
+                        <li>
+                            <img src="./img/search.png" alt="pesquisa">
+                        </li>
+                        <li>
+                            <img src="./img/tres-pontos.png" alt="mais_opcoes">
+                        </li>
+                    </ul>
+             
                 </div> 
             </div>
 
@@ -82,18 +82,43 @@
             </div>
         </div>
 
-        <div class="mensagens" id="mensagens">
+        <div class="container__mensagens" id="container__mensagens">
             
           <div class="header_msg">
-            <div class="header__icon">
-                <img src="./img/search.png" alt="">
-                <img src="./img/tres-pontos.png" alt="">
+            <ul class="header__icons">
+                <li>
+                    <i class="fab fa-whatsapp-square"></i>
+                </li>
+                <li>
+                    <i class="fas fa-search"></i>
+                </li>
+                <li>
+                    <i class="fas fa-ellipsis-v"></i>
+                </li>
+            </ul> 
+            </div>
+
+            <div class="contato__mensagem" id="contato__mensagem">
+                
+            </div>
+
+            <div class="enviar">
+                <span>Mensagem</span>
+                <ul class="icons__message">
+                    <li>
+                        <i class="fa-solid fa-microphone"></i>
+                    </li>
+                    <li>
+                        <i class="far fa-laugh-squint"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-paperclip"></i>
+                    </li>
+                </ul>
             </div>
           </div>
+         
 
-         <!-- <footer class="msg">
-            <h1>oi</h1>
-         </footer> -->
         </div>
 
     </main>

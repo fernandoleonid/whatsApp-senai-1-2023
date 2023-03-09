@@ -23,7 +23,7 @@
     font-size: 20px;
     color: var(--primary-color) ;
 }
-.contact-info{
+.contact_info{
     display: flex;
     gap: 2px;
 }
@@ -35,7 +35,7 @@
     font-size: 12px;
     color: white;
     flex-wrap: nowrap;
-    border-radius: ;
+   
 }
 .contact__photo{
     width: 5rem;
@@ -64,4 +64,9 @@
 }
 .contact__button:hover{
     background: #99ceff;
+}
+.contact.info{
+    background-color: inherit;
+    justify-content: start;    
+    
 }

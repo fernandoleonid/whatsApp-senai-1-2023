@@ -76,7 +76,7 @@ header{
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .chat__gretting{
@@ -94,7 +94,6 @@ header{
     color: #FFFFFF80;
 }
 .chat__header{
-    background-color: thistle;
     width: 80%;
     display: flex;
     justify-content: space-around;
@@ -106,4 +105,7 @@ header{
 .chat__space{
    height: 75%;
    width: 90%;
+}
+.box{
+    padding: 16px;
 }

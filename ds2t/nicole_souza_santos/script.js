@@ -1,10 +1,12 @@
 'use strict'
 
 import { contatos } from "./contatos.js"
+
+const contactRespon = document.getElementById('responsive')
 // console.log(contatos[1].messages)
 
 const criarContatos = (contatos, indice) => {
-    
+
     const card = document.createElement('a')
 
     card.classList.add('card')
@@ -32,19 +34,20 @@ const criarContatos = (contatos, indice) => {
     let cont = 0
     let timer = contatos.messages
     const time = document.createElement('span')
-    
+    console.log(timer.length)
+
 
     while (cont < timer.length) {
         time.classList.add('time')
-        
+
         time.textContent = contatos.messages[cont]['time']
-        console.log(time)
+        console.log(timer.length)
         cont++
     }
 
     console.log(indice)
     card.onclick = () => (carregarMensagens(indice))
-    card.append(foto, cardIdentificador, time)
+    card.append(foto, cardIdentificador)
     return card
 
 }
@@ -54,78 +57,76 @@ const carregarCards = () => {
     const cards = contatos.map(criarContatos)
 
     container.replaceChildren(...cards)
-    
+
 }
 
-const criarMensagens = (json) => {
-    const senderMessage = json.messages
-    
+const criarMensagens = (mensagens) => {
 
-    for (let conat = 0; conat < senderMessage.length; conat++) {
-        if (senderMessage[conat].sender == 'me') {
+    if (mensagens.sender == 'me') {
+
+        const user = document.createElement('div')
+        user.classList.add('me')
 
 
-            const user = document.createElement('div')
-            user.classList.add('me')
-            
+        const sender = document.createElement('p')
+        sender.classList.add('sender')
 
-            const sender = document.createElement('p')
-            sender.classList.add('sender')
+        const content = document.createElement('p')
+        content.classList.add('content')
+        content.textContent = mensagens.content
 
-            const content = document.createElement('p')
-            content.classList.add('content')
-            content.textContent = senderMessage[conat].content
+        const timer = document.createElement('p')
+        timer.classList.add('timer-timestamp')
+        timer.textContent = mensagens.time
 
-            const timer = document.createElement('p')
-            timer.classList.add('timer-timestamp')
-            timer.textContent = senderMessage[conat].time
-            
-            user.append(sender, content)
-            
+        user.append(sender, content, timer)
 
-            return user
-        
 
-        } else if (senderMessage[conat].sender != 'me') {
+        return user
 
-            const other = document.createElement('div')
-            other.classList.add('other-user')
-            
-            const content = document.createElement('p')
-            content.classList.add('content')
-            content.textContent = senderMessage[conat].content
 
-            other.append(content)
-            
-            return other
-        }
+    } else if (mensagens.sender != 'me') {
+
+        const other = document.createElement('div')
+        other.classList.add('other-user')
+
+        const content = document.createElement('p')
+        content.classList.add('content')
+        content.textContent = mensagens.content
+
+        const timer = document.createElement('p')
+        timer.classList.add('timer-timestamp')
+        timer.textContent = mensagens.time
+
+        other.append(content, timer)
+
+        return other
     }
-    
-}
 
-const mensagens = () =>{
-    let conat = 0
-    while (conat < contatos.length) {
-        console.log(contatos[conat].messages)
-        conat++
-    }
 
 }
 
 const carregarMensagens = (indice) => {
     const plane = document.getElementById('welcome')
     const messagesChat = document.getElementById('messages')
-    
+    const cardsChat = contatos[indice].messages.map(criarMensagens);
+
     plane.style.display = 'none'
 
     console.log(contatos[indice].messages)
 
-    const mensagens = contatos.map(criarMensagens)
-    messagesChat.replaceChildren(...mensagens)
+    messagesChat.replaceChildren(...cardsChat)
 
 }
 
+function exibirCards() {
+    document.getElementById('welcome').style.display = 'none'
+
+}
+
+contactRespon.addEventListener('click', exibirCards)
 carregarCards()
+
 
 
 

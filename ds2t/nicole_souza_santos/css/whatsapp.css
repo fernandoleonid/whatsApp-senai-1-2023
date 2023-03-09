@@ -70,7 +70,9 @@
 .time{
     margin-top: 2px;
 }
-
+.contatosRespo{
+    display: none;
+}
 .mensagens{
     display: flex;
     flex-direction: column;
@@ -112,10 +114,14 @@
 
 
 @media (max-width: 640px){
-    .chat{
+    .contatosRespo{
+        display: flex;
+    }
+    .contatos{
         display: none;
     }
     .contatos{
         border: 1px solid #979797;
     }
+    
 }

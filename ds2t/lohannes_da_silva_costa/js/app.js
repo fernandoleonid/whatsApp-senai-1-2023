@@ -2,9 +2,12 @@
 
 import { contatos } from './contatos.js'
 
-const criaContato = ( contato ) => {
-    const block = document.createElement('div')
+const criaContato = (contato) => {
+    const block = document.createElement('button')
     block.classList.add('block')
+    block.id = 'block'
+    block.setAttribute('type', 'button')
+    block.setAttribute('name', contato.name)
 
     const imgbx = document.createElement('div')
     imgbx.classList.add('imgbx')
@@ -30,7 +33,7 @@ const criaContato = ( contato ) => {
 
     const preview = document.createElement('p')
 
-    for(let cont = 0; cont < contato.messages.length; cont++) {
+    for (let cont = 0; cont < contato.messages.length; cont++) {
         time.textContent = contato.messages[cont].time
 
         preview.textContent = contato.messages[cont].content.slice(0, 25) + "..."
@@ -42,25 +45,31 @@ const criaContato = ( contato ) => {
     listHead.append(name, time)
     previewMessage.append(preview)
 
+    block.addEventListener("click", () => abrirConversa(block.getAttribute('name')))
+
     return block
 }
 
-const criaConversa = ( contato ) => {
-
+const criaConversa = (contato) => {
     const rightSide = document.createElement('div')
     rightSide.classList.add('rightSide')
+    rightSide.id = 'rightSide'
 
     const header = document.createElement('div')
     header.classList.add('header')
 
     const imgtxt = document.createElement('div')
-    imgtxt.classList.add('imgtxt')
+    imgtxt.classList.add('imgText')
+
+    const backButton = document.createElement('button')
+    backButton.classList.add('backButton')
+    backButton.setAttribute('type', 'button')
 
     const back = document.createElement('i')
-    back.classList.add('fas fa-chevron-left')
+    back.classList.add('fas', 'fa-chevron-left')
 
-    const userImg = document.createElement('div')
-    userImg.classList.add('userImg')
+    const contactImg = document.createElement('div')
+    contactImg.classList.add('userImg')
 
     const contactPic = document.createElement('img')
     contactPic.classList.add('cover')
@@ -69,29 +78,10 @@ const criaConversa = ( contato ) => {
     const contactName = document.createElement('h4')
     contactName.textContent = contato.name
 
+    const space = document.createElement('br')
+
     const description = document.createElement('span')
     description.textContent = contato.description
-
-    // <ul class="nav_icons">
-    //                 <li><i class="fas fa-search"></i></i></li>
-    //                 <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
-    //             </ul>
-    //         </div>
-
-    //         <div class="chatbox">
-    //             <div class="message my_message">
-    //                 <p>Hi<br><span>10:56</span></p>
-    //             </div>
-    //             <div class="message friend_message">
-    //                 <p>Hello<br><span>10:56</span></p>
-    //             </div>
-    //         </div>
-    //         <div class="chatbox_input">
-    //             <i class="far fa-smile"></i>
-    //             <i class="fas fa-paperclip"></i>
-    //             <input type="text" placeholder="Escreva sua mensagem...">
-    //             <i class="fa-solid fa-microphone"></i>
-    //         </div>
 
     const navIcons = document.createElement('ul')
     navIcons.classList.add('nav_icons')
@@ -99,24 +89,111 @@ const criaConversa = ( contato ) => {
     const searchIcon = document.createElement('li')
 
     const search = document.createElement('i')
-    search.classList.add('fas fa-search')
+    search.classList.add('fas', 'fa-search')
 
     const menuIcon = document.createElement('li')
 
     const menu = document.createElement('i')
-    menu.classList.add('fa-solid fa-ellipsis-vertical')
+    menu.classList.add('fa-solid', 'fa-ellipsis-vertical')
 
     const chatBox = document.createElement('div')
     chatBox.classList.add('chatbox')
 
+    contato.messages.forEach(function (mensagem) {
+        if (mensagem.sender == "me") {
+            const myMessage = document.createElement('div')
+            myMessage.classList.add("message", "my_message")
+
+            const userMessage = document.createElement('p')
+            userMessage.textContent = mensagem.content
+
+            const timeStamp = document.createElement('span')
+            timeStamp.textContent = mensagem.time
+
+            myMessage.append(userMessage)
+            userMessage.append(timeStamp)
+            chatBox.appendChild(myMessage)
+        } else {
+            const friendMessage = document.createElement('div')
+            friendMessage.classList.add("message", "friend_message")
+
+            const contactMessage = document.createElement('p')
+            contactMessage.textContent = mensagem.content
+
+            const friendTimeStamp = document.createElement('span')
+            friendTimeStamp.textContent = mensagem.time
+
+            friendMessage.append(contactMessage)
+            contactMessage.append(friendTimeStamp)
+            chatBox.appendChild(friendMessage)
+        }
+    })
+
+    const chatBoxInput = document.createElement('div')
+    chatBoxInput.classList.add('chatbox_input')
+
+    const emote = document.createElement('i')
+    emote.classList.add('far', 'fa-smile')
+
+    const attach = document.createElement('i')
+    attach.classList.add('fas', 'fa-paperclip')
+
+    const writeMessage = document.createElement('input')
+    writeMessage.setAttribute('type', "text")
+    writeMessage.setAttribute('placeholder', "Escreva sua mensagem...")
+
+    const audio = document.createElement('i')
+    audio.classList.add('fa-solid', 'fa-microphone')
+
+    rightSide.append(header, chatBox, chatBoxInput)
+    header.append(imgtxt, navIcons)
+    imgtxt.append(backButton, contactImg, contactName)
+    backButton.append(back)
+    contactImg.append(contactPic)
+    contactName.append(space, description)
+    navIcons.append(searchIcon, menuIcon)
+    searchIcon.append(search)
+    menuIcon.append(menu)
+    chatBoxInput.append(emote, attach, writeMessage, audio)
+
+    backButton.addEventListener('click', limparConversa)
+
     return rightSide
+}
+
+const conversaLimpa = () => {
+    const rightSideClean = document.createElement('div')
+    rightSideClean.classList.add('rightSide')
+    rightSideClean.id = 'rightSide'
+
+    return rightSideClean
 }
 
 const carregarContatos = () => {
     const chatList = document.getElementById('chatlist')
-    const listaContatos = contatos.map( criaContato )
-    
+    const listaContatos = contatos.map(criaContato)
+
     chatList.replaceChildren(...listaContatos)
+}
+
+const abrirConversa = function (nomeContato) {
+    contatos.forEach(function (contato) {
+        if (contato.name == nomeContato) {
+            const container = document.getElementById('container')
+            const rightSide = document.getElementById('rightSide')
+            const conversa = criaConversa(contato)
+
+            container.replaceChild(conversa, rightSide)
+        }
+    })
+}
+
+const limparConversa = function () {
+            const rightSide = document.getElementById('rightSide')
+            const leftSide = document.getElementById('leftSide')
+
+            rightSide.classList.remove('rightSide')
+            rightSide.classList.add('rightSideNone')
 }
 
 carregarContatos()

@@ -23,10 +23,18 @@ body{
     border-right: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+.container .leftSideNone{
+    display: none;
+}
+
 .container .rightSide{
     position: relative;
     flex: 70%;
     background: #e5ddd5;
+}
+
+.container .rightSideNone{
+    display: none;
 }
 
 .header{
@@ -124,6 +132,7 @@ body{
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     cursor: pointer;
     transition: all .5s;
+    border: 0;
 }
 
 .chatlist .block:hover{
@@ -132,8 +141,8 @@ body{
 
 .chatlist .block .imgbx{
     position: relative;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 50px;
     overflow: hidden;
     border-radius: 50%;
     margin-right: 10px;
@@ -200,18 +209,6 @@ body{
     height: calc(100% - 120px);
     padding: 50px;
     overflow-y: auto;
-}
-
-.fas.fa-chevron-left{
-    font-size: 1.5rem;
-    margin-right: 20px;
-    color: rgb(29, 29, 29);
-    transition: all .2s;
-    cursor: pointer;
-}
-
-.fas.fa-chevron-left:hover{
-    color: #009688;
 }
 
 .message{
@@ -302,4 +299,32 @@ body{
     outline: none;
     border-radius: 30px;
     font-size: 1rem;
+}
+
+.fas.fa-chevron-left{
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .container .rightSide{
+        display: block;
+        position: relative;
+        background: #e5ddd5;
+    }
+
+    .backButton:hover .fas.fa-chevron-left{
+        color: #009688;
+    }
+    
+    .fas.fa-chevron-left{
+        display: block;
+        font-size: 1.5rem;
+        margin-right: 20px;
+        color: rgb(29, 29, 29);
+        transition: all .2s;
+        cursor: pointer;
+    }
+    .esquerdo{
+        display: none;
+    }
 }

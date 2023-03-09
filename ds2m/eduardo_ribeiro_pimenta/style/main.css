@@ -7,7 +7,7 @@
 .main__name{
     font-weight: 100;
 }
-.main_icons{
+.header__icons{
     display: flex;
     flex-direction: row;
     color: #fff;
@@ -16,7 +16,7 @@
     gap: 40px;
     padding-right: 40px;
 }
-.main_icons i:hover{
+.header__icons i:hover{
     color: #fff5;
     cursor: pointer;
 }
@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-#send{
+#send__textfild{
     padding-top: 9px;
     padding-left: 40px;
     color: #fff;

@@ -31,9 +31,10 @@ h5{
     background-color: #2A2F33;
     min-height: 70px;
     height: 12.2vh;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
+
 }
 .main{
     height: 100%;
@@ -52,8 +53,34 @@ h5{
 
 }
 
+/* .main{
+    color: #fff;
+    font-size: 300px;
+    height: 100%;
+    background-color:  #0C1417;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: 8px;
+} */
+#main__placeholder{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#main__text{
+    font-size: 3rem;
+}
+#main__smile{
+    font-size: 200px;
+}
 
 .footer{
+    display: none;
     height: 9vh;
     padding-left: 10px;
     padding-right: 10px;

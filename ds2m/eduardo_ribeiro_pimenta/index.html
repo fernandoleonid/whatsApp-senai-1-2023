@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500&display=swap" rel="stylesheet">
     <script type="module" src="./recursos/contatos.js" defer></script>
     <script type="module" src="./app.js" defer></script>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/152/152740.png"/>
     <title>zapzap</title>
 </head>
 <body class="pure-g">
@@ -32,7 +33,7 @@
         <div class="nav__search">
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
-                <textarea name="search" id="search" placeholder="Search or start a new chat"></textarea>
+                <input type="text" id="search__textfield" spellcheck="true" wrap="hard" placeholder="Search or start a new chat"></input>
             </div>
         </div>
         <div id="nav__main">
@@ -61,27 +62,32 @@
                     <h5 class="contact__name main__name">Ana</h5>
                 </div> -->
             </div>
-            <div class="main_icons">
+            <div class="header__icons">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-paperclip"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
         </div>
         <div class="main">
-            <div class="messsage__baloon">
+            <div id="main__placeholder">
+                <p id="main__text">Start chatting!</p>
+                <i class="fa-regular fa-face-smile-wink" id="main__smile"></i>
+            </div>
+
+            <!-- <div class="messsage__baloon">
                 <p class="baloon_text">Teste2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                 <span class="baloon_time">12:05</span>
             </div>
             <div class="messsage__baloon__me">
                 <p class="baloon_text">Testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
                 <span class="baloon_time">12:03</span>
-            </div>
+            </div> -->
 
         </div>
         <div class="footer">
             <div class="send">
                 <i class="fa-solid fa-face-smile"></i>
-                <textarea name="send" id="send" placeholder="|Type A message..."></textarea>
+                <textarea name="send" id="send__textfild"  spellcheck="true"  placeholder="|Type A message..."></textarea>
                 <i class="fa-solid fa-paper-plane"></i>
             </div>
         </div>

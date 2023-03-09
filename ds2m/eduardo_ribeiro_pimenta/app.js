@@ -38,9 +38,17 @@ const criarContainer = (contato) => {
 
 
 }
+const criarBarras = () => {
+    const header = document.getElementsByClassName("header")
+    const footer = document.getElementsByClassName("footer")
+
+    header[0].style.display = "flex"
+    footer[0].style.display = "block"
+}
 
 const criarMensagens = (contatoSelecionado) => {
 
+    criarBarras()
     const contactHeader = document.getElementsByClassName("contact__header")
     const contactText = document.createElement('div')
     contactText.classList.add("contact__text")

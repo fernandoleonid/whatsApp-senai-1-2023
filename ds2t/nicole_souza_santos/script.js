@@ -80,10 +80,7 @@ const criarMensagens = (mensagens) => {
         timer.textContent = mensagens.time
 
         user.append(sender, content, timer)
-
-
         return user
-
 
     } else if (mensagens.sender != 'me') {
 

@@ -62,61 +62,48 @@ const loadingContact = () => {
 
             user.append(img, name)
             headerChat.append(user, options)
-
             conversation.replaceChildren(headerChat)
             
             const chat = document.getElementById('chat')
+            
             const messages = document.createElement('div')
             messages.classList.add('messages')
+            
             const sender = document.createElement('div')
             sender.classList.add('sender')
 
+            const writting = document.createElement('div')
+            writting.classList.add('writting__area')
+
+            const icons = document.createElement('div')
+            icons.classList.add('icons__writting__area')
+
+            const spanIcons = document.getElementById('span')
+
+            const label = document.createElement('label')
+            label.classList.add('user__writting')
+
+            
 
             const mensagens = contatos[contact.id].messages.map(function (msg) {
-
-                // const container = document.getElementById('container')
                 const span = document.createElement('span')
-                span.classList.add('me')
-                span.textContent = msg.content
-                
+                if(msg.sender == 'me'){
+                    span.classList.add('me')
+                    span.textContent = msg.content
+                }else{
+                    span.classList.add('other')
+                    span.textContent = msg.content
+                }   
                 return span
-
-
-               
-                // const sender = document.createElement('div')
-                // sender.classList.add('sender')
-                
-                // if (msg.sender == 'me') {
-                //     const me = document.createElement('span')
-                //     me.classList.add('me')
-                //     me.textContent = msg.content
-                //     sender.append(me)
-
-                // } else if (msg.sender != 'me') {
-                //     const other = document.createElement('span')
-                //     other.classList.add('other')
-                //     other.textContent = msg.content
-                //     sender.append(other )
-                // }
-                
-                // messages.replaceChildren(sender)
-                // chat.append(messages)
-                // container.append(chat)
-
             })
 
+            
             sender.replaceChildren (...mensagens)
-            messages.appendChild(sender)
-            chat.appendChild(messages)
-
-
-
-
-
-
-
+            icons.append(spanIcons)
+            writting.append(icons, label)
+            messages.append(sender)
+            chat.append(messages, writting)
         }
     })
-
 }
 loadingContact();

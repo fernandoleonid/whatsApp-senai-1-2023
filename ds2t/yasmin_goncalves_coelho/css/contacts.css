@@ -44,3 +44,8 @@
     justify-content: center;
     gap: 7px;   
 }
+.contact:hover{
+    background-color: #F5F6F6;
+    transition: .5s;
+    cursor: pointer;
+}

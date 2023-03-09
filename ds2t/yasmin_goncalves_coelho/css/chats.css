@@ -13,6 +13,8 @@
     width: 100%;
     align-items: center;
     border-radius: 10px 10px 0px 0px;
+    justify-content: space-between;
+    padding: 20px;
 }
 .chats__info img{
     width: 50px;
@@ -28,9 +30,11 @@
     font-size: .8rem;
     color: gray;
 }
-.chats__info i{
-    width: 100%;
-    font-size: 1.2rem;
-    color: #54656F;
-    justify-self: end;
+.info__contact{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.info__texts{
+    align-self: center;
 }

@@ -8,7 +8,7 @@ const criarContato = (contact) => {
 
     const foto = document.createElement('img')
     foto.classList.add('contact__picture')
-    foto.src = contact.image
+    foto.src = "./" + contact.image
 
     const textos = document.createElement('span')
     textos.classList.add('contact__text')
@@ -28,11 +28,51 @@ const criarContato = (contact) => {
     return contato
 }
 
+const criarDadosContato = (contact) => {
+    const container = document.createElement('div')
+    container.classList.add('chats__info')
+
+    const info__contact = document.createElement('span')
+    info__contact.classList.add('info__contact')
+
+    const foto = document.createElement('img')
+    foto.src = "./" +  contact.image
+
+    const info__texts = document.createElement('span')
+    info__texts.classList.add('info__texts')
+
+    const nome = document.createElement('h3')
+    nome.textContent = contact.name
+
+    const descricao = document.createElement('p')
+    descricao.textContent = contact.description
+
+
+    container.append(info__contact)
+    info__texts.append(nome, descricao)
+    info__contact.append(foto, info__texts)
+
+    return container
+
+}
+
 const carregarContatos = () => {
-    const container = document.getElementById('contacts__container')
+    const containerContatos = document.getElementById('contacts__container')
     const contacts = contatos.map(criarContato)
 
-    container.replaceChildren(...contacts)
+    
+    containerContatos.replaceChildren(...contacts)
+}
+
+const carregarConversa = (indice) => {
+    const containerChats = document.getElementById('chats')
+
+    containerChats.replaceChildren(criarDadosContato(contatos[indice]))
+}
+
+const getIndex = (contact) => {
+ 
 }
 
 carregarContatos()
+carregarConversa(6)

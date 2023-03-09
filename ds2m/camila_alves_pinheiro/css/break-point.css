@@ -8,6 +8,10 @@
         background-color: #fff;
     }
 
+    .container__messages{
+        height: 100vh;
+    }
+
     .container__contact{
         height: 100vh;
     }
@@ -46,7 +50,7 @@
         height: 100vh;
         display: grid;
         grid-template-columns: 100vw;
-        grid-template-areas: "contacts ";
+        grid-template-areas: "contacts";
         background-color: #fff;
     }
 
@@ -91,5 +95,13 @@
     .functions__contact {
         border: none;
     }
+
+    .container__messages{
+        display: none;
+    }
+
+    /* .message__contact{
+        display: none;
+    } */
     
 }

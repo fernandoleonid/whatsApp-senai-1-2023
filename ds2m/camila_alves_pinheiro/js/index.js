@@ -5,7 +5,10 @@ import { contatos } from "./contatos.js"
 const criarCards = (contato, indice) => {
     const card = document.createElement('div')
     card.classList.add('card')
-    card.onclick = () => carregarConversas(indice)
+    card.id = 'card'
+    card.onclick = () => chageContact(indice)
+    //  chageContact(indice)
+
 
     const contact = document.createElement('div')
     contact.classList.add('contact')
@@ -13,6 +16,7 @@ const criarCards = (contato, indice) => {
 
     const img = document.createElement('img')
     img.classList.add('img__contact')
+    img.alt = 'Image contact'
     img.src = `./img/${contato.image}`
 
     const name = document.createElement('h5')
@@ -34,11 +38,6 @@ const carregarContatos = () => {
     const container = document.getElementById('container__card')
     const cards = contatos.map(criarCards)
 
-    // ['a', 'b', 'c']
-    // 1 - elemento
-    // 2 - indice
-    // 3 - array
-
     container.replaceChildren(...cards)
 }
 
@@ -50,25 +49,28 @@ const getConversas = (mensagem) => {
 
     let messageSent = document.createElement('span')
 
+    let time = document.createElement('span')
+
     if (mensagem.sender == "me") {
         DivMessageSent.classList.add('message__sent')
         messageSent.classList.add('message__sent_span')
+        time.classList.add('time')
         messageSent.textContent = mensagem.content
+        time.textContent = mensagem.timestamp
     } else {
         DivMessageSent.classList.add('message__received')
         messageSent.classList.add('message__received_span')
+        time.classList.add('time')
         messageSent.textContent = mensagem.content
+        time.textContent = mensagem.timestamp
     }
 
     DivMessageSent.append(messageSent)
 
     return DivMessageSent
-    // })
-
 }
 
 const carregarConversas = (indice) => {
-
     const messageContact = document.getElementById('message__contact')
 
     const message = contatos[indice].messages.map(getConversas)
@@ -76,15 +78,60 @@ const carregarConversas = (indice) => {
     messageContact.replaceChildren(...message)
 }
 
+const manageContact = (contato) => {
+    const functions = document.createElement('div')
+    functions.classList.add('functions__contact')
+
+    const img = document.createElement('img')
+    img.classList.add('img__contact')
+    img.alt = 'Image contact'
+    img.src = `./img/${contato.image}`
+
+    const name = document.createElement('h5')
+    name.classList.add('name__contact')
+    name.textContent = contato.name
+
+    const listIcons = document.createElement('ul')
+    listIcons.classList.add('functions__icons')
+
+    const search = document.createElement('i')
+    search.classList.add('fa-solid')
+    search.classList.add('fa-magnifying-glass')
+
+    const moreSelections = document.createElement('i')
+    moreSelections.classList.add('fas')
+    moreSelections.classList.add('fa-ellipsis-v')
+
+    const logo = document.createElement('img')
+    logo.alt = 'Logo Pay Pal'
+    logo.src = `./img/paypal-window.png`
+
+
+    listIcons.append(search, moreSelections, logo)
+    functions.append(img, name, listIcons)
+
+    return functions
+
+}
+
+const chageContact = () => {
+
+        const container = document.getElementById('container__messages')
+        const profile = contatos.map(manageContact)
+
+        container.replaceChildren(...profile)
+
+}
 
 
 
 
+ // ['a', 'b', 'c']
+    // 1 - elemento
+    // 2 - indice
+    // 3 - array
 
 
-// const img = document.createElement('img')
-//     img.classList.add('img__contact')
-//     img.src = `./img/${indice.image}`
 
 
 

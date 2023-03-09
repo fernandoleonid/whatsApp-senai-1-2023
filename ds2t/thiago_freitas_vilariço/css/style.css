@@ -224,6 +224,7 @@ body{
 .footer-direito i{
     font-size: 24px;
     color: #54656f;
+    cursor: pointer;
 }
 .caixa-pesquisa-direita{
     width: 100%;
@@ -235,6 +236,9 @@ body{
     padding-left: 16px;
 }
 .footer-direito-none{
+    display: none;
+}
+.back{
     display: none;
 }
 /* TABLET */
@@ -260,6 +264,20 @@ body{
     }
     .container-main{
         display: none;
+    }
+    .back{
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        background-color: #00A884;
+        display: grid;
+        place-content: center;
+        color: black;
+        border-radius: 50%;
+        z-index: 666;
+        right: 16px;
+        bottom: 86px;
+        transition: opacity 0.5s;
     }
 }
 /* MOBILE */

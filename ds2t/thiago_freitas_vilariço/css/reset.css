@@ -10,3 +10,6 @@ a{
     text-decoration: none;
     color: inherit;
 }
+html, body{
+    scroll-behavior: smooth;
+}

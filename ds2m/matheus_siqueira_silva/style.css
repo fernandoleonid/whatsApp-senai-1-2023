@@ -182,8 +182,15 @@ a{
     align-self: flex-start;
 }
 
+
+.icons__writting__area{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
 .writting__area{
-    height: 9%;
+    height: 8%;
     display: flex;
     padding: 9px 12px 11px;
     margin: 5px 10px;

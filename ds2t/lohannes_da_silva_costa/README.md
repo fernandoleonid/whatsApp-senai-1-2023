@@ -24,7 +24,7 @@ O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em a
 
 ---
 ## Links
-- [Github](https://lohannn.github.io/whatsApp-senai-1-2023/ds2t/lohannes_da_silva_costa/)
+- [Github](./index.html)
 
 # Critérios de Avaliação
 - [x] `Codificou o app conforme o original?`

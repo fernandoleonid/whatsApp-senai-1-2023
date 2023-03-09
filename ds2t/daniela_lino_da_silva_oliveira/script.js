@@ -3,7 +3,6 @@ import { contatos } from "../../recursos/contatos.js";
 
 const criarContato = (contato, indice) => {
 
-
     const cardContact = document.createElement('div')
     cardContact.classList.add('contact')
     cardContact.setAttribute('id', 'contact')
@@ -24,13 +23,12 @@ const criarContato = (contato, indice) => {
     contactDescription.textContent = contato.description
 
     cardTitle.append(nameContact, contactDescription);
+
     cardContact.onclick = () => (carregarChat(indice))
+
     cardContact.append(foto, cardTitle);
 
     return cardContact;
-
-    
-
 
 }
 const carregarContatos = () => {
@@ -39,73 +37,61 @@ const carregarContatos = () => {
 
     containerContatos.replaceChildren(...cardsContato);
 }
-const criarChat = (json) => {
-    const jsonName = json
-    const nomeContato = json.name
-    const senderMessage = json.messages
-    
-
-    console.log(senderMessage[2].sender)
+//Cria os elementos que armazenarão as mensagens
+const criarChat = function (chat) {
 
 
-    // for (let index = 0; index < json.length; index++) {
-    //     const element = array[index];
-        
-    // }
-    for (let cont = 0; cont < senderMessage.length; cont++) {
+    if (chat.sender == 'me') {
 
-        const cardChat = document.createElement('div');
-        cardChat.classList.add('chat_place');
+        const rightMessages = document.createElement('div');
+        rightMessages.classList.add('right__messages');
 
-        console.log(3)
-        console.log(senderMessage[1].sender)
+        const userMessage = document.createElement('div');
+        userMessage.classList.add('user__message');
 
-        if (senderMessage[cont].sender === 'me') {
-            console.log('ok')
-            const messageRight = document.createElement('div')
-            messageRight.classList.add('right__messages')
+        const message = document.createElement('p');
+        message.classList.add('message');
+        message.textContent = chat.content;
 
-            const userMessage = document.createElement('div')
-            userMessage.classList.add('user__message')
+        const timer = document.createElement('p')
+        timer.classList.add('timer-timestamp')
+        timer.textContent = mensagens.time
 
-            const messageContentRight = document.createElement('p')
-            messageContentRight.classList.add('message')
-            messageContentRight.textContent = senderMessage[cont].content
+        other.append(content, timer)
 
-            userMessage.append(messageContentRight);
-            messageRight.append(userMessage);
-            cardChat.append(messageRight);
-            return cardChat;
-        } else if(senderMessage[cont].sender !== 'me'){
-            const messageLeft = document.createElement('div')
-            messageLeft.classList.add('left__messages')
+        console.log(chat)
+        userMessage.append(message);
+        rightMessages.append(userMessage);
 
-            const contactMessage = document.createElement('div')
-            contactMessage.classList.add('contact__message')
+        return rightMessages;
 
-            const messageContentLeft = document.createElement('p')
-            messageContentLeft.classList.add('message')
-            messageContentLeft.textContent = senderMessage[cont].content
+    } else {
+        const leftMessages = document.createElement('div');
+        leftMessages.classList.add('left__messages');
 
-            contactMessage.append(messageContentLeft);
-            messageLeft.append(contactMessage);
-            cardChat.append(messageLeft);
-            return cardChat;
-        }
+        const contactMessage = document.createElement('div');
+        contactMessage.classList.add('contact__message');
+
+        const message = document.createElement('p');
+        message.classList.add('message');
+        message.textContent = chat.content;
+
+        console.log(chat)
+        contactMessage.append(message);
+        leftMessages.append(contactMessage);
+
+        return leftMessages;
+
     }
 
-
 }
-
+//Carregas as mensagens para a tela com o clique no criar contatos(que chama essa função)
 const carregarChat = (indice) => {
-    const containerChat = document.getElementById('messages_place')
-    const cardsChat = contatos.map(criarChat);
+    const containerChat = document.getElementById('chat_place')
+    const cardsChat = contatos[indice].messages.map(criarChat);
 
     containerChat.replaceChildren(...cardsChat);
+
+    console.log(contatos[indice].messages)
 }
-const contactClick = (indice) => {
-    const contatoExistente = document.getElementById('contact');
-    contatoExistente.addEventListener('click', carregarChat)
-}
-carregarContatos()
-contactClick()
+carregarContatos();

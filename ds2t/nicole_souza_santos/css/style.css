@@ -1,3 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: #252525;
+}
 header{
     height: 100px;
     background: #191825;
@@ -8,6 +16,7 @@ main{
     background: #252525;
 }
 footer{
+    
     font-size: 2rem;
     display: flex;
     place-content: end;

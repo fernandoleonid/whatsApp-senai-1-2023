@@ -11,7 +11,7 @@ const criarContatos = (contatos, indice) => {
 
     card.classList.add('card')
     card.setAttribute('id', 'card')
-    card.setAttribute('href', '#')
+    card.setAttribute('href', '#chatMensagens')
 
     const foto = document.createElement('img')
     foto.classList.add('card-icon')
@@ -47,11 +47,35 @@ const criarContatos = (contatos, indice) => {
 
     console.log(indice)
     card.onclick = () => (carregarMensagens(indice))
-    card.append(foto, cardIdentificador)
+    card.append(foto, cardIdentificador, time)
     return card
 
 }
 
+const hearder = (indice) =>{
+    const hea = document.getElementById('header-contact')
+
+    
+    const foto = document.createElement('img')
+    foto.classList.add('card-icon')
+    foto.src = `/recursos/images/${contatos.image}`
+
+    const cardIdentificador = document.createElement('div')
+    cardIdentificador.classList.add('card-identification')
+
+    const cardTitle = document.createElement('p')
+    cardTitle.classList.add('card-title')
+    cardTitle.textContent = contatos.name
+
+    const cardMessage = document.createElement('p')
+    cardMessage.classList.add('card-message')
+    cardMessage.textContent = contatos.description
+
+    hea.append(foto, cardTitle, cardMessage)
+
+
+    
+}
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
     const cards = contatos.map(criarContatos)
@@ -79,6 +103,7 @@ const criarMensagens = (mensagens) => {
         timer.classList.add('timer-timestamp')
         timer.textContent = mensagens.time
 
+
         user.append(sender, content, timer)
         return user
 
@@ -103,6 +128,7 @@ const criarMensagens = (mensagens) => {
 
 }
 
+
 const carregarMensagens = (indice) => {
     const plane = document.getElementById('welcome')
     const messagesChat = document.getElementById('messages')
@@ -111,24 +137,12 @@ const carregarMensagens = (indice) => {
     plane.style.display = 'none'
 
     console.log(contatos[indice].messages)
-
+    
+    console.log(indice)
     messagesChat.replaceChildren(...cardsChat)
 
 }
 
-function exibirCards() {
-    document.getElementById('welcome').style.display = 'none'
 
-}
-
-contactRespon.addEventListener('click', exibirCards)
 carregarCards()
 
-
-
-
-
-
-
-// tarefas:
-// imprimir todas as mensagens de acordo com a conversa

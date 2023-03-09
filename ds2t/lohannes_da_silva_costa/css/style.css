@@ -305,25 +305,26 @@ body{
     display: none;
 }
 
+.backButton:hover .fas.fa-chevron-left{
+    color: #009688;
+}
+
+.fas.fa-chevron-left{
+    display: block;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    color: rgb(29, 29, 29);
+    transition: all .2s;
+    cursor: pointer;
+}
+
 @media (max-width: 640px) {
     .container .rightSide{
         display: block;
         position: relative;
         background: #e5ddd5;
     }
-
-    .backButton:hover .fas.fa-chevron-left{
-        color: #009688;
-    }
     
-    .fas.fa-chevron-left{
-        display: block;
-        font-size: 1.5rem;
-        margin-right: 20px;
-        color: rgb(29, 29, 29);
-        transition: all .2s;
-        cursor: pointer;
-    }
     .esquerdo{
         display: none;
     }

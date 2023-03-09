@@ -2,6 +2,8 @@
 
 import { contatos } from './contatos.js'
 
+const leftSide = document.getElementById('leftSide')
+
 const criaContato = (contato) => {
     const block = document.createElement('button')
     block.classList.add('block')
@@ -184,16 +186,18 @@ const abrirConversa = function (nomeContato) {
             const conversa = criaConversa(contato)
 
             container.replaceChild(conversa, rightSide)
+            leftSide.classList.add('esquerdo')
         }
     })
 }
 
 const limparConversa = function () {
             const rightSide = document.getElementById('rightSide')
-            const leftSide = document.getElementById('leftSide')
 
             rightSide.classList.remove('rightSide')
             rightSide.classList.add('rightSideNone')
+
+            leftSide.classList.remove('esquerdo')
 }
 
 carregarContatos()

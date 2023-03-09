@@ -13,7 +13,6 @@
     justify-content: center;
     align-items: center;
     background-color: #F0F2F5;
-    border-bottom: solid 6px #25d366;
 }
 
 .container_home_resources {
@@ -50,14 +49,25 @@
         height: 100%;
         display: grid;
         grid-template-areas: 
-        "body_left";
-        grid-template-columns: 1fr;
+        "body_left" "body_right";
+        grid-template-columns: 1fr 1fr;
     }
     .body_right{
-        display: none;
+        width: 100vw;
+        height: 100vh;
     }
+
+    .body_left {
+        width: 100vw;
+        height: 100vh;
+    }
+
     .search_chat{
         width: 100vw;
+    }
+
+    .container_home_resources {
+        display: none;
     }
 }
 /* MOBILE */

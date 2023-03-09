@@ -1,11 +1,28 @@
+.header__none{
+    display: block;
+}
+.voltar{
+    font-size: 2rem;
+   display: none;
+}
+
+
+
 @media (max-width:640px) {
     body {
         display: flex;
         flex-direction: column;
     }
     main {
+        height: 100vh;
         width: 100%;
+
     }
+    .main__header{
+        grid-template-columns: 40px 65px 1fr 65px;
+
+    }
+
     .main__header,
     .main__footer {
         width: 100vw;
@@ -18,4 +35,12 @@
         gap: 0px;
     }
     .camp__main {}
+
+    .header__none{
+        display: none;
+    }
+
+    .voltar{
+        display: block;
+    }
 }

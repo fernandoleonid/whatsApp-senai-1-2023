@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    background-color: var(--primary__color);
     display: grid;
     grid-template-areas: 'header main';
     grid-template-columns: minmax(300px, 400px) minmax(400px, 1fr);
@@ -37,6 +38,6 @@ main {
     overflow-y: scroll;
 }
 
-#display__none{
+.display__none{
     display: none;
 }

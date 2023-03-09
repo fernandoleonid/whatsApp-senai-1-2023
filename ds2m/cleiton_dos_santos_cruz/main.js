@@ -51,6 +51,13 @@ const carregarContatos = () => {
                 const mainHeader = document.createElement('div')
                 mainHeader.classList.add('main__header')
 
+                const Iconvoltar = document.createElement('button')
+                Iconvoltar.classList.add('voltar')
+
+                const voltar = document.createElement('i')
+                voltar.classList.add('fas')
+                voltar.classList.add('fa-arrow-circle-left')
+
                 const image = document.createElement('img')
                 image.classList.add('contact__image')
                 image.src = `./${contatos[contact.id].image}`
@@ -79,8 +86,9 @@ const carregarContatos = () => {
 
 
                 containerMain.append(contactName, descriptionMain)
+                Iconvoltar.append(voltar)
                 mainIcons.append(lente, elipse)
-                mainHeader.append(image, containerMain, mainIcons)
+                mainHeader.append(Iconvoltar, image, containerMain, mainIcons)
 
                 const containerMessage = document.getElementById('inside__message')
 
@@ -135,19 +143,21 @@ const carregarContatos = () => {
 
 
                     cont += 1
+
+                    //Responsividade
+                    document.getElementById('header').classList.add('header__none')
+
+
+
+
                 }
-
-
-
-                console.log(contatosWhile);
-                console.log(contatos[contact.id].messages[cont].sender);
-
 
 
             }
 
             puxarContatoMain()
             puxarMensagemMain()
+
         }
 
 

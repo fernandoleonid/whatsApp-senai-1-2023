@@ -5,6 +5,8 @@ import { contatos } from './recursos/contatos.js'
 const largura = window.screen.width;
 let i = 0
 
+
+
 const criarContato = contato => {
     const card = document.createElement('button')
     card.classList.add('media__contacts')
@@ -140,19 +142,30 @@ const carregarContatos = () => {
 
 
 
-            const pegarMensagem = getElementById('container')
-            const pegarMensagem2 = getElementById('inside-message')
+            const getMedia = document.getElementById('media')
+
             if (largura < 640) {
                 card.onclick = () => {
-                    console.log('clicado')
+                    console.log('clicado no card')
+                    containerMessage.style.display = 'block'
+                    container.style.display = 'none'
+                    getMedia.style.display = 'none'
 
-                    pegarMensagem.style.display = 'none'
-                    pegarMensagem2.style.display = 'block'
+                    // card.style.display = 'none'
                 }
                 menuBotao.onclick = () => {
-                    pegarMensagem.style.display = 'block'
-                    pegarMensagem2.style.display = 'none'
+                    console.log('clicado no botão')
+                    containerMessage.style.display = 'none'
+                    container.style.display = 'block'
+                    getMedia.style.display = 'block'
+
                 }
+            } else {
+                containerMessage.style.display = 'block'
+                container.style.display = 'block'
+                getMedia.style.display = 'block'
+
+
             }
             // menuBotao.append(imgMenu)
             // header__contact.append(header__name, messages__description)

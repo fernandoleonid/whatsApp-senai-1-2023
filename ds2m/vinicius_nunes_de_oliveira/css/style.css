@@ -48,6 +48,6 @@ main {
     }
     #inside-message {
         width: 100vw;
-        /* display: none; */
+        display: none;
     }
 }

@@ -8,10 +8,6 @@
 
 @media screen and (max-width: 48em){
 
-    .pure-g{
-        flex-wrap: wrap;
-    }
-    
     #nav{
         max-width: unset;
         width: 100%;

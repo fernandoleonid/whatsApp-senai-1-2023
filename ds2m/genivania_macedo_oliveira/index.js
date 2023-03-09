@@ -28,6 +28,9 @@ const carregarContatos = () =>{
     const cards = contatos.map(criarCard)
 
     container.replaceChildren(...cards)
+
+    
 }
 
-carregarContatos( )
+carregarContatos()
+

@@ -13,6 +13,11 @@
     justify-content: center;
     align-items: center;
     background-color: #F0F2F5;
+    border-bottom: 5px solid #00A884;
+}
+
+.img_home {
+    padding-left: 50px;
 }
 
 .container_home_resources {

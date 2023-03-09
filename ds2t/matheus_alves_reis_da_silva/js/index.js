@@ -5,11 +5,10 @@ import {contatos} from "./contatos.js"
 const createContact = (contato, index) => {
     const messages_chat = document.createElement('ul')
     messages_chat.classList.add('chat_list')
-    messages_chat.style.overflowY = 'auto'
 
-    messages_chat.addEventListener('click', (event) => {
-        var container_right = document.getElementById('container_right_home')
-        container_right.replaceChildren(createHeaderRight(index), createMessages(index))
+    messages_chat.addEventListener('click', () => {
+        var container = document.getElementById('container_right_home')
+        container.replaceChildren(createHeaderRight(index), createMessages(index), createMessageBar())
     })
 
     const chat = document.createElement('div')
@@ -71,8 +70,8 @@ const createHeaderRight = (index) => {
 
 const createMessages = (index) => {
 
-    const chatContainerRight = document.createElement('container_home')
-    chatContainerRight.classList.remove('container_right_home')
+    const chatContainerRight = document.getElementById('container_right_home')
+    chatContainerRight.classList.remove('container_home')
     chatContainerRight.classList.add('body_right');
 
     const chatBox = document.createElement('div')
@@ -126,10 +125,9 @@ const createMessages = (index) => {
 
             friendMessages.append(textFriendMessage, hourFriendMessage)
 
-        }
+        } 
     })
-
-    return chatContainerRight
+    return chatBox
 }
 
 const carregarContatos = () => {
@@ -139,11 +137,11 @@ const carregarContatos = () => {
     chat_messages.replaceChildren(...contactsMessages)
 }
 
-// const createMessageBar = () => {
-//     const messageBar = document.getElementById('chatInput')
-//     messageBar.classList.remove('chat_input_none')
-//     messageBar.classList.add('chat_input')
-//     return chatInput
-// }
+const createMessageBar = () => {
+    const messageBar = document.getElementById('chatInput')
+    messageBar.classList.remove('chat_input_none')
+    messageBar.classList.add('chat_input')
+    return chatInput
+}
 
 carregarContatos()

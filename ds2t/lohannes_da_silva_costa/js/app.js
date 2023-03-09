@@ -47,7 +47,7 @@ const criaContato = (contato) => {
     listHead.append(name, time)
     previewMessage.append(preview)
 
-    block.addEventListener("click", () => abrirConversa(block.getAttribute('name')))
+    block.addEventListener("click", () => openConversation(block.getAttribute('name')))
 
     return block
 }
@@ -57,8 +57,7 @@ const criaConversa = (contato) => {
     rightSide.classList.add('rightSide')
     rightSide.id = 'rightSide'
 
-    const header = document.createElement('div')
-    header.classList.add('header')
+    const header = document.createElement('header')
 
     const imgtxt = document.createElement('div')
     imgtxt.classList.add('imgText')
@@ -158,27 +157,19 @@ const criaConversa = (contato) => {
     menuIcon.append(menu)
     chatBoxInput.append(emote, attach, writeMessage, audio)
 
-    backButton.addEventListener('click', limparConversa)
+    backButton.addEventListener('click', clear)
 
     return rightSide
 }
 
-const conversaLimpa = () => {
-    const rightSideClean = document.createElement('div')
-    rightSideClean.classList.add('rightSide')
-    rightSideClean.id = 'rightSide'
-
-    return rightSideClean
-}
-
-const carregarContatos = () => {
+const loadContacts = () => {
     const chatList = document.getElementById('chatlist')
     const listaContatos = contatos.map(criaContato)
 
     chatList.replaceChildren(...listaContatos)
 }
 
-const abrirConversa = function (nomeContato) {
+const openConversation = function (nomeContato) {
     contatos.forEach(function (contato) {
         if (contato.name == nomeContato) {
             const container = document.getElementById('container')
@@ -186,18 +177,18 @@ const abrirConversa = function (nomeContato) {
             const conversa = criaConversa(contato)
 
             container.replaceChild(conversa, rightSide)
-            leftSide.classList.add('esquerdo')
+            leftSide.classList.add('invisible')
         }
     })
 }
 
-const limparConversa = function () {
+const clear = function () {
             const rightSide = document.getElementById('rightSide')
 
             rightSide.classList.remove('rightSide')
             rightSide.classList.add('rightSideNone')
 
-            leftSide.classList.remove('esquerdo')
+            leftSide.classList.remove('invisible')
 }
 
-carregarContatos()
+loadContacts()

@@ -2,6 +2,7 @@
 
 import {contatos} from "./recursos/contatos.js"
 var id = 0
+
 const criarContainer = (contato) => {
     const container = document.createElement('div')
     container.classList.add('contact__container')
@@ -9,7 +10,7 @@ const criarContainer = (contato) => {
     container.setAttribute('id',id)
     id++
     container.addEventListener("click", mudarFundo)
-    container.addEventListener("click", criarMensagens)
+    container.addEventListener("click",criarMensagens)
 
     const imageHolder = document.createElement('div')
     imageHolder.classList.add('nav__image_holder')
@@ -46,9 +47,34 @@ const criarBarras = () => {
     footer[0].style.display = "block"
 }
 
+const mudarTela = () => {
+    if(window.innerWidth < 770){
+        document.getElementById("nav").style.display = "none"
+        document.getElementById("main").style.display = "flex" 
+    }else{
+        document.getElementById("nav").style.display = "grid"
+        document.getElementById("main").style.display = "flex" 
+    }
+
+}
+const voltarTela = () => {
+    if(window.innerWidth < 770){
+        document.getElementById("nav").style.display = "grid"
+        document.getElementById("main").style.display = "none" 
+    }else{
+        document.getElementById("nav").style.display = "grid"
+        document.getElementById("main").style.display = "flex" 
+    }
+
+}
+
+
+
 const criarMensagens = (contatoSelecionado) => {
 
     criarBarras()
+    mudarTela()
+
     const contactHeader = document.getElementsByClassName("contact__header")
     const contactText = document.createElement('div')
     contactText.classList.add("contact__text")
@@ -58,14 +84,25 @@ const criarMensagens = (contatoSelecionado) => {
     image.setAttribute('id',"nav__header_image")
     const name = document.createElement('h5')
     name.classList.add('contact__name', 'main__name')
-    let selecionadoNome = contatoSelecionado.currentTarget.children[1].children[0].textContent
+    const back = document.createElement('i')
+    back.classList.add("fa-solid","fa-arrow-left","nav__icons")
+    back.setAttribute('id',"back")
+    back.addEventListener("click",voltarTela)
+    // let selecionadoNome = contatoSelecionado.currentTarget.children[1].children[0].textContent
+    let selecionadoNome = contatoSelecionado.currentTarget.querySelector('.contact__name').textContent
+ 
+    
+
     
 
     imageHolder.append(image)
     contactText.append(name)
     console.log(selecionadoNome)
 
-    contatos.map( (contatos) => {
+    // const contatoSelecionado = contatos.filter( contato => contato.name == selecionadoNome)
+    
+
+    contatos.forEach( (contatos) => {
         if(contatos.name == selecionadoNome ){
             name.textContent = selecionadoNome
             image.setAttribute('src',"./recursos/" + contatos.image)
@@ -75,7 +112,7 @@ const criarMensagens = (contatoSelecionado) => {
             console.log(false)
         }
     })
-    contactHeader[0].replaceChildren(imageHolder,contactText)
+    contactHeader[0].replaceChildren(back,imageHolder,contactText)
 
 }
 
@@ -140,6 +177,10 @@ const carregarMenssagens = (menssagens) => {
     })
     console.log(contactMessages)
     contactMain[0].replaceChildren(...contactMessages.reverse())
+}
+
+const trocarTelaMobile = () => {
+
 }
 
 

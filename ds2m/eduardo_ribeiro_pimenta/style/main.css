@@ -40,12 +40,20 @@
     color: #fff;
     background-color: #2A2F33;
     border: none;
-    height: 40px; 
+    min-height: 40px; 
     width: 90%;
     min-width: 260px;
     font-size: 1.2rem;
     border-radius: 100px 100px 100px 100px;
     resize: none;
     place-self: center;
+}
+
+#back{
+    display: none; 
+   color: #fff;
+   padding-right: 0px;
+   padding-left: 10px;
+   font-size: 30px;
 }
 

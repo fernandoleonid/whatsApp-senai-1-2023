@@ -13,12 +13,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/mobile.css">
     <script type="module" src="./recursos/contatos.js" defer></script>
     <script type="module" src="./app.js" defer></script>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/152/152740.png"/>
     <title>zapzap</title>
 </head>
-<body class="pure-g">
+<body class="pure-g" id="body">
     <div class="pure-u-1-3" id="nav">
         <div id="nav__header">
             <div class="nav__image_holder">
@@ -52,9 +53,10 @@
             
         </div>
     </div>
-    <div class="pure-u-1-1" id="main">
+    <div class="pure-u-1-1 " id="main">
         <div class="header">
             <div class="contact__header">
+                
                 <!-- <div class="nav__image_holder">
                     <img alt="" id="nav__header_image" src="./recursos/img/contact2.png">
                 </div>
@@ -87,7 +89,7 @@
         <div class="footer">
             <div class="send">
                 <i class="fa-solid fa-face-smile"></i>
-                <textarea name="send" id="send__textfild"  spellcheck="true"  placeholder="|Type A message..."></textarea>
+                <textarea name="send" id="send__textfild" rows="1" spellcheck="true"  placeholder="|Type A message..."></textarea>
                 <i class="fa-solid fa-paper-plane"></i>
             </div>
         </div>

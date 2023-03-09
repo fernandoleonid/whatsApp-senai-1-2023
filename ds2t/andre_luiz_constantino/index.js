@@ -7,15 +7,8 @@ const criarContato = (contato, indice) => {
     contact.classList.add('contact-card__container')
 
     contact.addEventListener('click', (event) => {
-        const container = document.getElementById('container-messages')
-        // if (document.getElementById('id-header') || document.getElementById('id-messages')) {
-        //     container.replaceChildren(carregarConversas(indice))
-        // } else {
-
-
-           carregarConversas(indice)
-        // }
-            
+        descerConversa()
+        carregarConversas(indice)
     })
 
     const fotoDePerfil = document.createElement('img')
@@ -87,8 +80,7 @@ const carregarMensagensComHeader = (indice) => {
     const inputMessages = document.createElement('input')
     inputMessages.classList.add('write-message')
 
-    const icone = document.getElementById('icone')  
-    
+    const icone = document.getElementById('icone')
     inputContainer.replaceChildren(inputMessages, icone)
 
     contatos[indice].messages.forEach(function (mensagem) {
@@ -111,6 +103,10 @@ const carregarMensagensComHeader = (indice) => {
         container.replaceChildren(messagesContainer, header, inputContainer)
     })
 
+}
+
+const descerConversa = () => {
+    window.scroll(0, 1100)
 }
 
 carregarContato()

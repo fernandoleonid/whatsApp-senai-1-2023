@@ -17,6 +17,10 @@ a{
     text-decoration: none;
 }
 
+html, body{
+    scroll-behavior: smooth;
+}
+
 .main__container{
     background: #fff;
     width: 87vw;
@@ -59,6 +63,10 @@ a{
     cursor: pointer;
 }
 
+.back{
+    display: none;
+}
+
 @media (max-width:778px){
     .my-profile__image{
         height: 4vh;
@@ -73,5 +81,34 @@ a{
         cursor: pointer;
         height: 3vh;
     }
+}
 
+@media (max-width:640px){
+    .left-side__container{
+        width: 100%;
+        border-right: none;
+    }
+
+    .main__container{
+        height: 100vh;
+    }
+
+    .back{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background-color: #5060EE;
+        display: grid;
+        place-content: center;
+        color: #000;
+        border-radius: 50%;
+        z-index: 666;
+        right: 24px;
+        bottom: 60px;
+        opacity: .2;
+    }
+
+    .back:hover{
+        opacity: 90%;
+    }
 }

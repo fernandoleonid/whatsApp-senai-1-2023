@@ -152,4 +152,49 @@ body {
 
 .aside__main {
     grid-area: aside-main;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.aside__main--contact {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    height: 73px;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.aside__main--contact-pic {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 86px;
+    padding: 0px 13px;
+}
+.aside__main--contact-pic img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+.aside__main--contact-content {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--shadow-box);
+}
+.aside__main--contact-content h4 {
+    width: 100%;
+    text-align: start;
+}
+.aside__main--contact-content p {
+    width: 100%;
+    text-align: start;
 }

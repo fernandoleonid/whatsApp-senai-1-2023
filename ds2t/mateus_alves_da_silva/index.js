@@ -2,9 +2,95 @@
 
 import{contatos} from "./contatos.js"
 
-const criarContato = (contato) => {
+const criarHeader = (indice) => {
+    const header = document.createElement('div')
+    header.classList.add('header_mensagens')
+
+    const containerHeader = document.createElement('div')
+    containerHeader.classList.add('container_header')
+
+    const imagemPerfil = document.createElement('img')
+    imagemPerfil.classList.add('img_perfil')
+    imagemPerfil.src = `./img/${contatos[indice].image}`
+
+
+    const containerPerfil = document.createElement('div')
+    containerPerfil.classList.add('container_perfil')
+
+    const infoNome = document.createElement('span')
+    infoNome.classList.add('info_nome')
+
+    const infoConversa = document.createElement('span')
+    infoConversa.classList.add('info_conversa')
+
+    header.append(containerHeader)
+
+    containerHeader.append(imagemPerfil, containerPerfil)
+
+    containerPerfil.append(infoNome, infoConversa)
+
+    return header
+}
+
+const criarMensagem = (indice) => {
+    const containerMensagensDireita = document.createElement('div')
+    containerMensagensDireita.classList.add('container_mensagens_direita')
+
+    contatos[indice].messages.forEach((mensagem) => {
+
+        const caixaMinhaMensagem = document.createElement('div')
+        caixaMinhaMensagem.classList.add('caixa_minha_mensagem')
+
+        const caixaSuaMensagem = document.createElement('div')
+        caixaSuaMensagem.classList.add('caixa_sua_mensagem')
+
+        const msgMinha = document.createElement('p')
+        msgMinha.classList.add('msg_minha')
+
+        const msgSua = document.createElement('p')
+        msgSua.classList.add('msg_sua')
+
+        const horaMinha = document.createElement('span')
+        horaMinha.classList.add('hora_minha')
+
+        const horaSua = document.createElement('span')
+        horaSua.classList.add('hora_sua')
+
+        if(mensagem.sender == 'me') {
+            msgMinha.classList.add('msg_minha')
+            msgMinha.textContent = mensagem.content
+
+            horaMinha.classList.add('hora_minha')
+            horaMinha.textContent = mensagem.time
+
+            containerMensagensDireita.appendChild(caixaMinhaMensagem, caixaSuaMensagem)
+
+            caixaMinhaMensagem.appendChild(msgMinha, horaMinha)
+
+        } else if(mensagem.sender == contatos[indice].name) {
+            msgSua.classList.add('msg_minha')
+            msgSua.textContent = mensagem.content
+
+            horaSua.classList.add('hora_minha')
+            horaSua.textContent = mensagem.time
+
+            containerMensagensDireita.appendChild(caixaMinhaMensagem, caixaSuaMensagem)
+
+            caixaSuaMensagem.appendChild(msgSua, horaSua)
+        }
+    })
+
+    return containerMensagensDireita
+}
+
+const criarContato = (contato, indice) => {
     const cardContato = document.createElement('div')
     cardContato.classList.add('chat_list')
+
+    cardContato.addEventListener('click', (event) => {
+        var container = document.getElementById('container_chat')
+        container.replaceChildren(criarHeader(indice), criarMensagem(indice),)
+    })
 
     const list = document.createElement('div')
     list.classList.add('contato_list')
@@ -44,5 +130,7 @@ const carregarContatos = () => {
 
     contatoCard.replaceChildren(...mensagensContatos)
 }
+
+
 
 carregarContatos()

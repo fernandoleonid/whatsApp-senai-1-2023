@@ -404,9 +404,9 @@ body {
  .container1{
     display: block;
     position: relative;
-    width: 375px;
+    width: 100vh;
     /* max-height: 900px; */
-    height: 670px;
+    height: 100vh;
     background: #000;
     box-shadow: 0 5px 5px rgb(0 0 0 / 15%);
     overflow: hidden;
@@ -621,7 +621,7 @@ header .action1 a{
 }
 
 ::-webkit-scrollbar{
-    width: 5px;
+    /* width: 5px; */
 }
 ::-webkit-scrollbar-track{
     background: transparent;

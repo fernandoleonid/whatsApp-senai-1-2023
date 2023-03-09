@@ -9,6 +9,7 @@
     grid-template-rows: 6vh 2fr;
 }
 
+
 .contact-information__container {
     grid-row: 1;
     width: 100%;
@@ -25,12 +26,8 @@
 .contact-information__container i {
     font-size: 2rem;
     cursor: pointer;
+    display: flex;
 }
-
-#icone {
-    display: none;
-}
-
 
 .contact-information__container i:hover {
     font-size: 2.4rem;
@@ -106,14 +103,16 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .message-input__container i {
     color: #000;
     font-size: 2rem;
     cursor: pointer;
-    display: none;
+}
+
+#icone{
+    color: #001B26;
 }
 
 .message-input__container i:hover {

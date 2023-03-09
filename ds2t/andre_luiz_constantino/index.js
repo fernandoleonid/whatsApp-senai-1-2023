@@ -5,10 +5,17 @@ import { contatos } from "./recursos/contatos.js"
 const criarContato = (contato, indice) => {
     const contact = document.createElement('div')
     contact.classList.add('contact-card__container')
-    contact.setAttribute('id', 'id-' + indice)
 
     contact.addEventListener('click', (event) => {
-        carregarConversas(indice)
+        const container = document.getElementById('container-messages')
+        // if (document.getElementById('id-header') || document.getElementById('id-messages')) {
+        //     container.replaceChildren(carregarConversas(indice))
+        // } else {
+
+
+           carregarConversas(indice)
+        // }
+            
     })
 
     const fotoDePerfil = document.createElement('img')
@@ -44,6 +51,7 @@ const carregarConversas = (indice) => {
 }
 
 const carregarMensagensComHeader = (indice) => {
+
     const container = document.getElementById('container-messages')
     const header = document.createElement('div')
     header.classList.add('contact-information__container')
@@ -66,20 +74,27 @@ const carregarMensagensComHeader = (indice) => {
     descricaoDoPerfil.classList.add('contact-information__description')
     descricaoDoPerfil.textContent = contatos[indice].description
 
-    const containerMessages = document.getElementById('container-messages')
-    const messagesContainer = document.createElement('div')
-    container.classList.add('container-messages')
-    messagesContainer.classList.add('messages__container')
-
     juntarTextos.append(nomeDoPerfil, descricaoDoPerfil)
     juntarImagemComTextos.append(imagemDePerfil, juntarTextos)
     header.append(juntarImagemComTextos)
 
+    const messagesContainer = document.createElement('div')
+    messagesContainer.classList.add('messages__container')
 
-    contatos[indice].messages.forEach(function (mensagem){
+    const inputContainer = document.createElement('div')
+    inputContainer.classList.add('message-input__container')
+
+    const inputMessages = document.createElement('input')
+    inputMessages.classList.add('write-message')
+
+    const icone = document.getElementById('icone')  
+    
+    inputContainer.replaceChildren(inputMessages, icone)
+
+    contatos[indice].messages.forEach(function (mensagem) {
         //Processo para criar uma div
         const divMensagem = document.createElement('div')
-        if(mensagem.sender == 'me'){
+        if (mensagem.sender == 'me') {
             divMensagem.classList.add('message-text-contact__container')
         } else {
             divMensagem.classList.add('message-text__container')
@@ -93,10 +108,9 @@ const carregarMensagensComHeader = (indice) => {
 
         divMensagem.append(textMensagem, textHorario)
         messagesContainer.append(divMensagem)
-        containerMessages.append(messagesContainer)
-        indice++
+        container.replaceChildren(messagesContainer, header, inputContainer)
     })
-    container.append(header)
+
 }
 
 carregarContato()

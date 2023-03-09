@@ -82,8 +82,11 @@ const buildChat = (contato) => {
     )
 }
 const buildHeader = (contact) =>{
-    const chatDiv = document.createElement('div')
-    chatDiv.classList.add('chat__header')
+    const header = document.createElement('header')
+    header.classList.add(
+        'chat__header',
+        't-align-section' 
+        )
 
     const info = document.createElement('div')
     info.classList.add('contact__info')
@@ -112,20 +115,19 @@ const buildHeader = (contact) =>{
         description
     )
     
-    chatDiv.append(
+    header.append(
         image,
         info,
         nav
     )
 
-    return chatDiv
+    return header
 }
 
 const buildBox = (messagesList) =>{
     const boxDiv = document.createElement('div')
     boxDiv.classList.add('container-message')
 
-    // const boxMessages = messages.map(createSingleMessage)
     const messages = messagesList.map(createSingleMessage)
     messages.forEach( (message) =>{
         boxDiv.append(

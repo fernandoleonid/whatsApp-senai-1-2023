@@ -7,9 +7,13 @@
 }
 
 @media screen and (max-width: 48em){
+    .pure-g{
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
 
     #main{
-        display: none;
+        display: none ;
     }
 
     #nav{

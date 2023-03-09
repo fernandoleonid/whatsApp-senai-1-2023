@@ -4,6 +4,12 @@ import {contatos} from "./recursos/contatos.js"
 var id = 0
 
 const criarContainer = (contato) => {
+    document.getElementById("send").addEventListener("click",addBallon)
+    document.getElementById("send__textfield").addEventListener("keypress", (key) => {
+        if(key.key === 'Enter'){
+             addBallon()
+        }})
+
     const container = document.createElement('div')
     container.classList.add('contact__container')
     container.style.backgroundColor
@@ -106,10 +112,7 @@ const criarMensagens = (contatoSelecionado) => {
         if(contatos.name == selecionadoNome ){
             name.textContent = selecionadoNome
             image.setAttribute('src',"./recursos/" + contatos.image)
-            console.log(contatos.messages)
             carregarMenssagens(contatos.messages)
-        }else{
-            console.log(false)
         }
     })
     contactHeader[0].replaceChildren(back,imageHolder,contactText)
@@ -175,11 +178,30 @@ const carregarMenssagens = (menssagens) => {
 
         }
     })
-    console.log(contactMessages)
     contactMain[0].replaceChildren(...contactMessages.reverse())
 }
 
-const trocarTelaMobile = () => {
+function addBallon () {
+    if(document.getElementById("send__textfield").value){
+        const contactMain = document.getElementsByClassName("main")
+        const ballon = document.createElement('div')
+        ballon.classList.add("messsage__baloon__me")
+        const messageContent = document.createElement('p')
+        messageContent.textContent =  document.getElementById("send__textfield").value
+        document.getElementById("send__textfield").value = ""
+        messageContent.classList.add("baloon_text")
+        ballon.append(messageContent)
+        const time = document.createElement('span')
+        const hora = new Date()
+        time.textContent = hora.getHours() +":"+ hora.getMinutes()
+    
+                
+        time.classList.add("baloon_time")
+        ballon.append(time)
+            
+    
+        contactMain[0].insertAdjacentElement('afterBegin',ballon)
+    }
 
 }
 

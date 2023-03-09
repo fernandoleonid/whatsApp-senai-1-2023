@@ -8,6 +8,10 @@
 
 @media screen and (max-width: 48em){
 
+    #main{
+        display: none;
+    }
+
     #nav{
         max-width: unset;
         width: 100%;

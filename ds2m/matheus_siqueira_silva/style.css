@@ -136,6 +136,15 @@ a{
     border-bottom: 1px solid #D1D7DB;
 }
 
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user__name{
+    margin-left: 10px;
+}
+
 .options{
     display: flex;
     flex-direction: row;

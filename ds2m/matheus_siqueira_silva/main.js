@@ -2,6 +2,8 @@
 
 import {contatos} from "./recursos/contatos.js";
 
+let i = 0;
+
 const createChat = (contato) => {
     const chat = document.createElement('div')
     chat.classList.add('user__talked')
@@ -24,33 +26,47 @@ const createChat = (contato) => {
     text__user.append(name, description)
     chat.append(img, text__user)
 
+    chat.id = i++;
     return chat
 }
 
-const userConversation = (contato) => {
-    const img = document.createElement('img') 
-    img.classList.add('user__image')
-    img.src = `./recursos/${contato.image}`
-    
-    const name = document.createElement('h5')
-    name.classList.add('user__name')
-    name.textContent = contato.name
-
-    const headerChat = document.createElement('div')
-    headerChat.classList.add('chat__header')
-
-    headerChat.append(img, name)
-
-}  
-
-const open = () => {
-    const chat = document.getElementById(chat)    
-}
-
-
 const loadingContact = () => {
     const users = document.getElementById('container__chat')
-    const informations = contatos.map(createChat);
-    users.replaceChildren(...informations)
+    const cards = contatos.map(createChat);
+    users.replaceChildren(...cards)
+
+    cards.forEach(contact => {
+        contact.onclick = () => {
+
+            console.log(contatos[contact.id].name)
+
+            const conversation =  document.getElementById('chat')
+            conversation.classList.add('chat__user')
+
+            const headerChat = document.createElement('div')
+            headerChat.classList.add('chat__header')
+
+            const user = document.createElement('div')
+            user.classList.add('user')
+
+            const img = document.createElement('img') 
+            img.classList.add('user__image')
+            img.src = `./recursos/${contatos[contact.id].image}`
+            
+            const name = document.createElement('h5')
+            name.classList.add('user__name')
+            name.textContent = contatos[contact.id].name
+    
+            const options = document.getElementById('options')
+            options.classList.add('options')
+
+            user.append(img, name)
+            headerChat.append(user, options)
+
+            conversation.replaceChildren(headerChat)
+
+        }
+    })
+
 }
 loadingContact();

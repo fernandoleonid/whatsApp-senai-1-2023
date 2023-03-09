@@ -61,8 +61,15 @@
     text-align: left;
 }
 
+.botaoMenu {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+}
+
 .media__contacts:hover {
-    background-color: honeydew;
+    background-color: whitesmoke;
     cursor: pointer;
 }
 

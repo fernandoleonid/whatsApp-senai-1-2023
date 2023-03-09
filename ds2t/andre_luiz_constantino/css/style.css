@@ -59,6 +59,19 @@ a{
     cursor: pointer;
 }
 
-.hide {
-    display: none;
+@media (max-width:778px){
+    .my-profile__image{
+        height: 4vh;
+    }
+
+    .white-theme__image{
+        cursor: pointer;
+        height: 3.5vh;
+    }
+    
+    .black-theme__image{
+        cursor: pointer;
+        height: 3vh;
+    }
+
 }

@@ -42,3 +42,14 @@
     transition: .3s;
     color: #fff;
 }
+
+@media (max-width:778px){
+    .contact-card__container{
+        gap: 0;
+    }
+
+    .contact-card__name{
+        font-size: 1rem;
+    }
+
+}

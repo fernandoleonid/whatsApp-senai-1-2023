@@ -1,0 +1,38 @@
+.chat{
+    width: 20.7vw;
+    height: 7.5vh;
+    display: flex;
+    padding-top: 10px;
+}
+
+.photo__chat{
+    width: 4.5vw;
+}
+
+.photo{
+    height: 5vh;
+    border-radius: 50%;
+    margin-left: 8px;   
+}
+
+.name__chat{
+    display: flex;
+    height: 6vh;;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.linha{
+    display: flex;
+    background-color: #e9edef;
+    width: 20.7vw;
+    height: 0.1vh;
+}
+
+.conversation   {
+    background-attachment: #e9edef;
+    width: 100%;
+    height: 100%;
+}

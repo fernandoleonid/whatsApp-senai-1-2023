@@ -1,0 +1,38 @@
+.config{
+    height: 7vh;
+    width: 21vw;
+    background-color: #e9edef;
+    display: flex;
+    
+}
+
+.photo_profile{
+    width: 29vh;
+    display: flex;
+}
+
+.img__photo{
+    height: 3.8vh;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: 8px;
+}
+
+.menu{
+    width: 12vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img_menu{
+    font-size: 1.1rem;
+    color: gray;
+    width: 12vw;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}

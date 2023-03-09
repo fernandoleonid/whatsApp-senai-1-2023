@@ -14,13 +14,16 @@ body{
         "home chat chat"
         "home chat chat";
     background-color: var(--body-grey);
+    gap: 0;
     
 }
-
 header{
-    width: 534px;
     height: 97px;
     background: #000000;
+}
+.main-header{
+    width: 534px;
+    
 }
 .t-border-and-color{
     background-color: var(--header-color);
@@ -70,16 +73,37 @@ header{
 }
 .chat{
     grid-area: chat;
-    background-color: aquamarine;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chat__gretting{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+}
 
+
+.chat__footer{
+    font-family: 'Montserrat';
+    color: #FFFFFF80;
 }
 .chat__header{
-    background-color:tomato;
-}
-.chat__space{
-   background-color: tomato;
+    background-color: thistle;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
 }
 .contacts{
     display: flex;
     flex-direction: column;
+}
+.chat__space{
+   height: 75%;
+   width: 90%;
 }

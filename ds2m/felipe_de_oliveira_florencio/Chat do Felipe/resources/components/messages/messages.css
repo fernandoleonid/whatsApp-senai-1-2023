@@ -1,4 +1,4 @@
-.container{
+.container-message{
     display: flex;
     flex-direction: column;
 }
@@ -21,4 +21,8 @@
     background-color: #036825;
     align-self: flex-end;
     text-align: end;
+}
+.chat-header{
+    background-color: tomato;
+    height: 6rem;
 }

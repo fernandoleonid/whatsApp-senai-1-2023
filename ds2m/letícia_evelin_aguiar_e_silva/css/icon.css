@@ -30,15 +30,22 @@
 .mobile{
     display: flex;
     align-items: center;
-    gap: 35px;
+    flex-direction: row;
+    gap: 333px;
     padding-left: 15px; 
     color: white;
 }
 .mobile__title{
     display: flex;
-    font-size: 1.5rem;
-    color: white;
-    width: 150px;
+    font-size: 1.3rem;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100px;
+}
+.mobile__icons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 }

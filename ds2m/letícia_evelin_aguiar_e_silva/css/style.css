@@ -10,54 +10,13 @@ body{
     grid-template-areas: 
     'principal' 'mensagens';
     flex-direction: column;
-    height: 135vh;
 }
 
 main{
     display: flex;
-   
-}
-.principal{
-    width: 40%;
-    flex-direction: column;
-}
-.img_search{
-    display: flex;
-    align-self: center;
-    height: 20px;
-    width: 30px;
-}
-.img_filter{
-    display: flex;
-    height: 20px;
-    width: 30px;
-}
- .pesquisa{
-    display: flex;
-    width: 585px;
-    margin-top: 2.5px;
-    height: 25px;
-    text-align: center;
-} 
-.container_search{
-    flex-direction: row;
-    display: flex;
-    height: 30px;
-    gap: 10px;
-}
-.container{
-    display: flex;
-    flex-direction: column; 
-    gap: 5px;
-    padding: 25px; 
-    /* grid-area: contacts;
-    display: flex;
-    flex-direction: column; */
-    
 }
 
 footer{
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,4 +30,9 @@ footer{
 
 @media(max-width: 640px) {
 
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    } 
 }

@@ -1,7 +1,6 @@
 .card{
     display: flex;
-    flex-direction: column;
-    /* width: 650px; */
+    height: 110px;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
@@ -17,17 +16,27 @@
 
 .card__titulo{
     display: flex;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 150px;
-    align-self: center;
-    
-   
+    align-self: center;  
 }
 
 .card__profissao{
-    width: 38%;
     width: 150px;
-    font-size: 1rem;
+    font-size: 0.85rem;
+    flex-direction: column;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-self: center;
-   
+}
+
+@media(max-width: 640px){
+    .card{
+        display: flex;
+        width: 600px;
+    }
+    .card__image{
+        width: 70px;
+        height: 70px;
+    }
 }

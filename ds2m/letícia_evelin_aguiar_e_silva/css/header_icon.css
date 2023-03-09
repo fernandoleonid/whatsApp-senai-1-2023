@@ -4,13 +4,14 @@
     width: 100%;
 }
 .header__icons {
-    font-size: 2.2rem;
     display: flex;
     flex-direction: row;
+    font-size: 2.2rem;
     height: 30px;
     gap: 15px;
     margin-top: 1%;
     padding: 10px;
+    width: 100%;
 }
 
 .header__icons {
@@ -25,3 +26,6 @@
     color: plum;
 }
 
+@media(max-width: 640px){
+
+}

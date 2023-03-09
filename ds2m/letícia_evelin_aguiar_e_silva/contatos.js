@@ -2,7 +2,7 @@ export const contatos = [
       {
         "name": "Ana Maria",
         "description": "Frontend Developer",
-        "image": "../images/contact1.png",
+        "image": "img/contact1.png",
         "messages": [
           {
             "sender": "me",

@@ -1,0 +1,47 @@
+.principal{
+    width: 40%;
+    flex-direction: column;
+}
+.img_search{
+    display: flex;
+    align-self: center;
+    height: 20px;
+    width: 30px;
+}
+.img_filter{
+    display: flex;
+    height: 20px;
+    width: 30px;
+}
+ .pesquisa{
+    display: flex;
+    width: 585px;
+    margin-top: 2.5px;
+    height: 25px;
+    text-align: center;
+} 
+.container_search{
+    flex-direction: row;
+    display: flex;
+    height: 30px;
+    gap: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;
+    padding: 25px; 
+    
+}
+
+@media(max-width: 640px){
+
+    .principal{
+        width: 100%;
+    }
+     .pesquisa{
+        display: flex;
+        width: 550px;
+        margin-bottom: 1.5px;
+    } 
+}

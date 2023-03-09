@@ -14,6 +14,9 @@
     
     
 }
+.none{
+    display: none;
+}
 
 .main__title{
     font: inherit;
@@ -33,4 +36,55 @@
     color: #41525d;
 }
 
+
+.header__main{
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    height: 59px;
+    background: #f0f2f5;
+    gap: 15px
+}
+
+.header__main__name{
+    display: flex;
+    flex-direction: column;
+}
+
+.header__name{
+    font-size: 1rem;
+}
+
+.header__online{
+    font-size: 0.8rem;
+}
+
+.container__conversa{
+    background-image: url(../recursos/img/zapzap.webp);
+    height: 83vh;
+}
+
+.footer__main{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+    gap: 8px;
+    
+}
+
+.icon{
+    height: 26px;
+    width: 26px;
+    padding: 8px;
+
+}
+
+.input-mensagem{
+    width: 50vw;
+    border-radius: 10px;
+    height: 44px;
+    text-align: start;
+    border: none;
+}
 

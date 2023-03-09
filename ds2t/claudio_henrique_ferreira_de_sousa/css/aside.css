@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;    
-    background: var(--color-main) ;
+    background: linear-gradient(#00A884 0%, #00A884 127px, #eae6df 127px, #d1d7db 100%) ;
     font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
 }
 
@@ -91,6 +91,10 @@ ol li{
     margin-left: 10px;
     height: 73px;
     border-bottom: 1px solid #e9edef;
+}
+
+.card:hover{
+    background: #e9edef;
 }
 
 .card__image{

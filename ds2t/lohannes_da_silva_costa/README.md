@@ -1,6 +1,6 @@
 # WhatsPrise (Whatsapp Enterprise)
 ![SCREENSHOT](./img/print.png)
-![SCREENSHOT_Mobile](./img/print_mobile.png)
+![SCREENSHOT_Mobile](./img/print_mobile.PNG)
 
 ---
 
@@ -24,7 +24,7 @@ O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em a
 
 ---
 ## Links
-- [Github](./index.html)
+- [Github](https://lohannn.github.io/whatsApp-senai-1-2023/ds2t/lohannes_da_silva_costa/index.html)
 
 # Critérios de Avaliação
 - [x] `Codificou o app conforme o original?`

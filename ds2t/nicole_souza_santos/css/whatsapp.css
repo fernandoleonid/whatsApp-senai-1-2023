@@ -111,11 +111,13 @@
     border-radius: 10px;
     margin: 5px;
     padding: 10px;
+    color: #ffff;
 }
 .other-user .timer-timestamp {
     font-size: 10px;
     text-align: start;
     margin-left: 10px;
+    color: #ffff;
 }
 .me{
     display: grid;
@@ -127,11 +129,13 @@
     margin: 5px;
     padding: 10px;
     margin-left: 29rem;
+    color: #ffff;
 }
 .me .timer-timestamp{
     font-size: 10px;
     text-align: end;
     margin-right: 10px;
+    color: #ffff;
 }
 
 

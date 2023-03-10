@@ -24,7 +24,7 @@ Projeto do tipo atividade somativa que tem como objetivo criar um clone do Whats
 - [X] `Foi criado funções pensando no principio de funções puras?`
 - [X] O texto do README é objetivo e sucinto?
 - [X] O screenshot mostra um pouco do projeto?
-- [ ] Existe um link para o github page no README?
+- [X] Existe um link para o github page no README?
 - [X] Existe um link do autor do projeto no README?
 - [X] `Fez a autoavaliação?`
 

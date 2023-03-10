@@ -35,3 +35,9 @@ input::placeholder{
 .message__bar__none{
     display: none;
 }
+
+@media(max-width: 960px){
+    .message__bar input{
+        width: 70%;
+    }
+}

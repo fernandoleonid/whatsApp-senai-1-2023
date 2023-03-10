@@ -22,7 +22,9 @@ const carregarHeader = (indice) => {
     descricaoContatoChat.classList.add('descricao__contato__chat')
     descricaoContatoChat.textContent = contatos[indice].description
 
-    headerChat.append(fotoContatoChat, contatoChat)
+    const arrow = document.getElementById('arrowHtml')
+
+    headerChat.append(fotoContatoChat, contatoChat, arrow)
     contatoChat.append(nomeContatoChat, descricaoContatoChat)
 
     return headerChat
@@ -131,5 +133,31 @@ const carregarContatos = () => {
 
     container.replaceChildren(...listaContt)
 }
+
+const boxLeft = document.getElementById('box__left')
+const boxContatos = document.getElementById('contatos')
+const boxMain = document.getElementById('main2')
+const boxRight = document.getElementById('conversa')
+boxContatos.addEventListener('click', (event) => {
+    boxRight.classList.toggle('conversa__active')
+    boxLeft.classList.toggle('contato__container__active')
+    boxMain.classList.toggle('main__responsive__active')
+    
+})
+
+const setas = document.getElementById('arrowHtml')
+setas.addEventListener('click', (event) => {
+    boxMain.classList.remove()
+    boxMain.classList.add('main__responsive')
+    boxRight.classList.remove()
+    boxRight.classList.add('conversa')
+    boxLeft.classList.remove()
+    boxLeft.classList.add('contato__container')
+
+    console.log('teste')
+})
+
+
+
 
 carregarContatos()

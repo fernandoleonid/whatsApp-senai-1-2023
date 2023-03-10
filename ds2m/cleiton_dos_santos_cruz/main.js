@@ -51,7 +51,7 @@ const carregarContatos = () => {
                 const mainHeader = document.createElement('div')
                 mainHeader.classList.add('main__header')
 
-                const Iconvoltar = document.createElement('button')
+                const Iconvoltar = document.createElement('a')
                 Iconvoltar.classList.add('voltar')
 
                 const voltar = document.createElement('i')
@@ -93,6 +93,15 @@ const carregarContatos = () => {
                 const containerMessage = document.getElementById('inside__message')
 
                 containerMessage.replaceChildren(mainHeader)
+
+                //Responsividade
+                document.getElementById('header').classList.add('header__none')
+
+                Iconvoltar.addEventListener('click', function() {
+                    console.log("Funcionou?");
+
+                    document.getElementById('header').classList.remove('header__none')
+                })
             }
 
             function puxarMensagemMain() {
@@ -143,12 +152,6 @@ const carregarContatos = () => {
 
 
                     cont += 1
-
-                    //Responsividade
-                    document.getElementById('header').classList.add('header__none')
-
-
-
 
                 }
 

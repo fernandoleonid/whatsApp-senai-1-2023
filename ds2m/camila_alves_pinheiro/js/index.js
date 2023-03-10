@@ -6,7 +6,7 @@ const criarCards = (contato, indice) => {
     const card = document.createElement('div')
     card.classList.add('card')
     card.id = 'card'
-    card.onclick = () => chageContact(indice)
+    card.onclick = () => carregarConversas(indice)
     //  chageContact(indice)
 
 
@@ -78,50 +78,50 @@ const carregarConversas = (indice) => {
     messageContact.replaceChildren(...message)
 }
 
-const manageContact = (contato) => {
-    const functions = document.createElement('div')
-    functions.classList.add('functions__contact')
+// const manageContact = (contato) => {
+//     const functions = document.createElement('div')
+//     functions.classList.add('functions__contact')
 
-    const img = document.createElement('img')
-    img.classList.add('img__contact')
-    img.alt = 'Image contact'
-    img.src = `./img/${contato.image}`
+//     const img = document.createElement('img')
+//     img.classList.add('img__contact')
+//     img.alt = 'Image contact'
+//     img.src = `./img/${contato.image}`
 
-    const name = document.createElement('h5')
-    name.classList.add('name__contact')
-    name.textContent = contato.name
+//     const name = document.createElement('h5')
+//     name.classList.add('name__contact')
+//     name.textContent = contato.name
 
-    const listIcons = document.createElement('ul')
-    listIcons.classList.add('functions__icons')
+//     const listIcons = document.createElement('ul')
+//     listIcons.classList.add('functions__icons')
 
-    const search = document.createElement('i')
-    search.classList.add('fa-solid')
-    search.classList.add('fa-magnifying-glass')
+//     const search = document.createElement('i')
+//     search.classList.add('fa-solid')
+//     search.classList.add('fa-magnifying-glass')
 
-    const moreSelections = document.createElement('i')
-    moreSelections.classList.add('fas')
-    moreSelections.classList.add('fa-ellipsis-v')
+//     const moreSelections = document.createElement('i')
+//     moreSelections.classList.add('fas')
+//     moreSelections.classList.add('fa-ellipsis-v')
 
-    const logo = document.createElement('img')
-    logo.alt = 'Logo Pay Pal'
-    logo.src = `./img/paypal-window.png`
+//     const logo = document.createElement('img')
+//     logo.alt = 'Logo Pay Pal'
+//     logo.src = `./img/paypal-window.png`
 
 
-    listIcons.append(search, moreSelections, logo)
-    functions.append(img, name, listIcons)
+//     listIcons.append(search, moreSelections, logo)
+//     functions.append(img, name, listIcons)
 
-    return functions
+//     return functions
 
-}
+// }
 
-const chageContact = () => {
+// const chageContact = () => {
 
-        const container = document.getElementById('container__messages')
-        const profile = contatos.map(manageContact)
+//         const container = document.getElementById('container__messages')
+//         const profile = contatos.map(manageContact)
 
-        container.replaceChildren(...profile)
+//         container.replaceChildren(...profile)
 
-}
+// }
 
 
 

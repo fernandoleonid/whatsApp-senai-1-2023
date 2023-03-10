@@ -1,6 +1,6 @@
 # WhatsApp Web
 
-![](./img/screenshot_readme.jpg)
+![](./img/screenshot_readme.JPG)
 
 [Clique aqui](https://github.com/MatheusAlves099/whatsApp-senai-1-2023/tree/matheusReis/ds2t/matheus_alves_reis_da_silva)
 

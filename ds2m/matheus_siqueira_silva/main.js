@@ -81,13 +81,17 @@ const loadingContact = () => {
             const spanSmiley = document.createElement('span')
             spanSmiley.innerHTML = '<i class="fas fa-smile"></i>'           
 
-            const spanClip = document.createElement('span')
+            const spanClip = document.createElement('a')
             spanClip.innerHTML = '<i class="fas fa-paperclip"></i>'
 
             const inputUser = document.createElement('input')
-            inputUser.innerHTML = 'type="search" value="" placeholder="Digite sua mensagem'
             inputUser.classList.add('user__writting')
+            inputUser.placeholder = 'Digite uma mensagem'
+            inputUser.value = ''
+            inputUser.type = 'search'
 
+            const spanMic = document.createElement('a')
+            spanMic.innerHTML = '<i class="fa-solid fa-microphone"></i'
 
             const mensagens = contatos[contact.id].messages.map(function (msg) {
                 const span = document.createElement('span')
@@ -104,7 +108,7 @@ const loadingContact = () => {
             
             icons__writting.append(spanSmiley, spanClip)
             sender.replaceChildren (...mensagens)
-            writting.appendChild(icons__writting, inputUser)
+            writting.append(icons__writting, inputUser, spanMic)
             messages.appendChild(sender)
             chat.append(messages, writting)
         }

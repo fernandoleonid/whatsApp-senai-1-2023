@@ -62,6 +62,8 @@
 .container__conversa{
     background-image: url(../recursos/img/zapzap.webp);
     height: 83vh;
+   
+    
 }
 
 .footer__main{
@@ -88,3 +90,51 @@
     border: none;
 }
 
+
+
+.container__mensagem{
+    display: flex;
+    height: calc(100% - 120px);
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+.minha-mensagem{
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #d9fdd3;
+
+}
+
+.minha-hora{
+    padding-left: 4px;
+    font-size: 0.7rem;
+    
+}
+
+.container-minha-mensage{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+   
+}
+
+.container-sua-mensagem{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sua-mensagem{
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.sua-hora{
+    padding-left: 4px;
+    font-size: 0.7rem;
+    
+}

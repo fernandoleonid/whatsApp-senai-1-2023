@@ -20,7 +20,8 @@ body{
 
 .container__aside{
     height: 100%;
-    width: 30%;   
+    width: 30%; 
+    min-width: 300px;  
     background: #fff;
 }
 
@@ -89,7 +90,7 @@ ol li{
     display: flex;
     align-items: center;
     margin-left: 10px;
-    height: 73px;
+    height: 8vh;
     border-bottom: 1px solid #e9edef;
 }
 

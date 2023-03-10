@@ -73,17 +73,57 @@ const criarHeader = (indice) => {
 }
 
 const criarChat = (indice) => {
-    // const pai = document.getElementById('container__main')
-    // pai.classList.add('
-    const container = document.createElement('div')
-    container.classList.add('container__conversa')
+  
+  const container = document.createElement("div");
+  container.classList.add("container__conversa");
 
+  const containerMensagem = document.createElement("div");
+  containerMensagem.classList.add("container__mensagem");
 
+  contatos[indice].messages.forEach((mensagens) => {
+    const containerMinhaMensagem = document.createElement("div");
+    containerMinhaMensagem.classList.add("container-minha-mensagem");
 
+    const containerSuaMensagem = document.createElement("div");
+    containerSuaMensagem.classList.add("container-sua-mensagem");
 
+    const minhaMensagem = document.createElement("p");
+    minhaMensagem.classList.add("minha-mensagem");
 
+    const suaMensagem = document.createElement("p");
+    suaMensagem.classList.add("sua-mensagem");
 
-    return container
+    const minhaHora = document.createElement("span");
+    minhaHora.classList.add("minha-hora");
+
+    const suaHora = document.createElement("span");
+    suaHora.classList.add("sua-hora");
+
+    if(mensagens.sender == "me"){
+        minhaMensagem.classList.add('minha-mensagem')
+        minhaMensagem.textContent = mensagens.content
+
+        minhaHora.classList.add('minha-hora')
+        minhaHora.textContent = mensagens.time
+
+        container.appendChild(containerMensagem)
+        containerMensagem.append(containerMinhaMensagem, containerSuaMensagem)
+        containerMinhaMensagem.append(minhaMensagem, minhaHora)
+
+    }else if (mensagens.sender == contatos[indice].name){
+        suaMensagem.classList.add('sua-mensagem')
+        suaMensagem.textContent = mensagens.content
+
+        suaHora.classList.add('sua-hora')
+        suaHora.textContent = mensagens.time
+
+        container.appendChild(containerMensagem);
+        containerMensagem.append(containerMinhaMensagem, containerSuaMensagem)
+        containerSuaMensagem.append(suaMensagem,minhaHora)
+    }
+  });
+
+  return container;
 }
 
 const carregarProdutos = () => {

@@ -3,7 +3,7 @@
 ![](./img/screenshot.jpg)
 
 [Clique aqui](https://github.com/Thiago1223/whatsApp-senai-1-2023)
-[Clique aqui](https://thiago1223.github.io/whatsApp-senai-1-2023/ds2t/thiago_freitas_vilari%C3%A7o/)
+[Site](https://thiago1223.github.io/whatsApp-senai-1-2023/ds2t/thiago_freitas_vilari%C3%A7o/)
 
 # Sobre
 

@@ -64,11 +64,30 @@ const createHeaderRight = (index) => {
     contactRightStatus.classList.add('status_contact_right')
     contactRightStatus.textContent = contatos[index].description
 
-    headerRight.append(contactRightInfo)
+    const navIconsRight = document.createElement('ul')
+    navIconsRight.classList.add('nav_icons_right')
+
+    const searchIcon = document.createElement('li')
+
+    const search = document.createElement('i')
+    search.classList.add('fa-solid', 'fa-magnifying-glass')
+
+    const menuIcon = document.createElement('li')
+
+    const menu = document.createElement('i')
+    menu.classList.add('fa-solid', 'fa-ellipsis-vertical')
+
+    headerRight.append(contactRightInfo, navIconsRight)
 
     contactRightInfo.append(contactRightImg, contactRightText)
 
     contactRightText.append(contactRightName, contactRightStatus)
+
+    navIconsRight.append(searchIcon, menuIcon)
+
+    searchIcon.append(search)
+
+    menuIcon.append(menu)
 
     return headerRight
 }

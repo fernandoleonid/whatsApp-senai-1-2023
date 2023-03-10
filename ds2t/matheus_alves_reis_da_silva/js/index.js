@@ -9,6 +9,7 @@ const createContact = (contato, index) => {
     messages_chat.addEventListener('click', () => {
         var container = document.getElementById('container_right_home')
         container.replaceChildren(createHeaderRight(index), createMessages(index), createMessageBar())
+        scrollBar()
     })
 
     const chat = document.createElement('div')
@@ -35,6 +36,10 @@ const createContact = (contato, index) => {
     details.append(name, message)
 
     return messages_chat
+}
+
+const scrollBar = () => {
+    window.scroll(0, document.body.scrollHeight);
 }
 
 const createHeaderRight = (index) => {

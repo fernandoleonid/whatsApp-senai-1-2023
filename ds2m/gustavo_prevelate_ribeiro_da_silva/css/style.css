@@ -1,28 +1,55 @@
-*{
-    margin: 0;
+:root {
+    /*-------PALETA-------*/
+    --primary-color: #f0f2f5;
+    --secundary-color: rgb(212, 0, 255);
+    --tertiary-color: rgb(0 205 106);
+    --quaternary-color: rgb(255 0 0);
+}
+
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
 }
 
-body{
+main {
+    background: url(../recursos/image/hashira.jpg);
+    z-index: -1;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(#00a884 0%,#00a884 130px, #d9dbd5 130px, #d9dbd5 100%);
+    overflow: hidden;
 }
 
-.header{
-    position: relative;
+.media {
+    background-color: var(--tertiary-color);
+    width: 600px;
+    height: 100vh;
+    box-shadow: 4px 4px 8px #fff2;
+    border: 0.5px solid #f0fff3;
+}
+
+#container {
+    overflow: auto;
+    height: 90%;
+}
+
+.inside-message {
+    display: flex;
     width: 100%;
-    height: 60px;
-    background: #ededed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
+    height: 100vh;
 }
 
-
-
+@media (max-width: 640px) {
+    main {
+        flex-direction: column;
+    }
+    .media {
+        width: 100vw;
+        height: 100%;
+        /* display: block; */
+    }
+    #inside-message {
+        width: 100vw;
+        display: none;
+    }
+}

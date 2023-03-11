@@ -24,6 +24,10 @@
     padding-bottom: 5vh;
     color: #41525d;
 }
+.img-main{
+    height: 20vh;
+    width: 20vw;
+}
 
 .text{
     font-size: 1rem;
@@ -85,7 +89,7 @@
 .input-mensagem{
     width: 50vw;
     border-radius: 10px;
-    height: 44px;
+    height: 4vh;
     text-align: start;
     border: none;
 }
@@ -114,11 +118,10 @@
     
 }
 
-.container-minha-mensage{
+.container-minha-mensagem{
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: flex-end;
-   
 }
 
 .container-sua-mensagem{
@@ -137,4 +140,56 @@
     padding-left: 4px;
     font-size: 0.7rem;
     
+}
+
+.back{
+    display: none;
+}
+
+@media (max-width: 960px){
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        }
+    .container__aside{
+        width: 100%;
+        min-height: 100%;
+    }
+    .container__main{
+        width: 100vw;
+        min-height: 100vh;
+    }
+    .container__inicial{
+        display: none;
+    }
+    .back {
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        background-color: #00A884;
+        display: grid;
+        place-content: center;
+        color: black;
+        border-radius: 50%;
+        z-index: 100;
+        right: 16px;
+        bottom: 86px;
+        transition: opacity 0.5s;
+    }
+    .footer__main{
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+    .input-mensagem{
+        width: 70vw;
+    }
+    .icon {
+        height: 5vh;
+        width: 5vw;
+        padding: 8px;
+    
+    }
 }

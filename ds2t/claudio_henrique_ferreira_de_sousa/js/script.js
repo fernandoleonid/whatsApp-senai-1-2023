@@ -20,6 +20,7 @@ const criaCard = (contato, indice) => {
     card.addEventListener('click', () => {
         let container = document.getElementById('container__main');
         container.replaceChildren(criarHeader(indice), criarChat(indice), criarFooter())
+        barraDeRolagem()
 
 
     })
@@ -119,7 +120,7 @@ const criarChat = (indice) => {
 
         container.appendChild(containerMensagem);
         containerMensagem.append(containerMinhaMensagem, containerSuaMensagem)
-        containerSuaMensagem.append(suaMensagem,minhaHora)
+        containerSuaMensagem.append(suaMensagem,suaHora)
     }
   });
 
@@ -161,6 +162,9 @@ const criarFooter = () => {
 
     
 }
+
+const barraDeRolagem = () => window.scroll(0, document.body.scrollHeight);
+
 
 
 carregarProdutos()

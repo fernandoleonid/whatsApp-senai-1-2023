@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="./recursos/img/whatsapp.png">
     <title>WhatsApp Web</title>
 
     <link rel="stylesheet" href="./css/reset.css">
@@ -14,10 +15,10 @@
 
     <section class="container">
 
-        <div class="container__aside">
+        <div class="container__aside" id="container__aside">
             
             <header>
-                <img src="./recursos/img/me.png" alt="Foto do dono do perfil" class="img__owner">
+                <img src="./recursos/img/me.png" alt="Foto do dono do perfil" class="img__owner ">
 
                 <ol class="header__container">
                     <li><ion-icon name="camera-outline"></ion-icon></li>
@@ -51,7 +52,7 @@
 
         <div class="container__main" id="container__main">
             <div class="container__inicial " id="container__inicial">
-                <img src="./recursos/img/Capturar.PNG" alt="svg">
+                <img src="./recursos/img/Capturar.PNG" alt="svg"  class="img-main">
                 <h1 class="main__title">WhatsApp Web</h1>
 
                 <span class="text">Envie e receba mensagens sem precisar manter seu celular conectado à internet.</span>
@@ -90,6 +91,9 @@
 
 
     </section>
+    <a href="#container__aside" class="back">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

@@ -253,3 +253,43 @@ body{
 .back{
     display: none;
 }
+
+/* TABLET */
+@media (max-width:960px){
+    .container{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "container-esquerdo" "container-direito";
+        grid-template-columns: 1fr 1fr;
+    }
+    .container-direito{
+        width: 100vw;
+        height: 100vh;
+    }
+    .container-esquerdo{
+        width: 100vw;
+        height: 100vh;
+    }
+    .caixa-pesquisa{
+        width: 80vw;
+    }
+    .container-main{
+        display: none;
+    }
+    .back{
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        background-color: #00A884;
+        display: grid;
+        place-content: center;
+        color: black;
+        border-radius: 50%;
+        z-index: 666;
+        right: 16px;
+        bottom: 86px;
+        transition: opacity 0.5s;
+    }
+}

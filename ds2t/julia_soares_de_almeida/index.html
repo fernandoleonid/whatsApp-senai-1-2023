@@ -1,130 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4f821b9693.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="imagem/png" href="./img/whatsapp.png">
     <link rel="stylesheet" href="./style.css">
-    <script src="./index.js" defer type="module"></script>
+    <script src="./js/index.js" defer type="module"></script>
     <title>WhatsApp</title>
 </head>
 
 <body>
-
-    <div class="container">
-
-        <div class="box-left">
-            <div class="header">
-                <div class="user_img">
-                    <img src="./img/user.jpeg" alt="" class="img__user">
+    <div class="container" id="container">
+        <div class="container-esquerdo" id="container-esquerdo">
+            <div class="header-esquerdo">
+                <div class="img-perfil">
+                    <img src="./img/user.jpeg" alt="Imagem de perfil">
                 </div>
-                <ul class="icons">
-                    <li class="icons__icons">
-                        <ion-icon name="camera-outline"></ion-icon>
-                        </ion-icon>
+                <ul class="nav-perfil">
+                    <li>
+                        <i class="fa-solid fa-users"></i>
                     </li>
-                    <li class="icons__icons">
-                        <ion-icon name="chatbox"></ion-icon>
+                    <li>
+                        <i class="fas fa-circle-notch"></i>
                     </li>
-                    <li class="icons__icons">
-                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    <li>
+                        <i class="fa-solid fa-message"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </li>
                 </ul>
             </div>
-
-            <div class="search">
-                <div>
-                    <input type="text" placeholder="Search or start new chat">
-                    <ion-icon name="search-outline"></ion-icon>
+            <div class="barra-pesquisa">
+                <div class="pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search or start new chat" class="caixa-pesquisa">
+                </div>
+                <div class="filtro">
+                    <i class="fa-solid fa-filter"></i>
                 </div>
             </div>
-
-            <!-- Messages-->
-            <ul class="chatlist" id="card">
-
-                <!-- <div class="card" >
-
-                    <div class="img__card">
-                        <img src="./img/contact7.png" alt="" class="img__user">
+            <ul class="container-mensagens" id="container-mensagens">
+                <div class="container-conversas">
+                        <img src="./img/contact1.png" alt="Contato 1" class="img-chat">
+                    <div class="container-info">
+                            <span class="info-nome">Ana Maria</span>
+                            <span class="info-conversa">Frontend Developer</span>
                     </div>
-
-                        <div class="div__card">
-                            <h4>Max Kellerman</h4>
-                            <p class="description">Bom trabalho, fico feliz em ver vocês te...</p>
-                        </div>
-
-                </div> -->
-
+                </div>
             </ul>
         </div>
-
-
-        <div class="box-right">
-
-            <div class="box-right-start">
-
-                <img src="./img/img-right.png" alt="" class="box-start-img">
-
-                <div class="box-start-text">
-
-                    <span>WhatsApp Web</span>
-                    <p>Send and receive messages without having to keep your phone connected to the internet.</p>
-                    <p>Use WhatsApp on up to four connected devices and a mobile phone at the same time.</p>
-
-                    <div class="encryption">
-                        <p class="encryption-text">
-                            <ion-icon name="lock-closed-sharp"></ion-icon>
-                            Protected with end-to-end encryption
-                        </p>
+        <div class="container-direito-none" id="container-chat">
+            <div class="container-main">
+                <img src="./img/img-right.png" alt="Imagem de um celular e um notebook" class="img-notebook">
+                <div class="mensagem-main">
+                    <p class="main-titulo">WhatsApp Web</p>
+                    <div class="main-descricao">
+                        <p class="main-criptografia">Send and receive messages without having to keep your phone connected to the internet.</p>
+                        <p class="main-criptografia">Use WhatsApp on up to four connected devices and a mobile phone at the same time.</p>
                     </div>
-
                 </div>
             </div>
-
-            <div class="box-right-open">
-                <div class="header">
-
-                    <div class="img-perfil">
-                        <div class="user_img">
-                            <img src="./img/contact1.png" alt="" class="cover">
-                        </div>
-                        <h4>Ana Maria <br><span>Online</span></h4>
-                    </div>
-
-                    <ul class="icons">
-                        <li>
-                            <ion-icon name="videocam"></ion-icon>
-                        </li>
-                        <li>
-                            <ion-icon name="call"></ion-icon>
-                        </li>
-                        <li>
-                            <ion-icon name="ellipsis-vertical"></ion-icon>
-                        </li>
-
-                    </ul>
-
-                    <!-- <img src="./img/background.png" alt="" class="background-msg"> -->
-
-                </div>
-
-
-                <div class="chatbox-input">
-                    <ion-icon name="happy-outline"></ion-icon>
-                    <ion-icon name="attach-outline"></ion-icon>
-                    <input type="text" placeholder="Menssage">
-                    <ion-icon name="mic-outline"></ion-icon>
-
-                    
-
-                </div>
-            </div>
+            
         </div>
-
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    </div>
+   
 </body>
 
 </html>

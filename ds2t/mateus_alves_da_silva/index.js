@@ -19,9 +19,11 @@ const criarHeader = (indice) => {
 
     const infoNome = document.createElement('span')
     infoNome.classList.add('info_nome')
+    infoNome.textContent = contatos[indice].name
 
     const infoConversa = document.createElement('span')
     infoConversa.classList.add('info_conversa')
+    infoConversa.textContent = 'online'
 
     header.append(containerHeader)
 
@@ -67,11 +69,11 @@ const criarMensagem = (indice) => {
 
             caixaMinhaMensagem.appendChild(msgMinha, horaMinha)
 
-        } else if(mensagem.sender == contatos[indice].name) {
-            msgSua.classList.add('msg_minha')
+        } else if (mensagem.sender == contatos[indice].name) {
+            msgSua.classList.add('msg_sua')
             msgSua.textContent = mensagem.content
 
-            horaSua.classList.add('hora_minha')
+            horaSua.classList.add('hora_sua')
             horaSua.textContent = mensagem.time
 
             containerMensagensDireita.appendChild(caixaMinhaMensagem, caixaSuaMensagem)
@@ -131,6 +133,9 @@ const carregarContatos = () => {
     contatoCard.replaceChildren(...mensagensContatos)
 }
 
-
-
+const carregarBarraDeMensagem = () => {
+    const barraMensaem = document.getElementById('footer')
+    barraMensaem.classList.remove('footer-direito-none')
+    barraMe
+}
 carregarContatos()

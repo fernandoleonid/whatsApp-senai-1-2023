@@ -4,7 +4,8 @@ import { contatos } from "./recursos/contatos.js";
 
 let i = 0;
 
-const createChat = (contato) => {
+
+const createUsers = (contato) => {
     const chat = document.createElement('div')
     chat.classList.add('user__talked')
 
@@ -33,7 +34,7 @@ const createChat = (contato) => {
 
 const loadingContact = () => {
     const users = document.getElementById('container__chat')
-    const cards = contatos.map(createChat);
+    const cards = contatos.map(createUsers);
     users.replaceChildren(...cards)
 
     cards.forEach(contact => {
@@ -70,6 +71,7 @@ const loadingContact = () => {
 
             const sender = document.createElement('div')
             sender.classList.add('sender')
+
             const box = createWritteBox()
 
             const mensagens = contatos[contact.id].messages.map(function (msg) {
@@ -80,14 +82,14 @@ const loadingContact = () => {
                 } else if (msg.sender != 'me') {
                     editingStyleOther(span)
                     span.textContent = msg.content
+                
                 }
                 return span
             })
+
             sender.replaceChildren(...mensagens)
             messages.appendChild(sender)
             chat.append(messages, box)
-
-
 
         }
     })
@@ -139,6 +141,7 @@ const editingStyleMe = (span) => {
     span.style.alignItems = 'center'
     span.style.backgroundColor = '#d9fdd3'
     span.style.height = '50px'
+    span.style.width = '50%'
     span.style.border = '1px solid transparent'
     span.style.borderRadius = '40px'
     span.style.padding = '20px'
@@ -151,6 +154,7 @@ const editingStyleOther = (i) => {
     i.style.alignItems = 'center'
     i.style.backgroundColor = 'white'
     i.style.height = '50px'
+    i.style.width = '50%'
     i.style.border = '1px solid transparent'
     i.style.borderRadius = '40px'
     i.style.padding = '20px'

@@ -206,3 +206,6 @@ a{
 }
 
 
+.time_me{
+    align-self: flex-end;
+}

@@ -18,6 +18,37 @@ export const contatos = [{
                 "timestamp": "2022-02-17T14:30:00.000Z"
             },
             {
+                "sender": "me",
+                "content": "Great to hear that. Do you have any plans for the weekend?",
+                "timestamp": "2022-02-17T14:30:00.000Z"
+            },
+            {
+                "sender": "me",
+                "content": "Great to hear that. Do you have any plans for the weekend?",
+                "timestamp": "2022-02-17T14:30:00.000Z"
+            },
+            {
+                "sender": "me",
+                "content": "Great to hear that. Do you have any plans for the weekend?",
+                "timestamp": "2022-02-17T14:30:00.000Z"
+            },
+            {
+                "sender": "me",
+                "content": "Great to hear that. Do you have any plans for the weekend?",
+                "timestamp": "2022-02-17T14:30:00.000Z"
+            },
+            {
+                "sender": "me",
+                "content": "Great to hear that. Do you have any plans for the weekend?",
+                "timestamp": "2022-02-17T14:30:00.000Z"
+            },
+            {
+                "sender": "me",
+                "content": "Great to hear that. Do you have any plans for the weekend?",
+                "timestamp": "2022-02-17T14:30:00.000Z"
+            },
+
+            {
                 "sender": "Ana Maria",
                 "content": "Not yet. I'm thinking about going to the beach. What about you?",
                 "timestamp": "2022-02-17T14:35:00.000Z"

@@ -95,12 +95,15 @@ const carregarContatos = () => {
                 containerMessage.replaceChildren(mainHeader)
 
                 //Responsividade
-                document.getElementById('header').classList.add('header__none')
+                document.getElementById('header').classList.add('display__none')
+
 
                 Iconvoltar.addEventListener('click', function() {
                     console.log("Funcionou?");
 
-                    document.getElementById('header').classList.remove('header__none')
+                    document.getElementById('header').classList.remove('display__none')
+                    document.getElementById('main').style.display = 'none'
+
                 })
             }
 

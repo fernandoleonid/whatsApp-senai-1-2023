@@ -1,12 +1,15 @@
-.header__none{
+.display__none {
     display: block;
 }
-.voltar{
-    font-size: 2rem;
-   display: none;
+
+.display__block {
+    display: block;
 }
 
-
+.voltar {
+    font-size: 2rem;
+    display: none;
+}
 
 @media (max-width:640px) {
     body {
@@ -16,16 +19,17 @@
     main {
         height: 100vh;
         width: 100%;
-
     }
-    .main__header{
+    .main__header {
         grid-template-columns: 40px 65px 1fr 65px;
-
     }
-
     .main__header,
     .main__footer {
         width: 100vw;
+    }
+    .main__mensagem__contact,
+    .main__mensagem__contact__end {
+        width: 300px;
     }
     .main__footer__envio {
         gap: 5px;
@@ -34,13 +38,13 @@
     .main__footer {
         gap: 0px;
     }
-    .camp__main {}
-
-    .header__none{
+    .camp__main {
+        min-width: 290px;
+    }
+    .display__none {
         display: none;
     }
-
-    .voltar{
+    .voltar {
         display: block;
     }
 }

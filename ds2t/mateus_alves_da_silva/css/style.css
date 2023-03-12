@@ -21,6 +21,12 @@ body {
     grid-template-columns: 480px 1fr;
 }
 
+.container_intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container_contatos{
     grid-area: container_contatos;
     background-color: #ffffffff;
@@ -32,8 +38,6 @@ body {
 .container_mensagens{
     grid-area: container_mensagens;
     position: relative;
-    flex: 70%;
-    background-color: #e5ddd5;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -155,10 +159,11 @@ body {
 /* Lado direito */
 .container_mensagens_direita{
     display: flex;
-    height: calc(100% - 120px);
+    height: calc(100% + 120px);
     flex-direction: column;
     padding: 16px;
     gap: 16px;
+    background-image: url(../img/fundo-whats.png);
 }
 
 .caixa_minha_mensagem{
@@ -259,6 +264,14 @@ body {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    height: 168%;
+    background-color: #F0F2F5;
+    border-bottom: solid 6px #25d366;
+}
+
+.img_notebook{
+    align-items: center;
+    justify-content: center;
 }
 
 .main-titulo{
@@ -275,15 +288,29 @@ body {
 }
 
 /* Footer */
-.footer_mensagens{
+.footer_direito{
     display: flex;
     width: 100%;
     height: 64px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #F0F2F5;
-    gap: 10px;
+    gap: 16px;
     padding: 16px;
+}
+
+.footer_direito i{
+    font-size: 24px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.footer_direito_none{
+    display: none;
+}
+
+.back{
+    display: none;
 }
 
 .footer-mensagens i{
@@ -292,13 +319,11 @@ body {
 }
 
 .caixa_digitar_mensagem{
-    width: 1000px;
+    width: 100%;
     border: none;
     outline: 0;
-    background-color: #ffffff;
-    height: 35px;
+    height: 45px;
     border-radius: 8px;
-    font-size: .9rem;
-    padding-left: 64px;
-    text-overflow: ellipsis;
+    font-size: 1rem;
+    padding-left: 16px;
 }

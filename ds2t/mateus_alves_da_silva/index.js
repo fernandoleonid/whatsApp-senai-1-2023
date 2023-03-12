@@ -37,6 +37,7 @@ const criarHeader = (indice) => {
 const criarMensagem = (indice) => {
     const containerMensagensDireita = document.createElement('div')
     containerMensagensDireita.classList.add('container_mensagens_direita')
+    containerMensagensDireita.classList.remove('container_direito_none')
 
     contatos[indice].messages.forEach((mensagem) => {
 
@@ -91,7 +92,7 @@ const criarContato = (contato, indice) => {
 
     cardContato.addEventListener('click', (event) => {
         var container = document.getElementById('container_chat')
-        container.replaceChildren(criarHeader(indice), criarMensagem(indice),)
+        container.replaceChildren(criarHeader(indice), criarMensagem(indice), carregarBarraDeMensagem())
     })
 
     const list = document.createElement('div')
@@ -134,8 +135,9 @@ const carregarContatos = () => {
 }
 
 const carregarBarraDeMensagem = () => {
-    const barraMensaem = document.getElementById('footer')
-    barraMensaem.classList.remove('footer-direito-none')
-    barraMe
+    const barraMensagem = document.getElementById('footer')
+    barraMensagem.classList.remove('footer_direito_none')
+    barraMensagem.classList.add('footer_direito')
+    return footer
 }
 carregarContatos()

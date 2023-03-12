@@ -41,6 +41,7 @@
 }
 
 
+
 .header__main{
     display: flex;
     align-items: center;
@@ -65,7 +66,7 @@
 
 .container__conversa{
     background-image: url(../recursos/img/zapzap.webp);
-    height: 83vh;
+    height: calc(100% - 120px);
    
     
 }
@@ -73,7 +74,7 @@
 .footer__main{
     display: flex;
     align-items: center;
-    height: 6vh;
+    min-height: 61px;
     width: 100%;
     gap: 8px;
     
@@ -181,15 +182,16 @@
     .footer__main{
         justify-content: center;
         align-items: center;
-        height: 60px;
+        min-height: 61px;
     }
     .input-mensagem{
         width: 70vw;
+        
     }
     .icon {
         height: 5vh;
         width: 5vw;
-        padding: 8px;
+        padding: 4px;
     
     }
 }

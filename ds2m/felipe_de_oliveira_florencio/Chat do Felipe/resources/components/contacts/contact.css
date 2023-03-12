@@ -67,6 +67,9 @@
 }
 .contact.info{
     background-color: inherit;
-    justify-content: start;    
-    
+    justify-content: start; 
+}
+.contact__photo.info{
+    width: 4.5rem;
+    height: 4.5rem;
 }

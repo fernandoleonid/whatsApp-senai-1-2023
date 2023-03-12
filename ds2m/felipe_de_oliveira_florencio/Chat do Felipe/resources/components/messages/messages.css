@@ -1,6 +1,8 @@
-.container-message{
+.message.container{
     display: flex;
     flex-direction: column;
+    max-width: 80vw;
+    max-height:  50vw;
 }
 .message{
     font-family: 'Montserrat';
@@ -15,6 +17,7 @@
 .receiver{
     max-width: 60vw;
     background-color: #272727;
+    align-self: start;
 }
 .sender{ 
     max-width: 45vw;

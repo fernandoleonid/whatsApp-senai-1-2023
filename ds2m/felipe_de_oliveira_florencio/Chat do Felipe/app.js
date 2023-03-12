@@ -3,6 +3,7 @@
 import {contatos} from "./resources/api/contatos.js"
 
 
+
 const buildHome = function(){
     const contactContainer = document.getElementById('contact')
     const contacts = contatos.map(buildContact)
@@ -77,10 +78,11 @@ const buildChat = (contato) => {
     const chatContainer = document.getElementById('chat')
     const header = buildHeader(contato)
     const chat = buildBox(contato.messages)
-    
+    const inputChat = buildInputChat()
     chatContainer.replaceChildren(
         header,
-        chat
+        chat,
+        inputChat
     )
 }
 const buildHeader = (contact) =>{
@@ -99,7 +101,10 @@ const buildHeader = (contact) =>{
         )
     
     const image = document.createElement('img')
-    image.classList.add('contact__photo')
+    image.classList.add(
+        'contact__photo',
+        'info'
+        )
     image.src = `./resources/api/${contact.image}`
 
     const name = document.createElement('h2')
@@ -114,12 +119,11 @@ const buildHeader = (contact) =>{
     description.textContent = contact.description
 
     const nav = document.createElement('button')
-    const nav_img = document.createElement('img')
-    nav_img.src = `./resources/imgs/controller.png`
+    // const nav_img = document.createElement('img')
+    // nav_img.src = `./resources/imgs/controller.png`
     
     header.append(
-        contactBasicInfo,
-        nav
+        contactBasicInfo
     )
     contactBasicInfo.append(
         image,
@@ -129,9 +133,9 @@ const buildHeader = (contact) =>{
         name,
         description
     )
-    nav.append(
-        nav_img
-    )
+    // nav.append(
+    //     nav_img
+    // )
     
 
     return header
@@ -140,7 +144,9 @@ const buildHeader = (contact) =>{
 const buildBox = (messagesList) =>{
     const boxDiv = document.createElement('div')
     boxDiv.classList.add(
-        'box'
+        'box',
+        'container',
+        'message'
         )
 
     const messages = messagesList.map(createSingleMessage)
@@ -152,6 +158,44 @@ const buildBox = (messagesList) =>{
     // })  
     boxDiv.append(...messages)
     return boxDiv
+}
+const buildInputChat = () =>{
+    const container = document.createElement('div')
+    container.classList.add('input-box')
+
+
+    const inputButtons = document.createElement('div')
+    inputButtons.classList.add('input__buttons')
+
+    const emojis = document.createElement('a')
+    const emojiImage = document.createElement('img')
+    emojiImage.src = `./resources/components/chat-input/emojis.png`
+    emojis.append(
+        emojiImage
+    )
+    emojis.classList.add('input-button')
+
+    const anexos = document.createElement('a')  
+    const anexoImage = document.createElement('img')
+    anexoImage.src = `./resources/components/chat-input/anexos.png`
+    anexos.append(
+        anexoImage
+    )
+    anexos.classList.add('input-button')
+    inputButtons.append(
+        emojis,
+        anexos
+    )
+    const inputText = document.createElement('input')
+    inputText.inputMode = 'text';
+    inputText.classList.add('input-text')
+    inputText.placeholder = 'Type your message here'
+    container.append(
+        inputButtons,
+        inputText
+    )
+
+    return container;
 }
 const createSingleMessage = (message) => {
     const messageHtml = document.createElement('p')

@@ -20,6 +20,7 @@ body{
 header{
     height: 97px;
     background: #000000;
+    padding: 1rem;
 }
 .main-header{
     width: 534px;
@@ -74,10 +75,6 @@ header{
 .chat{
     grid-area: chat;
     background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 .chat__gretting{
     font-family: 'Montserrat';
@@ -97,6 +94,8 @@ header{
     width: 80%;
     display: flex;
     justify-content: space-around;
+    height: 97px;
+    width: 50vw;
 }
 .contacts{
     display: flex;
@@ -107,5 +106,10 @@ header{
    width: 90%;
 }
 .box{
-    padding: 16px;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+}
+.header__button{
+    background-color : none;
 }

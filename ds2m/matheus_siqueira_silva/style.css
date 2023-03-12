@@ -162,26 +162,21 @@ a{
 
 .messages{
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     width: 100%;
     height: 80%;
-    background-color: teal;
+    background-image: url(./recursos/img/imagem_de_fundo_wpp.jpg);
+    
 }
-
 .sender{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    position: relative;
+    top: 53%;
+    gap: 20px;
+    background-image: url(./recursos/img/imagem_de_fundo_wpp.jpg);
 }
-
-.me{
-    align-self: flex-end;
-}
-.other{
-    align-self: flex-start;
-}
-
 
 .icons__writting__area{
     display: flex;

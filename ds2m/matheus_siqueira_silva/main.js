@@ -25,10 +25,11 @@ const createChat = (contato) => {
 
     text__user.append(name, description)
     chat.append(img, text__user)
-
     chat.id = i++;
     return chat
 }
+
+
 
 const loadingContact = () => {
     const users = document.getElementById('container__chat')
@@ -38,14 +39,12 @@ const loadingContact = () => {
     cards.forEach(contact => {
         contact.onclick = () => {
 
-            console.log(contatos[contact.id].name)
-
             const conversation = document.getElementById('chat')
             conversation.classList.add('chat__user')
 
             const headerChat = document.createElement('div')
             headerChat.classList.add('chat__header')
-
+ 
             const user = document.createElement('div')
             user.classList.add('user')
 
@@ -63,55 +62,96 @@ const loadingContact = () => {
             user.append(img, name)
             headerChat.append(user, options)
             conversation.replaceChildren(headerChat)
-            
+
             const chat = document.getElementById('chat')
-            
+
             const messages = document.createElement('div')
             messages.classList.add('messages')
-            
+
             const sender = document.createElement('div')
             sender.classList.add('sender')
-
-            const writting = document.createElement('div')
-            writting.classList.add('writting__area')
-
-            const icons__writting = document.createElement('div')
-            icons__writting.classList.add('icons__writting__area')
-
-            const spanSmiley = document.createElement('span')
-            spanSmiley.innerHTML = '<i class="fas fa-smile"></i>'           
-
-            const spanClip = document.createElement('a')
-            spanClip.innerHTML = '<i class="fas fa-paperclip"></i>'
-
-            const inputUser = document.createElement('input')
-            inputUser.classList.add('user__writting')
-            inputUser.placeholder = 'Digite uma mensagem'
-            inputUser.value = ''
-            inputUser.type = 'search'
-
-            const spanMic = document.createElement('a')
-            spanMic.innerHTML = '<i class="fa-solid fa-microphone"></i'
+            const box = createWritteBox()
 
             const mensagens = contatos[contact.id].messages.map(function (msg) {
                 const span = document.createElement('span')
-                if(msg.sender == 'me'){
-                    span.classList.add('me')
+                if (msg.sender == 'me') {
+                    editingStyleMe(span)
                     span.textContent = msg.content
-                }else{
-                    span.classList.add('other')
+                } else if (msg.sender != 'me') {
+                    editingStyleOther(span)
                     span.textContent = msg.content
-                }   
+                }
                 return span
             })
-
-            
-            icons__writting.append(spanSmiley, spanClip)
-            sender.replaceChildren (...mensagens)
-            writting.append(icons__writting, inputUser, spanMic)
+            sender.replaceChildren(...mensagens)
             messages.appendChild(sender)
-            chat.append(messages, writting)
+            chat.append(messages, box)
+
+
+
         }
     })
 }
 loadingContact();
+
+const stylingInput = (input) => {
+    input.placeholder = "Digite uma mensagem"
+    input.valeu = ""
+    input.type = "search"
+}
+
+const createWritteBox = () => {
+    const writting = document.createElement('div')
+    writting.classList.add('writting__area')
+
+    const icons__writting = document.createElement('div')
+    icons__writting.classList.add('icons__writting__area')
+
+    const spanSmiley = document.createElement('span')
+    spanSmiley.innerHTML = '<i class="fas fa-smile"></i>'
+    editingColorsIcon(spanSmiley)
+
+    const spanClip = document.createElement('a')
+    spanClip.innerHTML = '<i class="fas fa-paperclip"></i>'
+    editingColorsIcon(spanClip)
+
+    const inputUser = document.createElement('input')
+    inputUser.classList.add('user__writting')
+    stylingInput(inputUser)
+
+    const spanMic = document.createElement('a')
+    spanMic.innerHTML = '<i class="fa-solid fa-microphone"></i'
+    editingColorsIcon(spanMic)
+
+    icons__writting.append(spanSmiley, spanClip)
+    writting.append(icons__writting, inputUser, spanMic)
+
+    return writting
+}
+
+const editingColorsIcon = (i) => {
+    i.style.color = '#637d95'
+}
+
+const editingStyleMe = (span) => {
+    span.style.display = 'flex'
+    span.style.alignSelf = 'flex-end'
+    span.style.alignItems = 'center'
+    span.style.backgroundColor = '#d9fdd3'
+    span.style.height = '50px'
+    span.style.border = '1px solid transparent'
+    span.style.borderRadius = '40px'
+    span.style.padding = '20px'
+
+}
+
+const editingStyleOther = (i) => {
+    i.style.display = 'flex'
+    i.style.alignSelf = 'flex-start'
+    i.style.alignItems = 'center'
+    i.style.backgroundColor = 'white'
+    i.style.height = '50px'
+    i.style.border = '1px solid transparent'
+    i.style.borderRadius = '40px'
+    i.style.padding = '20px'
+}

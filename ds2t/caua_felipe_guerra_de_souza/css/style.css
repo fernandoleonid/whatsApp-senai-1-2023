@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -316,6 +323,10 @@ header{
     color: rgb(29, 29, 29);
     transition: all .2s;
     cursor: pointer;
+}
+
+button{
+    border: 0;
 }
 
 @media (max-width: 640px) {

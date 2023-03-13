@@ -4,10 +4,14 @@
     background-color: azure;
 }
 
- /* .mensagem__contato{
+.mensagem__contato{
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 
-
-} */
+} 
 
 .enviar{
     display: flex;
@@ -16,23 +20,42 @@
     justify-content: space-between;
     padding: 0 15px;
     width: 100%;
-} */
+} 
 
  .enviar span{
     color: #7D7B7B;
 }
-/*
+
 .enviar__mensagem_span{
-   
+    place-self: end;
+    background-color: var(--color-message-send);
+    padding: 13px;
+    border-radius: 8px 0 8px 8px;
+    box-shadow: 1px 1px 7px #D0D0D0;
+    max-width: 35vw;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 20px 30px;
 }
 
 .mensagem__entregue{
-   
+    background-color: #fff;
+    padding: 13px;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 1px 1px 7px #D0D0D0;
+    max-width: 35vw;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 20px 30px;
 }
 
-/* .mensagem__entregue_span{
+/* .mensagem__entregue_span{ */
   
-}  */
+/* }  */
 
 .icons__mensagens {
     display: flex;

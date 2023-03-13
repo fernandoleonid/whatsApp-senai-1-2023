@@ -3,13 +3,13 @@
 
  import { contatos } from "./contatos.js"
 
- const teste = (indice) => console.log(`oi ${contatos[indice].image}`)
+ //const teste = (indice) => console.log(`oi ${contatos[indice].image}`)
 
 
  const criarCard = (contato, indice) =>{
     const card = document.createElement( 'div' )
     card.classList.add( 'card' )
-    card.onclick = () => teste(indice)
+    card.onclick = () => carregarMensagens(indice)
 
     const img = document.createElement( 'img' )
     img.classList.add( 'card__image' )
@@ -46,18 +46,21 @@
 
    let envioConversa = document.createElement('span')
 
-   // if(messages.sender == "me") {//
-   divMessages.classList.add('enviar__mensagem')
-   envioConversa.classList.add('enviar__mensagem_span')
-   envioConversa.textContent = messages.content
+   if(messages.sender == "me") {
+      divMessages.classList.add('enviar__mensagem')
+      envioConversa.classList.add('enviar__mensagem_span')
+      envioConversa.textContent = messages.content
    
-   divMessages.classList.add('mensagem__entregue')
-   envioConversa.classList.add('mensagem__entregue_span')
-   envioConversa.textContent = messages.content
+    } else {
+      divMessages.classList.add('mensagem__entregue')
+      envioConversa.classList.add('mensagem__entregue_span')
+      envioConversa.textContent = messages.content
 
-   envioConversa.textContent = messages.content
+      envioConversa.textContent = messages.content
+    }
+   
 
-   divMessages.append(...envioConversa)
+   divMessages.append(envioConversa)
    return divMessages
 
  }
@@ -66,7 +69,7 @@
    const mensagemContato = document.getElementById('contato__mensagem')
    const mensagem = contatos[indice].messages.map(getMessages)
 
-   mensagemContato.append(...mensagem)
+   mensagemContato.replaceChildren(...mensagem)
 }
 
-// carregarMensagens()
+carregarMensagens()

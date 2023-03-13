@@ -71,7 +71,7 @@
     }
 
     .functions__icons li i:hover{
-        color: #CDDCEB;
+        color: var(--color-message-send);
     }
 
     .img__clerk{

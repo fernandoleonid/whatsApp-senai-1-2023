@@ -19,11 +19,11 @@ O objetivo deste projeto é colocar em prática os conhecimentos adquiridos no m
 - JavaScript
 - JSON
 
----
-## Relatório LightHouse
+<!-- --- -->
+<!-- ## Relatório LightHouse
 O Lighthouse é uma ferramenta automatizada que aprimora a qualidade dos apps da Web, simulando diversas situações que podem afetar a experiência do usuário.
 
-![](./img/lighthouse.png)
+![](./img/lighthouse.png) -->
 
 ---
 ## Autor 

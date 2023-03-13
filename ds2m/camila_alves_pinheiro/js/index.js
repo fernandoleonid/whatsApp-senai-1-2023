@@ -1,6 +1,6 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js"
 
 const criarCards = (contato, indice) => {
     const card = document.createElement('div')
@@ -17,7 +17,7 @@ const criarCards = (contato, indice) => {
     const img = document.createElement('img')
     img.classList.add('img__contact')
     img.alt = 'Image contact'
-    img.src = `./img/${contato.image}`
+    img.src = `${contato.image}`
 
     const name = document.createElement('h5')
     name.classList.add('name__contact')

@@ -47,6 +47,7 @@ const getConversas = (mensagem) => {
 
     const DivMessageSent = document.createElement('div')
 
+
     let messageSent = document.createElement('span')
 
     let time = document.createElement('span')

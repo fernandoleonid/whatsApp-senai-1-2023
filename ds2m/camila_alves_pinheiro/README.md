@@ -36,7 +36,7 @@ O Lighthouse é uma ferramenta automatizada que aprimora a qualidade dos apps da
 - [x] `O app está responsivo?`
 - [ ] Utilizou algum framework CSS?
 - [x] `Consumiu o JSON para mostrar todos os contatos?`
-- [x] Criou outros itens, na lista de contatos, como a quantidade de mensagens lidas?
+- [] Criou outros itens, na lista de contatos, como a quantidade de mensagens lidas?
 - [x] `Consumiu o JSON para mostrar as mensagens de cada contato?`
 - [x] Foi criado variáveis pensando nas boas praticas?
 - [x] `Foi criado funções pensando em responsabilidade única?`

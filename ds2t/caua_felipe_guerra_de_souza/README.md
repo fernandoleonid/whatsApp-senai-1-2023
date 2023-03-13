@@ -1,10 +1,10 @@
 # Whatsapp
-![SCREENSHOT](./img/print.png)
+![PRINT](./img/capturar.png)
 
 ---
 
 ## Sobre
-Site cirado uma copia do Whatsapp Web.
+Site criado pensando em uma copia do Whatsapp Web.
 
 O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em aula no curso de Desenvolvimento de Sistemas do [SENAI Jandira](https://jandira.sp.senai.br/).
 

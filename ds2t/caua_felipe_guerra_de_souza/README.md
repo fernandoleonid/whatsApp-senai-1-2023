@@ -1,5 +1,5 @@
 # Whatsapp
-![PRINT](./img/capturar.png)
+![PRINT](./img/print.png)
 
 ---
 

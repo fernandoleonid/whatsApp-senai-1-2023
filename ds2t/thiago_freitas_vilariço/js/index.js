@@ -15,7 +15,7 @@ const criarCard = (contato, indice) => {
 
     const foto = document.createElement('img')
     foto.classList.add('img-chat')
-    foto.src = `./${contato.image}`
+    foto.src = `../img/${contato.image}`
 
     const informacao = document.createElement('div')
     informacao.classList.add('container-info')
@@ -49,7 +49,7 @@ const criarHeader = (indice) => {
 
     const imagemPerfil = document.createElement('img')
     imagemPerfil.classList.add('img-perfil');
-    imagemPerfil.src = `./${contatos[indice].image}`
+    imagemPerfil.src = `../img/${contatos[indice].image}`
 
     const containerPerfil = document.createElement('div')
     containerPerfil.classList.add('container-perfil')

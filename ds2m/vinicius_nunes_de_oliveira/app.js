@@ -1,12 +1,14 @@
 'use strict'
-
+window.addEventListener('resize', function () {
+  location.reload()
+})
 import { contatos } from './recursos/contatos.js'
 
 const largura = window.screen.width
 let i = 0
 
 const criarContato = contato => {
-  const card = document.createElement('button')
+  const card = document.createElement('div')
   card.classList.add('media__contacts')
 
   const img = document.createElement('img')
@@ -139,10 +141,6 @@ const carregarContatos = () => {
         container.style.display = 'block'
         getMedia.style.display = 'block'
       }
-
-      window.addEventListener('resize', function () {
-        location.reload()
-      })
 
       if (largura < 640) {
         card.onclick = () => {

@@ -1,13 +1,12 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js"
 
 let i = 0
 
 
+
 const criarContato = (contato) => {
-
-
     const contact = document.createElement('button')
     contact.classList.add('contact')
 
@@ -52,6 +51,13 @@ const carregarContatos = () => {
                 const mainHeader = document.createElement('div')
                 mainHeader.classList.add('main__header')
 
+                const Iconvoltar = document.createElement('a')
+                Iconvoltar.classList.add('voltar')
+
+                const voltar = document.createElement('i')
+                voltar.classList.add('fas')
+                voltar.classList.add('fa-arrow-circle-left')
+
                 const image = document.createElement('img')
                 image.classList.add('contact__image')
                 image.src = `./${contatos[contact.id].image}`
@@ -80,12 +86,25 @@ const carregarContatos = () => {
 
 
                 containerMain.append(contactName, descriptionMain)
+                Iconvoltar.append(voltar)
                 mainIcons.append(lente, elipse)
-                mainHeader.append(image, containerMain, mainIcons)
+                mainHeader.append(Iconvoltar, image, containerMain, mainIcons)
 
                 const containerMessage = document.getElementById('inside__message')
 
                 containerMessage.replaceChildren(mainHeader)
+
+                //Responsividade
+                document.getElementById('header').classList.add('display__none')
+
+
+                Iconvoltar.addEventListener('click', function() {
+                    console.log("Funcionou?");
+
+                    document.getElementById('header').classList.remove('display__none')
+                    document.getElementById('main').style.display = 'none'
+
+                })
             }
 
             function puxarMensagemMain() {
@@ -136,19 +155,15 @@ const carregarContatos = () => {
 
 
                     cont += 1
+
                 }
-
-
-
-                console.log(contatosWhile);
-                console.log(contatos[contact.id].messages[cont].sender);
-
 
 
             }
 
             puxarContatoMain()
             puxarMensagemMain()
+
         }
 
 
@@ -158,11 +173,11 @@ const carregarContatos = () => {
 }
 
 const lightTheme = {
-    '--primary__color': '#00bfa5',
+    '--primary__color': '#26CE4B',
     '--font__color': '#fff',
-    '--backContact__color': '#9e9e9e',
+    '--backContact__color': '#98D1A4',
     '--backImage': 'url(../img/dia.jpg)',
-    '--backFinder': '#757575',
+    '--backFinder': '#62B774',
 
 }
 

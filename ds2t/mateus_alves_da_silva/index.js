@@ -35,9 +35,12 @@ const criarHeader = (indice) => {
 }
 
 const criarMensagem = (indice) => {
-    const containerMensagensDireita = document.createElement('div')
+    const containerMensagensDireita = document.getElementById('id_container')
     containerMensagensDireita.classList.add('container_mensagens_direita')
     containerMensagensDireita.classList.remove('container_direito_none')
+
+    const chatBox = document.createElement('div')
+    chatBox.classList.add('chat_box')
 
     contatos[indice].messages.forEach((mensagem) => {
 
@@ -66,9 +69,11 @@ const criarMensagem = (indice) => {
             horaMinha.classList.add('hora_minha')
             horaMinha.textContent = mensagem.time
 
-            containerMensagensDireita.appendChild(caixaMinhaMensagem, caixaSuaMensagem)
+            containerMensagensDireita.appendChild(chatBox)
 
-            caixaMinhaMensagem.appendChild(msgMinha, horaMinha)
+            chatBox.append(caixaMinhaMensagem, caixaSuaMensagem)
+
+            caixaMinhaMensagem.append(msgMinha, horaMinha)
 
         } else if (mensagem.sender == contatos[indice].name) {
             msgSua.classList.add('msg_sua')
@@ -77,9 +82,11 @@ const criarMensagem = (indice) => {
             horaSua.classList.add('hora_sua')
             horaSua.textContent = mensagem.time
 
-            containerMensagensDireita.appendChild(caixaMinhaMensagem, caixaSuaMensagem)
+            containerMensagensDireita.appendChild(chatBox)
 
-            caixaSuaMensagem.appendChild(msgSua, horaSua)
+            chatBox.append(caixaMinhaMensagem, caixaSuaMensagem)
+
+            caixaSuaMensagem.append(msgSua, horaSua)
         }
     })
 

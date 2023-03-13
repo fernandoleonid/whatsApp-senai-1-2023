@@ -163,7 +163,6 @@ body {
     flex-direction: column;
     padding: 16px;
     gap: 16px;
-    background-image: url(../img/fundo-whats.png);
 }
 
 .caixa_minha_mensagem{

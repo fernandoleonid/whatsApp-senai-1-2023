@@ -30,8 +30,6 @@ const createUsers = (contato) => {
     return chat
 }
 
-
-
 const loadingContact = () => {
     const users = document.getElementById('container__chat')
     const cards = contatos.map(createUsers);
@@ -94,7 +92,6 @@ const loadingContact = () => {
         }
     })
 }
-loadingContact();
 
 const stylingInput = (input) => {
     input.placeholder = "Digite uma mensagem"
@@ -159,3 +156,10 @@ const editingStyleOther = (i) => {
     i.style.borderRadius = '40px'
     i.style.padding = '20px'
 }
+
+const initApp = () => {
+    const app = loadingContact();
+    return app;
+}
+
+initApp()

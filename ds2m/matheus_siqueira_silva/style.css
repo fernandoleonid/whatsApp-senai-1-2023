@@ -205,7 +205,17 @@ a{
     border-color: transparent;
 }
 
-
 .time_me{
     align-self: flex-end;
+}
+
+@media (max-width:640px){
+
+    .chat__user{
+        display: none;
+    }
+
+    .navegation__user{
+        width: 100%;
+    }
 }

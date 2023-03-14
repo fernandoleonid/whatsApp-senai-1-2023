@@ -25,15 +25,16 @@ const criaListaMensagem = (mensagem) => {
   const imagemElement = document.createElement('div');
   imagemElement.classList.add('col-3');
 
-  const foto = document.createElement('img');
-  foto.classList.add('profile-photo');
-  foto.classList.add('rounded-circle');
-  foto.classList.add('mb-2');
-  foto.classList.add('mt-3');
-  foto.classList.add('ml-2');
-  foto.classList.add('mr-3');
-  foto.alt = 'foto de perfil do usuário'
-  foto.src = mensagem.image;
+
+  const img = document.createElement('img');
+  img.classList.add('profile-photo');
+  img.classList.add('rounded-circle');
+  img.classList.add('mb-2');
+  img.classList.add('mt-3');
+  img.classList.add('ml-2');
+  img.classList.add('mr-3');
+  img.alt = 'foto de perfil';
+  img.src = mensagem.image;
 
   const guardaMediaBody = document.createElement('div');
   guardaMediaBody.classList.add('media-body');
@@ -67,9 +68,9 @@ const criaListaMensagem = (mensagem) => {
   guardaMediaBody.append(nomeContato, lastMensagem)
   nomeContato.append(spanHora)
 
-  list.append(listElement, foto, guardaMediaBody);
+  list.append(listElement, img, guardaMediaBody);
 
- 
+
   list.addEventListener('click', (event) => {
     carregarChatItens(mensagem.id);
     carregarMensagens(mensagem.id);

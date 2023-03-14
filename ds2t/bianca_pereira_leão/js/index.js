@@ -33,7 +33,7 @@ const criaListaMensagem = (mensagem) => {
   foto.classList.add('ml-2');
   foto.classList.add('mr-3');
   foto.alt = 'foto de perfil do usuário'
-  foto.src = `../${mensagem.image}`;
+  foto.src = mensagem.image;
 
   const guardaMediaBody = document.createElement('div');
   guardaMediaBody.classList.add('media-body');

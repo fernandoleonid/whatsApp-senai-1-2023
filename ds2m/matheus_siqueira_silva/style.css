@@ -211,14 +211,18 @@ a{
 
 
 .voltar{
-    font-size: 2rem;
     display: none;
 }
 
+
 @media (max-width:640px){
 
+    .voltar{
+        font-size: 2rem;
+        display: flex;
+    }
+
     main{
-       
         height: 170vh;
         width: 100%;
         background-color: white;

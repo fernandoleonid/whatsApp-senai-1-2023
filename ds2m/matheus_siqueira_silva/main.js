@@ -62,7 +62,7 @@ const loadingContact = () => {
             const backIcon = backPage();
 
             user.append(img, name)
-            headerChat.append(backIcon, user, options)
+            headerChat.append(backIcon ,user, options)
             conversation.replaceChildren(headerChat)
 
             const chat = document.getElementById('chat')
@@ -91,6 +91,21 @@ const loadingContact = () => {
             sender.replaceChildren(...mensagens)
             messages.appendChild(sender)
             chat.append(messages, box)
+
+            const getClick = document.getElementsByClassName('user__talked')
+
+            backIcon.addEventListener('click', function(){
+                const getUser = document.getElementById('container__chat') 
+                const getChat = document.getElementById('chat')
+                getChat.style.visibility = 'hidden'
+                getUser.style.visibility = 'visible'
+            })
+            getClick.addEventListener('click', function(){
+                const getUser = document.getElementById('container__chat') 
+                const getChat = document.getElementById('chat')
+                getChat.style.visibility = 'visible'
+                getUser.style.visibility = 'hidden'
+            })
 
         }
     })
@@ -170,10 +185,6 @@ const backPage = () => {
 
     iconBack.append(backForward)
     return iconBack
-}
-
-const showMessages = (looping) => {
-
 }
 
 const initApp = () => {

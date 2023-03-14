@@ -1,6 +1,8 @@
 'use strict'
 
-import { contatos } from "./recursos/contatos.js";
+import {
+    contatos
+} from "./recursos/contatos.js";
 
 let i = 0;
 
@@ -37,13 +39,12 @@ const loadingContact = () => {
 
     cards.forEach(contact => {
         contact.onclick = () => {
-
             const conversation = document.getElementById('chat')
             conversation.classList.add('chat__user')
 
             const headerChat = document.createElement('div')
             headerChat.classList.add('chat__header')
- 
+
             const user = document.createElement('div')
             user.classList.add('user')
 
@@ -58,8 +59,10 @@ const loadingContact = () => {
             const options = document.getElementById('options')
             options.classList.add('options')
 
+            const backIcon = backPage();
+
             user.append(img, name)
-            headerChat.append(user, options)
+            headerChat.append(backIcon, user, options)
             conversation.replaceChildren(headerChat)
 
             const chat = document.getElementById('chat')
@@ -80,7 +83,7 @@ const loadingContact = () => {
                 } else if (msg.sender != 'me') {
                     editingStyleOther(span)
                     span.textContent = msg.content
-                
+
                 }
                 return span
             })
@@ -155,6 +158,22 @@ const editingStyleOther = (i) => {
     i.style.border = '1px solid transparent'
     i.style.borderRadius = '40px'
     i.style.padding = '20px'
+}
+
+const backPage = () => {
+    const iconBack = document.createElement('a')
+    iconBack.classList.add('voltar')
+
+    const backForward = document.createElement('i')
+    backForward.classList.add('fas')
+    backForward.classList.add('fa-arrow-circle-left')
+
+    iconBack.append(backForward)
+    return iconBack
+}
+
+const showMessages = (looping) => {
+
 }
 
 const initApp = () => {

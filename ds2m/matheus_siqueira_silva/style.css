@@ -209,20 +209,43 @@ a{
     align-self: flex-end;
 }
 
+
+.voltar{
+    font-size: 2rem;
+    display: none;
+}
+
 @media (max-width:640px){
 
     main{
+       
+        height: 170vh;
         width: 100%;
         background-color: white;
     }
 
     .container__user__interface{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 110%;
+        height: 105.3%;
+    }
+
+    .icons{
+        width: 150px;
+        gap: 20px;
+    }
+
+    .chat__header{
+
+    }
+
+    .messages{
+
     }
 
     .chat__user{
-        display: none;
+        height: 100%;
     }
 
     .navegation__user{

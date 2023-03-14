@@ -61,18 +61,18 @@
 
 
 <body class="h-100 py-5 backgroundClaroBody" id="bodyId">
-   
+
     <div id="loading" class="backgroundClaroBody">
 
         <div class="textLoader">
             <div class="whatsapp-loading">
                 <i class="fab fa-whatsapp"></i>
-              </div>
-              <div class="progress-bar"></div>
+            </div>
+            <div class="progress-bar"></div>
             <h5>WhatsApp</h5>
             <span class="text-secondary"><i class="fas fa-lock"></i>Protegido com a criptografia de ponta a ponta</span>
         </div>
-      </div>
+    </div>
 
     <div class="header-body backgroudGreenHeaderBody" id="headerBody"></div>
     <main class="d-flex align-items-stretch  mx-auto" id="conteudo">
@@ -130,7 +130,7 @@
                     <div class="button-group">
                         <button class="cancel-button">CANCELAR</button>
                         <button class="ok-button">OK</button>
-                      </div>   
+                    </div>
                 </div>
             </div>
         </div>
@@ -168,12 +168,13 @@
             </header>
 
 
-            <div class="search-bar w-100 py-2 px-3 backgroundClaroSearchBar"  id="search-bar">
+            <div class="search-bar w-100 py-2 px-3 backgroundClaroSearchBar" id="search-bar">
                 <div class="input-group">
 
                     <div class="input-group-prepend position-absolute search-button-wrapper">
 
-                        <button class="btn border-2 text-black-50 ml-2" type="button" alt="guarda o pesquisar e a seta"  aria-label="btn">
+                        <button class="btn border-2 text-black-50 ml-2" type="button" alt="guarda o pesquisar e a seta"
+                            aria-label="btn">
                             <i class="fas fa-search" id="search"></i>
                             <i class="fas fa-arrow-left" id="arrow"></i>
                         </button>
@@ -192,8 +193,12 @@
         <section class="chat flex-fill bg-light d-flex flex-column" id="chatContainer">
 
             <header class="d-flex backgroundClaroSideHeader" id="headerChat"></header>
+            <button class="buttonBack">
+                <i class="fas fa-arrow-left" id="back2"></i>
+            </button>
+            <section class="dialog flex-fill overflow-x-auto imgClara" id="messages">
 
-            <section class="dialog flex-fill overflow-x-auto imgClara" id="messages"></section>
+            </section>
 
             <footer class="d-flex backgroundClaroSideHeader" id="chatFooter">
 
@@ -207,7 +212,7 @@
                 <div class="form-group my-auto flex-fill" id="form-group">
                     <input type="text" class="form-control rounded-pill" id="message" placeholder="Mensagem">
                 </div>
-                <a href="#" class="icon my-auto mx-4" id="btn-microphone"  aria-label="microfone">
+                <a href="#" class="icon my-auto mx-4" id="btn-microphone" aria-label="microfone">
                     <i class="fas fa-microphone text-secondary my-auto"></i>
                 </a>
             </footer>

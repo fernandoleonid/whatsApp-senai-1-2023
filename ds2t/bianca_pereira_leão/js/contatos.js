@@ -2,92 +2,88 @@ export const contatos = [
   {
     "name": "Ana Maria",
     "description": "Frontend Developer",
-    "image": "../img/contact1.png",
-    "hora": "14:30",
+    "image": "img/contact1.png",
     "messages": [
       {
         "sender": "me",
         "content": "Hello Leonid, how are you doing today?",
-        "time": "14:20"
+        "timestamp": "2022-02-17T14:20:00.000Z"
       },
       {
         "sender": "Ana Maria",
         "content": "Hi, I'm doing fine. Thanks for asking.",
-        "time": "14:25"
+        "timestamp": "2022-02-17T14:25:00.000Z"
       },
       {
         "sender": "me",
         "content": "Great to hear that. Do you have any plans for the weekend?",
-        "time": "14:30"
+        "timestamp": "2022-02-17T14:30:00.000Z"
       },
       {
         "sender": "Ana Maria",
         "content": "Not yet. I'm thinking about going to the beach. What about you?",
-        "time": "14:35"
+        "timestamp": "2022-02-17T14:35:00.000Z"
       }
     ]
   },
   {
     "name": "Jane Smith",
     "description": "UI Designer",
-    "image": "../img/contact2.png",
-    "hora": "15:00",
+    "image": "img/contact2.png",
     "messages": [
       {
         "sender": "me",
         "content": "Hi Jane, how's it going?",
-        "time": "09:00"
+        "timestamp": "2022-02-16T09:00:00.000Z"
       },
       {
         "sender": "Jane Smith",
         "content": "I'm good, thanks. How about you?",
-        "time": "09:05"
+        "timestamp": "2022-02-16T09:05:00.000Z"
       },
       {
         "sender": "me",
         "content": "I'm doing well. By the way, have you seen the latest designs for the new project?",
-        "time": "09:10"
+        "timestamp": "2022-02-16T09:10:00.000Z"
       },
       {
         "sender": "Jane Smith",
         "content": "Yes, I have. They look great!",
-        "time": "09:15"
+        "timestamp": "2022-02-16T09:15:00.000Z"
       }
     ]
   },
   {
     "name": "Mark Johnson",
     "description": "Backend Developer",
-    "image": "../img/contact3.png",
-    "hora": "13:15",
+    "image": "img/contact3.png",
     "messages": [
       {
         "sender": "me",
         "content": "Hi Mark, how's everything going?",
-        "time": "13:00"
+        "timestamp": "2022-02-15T13:00:00.000Z"
       },
       {
         "sender": "Mark Johnson",
         "content": "Everything's going well. How about you?",
-        "time": "13:05"
+        "timestamp": "2022-02-15T13:05:00.000Z"
       },
       {
         "sender": "me",
         "content": "I'm doing fine. By the way, do you have any updates on the API development?",
-        "time": "13:10"
+        "timestamp": "2022-02-15T13:10:00.000Z"
       },
       {
         "sender": "Mark Johnson",
         "content": "Yes, we're making good progress. We should be able to deliver it on schedule.",
-        "time": "13:15"
+        "timestamp": "2022-02-15T13:15:00.000Z"
       }
     ]
   },
 {
 "name": "Sarah Lee",
 "description": "Software Engineer",
-"image": "../img/contact4.png",
-"hora": "10:15",
+"image": "img/contact4.png",
 "messages": [
     {
     "sender": "me",
@@ -114,8 +110,7 @@ export const contatos = [
 {
 "name": "John Doe",
 "description": "Designer",
-"image": "../img/contact5.png",
-"hora": "11:10",
+"image": "img/contact5.png",
 "messages": [
     {
     "sender": "John Doe",
@@ -142,8 +137,7 @@ export const contatos = [
 {
 "name": "Julia Smith",
 "description": "Product Manager",
-"image": "../img/contact6.png",
-"hora": "12:15",
+"image": "img/contact6.png",
 "messages": [
     {
     "sender": "Julia Smith",
@@ -170,8 +164,7 @@ export const contatos = [
 {
 "name": "Max Kellerman",
 "description": "Marketing Manager",
-"image": "../img/contact7.png",
-"hora": "13:10",
+"image": "img/contact7.png",
 "messages": [
     {
     "sender": "Max Kellerman",

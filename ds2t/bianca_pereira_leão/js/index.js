@@ -123,7 +123,7 @@ const criarChatItens = (chat) => {
   img.classList.add('ml-2');
   img.classList.add('mr-3');
   img.alt = 'foto de perfil';
-  img.src = `/${chat.image}`;
+  img.src = `./${chat.image}`;
 
   const divPaiNomeDescricao = document.createElement('div');
   divPaiNomeDescricao.classList.add('mr-auto')

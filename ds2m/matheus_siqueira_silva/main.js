@@ -6,7 +6,6 @@ import {
 
 let i = 0;
 
-
 const createUsers = (contato) => {
     const chat = document.createElement('div')
     chat.classList.add('user__talked')

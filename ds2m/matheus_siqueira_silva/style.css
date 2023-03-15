@@ -226,13 +226,16 @@ a{
 
 @media (max-width:640px){
 
-    .voltar{
-        font-size: 2rem;
-        display: flex;
+    body{
+        height: 100%;
+    }
+
+    header{
+        display: none;
     }
 
     main{
-        height: 170vh;
+        height: 100%;
         width: 100%;
         background-color: white;
     }
@@ -242,11 +245,22 @@ a{
         flex-direction: column;
         width: 100%;
         height: 105.3%;
+        transform: translateY(20px);
     }
 
     .icons{
         width: 150px;
         gap: 20px;
+    }
+
+    .voltar{
+        font-size: 2rem;
+        display: flex;
+    }
+
+
+    .user__talked{
+        height: 70px;
     }
 
     .chat__header{

@@ -1,7 +1,7 @@
  'use strict'
 
 
- import { contatos } from "./contatos.js"
+ import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js"
 
  //const teste = (indice) => console.log(`oi ${contatos[indice].image}`)
 
@@ -69,7 +69,7 @@
    const mensagemContato = document.getElementById('contato__mensagem')
    const mensagem = contatos[indice].messages.map(getMessages)
 
-   mensagemContato.replaceChildren(...mensagem)
+  mensagemContato.replaceChildren(...mensagem)
 }
 
 carregarMensagens()

@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="./css/mensagens.css">
     <link rel="stylesheet" href="./css/principal.css">
     <link rel="icon" href="./img/whatsapp.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b94100b9f6.js" crossorigin="anonymous"></script>
     <script src="./index.js" defer type="module"></script>
     <title>WhatsApp</title>
@@ -27,16 +30,16 @@
                     </div>
                     <ul class="header__principal">
                         <li>
-                            <img src="./img/grupo.png" alt="grupo">
+                            <i class="fas fa-users"></i>
                         </li>
                         <li>
-                            <img src="./img/status.png" alt="status">
+                            <i class="fas fa-circle-notch"></i>
                         </li>
                         <li>
-                            <img src="./img/conversando.png" alt="add_conversas">
+                            <i class="far fa-comment-dots"></i>
                         </li>
                         <li>
-                            <img src="./img/tres-pontos.png" alt="mais_opcoes">
+                            <i class="fas fa-ellipsis-v"></i>
                         </li>
                     </ul>
                  
@@ -89,13 +92,17 @@
                 <li>
                     <i class="fab fa-whatsapp-square"></i>
                 </li>
-                <li>
-                    <i class="fas fa-search"></i>
-                </li>
-                <li>
-                    <i class="fas fa-ellipsis-v"></i>
-                </li>
             </ul> 
+
+            <ul class="icons__end">
+                <li>
+                    <i class="fas fa-ellipsis-v"></i> 
+                </li>
+                <li>
+                    <i class="fas fa-search"></i> 
+                  
+                </li>
+            </ul>
             </div>
 
             <div class="contato__mensagem" id="contato__mensagem">
@@ -105,11 +112,7 @@
             </div>
 
             <div class="enviar">
-                <!-- <span>Mensagem</span> -->
                 <ul class="icons__mensagens">
-                    <li>
-                        <i class="fa-solid fa-microphone"></i>
-                    </li>
                     <li>
                         <i class="far fa-laugh-squint"></i>
                     </li>
@@ -117,6 +120,13 @@
                         <i class="fas fa-paperclip"></i>
                     </li>
                 </ul>
+                <div id="mensagem"><input type="text" id="text__search" class = 'digitar__mensagem'placeholder ="Mensagem"></div>
+                <ul class="icon_microphone">
+                    <li>
+                        <i class="fa-solid fa-microphone"></i>
+                    </li>
+                </ul>
+                </span>
             </div>
         </div>
     </main>

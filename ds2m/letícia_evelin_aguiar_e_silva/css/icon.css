@@ -12,8 +12,12 @@
 }
 .header__principal{
     display: flex;
+    font-size: 1.80rem;
     width: 190px;   
     gap: 40px;
+}
+.header__principal li i:hover {
+    color: white;
 }
 .mobile{
     display: none;

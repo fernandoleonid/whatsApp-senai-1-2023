@@ -15,10 +15,16 @@
 }
  .pesquisa{
     display: flex;
-    width: 585px;
-    margin-top: 2.5px;
-    height: 25px;
+    width: 580px;
+    height: 1vh;
+    padding: 15px;
     text-align: center;
+    color: grey;
+    font-size: 20px;
+    margin-top: 2.5px;
+    margin-bottom: 5px;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 1px 1px 10px lightgrey;
 } 
 .container_search{
     flex-direction: row;
@@ -33,6 +39,7 @@
     padding: 25px; 
     
 }
+
 
 @media(max-width: 640px){
 

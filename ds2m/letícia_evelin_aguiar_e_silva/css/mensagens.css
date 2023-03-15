@@ -5,6 +5,7 @@
 }
 
 .mensagem__contato{
+    z-index: 1;
     padding-top: 100px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,46 +17,52 @@
 .enviar{
     display: flex;
     align-items: center;
-    place-self: end center;
+    place-self: end center; 
     justify-content: space-between;
     padding: 0 15px;
     width: 100%;
 } 
 
- .enviar span{
-    color: #7D7B7B;
-}
-
 .enviar__mensagem_span{
-    place-self: end;
-    background-color: var(--color-message-send);
-    padding: 13px;
-    border-radius: 8px 0 8px 8px;
-    box-shadow: 1px 1px 7px #D0D0D0;
-    max-width: 35vw;
-    width: fit-content;
-    height: auto;
     display: flex;
+    padding: 13px;
+    font-family: 'Inter', sans-serif;
+    justify-content: end;
+    flex-direction: row-reverse;
+    place-self: end; 
+    flex-direction: row-reverse;
+    width: 95%;  
     align-items: center;
-    margin: 20px 30px;
+    margin: 20px 30px; 
+
 }
 
 .mensagem__entregue{
-    background-color: #fff;
-    padding: 13px;
-    border-radius: 0 8px 8px 8px;
-    box-shadow: 1px 1px 7px #D0D0D0;
-    max-width: 35vw;
-    width: fit-content;
-    height: auto;
     display: flex;
+    background-color: papayawhip;
+    padding: 13px;
+    place-self: end;
     align-items: center;
+    font-family: 'Inter', sans-serif;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 1px 1px 10px #D0D0D0;
+    width: fit-content;
     margin: 20px 30px;
 }
 
-/* .mensagem__entregue_span{ */
-  
-/* }  */
+.digitar__mensagem{
+    display: flex;
+    color: grey;
+    font-size: 20px;
+    width: 48vw;
+    height: 5vh;
+    padding: 15px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5px;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 1px 1px 10px grey;
+}
 
 .icons__mensagens {
     display: flex;
@@ -67,7 +74,14 @@
     font-size: 1.7rem;
     color: #000;
 }
+.icon_microphone{
+    font-size: 1.7rem;
+    color: #000;
+}
 
+.icon_microphone li i:hover{
+    color: plum;
+}
 .icons__mensagens li i:hover {
     color: plum;
 }

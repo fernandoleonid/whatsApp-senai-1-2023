@@ -87,7 +87,8 @@ a{
     
 }
 
-#container__chat__conversation{
+.container__chat__conversation{
+    display: block;
     height: 100%;
 }
 
@@ -214,6 +215,14 @@ a{
     display: none;
 }
 
+.display__none{
+    display: none;
+}
+
+.display__block{
+    display: block;
+}
+
 
 @media (max-width:640px){
 
@@ -256,3 +265,4 @@ a{
         width: 100%;
     }
 }
+

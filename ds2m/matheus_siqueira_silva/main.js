@@ -41,6 +41,7 @@ const loadingContact = () => {
         contact.onclick = () => {
             const conversation = document.getElementById('chat')
             conversation.classList.add('chat__user')
+            conversation.classList.add('display__block')
 
             const headerChat = document.createElement('div')
             headerChat.classList.add('chat__header')
@@ -62,7 +63,7 @@ const loadingContact = () => {
             const backIcon = backPage();
 
             user.append(img, name)
-            headerChat.append(backIcon ,user, options)
+            headerChat.append(backIcon, user, options)
             conversation.replaceChildren(headerChat)
 
             const chat = document.getElementById('chat')
@@ -92,21 +93,25 @@ const loadingContact = () => {
             messages.appendChild(sender)
             chat.append(messages, box)
 
-            const getClick = document.getElementsByClassName('user__talked')
 
-            backIcon.addEventListener('click', function(){
-                const getUser = document.getElementById('container__chat') 
-                const getChat = document.getElementById('chat')
-                getChat.style.visibility = 'hidden'
-                getUser.style.visibility = 'visible'
-            })
-            getClick.addEventListener('click', function(){
-                const getUser = document.getElementById('container__chat') 
-                const getChat = document.getElementById('chat')
-                getChat.style.visibility = 'visible'
-                getUser.style.visibility = 'hidden'
-            })
+            const getClickContainerChat = document.getElementById('container__chat')
+            getClickContainerChat.classList.add('container__chat__conversation')
+            getClickContainerChat.classList.add('display__block')
 
+            const getChat = document.getElementById('chat')
+            const navegation = document.getElementById('navegation')
+
+            backIcon.onclick = () => {
+                getChat.classList.remove('display__block')
+                getChat.classList.add('display__none')
+                navegation.classList.add('display__block')
+            }
+
+            getClickContainerChat.onclick = () => {
+                navegation.classList.add('display__none')
+                navegation.classList.remove('display__block')
+                getChat.classList.add('display__block')
+            }
         }
     })
 }
@@ -193,3 +198,4 @@ const initApp = () => {
 }
 
 initApp()
+

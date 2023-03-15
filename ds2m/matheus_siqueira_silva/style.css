@@ -268,7 +268,7 @@ a{
     }
 
     .messages{
-
+        height: 100%;
     }
 
     .chat__user{

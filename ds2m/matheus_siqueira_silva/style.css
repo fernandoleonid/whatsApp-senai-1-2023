@@ -264,7 +264,7 @@ a{
     }
 
     .chat__header{
-
+        height: 65px;
     }
 
     .messages{

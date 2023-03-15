@@ -4,9 +4,6 @@ import {
     contatos
 } from "./recursos/contatos.js";
 
-window.addEventListener('resize', function () {
-    location.reload()
-  })
 const width = window.screen.width
 let i = 0;
 

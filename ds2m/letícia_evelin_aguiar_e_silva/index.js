@@ -12,7 +12,7 @@
     card.onclick = () => carregarMensagens(indice)
 
     const img = document.createElement( 'img' )
-    img.classList.add( 'card__image' )
+    img.classList.add( 'contato__image' )
     img.src = `./${contato.image}`
 
     const titulo = document.createElement( 'h5' )

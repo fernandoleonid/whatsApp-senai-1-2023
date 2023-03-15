@@ -1,9 +1,9 @@
 .card{
     display: flex;
     height: 110px;
-    border: 1px solid #ddd;
+    border: 1px solid gray; 
     border-radius: 5px;
-    box-shadow: 1px 1px 3px grey;
+    /* box-shadow: 1px 1px 3px grey; */
     padding: 10px;
     cursor: pointer;
 }
@@ -15,9 +15,9 @@
     transition-delay: 0.05s;
 }
 
-.card__image{
-    width: 70px;
-    height: 70px;
+.contato__image{
+    width: 65px;
+    height: 65px;
     border-radius: 100px;
     object-fit: contain;
 }
@@ -43,7 +43,7 @@
         display: flex;
         width: 600px;
     }
-    .card__image{
+    .contato__image{
         width: 70px;
         height: 70px;
     }

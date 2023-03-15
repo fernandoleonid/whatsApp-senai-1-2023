@@ -2,7 +2,7 @@ export const contatos = [
   {
     "name": "Ana Maria",
     "description": "Frontend Developer",
-    "image": "../img/contact1.png",
+    "image": "img/contact1.png",
     "messages": [
       {
         "sender": "me",
@@ -29,7 +29,7 @@ export const contatos = [
   {
     "name": "Jane Smith",
     "description": "UI Designer",
-    "image": "../img/contact2.png",
+    "image": "img/contact2.png",
     "messages": [
       {
         "sender": "me",
@@ -56,7 +56,7 @@ export const contatos = [
   {
     "name": "Mark Johnson",
     "description": "Backend Developer",
-    "image": "../img/contact3.png",
+    "image": "img/contact3.png",
     "messages": [
       {
         "sender": "me",
@@ -83,7 +83,7 @@ export const contatos = [
   {
     "name": "Sarah Lee",
     "description": "Software Engineer",
-    "image": "../img/contact4.png",
+    "image": "img/contact4.png",
     "messages": [
       {
         "sender": "me",
@@ -110,7 +110,7 @@ export const contatos = [
   {
     "name": "John Doe",
     "description": "Designer",
-    "image": "../img/contact5.png",
+    "image": "img/contact5.png",
     "messages": [
       {
         "sender": "John Doe",
@@ -137,7 +137,7 @@ export const contatos = [
   {
     "name": "Julia Smith",
     "description": "Product Manager",
-    "image": "../img/contact6.png",
+    "image": "img/contact6.png",
     "messages": [
       {
         "sender": "Julia Smith",
@@ -164,7 +164,7 @@ export const contatos = [
   {
     "name": "Max Kellerman",
     "description": "Marketing Manager",
-    "image": "../img/contact7.png",
+    "image": "img/contact7.png",
     "messages": [
       {
         "sender": "Max Kellerman",

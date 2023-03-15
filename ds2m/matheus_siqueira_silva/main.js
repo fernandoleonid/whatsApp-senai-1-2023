@@ -4,6 +4,10 @@ import {
     contatos
 } from "./recursos/contatos.js";
 
+window.addEventListener('resize', function () {
+    location.reload()
+  })
+const width = window.screen.width
 let i = 0;
 
 const createUsers = (contato) => {
@@ -40,11 +44,9 @@ const loadingContact = () => {
         contact.onclick = () => {
             const conversation = document.getElementById('chat')
             conversation.classList.add('chat__user')
-            conversation.classList.add('display__block')
-
             const headerChat = document.createElement('div')
             headerChat.classList.add('chat__header')
-
+7
             const user = document.createElement('div')
             user.classList.add('user')
 
@@ -93,24 +95,24 @@ const loadingContact = () => {
             chat.append(messages, box)
 
 
-            const getClickContainerChat = document.getElementById('container__chat')
-            getClickContainerChat.classList.add('container__chat__conversation')
-            getClickContainerChat.classList.add('display__block')
-
-            const getChat = document.getElementById('chat')
-            const navegation = document.getElementById('navegation')
-
-            backIcon.onclick = () => {
-                getChat.classList.remove('display__block')
-                getChat.classList.add('display__none')
-                navegation.classList.add('display__block')
+            if(width <= 640){
+                const mediaQuery = window.matchMedia('(max-width:640px)')
+                const getClickContainerChat = document.getElementById('container__chat')
+                getClickContainerChat.classList.add('container__chat__conversation')
+                const getChat = document.getElementById('chat')
+                const navegation = document.getElementById('navegation')
+                backIcon.onclick = () => {
+                    getChat.classList.remove('display__block')
+                    getChat.classList.add('display__none')
+                    navegation.classList.add('display__block')
+                }
+                getClickContainerChat.onclick = () => {
+                    navegation.classList.add('display__none')
+                    navegation.classList.remove('display__block')
+                    getChat.classList.add('display__block')
+                }
             }
-
-            getClickContainerChat.onclick = () => {
-                navegation.classList.add('display__none')
-                navegation.classList.remove('display__block')
-                getChat.classList.add('display__block')
-            }
+            
         }
     })
 }

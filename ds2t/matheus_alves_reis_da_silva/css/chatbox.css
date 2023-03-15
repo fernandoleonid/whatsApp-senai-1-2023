@@ -19,36 +19,38 @@
 
 .my_message {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 .text_myMessage {
     padding: 12px;
     border-radius: 8px;
     font-size: 1rem;
-    background-color: #d9fdd3;
+    background-color: var(--chat-mymessage-color);
+    color: var(--text-mymessage-color);
 }
 
 .hour_myMessage {
     padding-left: 4px;
     font-size: 0.7rem;
-    opacity: 0.5;
+    color: var(--hour-mymessage-color);
 }
 
 .friend_message {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .text_friendMessage {
     padding: 12px;
     border-radius: 8px;
     font-size: 1rem;
-    background-color: #ffffff;
+    background-color: var(--chat-friendmessage-color);
+    color: var(--text-friendmessage-color);
 }
 
 .hour_friendMessage {
     padding-left: 4px;
     font-size: 0.7rem;
-    opacity: 0.5;
+    color: var(--hour-friendmessage-color);
 }

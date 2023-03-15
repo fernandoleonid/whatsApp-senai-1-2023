@@ -1,3 +1,26 @@
+:root {
+    --header-color: #ededed;
+    --search-chat-color: #eeeeeea9;
+    --search-chat-text: #bbb;
+    --chatlist-color: #fff;
+    --chatlist-hover-color: #e9edef;
+    --search-bar-left-color: #fff;
+    --body-right-color: #efeae2;
+    --chat-mymessage-color: #d9fdd3;
+    --chat-friendmessage-color: #fff;
+    --text-mymessage-color: #000;
+    --text-friendmessage-color: #000;
+    --hour-mymessage-color: #000000;
+    --hour-friendmessage-color: #000;
+    --container-initial-color: #F0F2F5;
+    --container-initial-resources-color: #41525D; 
+    --nav-icons-left-color: #51585c;
+    --text-contacts-color: #000;
+    --text-description-color: #727272;
+    --chat-input-color: #e9edef;
+    --input-chat-input-color: #fff;
+}
+
 .container {
     display: grid;
     width: 85vw;
@@ -12,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F0F2F5;
+    background-color: var(--container-initial-color);
     border-bottom: 5px solid #00A884;
 }
 
@@ -22,7 +45,7 @@
 
 .container_home_resources {
     font-size: 32px;
-    color: #41525D;
+    color: var(--container-initial-resources-color);
 }
 
 .message_home {
@@ -35,7 +58,7 @@
 
 .description_home {
     font-size: 14px;
-    color: #667781;
+    color: var(--container-initial-resources-color);
     text-align: center;
 }
 
@@ -44,7 +67,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 14px;
-    color: #667781;
+    color: var(--container-initial-resources-color);
 }
 
 .back {
@@ -105,6 +128,4 @@
 }
 
 /* MOBILE */
-@media (max-width:640px) {
-
-}
+@media (max-width:640px) {}

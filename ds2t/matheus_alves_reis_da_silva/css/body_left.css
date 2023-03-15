@@ -1,6 +1,6 @@
 .body_left {
     grid-area: body_left;
-    background-color: #ffffff;
+    background-color: var(--chatlist-color);
     border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -8,11 +8,11 @@
     position: relative;
     width: 100%;
     height: 60px;
-    background: #ededed;
+    background: var(--header-color);
     display: flex;
     justify-content: space-between;
-        align-items: center;
-        padding: 0 15px;
+    align-items: center;
+    padding: 0 15px;
 }
 
 .user_profile {
@@ -21,7 +21,7 @@
     height: 40px;
     overflow: hidden;
     border-radius: 50%;
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 .img_profile {
@@ -39,7 +39,7 @@
 
 .nav_icons li {
     cursor: pointer;
-    color: #51585c;
+    color: var(--nav-icons-left-color);
     font-size: 1.25rem;
     margin-left: 22px;
 }
@@ -48,7 +48,7 @@
     position: relative;
     width: 100%;
     height: 50px;
-    background: #f6f6f6;
+    background: var(--search-chat-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +63,7 @@
     width: 97%;
     outline: none;
     border: none;
-    background: #fff;
+    background: var(--search-bar-left-color);
     height: 32px;
     border-radius: 10px;
     font-size: 14px;
@@ -71,7 +71,7 @@
 }
 
 .search_chat div input::placeholder {
-    color: #bbb;
+    color: var(--search-chat-text);
 }
 
 .search_chat div i {
@@ -79,11 +79,11 @@
     left: 30px;
     top: 18px;
     font-size: 0.90rem;
-    color: #51585c;
+    color: var(--nav-icons-left-color);
 }
 
 .search_chat i {
-    color: #7a7b7c;
+    color: var(--nav-icons-left-color);
     cursor: pointer;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .chat_active:hover {
-    background: #e9edef;
+    background: var(--chatlist-hover-color);
 }
 
 .img_contact {
@@ -127,13 +127,14 @@
     justify-content: space-between;
     width: 100%;
     padding-bottom: 8px;
-    padding-left: 8px
+    padding-left: 8px;
+    color: var(--text-contacts-color);
+    border-bottom: 1px solid #d1d7db;
 }
 
 .name_contact {
     font-size: 1rem;
     font-weight: 600;
-    color: #111;
 }
 
 /* .time {
@@ -142,6 +143,6 @@
 } */
 
 .message_contact {
-    color: #aaa;
+    color: var(--text-description-color);
     font-size: 0.9rem;
 }

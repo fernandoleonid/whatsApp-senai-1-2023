@@ -59,11 +59,11 @@
     .barra__nav{
         display: flex;
         font-size: 1rem;
-        gap: 40px;
+        gap: 70px;
         margin-top: 5%;
         flex-direction: row;
         padding: 16px;
-        width: 77vw;
+        width: 100vw;
         color: black;
         font-family: 'Inter', sans-serif;
     }

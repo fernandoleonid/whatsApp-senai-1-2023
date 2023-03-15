@@ -42,6 +42,7 @@
     background-color: papayawhip;
     padding: 13px;
     place-self: end;
+    text-align: end;
     align-items: center;
     font-family: 'Inter', sans-serif;
     border-radius: 0 8px 8px 8px;

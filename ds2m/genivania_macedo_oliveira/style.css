@@ -78,7 +78,11 @@ main {
 .icon__menu {
     flex-direction: row;
     display: flex;
-    font-size: 3rem;
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-right: 20px;
+    align-items: center;
+    gap: 30px;  
 }
 
 .menu_conversa {
@@ -91,6 +95,11 @@ main {
     padding-left: 10px;
     padding-right: 20px;
 }
+.icon__perfil{
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+}
 
 .icon__mensagem{
     flex-direction: row;
@@ -99,7 +108,7 @@ main {
     padding-left: 10px;
     padding-right: 20px;
     align-items: center;
-    gap: 50px;  
+    gap: 30px;  
 }
 
 .mensagem {
@@ -132,7 +141,7 @@ main {
 }
 .text{
     display: flex;
-    height: 100%;
+    height: 92%;
 }
 
 footer{
@@ -146,7 +155,10 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
-
+.icon__emoji{
+    display: flex;
+    gap: 20px;
+}
 .digitar__mensagem{
     background-color: rgb(201, 168, 191);
     height: 40px;

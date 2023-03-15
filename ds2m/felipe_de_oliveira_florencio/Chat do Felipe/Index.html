@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link href="./resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <script src="./resources/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <link href="./resources/bootstrap/css/bootstrap-grid.css" rel="stylesheet">
     <link rel="stylesheet" href="./resources/components/contacts/contact.css">
     <script src="app.js" defer type='module'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,23 +16,26 @@
     <title>Chat do Felipe</title>
 </head>
 <body>
-    <section class="home container-fluid t-align-section" id='home'>
-      <header class="main-header t-border-and-color d-flex justify-content-between align-items-center">
+  <main class="row">
+    <section class="home col-5 col-xxl-5 col-md-2 col-lg-2 col-xl-12" id='home'>
+      <header class="main-header">
         <div class="logo">
           <img src="./resources/imgs/logo.png" class='logo__image'alt="">
           <h1 class="logo__text">CHAT DO FELIPE</H1>
         </div>
         <div class="profile">
           <p class="profile__text">PROFILE</p>
-          <img src="./resources/imgs/profile.png" alt="">
+          <img class="profile__image"src="./resources/imgs/profile.png" alt="">
         </div>
       </header>
       <div class="contacts" id="contact">
       </div>
     </section>
-    <div class= "chat grid container-fluid d-flex flex-column justify-content-center align-items-center t-align-section" id="chat">
+    <section class= "chat col-7 col-xxl-5 col-md-2 col-lg-4 " id="chat">
         <h3 class="chat__gretting">Bem vindo ao Chat do Felipe</h3>
         <p class="chat__footer">Copyright@2023 Felipe Florêncio</p>
-    </div>
+    </section>
+  </main>
+    
 </body>
 </html>

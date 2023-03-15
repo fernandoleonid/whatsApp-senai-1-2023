@@ -9,7 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 495px;
+    /* width: 495px; */
+    width: 80%;
     height: 83px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 4rem;
@@ -68,8 +69,17 @@
 .contact.info{
     background-color: inherit;
     justify-content: start; 
+    width: 100%;
 }
 .contact__photo.info{
-    width: 4.5rem;
-    height: 4.5rem;
+    height: 90%;
 }
+
+/* @media (max-width:768px){
+    .contact{
+        width: 85vw;
+    }
+    .contact.info{
+        width: 100vw;
+    }
+} */

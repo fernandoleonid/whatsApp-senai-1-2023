@@ -4,6 +4,7 @@ import {contatos} from "./resources/api/contatos.js"
 
 
 
+
 const buildHome = function(){
     const contactContainer = document.getElementById('contact')
     const contacts = contatos.map(buildContact)
@@ -78,7 +79,14 @@ const buildChat = (contato) => {
     const chatContainer = document.getElementById('chat')
     const header = buildHeader(contato)
     const chat = buildBox(contato.messages)
-    const inputChat = buildInputChat()
+    const inputChat = buildInputChat()  
+
+    
+    chatContainer.classList.add(
+        'd-flex',
+        'flex-column',
+        'justify-content-around'
+        )
     chatContainer.replaceChildren(
         header,
         chat,
@@ -87,13 +95,13 @@ const buildChat = (contato) => {
 }
 const buildHeader = (contact) =>{
     const header = document.createElement('header')
-    header.classList.add(
-        'chat__header',
-        't-border-and-color', 
-        'd-flex' ,
-        'justify-content-between',
-        'align-items-center'
-        )
+    // header.classList.add(
+    //     'chat__header',
+    //     't-border-and-color', 
+    //     'd-flex' ,
+    //     'justify-content-between',
+    //     'align-items-center'
+    //     )
     const contactBasicInfo = document.createElement('div')
     contactBasicInfo.classList.add(
         'contact',
@@ -144,13 +152,11 @@ const buildHeader = (contact) =>{
 const buildBox = (messagesList) =>{
     const boxDiv = document.createElement('div')
     boxDiv.classList.add(
-        'box',
-        'container',
-        'message'
+        'box'
         )
-
+    
     const messages = messagesList.map(createSingleMessage)
-
+      
     // messages.forEach( (message) =>{
     //     boxDiv.append(
     //         message

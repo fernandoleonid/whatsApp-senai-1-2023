@@ -37,16 +37,37 @@
     padding: 25px; 
     
 }
+.barra__nav{
+    display: none;
+}
 
 
 @media(max-width: 640px){
 
-    .principal{
-        width: 100%;
-    }
+    /* .principal{
+        /* width: 30%; */
+    /* } */ */
      .pesquisa{
-        display: flex;
-        width: 550px;
-        margin-bottom: 1.5px;
+        display: none
     } 
+    .img_search{
+        display: none;
+    }
+    .img_filter{
+        display: none;
+    }
+    .barra__nav{
+        display: flex;
+        font-size: 1rem;
+        gap: 40px;
+        margin-top: 5%;
+        flex-direction: row;
+        padding: 16px;
+        width: 77vw;
+        color: black;
+        font-family: 'Inter', sans-serif;
+    }
+    .container_search{
+        display: none;
+    }
 }

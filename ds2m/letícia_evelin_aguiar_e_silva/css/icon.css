@@ -36,18 +36,26 @@
     align-items: center;
     flex-direction: row;
     gap: 333px;
-    padding-left: 15px; 
+    padding-left: 45px; 
     color: white;
+    background-color: #00a884;
+    width: 77vw;
+    height: 55px;
 }
 .mobile__title{
     display: flex;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    padding: 16px;
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100px;
+    padding-right: 15%;
+    font-family: 'Inter', sans-serif;
+    width: 50px;
 }
-.mobile__icons{
+.mobile__icons {
     display: flex;
+    font-size: 1rem;
+    color: black;
+    width: 70px;
     flex-direction: row;
     gap: 15px;
 }

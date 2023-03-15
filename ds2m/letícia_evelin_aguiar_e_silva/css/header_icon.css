@@ -24,10 +24,6 @@
     padding: 10px;
     width: 100%;
 }
-/* .header__icons {
-    display: flex;
-    font-size: 2rem;
-} */
 
 .header__icons li i:hover {
     color: white;

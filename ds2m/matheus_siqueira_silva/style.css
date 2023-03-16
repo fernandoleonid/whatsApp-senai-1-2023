@@ -214,12 +214,21 @@ a{
     gap: 50px;
 }
 
+
 .voltar{
-    display: flex;
+    display: none;
+}
+
+.display__none__msg{
+    display: none;
+}
+
+.display__block__msg{
+    display: block;
 }
 
 .display__none{
-    display: none;
+    display: block;
 }
 
 .display__block{
@@ -227,7 +236,13 @@ a{
 }
 
 
+
+
 @media (max-width:640px){
+    .display__none{
+        display: none;
+    }
+
     body{
         height: 100%;
     }
@@ -279,7 +294,7 @@ a{
         width: 100%;
         height: 450px;
         position: relative;
-        top: 30%;
+        top: 15%;
         gap: 20px;
     }        
 
@@ -300,4 +315,3 @@ a{
         align-items: center;
     }
 }
-

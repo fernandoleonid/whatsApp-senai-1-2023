@@ -34,6 +34,13 @@ Site do WhatsApp. O objetivo deste projeto é colocar em prática os conheciment
 
 ![Screenshot](./img/screenshot.png)
 
+- Extensão com as cores do site
+
+![Screenshot](./img/extensaoSite.png)
+
+[Clique aqui](https://chrome.google.com/webstore/detail/high-contrast-colorful/cdfdkmklcjlnnnlnplffpdiekfhkpbme?hl=pt-BR) para visitar a Extensão.
+
+
 ---
 ## Relatório do LightHouse
 O LightHouse basicamente analisa todo o seu site, indicando como está determinados aspectos do mesmo. Segue o relatório:

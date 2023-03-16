@@ -2,7 +2,27 @@
 
 import { contatos } from "./contatos.js"
 
-const adicionar = document.getElementById('adicionar')
+
+
+const apagar = () => {
+    const tela = document.getElementById('container__mensagens')
+    tela.classList.remove('container')
+    tela.classList.add('container__subir')
+
+    return tela
+}
+
+const subir = () => {
+
+    const telaInvertida = document.getElementById('voltar')
+
+    telaInvertida.addEventListener('click', () => {
+    const tela = document.getElementById('container__mensagens')
+    tela.classList.remove('container__subir')
+    
+    })
+    
+}
 
 
 
@@ -14,7 +34,7 @@ const criarContato = (contato, indice) => {
     
     const foto = document.createElement('img')
     foto.classList.add('contato__img')
-    foto.src = `../img/${contatos[contato].image}`
+    foto.src = `../img/${contato.image}`
     foto.setAttribute("alt", "foto_de_perfil")
 
     const titulo = document.createElement('h5')
@@ -33,6 +53,10 @@ const criarContato = (contato, indice) => {
         let container = document.getElementById('container')
        
         container.replaceChildren(criarHeader(indice), criarChat(indice), criarEntradaMensagens())
+        apagar()
+        subir()
+        
+        
         
     })
 
@@ -48,11 +72,7 @@ const criarContato = (contato, indice) => {
 
 }
 
-const criarArrow = () => {
-    
 
-    return conversa
-}
 
 const criarHeader = (indice) => {
    
@@ -78,9 +98,8 @@ const criarHeader = (indice) => {
     const topIcon = document.createElement('ion-icon')
     topIcon.name = 'arrow-back'
     topIcon.classList.add('icon_back')
+    topIcon.id = 'voltar'
 
-
-  
 
     topDescricao.append(
         topNomeContato,
@@ -93,11 +112,14 @@ const criarHeader = (indice) => {
         topDescricao,
         topIcon
     )
-
-   
     
     return topMensagens
 }
+
+
+
+
+
 
 const zerarContainer = () => {
     const container = document.createElement('div')

@@ -137,23 +137,30 @@ const carregarContatos = () => {
 }
 
 const boxLeft = document.getElementById('box__left')
-const boxContatos = document.getElementById('contatos')
 const boxMain = document.getElementById('main2')
 const boxRight = document.getElementById('conversa')
-boxContatos.addEventListener('click', (event) => {
+
+const chatMobile = () => {
     boxRight.classList.toggle('conversa__active')
     boxLeft.classList.toggle('contato__container__active')
     boxMain.classList.toggle('main__responsive__active')
+}
+
+const listaDeContatosMobile = () => {
+    boxRight.classList.replace('conversa__active', 'conversa')
+    boxMain.classList.replace('main__responsive__active', 'main__responsive')
+    boxLeft.classList.replace('contato__container__active', 'contato__container')
+}
+
+const boxContatos = document.getElementById('contatos')
+boxContatos.addEventListener('click', (event) => {
+    chatMobile()
 })
 
 const setas = document.getElementById('arrowHtml')
 setas.addEventListener('click', (event) => {
-    boxRight.classList.replace('conversa__active', 'conversa')
-    boxMain.classList.replace('main__responsive__active','main__responsive')
-    boxLeft.classList.replace('contato__container__active', 'contato__container')
+    listaDeContatosMobile()
 })
-
-
 
 
 carregarContatos()

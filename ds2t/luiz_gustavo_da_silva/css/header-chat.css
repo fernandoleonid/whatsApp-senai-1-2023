@@ -7,8 +7,8 @@
 }
 
 .foto__contato__chat{
-    width: 40px;
-    height: 40px;
+    width: auto;
+    height: 2.5rem;
     border-radius: 100%;
     margin-left: 15px;
 }
@@ -38,7 +38,7 @@
         gap: 20px;
     }
     .foto__contato__chat{
-        width: 55px;
-        height: auto;
+        width: auto;
+        height: 2.5rem;
     }
 }

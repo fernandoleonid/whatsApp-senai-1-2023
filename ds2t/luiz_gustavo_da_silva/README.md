@@ -1,5 +1,5 @@
 # WhatsApp Web Clone
-![](/ds2t/luiz_gustavo_da_silva/img/printProjeto.png)
+![](./img/printProjeto.webp)
 - [Link do site](https://luyz-gusta.github.io/whatsApp-senai-1-2023/ds2t/luiz_gustavo_da_silva/index.html)
 
 
@@ -21,7 +21,7 @@
 - [x] `Fez a autoavaliação?`
   
 # LightHouse
-![](/ds2t/luiz_gustavo_da_silva/img/lightHouse.webp)
+![](./img/lightHouse.webp)
 
 
 # Tecnologias Utilizadas
@@ -34,5 +34,9 @@
 - JSON
   
 # Autor
+- [Luiz Gustavo](https://github.com/luyz-gusta)
 
-[![](https://avatars.githubusercontent.com/u/110852235?v=4)](https://github.com/luyz-gusta)
+## Contatos
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.facebook.com/profile.php?id=100017784065363)
+[![Whatsapp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/11967593159)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/luyz.gusta/)

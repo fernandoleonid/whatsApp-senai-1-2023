@@ -130,7 +130,6 @@ const listaDeContatos = (contato, indice) => {
 const carregarContatos = () => {
     const container = document.getElementById('contatos')
     const listaContt = contatos.map(listaDeContatos)
-
     container.replaceChildren(...listaContt)
 }
 
@@ -142,19 +141,13 @@ boxContatos.addEventListener('click', (event) => {
     boxRight.classList.toggle('conversa__active')
     boxLeft.classList.toggle('contato__container__active')
     boxMain.classList.toggle('main__responsive__active')
-    
 })
 
 const setas = document.getElementById('arrowHtml')
 setas.addEventListener('click', (event) => {
-    boxMain.classList.remove()
-    boxMain.classList.add('main__responsive')
-    boxRight.classList.remove()
-    boxRight.classList.add('conversa')
-    boxLeft.classList.remove()
-    boxLeft.classList.add('contato__container')
-
-    console.log('teste')
+    boxRight.classList.replace('conversa__active', 'conversa')
+    boxMain.classList.replace('main__responsive__active','main__responsive')
+    boxLeft.classList.replace('contato__container__active', 'contato__container')
 })
 
 

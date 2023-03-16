@@ -7,8 +7,6 @@ const criarCards = (contato, indice) => {
     card.classList.add('card')
     card.id = 'card'
     card.onclick = () => carregarConversas(indice)
-    //  chageContact(indice)
-
 
     const contact = document.createElement('div')
     contact.classList.add('contact')
@@ -22,6 +20,10 @@ const criarCards = (contato, indice) => {
     const name = document.createElement('h5')
     name.classList.add('name__contact')
     name.textContent = contato.name
+
+    const tempo = document.createElement('p')
+    tempo.classList.add('tempo')
+    tempo.textContent = contato.time
 
     const description = document.createElement('p')
     description.classList.add('description__contact')
@@ -49,6 +51,7 @@ const getConversas = (mensagem) => {
 
 
     let messageSent = document.createElement('span')
+    let br = document.createElement('br')
 
     let time = document.createElement('span')
 
@@ -57,16 +60,16 @@ const getConversas = (mensagem) => {
         messageSent.classList.add('message__sent_span')
         time.classList.add('time')
         messageSent.textContent = mensagem.content
-        time.textContent = mensagem.timestamp
+        time.textContent = mensagem.time
     } else {
         DivMessageSent.classList.add('message__received')
         messageSent.classList.add('message__received_span')
         time.classList.add('time')
         messageSent.textContent = mensagem.content
-        time.textContent = mensagem.timestamp
+        time.textContent = mensagem.time
     }
 
-    DivMessageSent.append(messageSent)
+    DivMessageSent.append(messageSent, br, time)
 
     return DivMessageSent
 }

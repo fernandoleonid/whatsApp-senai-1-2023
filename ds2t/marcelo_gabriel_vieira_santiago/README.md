@@ -14,6 +14,8 @@
 
 - GitHub Repositório: [Clique aqui!](https://github.com/marcelo-g-v-s/whatsApp-senai-1-2023/tree/marcelo)
 
+- GitHub Pages: [Clique aqui!](https://marcelo-g-v-s.github.io/whatsApp-senai-1-2023/ds2t/marcelo_gabriel_vieira_santiago/)
+
 ---
 
 ## Sobre o Projeto
@@ -61,7 +63,7 @@ O design da página foi desenvolvido no Figma.
 - [x] Task Funcionalidades
 - [x] Task Responsividade
 - [x] Task ReadMe
-- [ ] Task Finalização Extra 1.0*
+- [x] Task Finalização Extra 1.0*
 
 Obs: * A Task Finalização Extra é para futuros avanços e correções de bugs.
 

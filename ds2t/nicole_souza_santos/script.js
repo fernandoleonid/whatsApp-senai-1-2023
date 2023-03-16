@@ -15,7 +15,7 @@ const criarContatos = (contatos, indice) => {
 
     const foto = document.createElement('img')
     foto.classList.add('card-icon')
-    foto.src = `/recursos/images/${contatos.image}`
+    foto.src = `./images/${contatos.image}`
 
     const cardIdentificador = document.createElement('div')
     cardIdentificador.classList.add('card-identification')
@@ -111,7 +111,7 @@ const carregarChat = (indice) => {
 
     const iconHeader = document.createElement('img')
     iconHeader.classList.add('icon-header')
-    iconHeader.src = `/recursos/images/${contatos[indice].image}`
+    iconHeader.src = `./images/${contatos[indice].image}`
 
     const cardHeader = document.createElement('div')
     cardHeader.classList.add('header-description')

@@ -1,6 +1,6 @@
 # EmpresarialCHat
 
-![Imagem do Projeto](./img/Capturar.PNG)
+![Imagem do Projeto](./img/Capturar.png)
 
 [link do projeto](https://github.com/AndreLuisConstantino/whatsApp-senai-somativa)
 
@@ -25,7 +25,7 @@
 
 ## LightHouse
 
-![Imagem nota Lighthouse](./img/lighthouse.PNG)
+![Imagem nota Lighthouse](./img/Lighthouse.png)
 
 ## Tecnologias utilizadas 
 

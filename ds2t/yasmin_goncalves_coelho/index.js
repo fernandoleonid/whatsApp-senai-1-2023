@@ -25,6 +25,12 @@ const criarContato = (contact) => {
 
     contato.append(foto, textos)
 
+    contato.addEventListener('click', () => {
+        const chat = document.getElementById('chats')
+        chat.replaceChild(carregarHeader(getIndex(contact, contatos)))
+        console.log(contact)
+    })
+
     return contato
 }
 
@@ -64,15 +70,16 @@ const carregarContatos = () => {
     containerContatos.replaceChildren(...contacts)
 }
 
-const carregarConversa = (indice) => {
+const carregarHeader = (indice) => {
     const containerChats = document.getElementById('chats')
 
     containerChats.replaceChildren(criarDadosContato(contatos[indice]))
 }
 
-const getIndex = (contact) => {
- 
+const getIndex = (contact, lista) => {
+    return lista.indexOf(contact)
 }
 
 carregarContatos()
-carregarConversa(6)
+
+// carregarConversa(3)

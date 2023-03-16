@@ -86,6 +86,41 @@
     color: rgb(128, 123, 123);
 
 }
+.spacer{
+    height: 0.5vh;
+    width: 100%;
+    background-color: #b8b8b8;
+    margin-top: 2vh;
+}
+.card{
+    display: grid;
+    grid-template-areas: 
+    'img nome'
+    'img legenda';
+    grid-template-columns: 
+    1fr 6fr;
+    width: 100%;
+    height: 7vh;
+    margin-top: 2vh;
+    border-bottom: 1px solid #d3d3d3;
+}
+.img-card{
+    margin-left: .75vw;
+    grid-area: img;
+    padding-top: 1vh;
+}
+.name-card{
+    grid-area: nome;
+    padding-top: 1vh;
+    color: #e9e9e9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.subtitle-card{
+    grid-area: legenda;
+    color: #cacaca;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
 .icon-search{
     position: absolute;
     margin-top: 1.5vh;
@@ -113,5 +148,8 @@
     .bar-text{
         width: 95vw;
         
+    }
+    .card{
+        height: 9vh;
     }
 }

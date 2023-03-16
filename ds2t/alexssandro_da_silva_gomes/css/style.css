@@ -18,11 +18,7 @@ body {
 }
 
 .section-tela-inicial {
-    display: grid;
-    grid-template-areas: 
-        "main"
-        "footer";
-    grid-template-rows: 1fr 70px;
+    display: none;
     height: 100%;
     width: 100%;
     background-color: var(--background-tela-inicial);
@@ -60,6 +56,32 @@ body {
 
 .section-tela-inicial__footer--criptography {
     font-size: 0.90rem;
+}
+
+.section-chat-box {
+    display: grid;
+    grid-template-areas:
+    "chat-box-header" 
+    "chat-box-main"
+    "chat-box-message";
+    grid-template-rows: 60px 1fr 65px;
+    height: 100%;
+    width: 100%;
+}
+
+.section-chat-box__header {
+    grid-area: chat-box-header;
+    background-color: aqua;
+}
+
+.section-chat-box__main {
+    grid-area: chat-box-main;
+    background-color: blueviolet;
+}
+
+.section-chat-box__chat-box-message {
+    grid-area: chat-box-message;
+    background-color: red;
 }
 
 .aside {

@@ -1,5 +1,5 @@
-guilherme_rufino_campos/
-# whatsap
+# DS2M - A -Guilherme Rufino
+# Portifolio
 
 
 para desktop 
@@ -9,13 +9,22 @@ para desktop
 para celular
 
 ![](./imagensReadme/readmeCell.png)
-# Ferramentas 
-+ Vscode
-+ git/ GitHub
-# Tecnologia
+
+
+
+
+# Sobre
+Site do WhatsApp. O objetivo deste projeto é colocar em prática os conhecimentos adquiridos no curso do SENAI Jandira na criação de web sites e adquirir conhecimento sobre outras coisas das quais não foram abordadas no curso.
+
+
+
+# Tecnologias
 + HTML
 + CSS
-+ Javascripy
++ Responsividade
++ JS
++ Markdown
++ JSON
 
 
 

@@ -5,12 +5,14 @@
 }
 
 .message__sent {
-    background-color: #d9fdd3;
-    max-width: max-content;
+    /* background-color: #d9fdd3; */
+    /* max-width: max-content; */
     padding: 5px;
     border-radius: 10px 10px 10px 10px;
     line-height: 1.2;
-    margin: 20px 0 20px 0;
+    margin: 20px 20px 20px 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .message__received_span {
@@ -80,6 +82,7 @@ body {
 
 .container-message-submissions {
     height: calc(100vh - 100px);
+    background: url();
 }
 
 .chatlist {

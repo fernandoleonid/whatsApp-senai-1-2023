@@ -9,6 +9,7 @@ const criarContato = (contato, indice) => {
     contatos.id = 'contato'
     contatos.onclick = () => carregarConversas(indice)
     // contato.onclick = () => mobile(indice)
+    // fgjdfg
 
 
 

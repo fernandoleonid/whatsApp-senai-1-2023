@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon-whatsapp.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/30058942d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/body_left.css">
+    <link rel="stylesheet" href="./css/body_right.css">
+    <link rel="stylesheet" href="./css/chatbox.css">
+    <script src="./js/index.js" defer type="module"></script>
+    <script src="./js/theme.js" defer type="module"></script>
+    <title>WhatsApp Web</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="body_left" id="body_left">
+
+            <!-- Header do WhatsApp (Comunidades, Status, Nova Conversa e mais opções) -->
+            <div class="header_left" id="header_left">
+                <div class="user_profile">
+                    <img title="Imagem de perfil" src="./img/profile.jpg" alt="Imagem de perfil do usuário" class="img_profile">
+                </div>
+                <ul class="nav_icons" id="nav_icons_left">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+
+                    <label class="label" for="checkbox">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div title="Alternar entre tema claro e escuro" class="ball"></div>
+                    </label>
+
+                    <li><i title="Comunidades" class="fa-solid fa-users"></i></li>
+                    <li><i title="Status" class="fas fa-spinner"></i></li>
+                    <li><i title="Nova conversa" class="fa-solid fa-message"></i></li>
+                    <li><i title="Mais opções" class="fa-solid fa-ellipsis-vertical"></i></li>
+                </ul>
+            </div>
+
+            <!-- Barra de pesquisa de chats ou grupos -->
+            <div class="search_chat">
+                <div>
+                    <input type="text" placeholder="Pesquisar ou começar uma nova conversa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <i title="Filtro de conversas não lidas" class="fa-solid fa-filter"></i>
+            </div>
+
+            <!-- Lista das conversas e grupos -->
+            <ul class="chat_list" id="chat_messages">
+                <!-- <div class="chat_active">
+                    <img src="./img/contact1.png" class="img_contact" alt="Imagem de perfil dos contatos">
+                    <div class="chat_details">
+                            <span class="name_contact">Ana Maria</span>
+                            <span class="message_contact">Frontend Developer</span>
+                        <div class="time">
+                            18:30
+                        </div>
+                    </div>
+                </div> -->
+            </ul>
+        </div>
+
+        <!-- Container principal para exibir a foto e a mensagem ao entrar no app -->
+        <div class="container_home" id="container_right_home">
+            <div class="container_home_resources">
+                <img src="./img/notebook_phone_wpp.png" alt="Foto de um notebook e um celular, original do WhatsApp."
+                    class="img_home">
+                <div class="message_home">
+                    <p class="title_home">WhatsApp Web</p>
+                    <div class="description_home">
+                        <p class="first_message_home">Envie e receba mensagens sem precisar manter seu celular conectad
+                            á internet.</p>
+                        <p class="second_message_home">Use o WhatsApp em até quatro aparelhos conectados e um celular ao
+                            mesmo tempo.</p>
+                    </div>
+                    <footer class="footer_home">
+                        <p class="footer_message"> <i class="fa-solid fa-lock"></i> Protegido com a criptografia de
+                            ponta a ponta</p>
+                    </footer>
+                </div>
+            </div>
+
+            <!-- <div class="header_right" id="header_right">
+                <div class="contact_right_info">
+                        <img src="./img/contact1.png" alt="Imagem de perfil do contato no header de conversas" class="img_contact">
+                    </div>
+                    <div class="contact_text">
+                        <h4 class="name_contact_right">Ana Maria</h4>
+                        <span class="status_contact_right">online</span>
+                    </div> 
+
+                <ul class="nav_icons_right">
+                    <li><i title="Pesquisar..." class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><i title="Mais opções" class="fa-solid fa-ellipsis-vertical"></i></li>
+                </ul>
+                
+                </div>
+            </div> -->
+
+            <!-- Caixa de mensagens -->
+            <!-- <div class="chatbox">
+                <div class="my_message">
+                    <span class="text_myMessage">teste</span>
+                    <span class="hour_myMessage">02:22</span>
+                </div>
+                <div class="friend_message">
+                    <span class="text_friendMessage">opa</span>
+                    <span class="hour_friendMessage">02:22</span>
+                </div>     
+            </div> -->
+
+            <!-- Input da caixa de mensagens -->
+            <div class="chat_input_none" id="chatInput">
+                <i title="Emotes" class="fa-regular fa-face-smile"></i>
+                <i title="Anexar" class="fa-solid fa-paperclip"></i>
+                <input class="input_message" title="Escreva sua mensagem" type="text" placeholder="Mensagem">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+    </div>
+    <a href="#body_left" class="back" title="Voltar para conversas">
+        <i class="fas fa-angle-double-up" aria-hidden="true"></i>
+    </a>
+
+</body>
+
+</html>

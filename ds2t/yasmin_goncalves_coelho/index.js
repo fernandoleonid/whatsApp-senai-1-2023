@@ -34,7 +34,7 @@ const criarContato = (contact) => {
     return contato
 }
 
-const criarDadosContato = (contact) => {
+const criarHeaderContato = (contact) => {
     const container = document.createElement('div')
     container.classList.add('chats__info')
 
@@ -73,7 +73,7 @@ const carregarContatos = () => {
 const carregarHeader = (indice) => {
     const containerChats = document.getElementById('chats')
 
-    containerChats.replaceChildren(criarDadosContato(contatos[indice]))
+    containerChats.replaceChildren(criarHeaderContato(contatos[indice]))
 }
 
 const getIndex = (contact, lista) => {
@@ -82,4 +82,3 @@ const getIndex = (contact, lista) => {
 
 carregarContatos()
 
-// carregarConversa(3)

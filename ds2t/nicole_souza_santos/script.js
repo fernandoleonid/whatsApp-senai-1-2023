@@ -106,7 +106,8 @@ const carregarChat = (indice) => {
     plane.style.display = 'none'
     messagesChat.style.display = 'flex'
 
-    const header = document.createElement('headerContact')
+    const header = document.createElement('div')
+    header.setAttribute('id', 'headerContact')
     header.classList.add('header-contact')
 
     const iconHeader = document.createElement('img')

@@ -58,6 +58,7 @@ const criarHeaderContato = (contact) => {
     info__texts.append(nome, descricao)
     info__contact.append(foto, info__texts)
 
+
     return container
 
 }

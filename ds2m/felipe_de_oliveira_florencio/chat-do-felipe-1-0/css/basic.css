@@ -1,0 +1,19 @@
+:root{
+    --background-color : #090909;
+    --header-color : #00000025;
+    --pure-white: #FFFFFF;
+    --body-grey: #1E1E1E;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background: #000000;
+    /* display: flex; */
+    padding-left: 0;
+}

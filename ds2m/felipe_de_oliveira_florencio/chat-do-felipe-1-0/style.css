@@ -1,0 +1,132 @@
+
+
+header{
+    padding: 1rem;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.chat{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+.main-header{
+    height: 97px;
+    display: flex;
+    justify-content: space-between;
+    /* width: 534px; */
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    gap: 16px;
+}
+
+.t-border-and-color{
+    background-color: var(--header-color);
+    border: 1px solid #202020;
+    border-radius: 10px;
+}
+.t-align-section { 
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}   
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #99FFAF;
+}
+/* .logo__image{
+
+} */
+.profile{
+    display: flex;
+}
+.profile__image{
+    height: 90%;
+    width: 90%;
+}
+.profile__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--pure-white);
+    transform: rotate(-90deg);
+}
+
+.chat__gretting{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+}
+
+
+.chat__footer{
+    font-family: 'Montserrat';
+    color: #FFFFFF80;
+}
+.chat__header{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    height: 97px;
+    width: 50vw;
+}
+
+.chat__space{
+   height: 75%;
+   width: 90%;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}  
+.header__button{
+    background-color : none;
+}
+/* @media (max-width:768px){
+    body{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .home{
+        z-index: 1;
+    }
+    .chat{
+        position: absolute;
+        transform: translateX(100%);
+        animation-delay: 10ms;
+        height: 100vh;
+        z-index: 1;
+    }
+    .home.load .chat{
+        grid-area: home;
+    }
+    
+    .main-header{
+        width: 100vw;
+    }
+    
+} */

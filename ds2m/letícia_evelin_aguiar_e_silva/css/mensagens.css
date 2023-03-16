@@ -37,10 +37,10 @@
     align-items: end;
     border-radius: 8px 0 8px 8px; 
     box-shadow: 1px 1px 7px grey;
-    max-width: 35vw; 
-    width: 85%;
+    max-width: 55vw; 
+    width: 45%; 
     height: auto; 
-    margin: 30px 330px ;
+    margin: 50px 450px ;
      
 }
 
@@ -56,7 +56,7 @@
     width: fit-content;
     height: auto;
     align-items: center;
-    margin: 20px 30px;
+    margin: 20px 50px;
 }
 
 .digitar__mensagem{

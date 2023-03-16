@@ -83,15 +83,6 @@ main {
     gap: 36px;
 }
 
-.container__mensagens {
-    background-color: #393837;
-    height: 95%;
-    width: 45vw;
-    position: absolute;
-    left: 33%;
-    top: 2%;
-    border-radius: 20px;
-}
 
 .lista__perfil {
     display: flex;
@@ -124,24 +115,83 @@ main {
 .contatos {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     padding-left: 12px;
+    width: 100%;
+    
 }
 
 .contato {
-    height: 60px;
-    width: 350px;
+    height: 25%;
+    width: 100%;
     background-color: #393837;
     border-radius: 10px;
     box-shadow: 1px 3px 2px 0px #00A88433;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.contato:hover {
+    background-color: #4e4d4b;
+}
+
+.contato:active {
+    background-color: #4e4d4b;
+}
+
+.contato__img {
+    height: 50px;
+    
+    border-radius: 25px;
     
 }
+
+.descricao__contato {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.nome__contato {
+    font-weight: 700;
+    font-size: 1rem;
+    align-self: flex-start;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.status__contato {
+    position: relative;
+    color: #FFFFFF;
+    font-size: 0.7rem;
+    top: 35%;
+    left: -39%;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.hora {
+    font-size: 1rem;
+    color: #FFFFFF;
+    position: relative;
+
+}
+
 
 .barra__separacao__listas {
     width: 18vw;
     height: 2px;
+    top: 240px;
     background-color: #FFFFFF;
-    position: relative;
+    position: absolute;
     
 }
 
@@ -177,8 +227,217 @@ main {
     font-weight: 700;
 }
 
+.botao__arquivadas:hover {
+    color: #b9b9b9;
+    border-color: #1faf90;
+}
+
 
 .fas {
     font-size: 1.6rem;
     color: #00A884;
 }
+
+.fas:hover {
+    color: #10614f;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #00A884;
+}
+
+.icon:hover {
+    color: #10614f;
+    cursor: pointer;
+}
+
+.container {
+    background-color: #393837;
+    height: 80%;
+    width: 45vw;
+    position: relative;
+    border-radius: 20px;
+}
+
+.container__mensagens {
+    background-color: #393837;
+    height: 95%;
+    width: 45vw;
+    position: absolute;
+    left: 33%;
+    top: 2%;
+    border-radius: 20px;
+  
+  
+}
+
+.top__mensagens {
+    height: 92px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #00A884;
+    display: flex;
+    padding: 10px;
+    gap: 15px;
+    align-items: center;
+}
+
+.descricao__top__mensagens {
+    color: #ffffff;
+}
+
+.nome__contato__top {
+    font-size: 1.2rem;
+}
+
+.status__mensagem {
+    font-size: 0.9rem;
+}
+
+.img__mensagens {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.mensagens {
+    display: flex;
+    height: 97%;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 15px;
+    padding-right: 50px;
+    gap: 4%;
+    flex-direction: column;
+    border-radius: 20px;
+    background-image: url(../img/13162448904561\ 1\ \(1\).png);
+}
+
+.mensagem__esquerda {
+    background-color: #8c948c;
+    color: #ffffff;
+    align-self: flex-start;
+    border-radius: 8px;
+    height: auto;
+    width: 50%;
+    text-align: start;
+    font-size: 1rem;
+    display: grid;
+    align-content: center;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.hora_esquerda {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: end;
+}
+
+.mensagem__direita {
+    display: grid;
+    align-content: center;
+    padding: 5px;
+    align-self: flex-end;
+    background-color: #55ad5a;
+    color: #ffffff;
+    border-radius: 8px;
+    height: auto;
+    width: 50%;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    text-align: end;
+}
+
+.hora_direita {
+    font-size: 0.8rem;
+    width: 100%;
+    position: relative;
+    text-align: end;
+}
+
+.mensagem {
+    width: 100%;
+}
+
+.entrada__mensagens {
+    height: 10vh;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #74716F;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input__mensagens {
+    width: 80%;
+    height: 70%;
+    border: 2px solid;
+    border-color: #10614f;
+    border-radius: 30px;
+    background-color: #4e4d4b;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding-left: 10px;
+}
+
+
+.temas {
+    background: #313237;
+    height: 10vh;
+    display: flex;
+    width: 17vw;
+    position: relative;
+    left: 30%;
+    top: 10%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    box-shadow: 0px 4px 4px rgba(16, 94, 0, 0.25);
+    border-radius: 20px;
+}
+
+.botao_azul_claro {
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(90deg, #0500FF 0%, #3C00FF 42.71%, #7000FF 100%);
+    border: 2px solid;
+    border-color: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.botao_verde_escuro {
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(90deg, #00DB71 0%, #0CF2C4 48.44%, #0CD7E8 100%);
+    border: 2px solid;
+    border-color: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+   
+}
+
+.back {
+    display: none;
+}
+
+.icon_back {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+    z-index: 1000;
+}
+
+

@@ -4,4 +4,4 @@
 
 | Nome          | Código                        | Site                              |
 | --------------| ------------------------------|-----------------------------------|
-| [Camila Pinheiro](https://github.com/camilapinh3iro)   | [![](https://skillicons.dev/icons?i=js)](./camila_alves_pinheiro/) | [<img src="./camila_alves_pinheiro/img/screenshot.png" width="300">](https://camilapinh3iro.github.io/whatsApp-senai-1-2023/ds2m/camila_alves_pinheiro/)|
+| [Camila Pinheiro](https://github.com/camilapinh3iro)   | [![](https://skillicons.dev/icons?i=js)](./camila_alves_pinheiro/) | [<img src="./camila_alves_pinheiro/img/screenshot_desktop.png" width="300">](https://camilapinh3iro.github.io/whatsApp-senai-1-2023/ds2m/camila_alves_pinheiro/)|

@@ -35,6 +35,8 @@ const criarContato = contato => {
   return card
 }
 
+let card2
+
 const carregarContatos = () => {
   const container = document.getElementById('container')
   const cards = contatos.map(criarContato)
@@ -69,6 +71,7 @@ const carregarContatos = () => {
       const messages__description = document.createElement('span')
       messages__description.classList.add('messages__description')
       messages__description.textContent = contatos[card.id].description
+
 
       //APPEND
       menuBotao.append(imgMenu)
@@ -127,7 +130,7 @@ const carregarContatos = () => {
           alignOther.append(sendOther, messageOther, dateOther)
           cardDaMensagem.append(alignOther)
         }
-        contentMessage.appendChild(cardDaMensagem)
+        contentMessage.replaceChildren(cardDaMensagem)
       })
 
       const containerMessage = document.getElementById('inside-message')
@@ -148,14 +151,17 @@ const carregarContatos = () => {
           containerMessage.style.display = 'block'
           container.style.display = 'none'
           getMedia.style.display = 'none'
-        }
+               }
       } else {
         containerMessage.style.display = 'block'
         container.style.display = 'block'
         getMedia.style.display = 'block'
       }
+    
     }
+
   })
 }
 
 carregarContatos()
+

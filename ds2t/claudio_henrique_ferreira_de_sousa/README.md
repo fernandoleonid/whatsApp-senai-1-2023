@@ -35,6 +35,10 @@ O intuito era colocar em prática os conhecimentos adquiridos em sala, consumind
 - [X] Existe um link do autor do projeto no README?
 - [X] `Fez a autoavaliação?`
 
+# LightHouse
+
+![](./recursos/img/lighthouse.png)
+
 # Autor
 
 - [Claudio Sousa](https://github.com/ClaudioSousa44)

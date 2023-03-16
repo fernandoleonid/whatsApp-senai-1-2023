@@ -14,7 +14,8 @@ const criarContato = (contato, indice) => {
     
     const foto = document.createElement('img')
     foto.classList.add('contato__img')
-    foto.src = `../img/${contato.image}`
+    foto.src = `../img/${contatos[contato].image}`
+    foto.setAttribute("alt", "foto_de_perfil")
 
     const titulo = document.createElement('h5')
     titulo.classList.add('nome__contato')

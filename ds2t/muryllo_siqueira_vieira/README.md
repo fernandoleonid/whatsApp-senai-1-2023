@@ -10,6 +10,8 @@ O objetivo desse projeto é colocar em prática os conhecimentos adquiridos no c
 
 ----
 
+## Auto-Avaliação
+
 [X] Codificou o app conforme o original?<br>
 [ ] Nomeou as classes CSS utilizando o padrão BEM?<br>
 [X] O app está responsivo?<br>
@@ -29,11 +31,11 @@ O objetivo desse projeto é colocar em prática os conhecimentos adquiridos no c
 ----
 
 ## Tecnologias utilizadas 
--HTML
--CSS
--JAVASCRIPT
--JSON
--RESPONSIVIDADE
+- HTML <br>
+- CSS <br>
+- JAVASCRIPT <br>
+- JSON <br>
+- RESPONSIVIDADE
 
 ---
 ## Autor

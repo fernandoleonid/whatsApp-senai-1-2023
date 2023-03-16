@@ -1,5 +1,5 @@
-#<div align="center"><h1 style="color:green">DS2M - B - MATHEUS SIQUEIRA SILVA</h1></div>
-#<div align="center"><h1 style="color:green">WhatsApp</h1></div>
+<div align="center"><h1 style="color:green">DS2M - B - MATHEUS SIQUEIRA SILVA</h1></div>
+<div align="center"><h1 style="color:green">WhatsApp</h1></div>
 
 ## <h2>[Clique aqui](https://ma7hs.github.io/atividade-senai-whatsapp/ds2m/matheus_siqueira_silva) para acessar o site</h2>
 <img>![image](https://user-images.githubusercontent.com/87048682/225513500-4fd21677-67cc-4d27-8473-fee0ac5363fb.png) </img>

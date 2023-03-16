@@ -93,7 +93,6 @@ const loadingContact = () => {
 
 
             if(width <= 640){
-                const mediaQuery = window.matchMedia('(max-width:640px)')
                 const getClickContainerChat = document.getElementById('container__chat')
                 getClickContainerChat.classList.add('container__chat__conversation')
                 const getChat = document.getElementById('chat')
@@ -190,10 +189,20 @@ const backPage = () => {
     return iconBack
 }
 
+const tryingClear = () =>{
+    if(width <= 640){
+        const allUser = document.getElementById("chat")
+        allUser.remove()
+    }
+}
+
 const initApp = () => {
     const app = loadingContact();
     return app;
 }
 
 initApp()
+tryingClear()
+
+
 

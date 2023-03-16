@@ -93,3 +93,11 @@ okButton.addEventListener('click', function() {
   }
   closeTemaModal();
 });
+
+const back2 = document.getElementById('back2')
+const main = document.getElementById('conteudo')
+
+back2.addEventListener('click', (event) => {
+  main.classList.remove('eixoX')
+  main.classList.add('eixoX2')
+});

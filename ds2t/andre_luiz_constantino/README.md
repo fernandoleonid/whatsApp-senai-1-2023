@@ -35,4 +35,4 @@
 - JSON
 
 ## Autora 
-Meu nome é Bianca Leão e sou estudante de desenvolvimento de sistemas no SENAI Jandira. Eu tenho grande interesse em desenvolvimento web e fiquei muito feliz em participar do projeto clone do WhatsApp Web proposto pelo professor Fernando Leonid. Se quiser conferir meus outros projetos, fique à vontade para acessar meu perfil no GitHub: [AndreLuis](https://github.com/AndreLuisConstantino)
+Meu nome é André Luiz e sou estudante de desenvolvimento de sistemas no SENAI Jandira. Eu tenho grande interesse em desenvolvimento web e fiquei muito feliz em participar do projeto clone do WhatsApp Web proposto pelo professor Fernando Leonid. Se quiser conferir meus outros projetos, fique à vontade para acessar meu perfil no GitHub: [AndreLuis](https://github.com/AndreLuisConstantino)

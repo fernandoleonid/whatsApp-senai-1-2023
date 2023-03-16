@@ -23,7 +23,7 @@ Confira o [projeto](https://nicanico.github.io/whatsApp-senai-1-2023/ds2t/nicole
 - [X] Consumiu o JSON para mostrar as mensagens de cada contato?
 - [X] Foi criado variáveis pensando nas boas praticas?
 - [X] Foi criado funções pensando em responsabilidade única?
-- [ ] Foi criado funções pensando no principio de funções puras?
+- [X] Foi criado funções pensando no principio de funções puras?
 - [X] O texto do README é objetivo e sucinto?
 - [X] O screenshot mostra um pouco do projeto?
 - [X] Existe um link para o github page no README?

@@ -43,7 +43,8 @@ const loadingContact = () => {
         contact.onclick = () => {
             const conversation = document.getElementById('chat')
             conversation.classList.add('chat__user')
-            conversation.classList.add('display__block')
+            conversation.classList.add('display__block__msg')
+
             function addChilds() {
                 for (let i = 0; i < removedChilds.length; i++) {
                     conversation.appendChild(removedChilds[i])
@@ -101,18 +102,22 @@ const loadingContact = () => {
 
             const getClickContainerChat = document.getElementById('container__chat')
             getClickContainerChat.classList.add('container__chat__conversation')
-            getClickContainerChat.classList.add('display__block')
+           
             const getChat = document.getElementById('chat')
             const navegation = document.getElementById('navegation')
                 backIcon.onclick = () => {
-                    getChat.classList.remove('display__block')
-                    getChat.classList.add('display__none')
-                    navegation.classList.add('display__block')}
+                    
+                    getChat.classList.remove('display__block__msg')
+                    getChat.classList.add('display__none__msg')
+                    navegation.classList.add('display__block')
+                    navegation.classList.remove('display__none')
+                }
+
                 
                 getClickContainerChat.onclick = () => {
                     navegation.classList.add('display__none')
                     navegation.classList.remove('display__block')
-                    getChat.classList.add('display__block')}
+                    getChat.classList.add('display__block__msg')}
         
                 
         }

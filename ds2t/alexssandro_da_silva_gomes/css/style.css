@@ -71,12 +71,73 @@ body {
 
 .section-chat-box__header {
     grid-area: chat-box-header;
-    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 16px;
+    flex: 40px 1 90px;
+    background-color: var(--input-color-grey);
 }
 
-.section-chat-box__main {
+.section-chat-box--user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.section-chat-box--user--pic {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    padding-right: 15px;
+}
+
+.section-chat-box--user--pic img {
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+}
+
+.section-chat-box--user--name {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.section-chat-box--user--name p {
+    place-self: center start;
+}
+
+.section-chat-box--user--icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.section-chat-box--user--icons span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.section-chat-box--user--icons i {
+    font-size: 18px;
+    justify-content: center;
+    align-self: center;
+}
+
+.section-chat-box__main {   
     grid-area: chat-box-main;
-    background-color: blueviolet;
+    background-image: url(../img/image.webp);
 }
 
 .section-chat-box__chat-box-message {

@@ -1,7 +1,7 @@
 # <div align="center"><h1 style="color:green">WhatsApp</h1></div>
 
 ## [Clique aqui](https://ma7hs.github.io/atividade-senai-whatsapp/ds2m/matheus_siqueira_silva) para acessar o site
-## (https://user-images.githubusercontent.com/87048682/225513269-a5704bc0-c1aa-4b99-9882-ede9bad02654.png)
+## [Image](https://user-images.githubusercontent.com/87048682/225513269-a5704bc0-c1aa-4b99-9882-ede9bad02654.png)
 
 
 <div>   

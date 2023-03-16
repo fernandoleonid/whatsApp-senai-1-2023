@@ -21,7 +21,7 @@ body {
     grid-template-columns: 480px 1fr;
 }
 
-.container_intro{
+.container_chat{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +39,7 @@ body {
     grid-area: container_mensagens;
     position: relative;
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     background-color: #efeae2;
@@ -177,7 +178,7 @@ body {
 }
 .container_mensagens_direita{
     display: flex;
-    height: 106%;
+    height: 80vh;
     flex-direction: column;
     padding: 16px;
     gap: 16px;
@@ -357,7 +358,7 @@ body {
 
     .container_mensagens{
         width: 100vw;
-        height: 100vh;
+        height: 92vh;
     }
 
     .container_contatos{

@@ -36,8 +36,8 @@ const criarHeader = (indice) => {
 
 const criarMensagem = (indice) => {
     const containerMensagensDireita = document.getElementById('id_container')
-    containerMensagensDireita.classList.add('container_mensagens_direita')
     containerMensagensDireita.classList.remove('container_direito_none')
+    containerMensagensDireita.classList.add('container_mensagens_direita')
 
     const chatBox = document.createElement('div')
     chatBox.classList.add('chat_box')
@@ -97,7 +97,7 @@ const criarContato = (contato, indice) => {
     const cardContato = document.createElement('div')
     cardContato.classList.add('chat_list')
 
-    cardContato.addEventListener('click', (event) => {
+    cardContato.addEventListener('click', () => {
         var container = document.getElementById('container_chat')
         container.replaceChildren(criarHeader(indice), criarMensagem(indice), carregarBarraDeMensagem())
     })
@@ -147,4 +147,5 @@ const carregarBarraDeMensagem = () => {
     barraMensagem.classList.add('footer_direito')
     return footer
 }
+
 carregarContatos()

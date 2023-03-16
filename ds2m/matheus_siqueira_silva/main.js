@@ -4,8 +4,10 @@ import {
     contatos
 } from "./recursos/contatos.js";
 
-const width = window.screen.width
+var removedChilds = []
 let i = 0;
+var width = window.matchMedia('(min-width:700px)')
+var widthMobile = window.matchMedia('(max-width:640px)')
 
 const createUsers = (contato) => {
     const chat = document.createElement('div')
@@ -41,9 +43,16 @@ const loadingContact = () => {
         contact.onclick = () => {
             const conversation = document.getElementById('chat')
             conversation.classList.add('chat__user')
+            conversation.classList.add('display__block')
+            function addChilds() {
+                for (let i = 0; i < removedChilds.length; i++) {
+                    conversation.appendChild(removedChilds[i])
+                }
+            }
+
             const headerChat = document.createElement('div')
             headerChat.classList.add('chat__header')
-7
+
             const user = document.createElement('div')
             user.classList.add('user')
 
@@ -55,9 +64,7 @@ const loadingContact = () => {
             name.classList.add('user__name__chat')
             name.textContent = contatos[contact.id].name
 
-            const options = document.getElementById('options')
-            options.classList.add('options')
-
+            const options = createOptionsHeader();
             const backIcon = backPage();
 
             user.append(img, name)
@@ -92,25 +99,22 @@ const loadingContact = () => {
             chat.append(messages, box)
 
 
-            if(width <= 640){
-                const getClickContainerChat = document.getElementById('container__chat')
-                getClickContainerChat.classList.add('container__chat__conversation')
-                const getChat = document.getElementById('chat')
-                const navegation = document.getElementById('navegation')
+            const getClickContainerChat = document.getElementById('container__chat')
+            getClickContainerChat.classList.add('container__chat__conversation')
+            getClickContainerChat.classList.add('display__block')
+            const getChat = document.getElementById('chat')
+            const navegation = document.getElementById('navegation')
                 backIcon.onclick = () => {
                     getChat.classList.remove('display__block')
                     getChat.classList.add('display__none')
-                    navegation.classList.add('display__block')
-                }
+                    navegation.classList.add('display__block')}
+                
                 getClickContainerChat.onclick = () => {
-                    const createConversation = document.createElement('div')
-                    createConversation.classList.add('chat__user')
                     navegation.classList.add('display__none')
                     navegation.classList.remove('display__block')
-                    getChat.classList.add('display__block')
-                }
-            }
-            
+                    getChat.classList.add('display__block')}
+        
+                
         }
     })
 }
@@ -150,33 +154,71 @@ const createWritteBox = () => {
     return writting
 }
 
+const createOptionsHeader = () => {
+    const options = document.createElement('div')
+    options.classList.add('options')
+
+    const iconsOptions__ellipsis = document.createElement('a')
+    iconsOptions__ellipsis.innerHTML = '<i class="ellipsis fas fa-ellipsis-v"></i>'
+
+    const iconsOptions__search = document.createElement('a')
+    iconsOptions__search.innerHTML = '<i class="fas fa-search"></i>'
+
+    options.append(iconsOptions__ellipsis, iconsOptions__search)
+    return options
+}
+
 const editingColorsIcon = (i) => {
     i.style.color = '#637d95'
 }
 
 const editingStyleMe = (span) => {
-    span.style.display = 'flex'
-    span.style.alignSelf = 'flex-end'
-    span.style.alignItems = 'center'
-    span.style.backgroundColor = '#d9fdd3'
-    span.style.height = '50px'
-    span.style.width = '50%'
-    span.style.border = '1px solid transparent'
-    span.style.borderRadius = '40px'
-    span.style.padding = '20px'
-
+    if (widthMobile.matches) {
+        span.style.display = 'flex'
+        span.style.alignSelf = 'flex-end'
+        span.style.alignItems = 'center'
+        span.style.backgroundColor = '#d9fdd3'
+        span.style.height = '100px'
+        span.style.width = '50%'
+        span.style.border = '1px solid transparent'
+        span.style.borderRadius = '40px'
+        span.style.padding = '20px'
+    } else {
+        span.style.display = 'flex'
+        span.style.alignSelf = 'flex-end'
+        span.style.alignItems = 'center'
+        span.style.backgroundColor = '#d9fdd3'
+        span.style.height = '50px'
+        span.style.width = '50%'
+        span.style.border = '1px solid transparent'
+        span.style.borderRadius = '40px'
+        span.style.padding = '20px'
+    }
 }
 
 const editingStyleOther = (i) => {
-    i.style.display = 'flex'
-    i.style.alignSelf = 'flex-start'
-    i.style.alignItems = 'center'
-    i.style.backgroundColor = 'white'
-    i.style.height = '50px'
-    i.style.width = '50%'
-    i.style.border = '1px solid transparent'
-    i.style.borderRadius = '40px'
-    i.style.padding = '20px'
+    if (widthMobile.matches) {
+        i.style.display = 'flex'
+        i.style.alignSelf = 'flex-start'
+        i.style.alignItems = 'center'
+        i.style.backgroundColor = 'white'
+        i.style.height = '100px'
+        i.style.width = '50%'
+        i.style.border = '1px solid transparent'
+        i.style.borderRadius = '40px'
+        i.style.padding = '20px'
+    } else {
+        i.style.display = 'flex'
+        i.style.alignSelf = 'flex-start'
+        i.style.alignItems = 'center'
+        i.style.backgroundColor = 'white'
+        i.style.height = '50px'
+        i.style.width = '50%'
+        i.style.border = '1px solid transparent'
+        i.style.borderRadius = '40px'
+        i.style.padding = '20px'
+    }
+
 }
 
 const backPage = () => {
@@ -191,22 +233,16 @@ const backPage = () => {
     return iconBack
 }
 
-const tryingClear = () =>{
-    let pixelsSize = "max-width:640px"
-    let mediaQuery = window.matchMedia(pixelsSize)
-    if(width <= mediaQuery){
-        const allUser = document.getElementById("chat")
-        allUser.remove()
-    }
-}
-
 const initApp = () => {
     const app = loadingContact();
+    const fixErr = document.getElementById("chat")
+
+    while (fixErr.firstChild) {
+        removedChilds.push(fixErr.removeChild(fixErr.firstChild))
+    }
+
     return app;
 }
 
 initApp()
-tryingClear()
-
-
 

@@ -1,6 +1,6 @@
 # WhatsApp Clone
 ![Imagem do Projeto](./recursos/img/capturar.png)
-[Clique aqui](adiconar-link) para conhecer o site
+[Clique aqui](https://ingryd16.github.io/whatsApp-senai-1-2023/ds2m/ingryd_shirlley_da_silva_ribeiro/) para conhecer o site
 
 ## Sobre
 Site feito para desenvolver a interface do usuário de um projeto de chat interno para uma empresa. A empresa decidiu que a interface deverá ser um clone do WhatsApp, pois a grande maioria dos funcionários já está acostumada a utilizá-lo em seu dia a dia. O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em aula no curso de Desenvolvimento de Sistemas do SENAI Jandira.

@@ -1,6 +1,6 @@
 # <div align="center"><h1 style="color:green">WhatsApp</h1></div>
 
-## [Clique aqui](https://fernandoleonid.github.io/whatsApp-senai-1-2023/ds2m/vinicius_nunes_de_oliveira) para acessar o site
+## [Clique aqui](https://viniciusnunes137.github.io/whatsApp-senai-1-2023/ds2m/vinicius_nunes_de_oliveira/) para acessar o site
 
 <div>   
 <h1>SUMÁRIO</h1>

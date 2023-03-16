@@ -1,0 +1,131 @@
+:root {
+    --header-color: #ededed;
+    --search-chat-color: #eeeeeea9;
+    --search-chat-text: #bbb;
+    --chatlist-color: #fff;
+    --chatlist-hover-color: #e9edef;
+    --search-bar-left-color: #fff;
+    --body-right-color: #efeae2;
+    --chat-mymessage-color: #d9fdd3;
+    --chat-friendmessage-color: #fff;
+    --text-mymessage-color: #000;
+    --text-friendmessage-color: #000;
+    --hour-mymessage-color: #000000;
+    --hour-friendmessage-color: #000;
+    --container-initial-color: #F0F2F5;
+    --container-initial-resources-color: #41525D; 
+    --nav-icons-left-color: #51585c;
+    --text-contacts-color: #000;
+    --text-description-color: #727272;
+    --chat-input-color: #e9edef;
+    --input-chat-input-color: #fff;
+}
+
+.container {
+    display: grid;
+    width: 85vw;
+    height: 95vh;
+    background-color: #ffffff;
+    grid-template-areas:
+        "body_left body_right";
+    grid-template-columns: 500px 1fr;
+}
+
+.container_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container-initial-color);
+    border-bottom: 5px solid #00A884;
+}
+
+.img_home {
+    padding-left: 50px;
+}
+
+.container_home_resources {
+    font-size: 32px;
+    color: var(--container-initial-resources-color);
+}
+
+.message_home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.description_home {
+    font-size: 14px;
+    color: var(--container-initial-resources-color);
+    text-align: center;
+}
+
+.footer_home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--container-initial-resources-color);
+}
+
+.back {
+    display: none;
+}
+
+/* TABLET */
+@media (max-width:960px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas:
+            "body_left"
+            "body_right";
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+    }
+
+    .body_right {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .body_left {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .search_chat {
+        width: 100vw;
+    }
+
+    .container_home_resources {
+        display: none;
+    }
+
+    .back {
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        background-color: #00A884;
+        display: grid;
+        place-content: center;
+        color: black;
+        border-radius: 50%;
+        z-index: 13;
+        right: 8px;
+        bottom: 90px;
+        opacity: .2;
+        transition: opacity 0.5s;
+    }
+
+    .back:hover {
+        opacity: 1;
+    }
+}
+
+/* MOBILE */
+@media (max-width:640px) {}

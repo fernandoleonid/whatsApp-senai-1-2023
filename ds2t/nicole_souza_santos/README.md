@@ -2,6 +2,16 @@
 
 Projeto criado como atividade somativa para as aulas de PWFE. O objetivo é consumir um arquivo json para carregar todos os contatos.
 
+## Protótipo Figma
+
+![](./img-pessoal/WhatsApp-Figma.PNG)
+
+O projeto inicialmente conta com apenas uma versão de tema dark nos tons preto e variações de roxo.
+
+## Link do Projeto
+
+Confira o [projeto](https://nicanico.github.io/whatsApp-senai-1-2023/ds2t/nicole_souza_santos/#chatMensagens) na web.
+
 ## Auto-avaliação
 
 - [X] Codificou o app conforme o original?
@@ -20,20 +30,11 @@ Projeto criado como atividade somativa para as aulas de PWFE. O objetivo é cons
 - [X] Existe um link do autor do projeto no README?
 - [X] Fez a autoavaliação?
 
-## Protótipo Figma
-
-![](./img-pessoal/WhatsApp-Figma.PNG)
-
-O projeto inicialmente conta com apenas uma versão de tema dark nos tons preto e variações de roxo.
-
-## Link do Projeto
-
-Confira o [projeto](https://nicanico.github.io/whatsApp-senai-1-2023/ds2t/nicole_souza_santos/#chatMensagens) na web.
-
 ## status e data de entrega
 
 > Entrega: 02/03
-> Status do projeto: Concluido - tendo ajustes
+
+> Status do projeto: Concluido - tendo ajustes ✔️
 
 ## Autor(a)
 

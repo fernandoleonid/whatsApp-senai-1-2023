@@ -29,6 +29,7 @@ const criaCard = (contato, indice) => {
     foto.classList.add('card__image')
     foto.classList.add('img__owner')
     foto.src = `./recursos/${contato.image}`
+    foto.alt = 'foto de perfil'
 
     const nome = document.createElement('h4')
     nome.textContent = contato.name
@@ -53,6 +54,7 @@ const criarHeader = (indice) => {
     const image = document.createElement('img')
     image.classList.add('img__owner')
     image.src = `./recursos/${contatos[indice].image}`
+    image.alt = 'foto de perfil';
 
     const container_text = document.createElement('div')
     container_text.classList.add('header__main__name')

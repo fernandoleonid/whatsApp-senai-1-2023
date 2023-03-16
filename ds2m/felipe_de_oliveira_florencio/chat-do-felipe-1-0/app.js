@@ -1,6 +1,6 @@
 'use strict'
 
-import {contatos} from "./resources/api/contatos.js"
+import {contatos} from "./api/contatos.js"
 
 
 
@@ -24,7 +24,7 @@ const buildContact = (contact) => {
 
     const image = document.createElement('img')
     image.classList.add('contact__photo')
-    image.src = `./resources/api/${contact.image}`
+    image.src = `./api/${contact.image}`
 
     const description = document.createElement('p')
     description.classList.add('contact__description')
@@ -40,7 +40,7 @@ const buildContact = (contact) => {
 
 
     const vetor = document.createElement('img')
-    vetor.src = `./resources/imgs/vetor.png`
+    vetor.src = `./img/vetor.png`
 
     const text = document.createElement('p')
     text.textContent = 'Ver'
@@ -113,7 +113,7 @@ const buildHeader = (contact) =>{
         'contact__photo',
         'info'
         )
-    image.src = `./resources/api/${contact.image}`
+    image.src = `./api/${contact.image}`
 
     const name = document.createElement('h2')
     name.classList.add('contact__name')

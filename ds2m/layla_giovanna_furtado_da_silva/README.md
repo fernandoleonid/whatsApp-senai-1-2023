@@ -4,7 +4,8 @@
 
 [Clique aqui](https://laylagiovanna.github.io/whatsApp-senai-1-2023/ds2m/layla_giovanna_furtado_da_silva/) para conhecer o site
 
-
+## Sobre
+Site feito para desenvolver a interface do usuário de um projeto de chat interno para uma empresa. A empresa decidiu que a interface deverá ser um clone do WhatsApp, pois a grande maioria dos funcionários já está acostumada a utilizá-lo em seu dia a dia. O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em aula no curso de Desenvolvimento de Sistemas do SENAI Jandira.
 
 ## Critérios de Avaliação
 

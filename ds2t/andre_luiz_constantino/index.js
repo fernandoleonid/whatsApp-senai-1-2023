@@ -13,6 +13,7 @@ const criarContato = (contato, indice) => {
 
     const fotoDePerfil = document.createElement('img')
     fotoDePerfil.classList.add('contact-card__image')
+    fotoDePerfil.alt = 'Foto de perfil usuário'
     fotoDePerfil.src = `./${contato.image}`
 
     const nomeComDescricao = document.createElement('div')
@@ -51,7 +52,7 @@ const carregarMensagensComHeader = (indice) => {
 
     const imagemDePerfil = document.createElement('img')
     imagemDePerfil.classList.add('contact-information__image')
-    imagemDePerfil.alt = "Foto de  perfil usuário"
+    imagemDePerfil.alt = 'Foto de perfil usuário'
     imagemDePerfil.src = `./${contatos[indice].image}`
 
     const juntarImagemComTextos = document.createElement('div')

@@ -42,6 +42,7 @@
 
 .contact-information__image {
     height: 6vh;
+    width: auto;
     border-radius: 50%;
     place-self: left;
     cursor: pointer;

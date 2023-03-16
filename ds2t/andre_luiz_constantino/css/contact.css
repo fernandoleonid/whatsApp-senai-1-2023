@@ -17,6 +17,7 @@
 
 .contact-card__image {
     height: 4.2vh;
+    width: auto;
     border-radius: 50%;
     place-self: left;
 }

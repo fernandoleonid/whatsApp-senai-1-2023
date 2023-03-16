@@ -4,6 +4,9 @@
     background-color: azure;
     /* position: relative; */
     /* line-height: 10%; */
+    display: grid;
+    grid-template-areas:
+        "content";
 }
 
 .mensagem__contato{
@@ -25,33 +28,35 @@
     width: 100%;
 } 
 
-.enviar__mensagem_span{
+.enviar__mensagem{
     display: flex;
     padding: 13px;
+    place-self: end;
+    background-color: white;
     font-family: 'Inter', sans-serif;
-    justify-content: end;
-    flex-direction: row-reverse;
-    place-self: end; 
-    flex-direction: row-reverse;
-    width: 95%;  
-    align-items: center;
-    margin: 20px 30px; 
-    
+    align-items: end;
+    border-radius: 8px 0 8px 8px; 
+    box-shadow: 1px 1px 7px grey;
+    max-width: 35vw; 
+    width: 85%;
+    height: auto; 
+    margin: 30px 330px ;
+     
 }
 
 .mensagem__entregue{
     display: flex;
-    background-color: papayawhip;
     padding: 13px;
     place-self: end;
-    text-align: end;
-    align-items: center;
-    font-family: 'Inter', sans-serif;
+    background-color: papayawhip; 
     border-radius: 0 8px 8px 8px;
-    box-shadow: 1px 1px 10px #D0D0D0;
+    box-shadow: 1px 1px 7px black;
+    max-width: 35vw;
+    font-family: 'Inter', sans-serif;
     width: fit-content;
+    height: auto;
+    align-items: center;
     margin: 20px 30px;
-    
 }
 
 .digitar__mensagem{
@@ -89,6 +94,15 @@
 .icons__mensagens li i:hover {
     color: plum;
 }
+
+.time{
+    color: grey;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+    margin-right: 25%;
+}
+
 
 @media(max-width: 640px){
     .container__mensagens{

@@ -4,6 +4,9 @@ import { contatos } from "./contatos.js"
 
 const criarContato = (contato) => {
 
+    const card = document.createElement('div')
+    card.classList.add("aside__main")
+
     const contact = document.createElement('div')
     contact.classList.add("aside__main--contact")
 
@@ -12,7 +15,7 @@ const criarContato = (contato) => {
 
     const image = document.createElement('img')
     image.classList.add('image')
-    image.src = `./img${contato.image}`
+    image.src = `./${contato.image}`
 
     const content = document.createElement('div')
     content.classList.add("aside__main--contact-content")
@@ -23,6 +26,7 @@ const criarContato = (contato) => {
     const description = document.createElement('p')
     description.textContent = contato.description
 
+    card.append(contact)
     contact.append(pic, content)
     pic.append(image)
     content.append(name, description)
@@ -33,7 +37,7 @@ const criarContato = (contato) => {
 
 
 const carregarContatos = () => {
-    const container = document.getElementById('container')
+    const container = document.getElementById('aside__main')
     const contato = contatos.map(criarContato)
 
     container.replaceChildren(...contato)

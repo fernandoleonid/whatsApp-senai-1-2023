@@ -9,7 +9,8 @@ const carregarHeader = (indice) => {
 
     const fotoContatoChat = document.createElement('img')
     fotoContatoChat.classList.add('foto__contato__chat')
-    fotoContatoChat.src = `../${contatos[indice].image}`
+    fotoContatoChat.src = `./${contatos[indice].image}`
+    fotoContatoChat.alt = `foto do contato na conversa`
 
     const contatoChat = document.createElement('div')
     contatoChat.classList.add('contato__chat')
@@ -28,9 +29,10 @@ const carregarHeader = (indice) => {
     contatoChat.append(nomeContatoChat, descricaoContatoChat)
 
     return headerChat
+
 }
 
-const carregarMain = (indice, indiceMensagem) => {
+const carregarMain = (indice) => {
 
     const mainChat = document.createElement('div')
     mainChat.classList.add('main__chat')
@@ -108,7 +110,8 @@ const listaDeContatos = (contato, indice) => {
 
     const fotoContato = document.createElement('img')
     fotoContato.classList.add('foto__contato')
-    fotoContato.src = `../${contato.image}`
+    fotoContato.src = `./${contato.image}`
+    fotoContato.alt = `foto do contato`
 
     const conversaContatos = document.createElement('div')
     conversaContatos.classList.add('conversa__contato')

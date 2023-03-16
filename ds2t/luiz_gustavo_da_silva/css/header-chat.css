@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    /* margin-left: 15px; */
 }
 
 .foto__contato__chat{
@@ -40,5 +39,6 @@
     }
     .foto__contato__chat{
         width: 55px;
+        height: auto;
     }
 }

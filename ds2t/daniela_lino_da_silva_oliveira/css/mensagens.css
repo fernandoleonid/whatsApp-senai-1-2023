@@ -6,12 +6,11 @@
     background-color: #FFE7B3;
 }
 
-
-
 .messages_place {
     height: 60%;
     width: 100%;
 }
+
 .chat_place {
     height: max-content;
     width: 100%;
@@ -65,7 +64,7 @@
 
 .message-time{
     font-size: .8rem;
-    width: 2rem;
+    width: max-content;
     margin: .3rem;
     word-wrap: break-word;float: right;
 }

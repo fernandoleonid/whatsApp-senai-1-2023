@@ -8,12 +8,14 @@
 .chat-card__title{
     width: max-content;
     margin-left: 1rem;
-
+    height: 3rem;
+    align-self: center;
 }
 .chat-contact_image{
-    width: 4rem;
+    height: 4rem;
     margin-left: 1rem;
     align-self: center;
+    border: 1.8px solid #E78A38;
     display: flex;
     border-radius: 100%;
 }
@@ -25,8 +27,11 @@
     display: flex;
 }
 .chat-contact_name{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    display: flex;
 }
 .chat-contact_description{
     font-size: 1rem;
+    color: #E78A38;
+    display: flex;
 }

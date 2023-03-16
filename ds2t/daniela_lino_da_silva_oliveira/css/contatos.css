@@ -17,11 +17,11 @@
 
 .contacts__container {
     width: 100%;
-    max-height: 25rem;
+    height: 70%;
     margin-bottom: 5rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    position: absolute;
+    /* position: absolute; */
     border-top: 1px solid #FFAE03;
     border-bottom: 1px solid #FFAE03;
 }

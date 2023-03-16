@@ -43,3 +43,9 @@ nav{
     grid-template-columns: 20%;
     position: fixed;
 }
+/* TABLET */
+@media (max-width: 960px) {
+    .search_box__contacts{
+        display: none;
+    }
+}

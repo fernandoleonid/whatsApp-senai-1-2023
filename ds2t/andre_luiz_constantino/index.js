@@ -51,6 +51,7 @@ const carregarMensagensComHeader = (indice) => {
 
     const imagemDePerfil = document.createElement('img')
     imagemDePerfil.classList.add('contact-information__image')
+    imagemDePerfil.alt = "Foto de  perfil usuário"
     imagemDePerfil.src = `./${contatos[indice].image}`
 
     const juntarImagemComTextos = document.createElement('div')

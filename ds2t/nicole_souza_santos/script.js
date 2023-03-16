@@ -29,53 +29,25 @@ const criarContatos = (contatos, indice) => {
     cardMessage.textContent = contatos.description
 
     cardIdentificador.append(cardTitle, cardMessage)
-    console.log(cardMessage)
 
     let cont = 0
     let timer = contatos.messages
     const time = document.createElement('span')
-    console.log(timer.length)
 
 
     while (cont < timer.length) {
         time.classList.add('time')
 
         time.textContent = contatos.messages[cont]['time']
-        console.log(timer.length)
         cont++
     }
 
-    console.log(indice)
-    card.onclick = () => (carregarMensagens(indice))
+    card.onclick = () => (carregarChat(indice))
     card.append(foto, cardIdentificador, time)
     return card
 
 }
 
-const hearder = (indice) =>{
-    const hea = document.getElementById('header-contact')
-
-    
-    const foto = document.createElement('img')
-    foto.classList.add('card-icon')
-    foto.src = `/recursos/images/${contatos.image}`
-
-    const cardIdentificador = document.createElement('div')
-    cardIdentificador.classList.add('card-identification')
-
-    const cardTitle = document.createElement('p')
-    cardTitle.classList.add('card-title')
-    cardTitle.textContent = contatos.name
-
-    const cardMessage = document.createElement('p')
-    cardMessage.classList.add('card-message')
-    cardMessage.textContent = contatos.description
-
-    hea.append(foto, cardTitle, cardMessage)
-
-
-    
-}
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
     const cards = contatos.map(criarContatos)
@@ -121,28 +93,54 @@ const criarMensagens = (mensagens) => {
         timer.textContent = mensagens.time
 
         other.append(content, timer)
-
         return other
     }
 
-
 }
 
-
-const carregarMensagens = (indice) => {
+const carregarChat = (indice) => {
     const plane = document.getElementById('welcome')
     const messagesChat = document.getElementById('messages')
-    const cardsChat = contatos[indice].messages.map(criarMensagens);
+    const cardsChat = contatos[indice].messages.map(criarMensagens)
 
     plane.style.display = 'none'
+    messagesChat.style.display = 'flex'
 
-    console.log(contatos[indice].messages)
-    
-    console.log(indice)
-    messagesChat.replaceChildren(...cardsChat)
+    const header = document.createElement('headerContact')
+    header.classList.add('header-contact')
+
+    const iconHeader = document.createElement('img')
+    iconHeader.classList.add('icon-header')
+    iconHeader.src = `/recursos/images/${contatos[indice].image}`
+
+    const cardHeader = document.createElement('div')
+    cardHeader.classList.add('header-description')
+
+    const headerTitle = document.createElement('p')
+    headerTitle.classList.add('card-title')
+    headerTitle.textContent = contatos[indice].name
+
+    const headerMessage = document.createElement('p')
+    headerMessage.classList.add('card-message')
+    headerMessage.textContent = contatos[indice].description
+
+    const textInput = document.createElement('div')
+    textInput.classList.add('textInput')
+
+    const inputPurple = document.createElement('input')
+    inputPurple.classList.add('mensagensTexto')
+
+    const enviar = document.createElement('img')
+    enviar.classList.add('enviar')
+    enviar.src = `./img-pessoal/enviar.png`
+
+    cardHeader.append(headerTitle, headerMessage)
+    header.append(iconHeader, cardHeader)
+    textInput.append(inputPurple, enviar)
+
+    messagesChat.replaceChildren(header, ...cardsChat, textInput)
 
 }
-
 
 carregarCards()
 

@@ -19,6 +19,7 @@ O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em a
 ---
 ## Autor
 - [Paula Blesa Staniukaitis](https://github.com/StaniukaitisPaula)
+ [![](./img/paula.png)](https://github.com/StaniukaitisPaula)
 
 ---
 ## Links
@@ -40,3 +41,5 @@ O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em a
 - [x] Existe um link para o github page no README?
 - [x] Existe um link do autor do projeto no README?
 - [x] `Fez a autoavaliação?`
+
+

@@ -82,7 +82,7 @@ const criarHeader = (indice) => {
 
     const topFoto = document.createElement('img')
     topFoto.classList.add('img__mensagens')
-    topFoto.src = indice.image
+    topFoto.src = contatos[indice].image
 
     const topDescricao = document.createElement('div')
     topDescricao.classList.add('descricao__top__mensagens')

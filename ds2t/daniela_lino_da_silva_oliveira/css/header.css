@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 2px 5px #C0A599;
+    /* box-shadow: 0px 2px 5px #C0A599; */
 }
 .search__itens{
     justify-content: flex-start;

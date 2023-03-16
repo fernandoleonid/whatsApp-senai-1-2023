@@ -9,30 +9,33 @@
 }
 
 .contacts__list {
-    min-height: 80vh;
-    margin: 3%;
-    border-top: 1px solid #958F83;
+    min-height: max-content;
+    height: 100%;
+    margin: 1rem;
+    position: relative;
 }
 
 .contacts__container {
     width: 100%;
-    height: 33rem;
+    max-height: 25rem;
+    margin-bottom: 5rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    position: absolute;
+    border-top: 1px solid #FFAE03;
+    border-bottom: 1px solid #FFAE03;
 }
 
 .contacts__container::-webkit-scrollbar {
-    width: 11px;
-    /* width of the entire scrollbar */
+    width: .6rem;
 }
 
 .contacts__container::-webkit-scrollbar-track {
     background: transparent;
-    /* color of the tracking area */
 }
 
 .contacts__container::-webkit-scrollbar-thumb {
-    background-color: #958F83;
+    background-color: #E78A38;
     border-radius: 22px;
     border: 3px solid #fff;
 }

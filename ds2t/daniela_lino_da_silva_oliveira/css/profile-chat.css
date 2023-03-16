@@ -1,0 +1,32 @@
+.profile_chat{
+    display: flex;
+    width: auto;
+}
+.show_contact{
+    display: flex;
+}
+.chat-card__title{
+    width: max-content;
+    margin-left: 1rem;
+
+}
+.chat-contact_image{
+    width: 4rem;
+    margin-left: 1rem;
+    align-self: center;
+    display: flex;
+    border-radius: 100%;
+}
+.contact__profile {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #E78A38;
+    display: flex;
+}
+.chat-contact_name{
+    font-size: 2rem;
+}
+.chat-contact_description{
+    font-size: 1rem;
+}

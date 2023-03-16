@@ -39,16 +39,7 @@ nav{
     "nav main main"
     "nav main main"
     "nav chat chat";
-    grid-template-rows: 90px 1fr 1fr 50px ;
+    grid-template-rows: 80px 1fr 1fr 70px ;
     grid-template-columns: 20%;
     position: fixed;
-}
-.message__entry{
-    grid-area: chat;
-    background-color: darkkhaki;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    
 }

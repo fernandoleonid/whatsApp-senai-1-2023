@@ -9,7 +9,7 @@ const criarContato = (contato, indice) => {
 
     const foto = document.createElement('img')
     foto.classList.add('contact__image')
-    foto.src = `../../recursos/${contato.image}`
+    foto.src = `../../recursos/image/${contato.image}`
 
     const cardTitle = document.createElement('div')
     cardTitle.classList.add('card__title')
@@ -53,14 +53,13 @@ const criarChat = function (chat) {
         message.classList.add('message');
         message.textContent = chat.content;
 
-        const timer = document.createElement('p')
-        timer.classList.add('timer-timestamp')
-        timer.textContent = mensagens.time
+        const timer = document.createElement('span')
+        timer.classList.add('message-time')
+        timer.textContent = chat.time
 
-        other.append(content, timer)
 
-        console.log(chat)
-        userMessage.append(message);
+        console.log()
+        userMessage.append(message, timer);
         rightMessages.append(userMessage);
 
         return rightMessages;
@@ -76,8 +75,12 @@ const criarChat = function (chat) {
         message.classList.add('message');
         message.textContent = chat.content;
 
+        const timer = document.createElement('span')
+        timer.classList.add('message-time')
+        timer.textContent = chat.time
+
         console.log(chat)
-        contactMessage.append(message);
+        contactMessage.append(message, timer);
         leftMessages.append(contactMessage);
 
         return leftMessages;
@@ -85,12 +88,48 @@ const criarChat = function (chat) {
     }
 
 }
+// const carregarPerfilContato = (contato, indice) => {
+    
+
+//     const cardContact = document.createElement('div')
+//     cardContact.classList.add('show_contact')
+//     cardContact.setAttribute('id', 'show_contact')
+
+//     const foto = document.createElement('img')
+//     foto.classList.add('chat-contact_image')
+//     foto.src = `../../recursos/image/${contatos[indice].image}`
+
+//     const cardTitle = document.createElement('div')
+//     cardTitle.classList.add('chat-card__title')
+
+//     const nameContact = document.createElement('h5')
+//     nameContact.classList.add('chat-contact_name')
+//     nameContact.textContent = contatos[indice].name
+
+//     const contactDescription = document.createElement('span')
+//     contactDescription.classList.add('chat-contact_description')
+//     contactDescription.textContent = contatos[indice].description
+
+//     cardTitle.append(nameContact, contactDescription);
+//     cardContact.append(foto, cardTitle);
+
+//     cardContact.onclick = () => (carregarChat(indice))
+    
+//     console.log(indice)
+//     return cardContact;
+
+
+// }
 //Carregas as mensagens para a tela com o clique no criar contatos(que chama essa função)
 const carregarChat = (indice) => {
-    const containerChat = document.getElementById('chat_place')
+    // const headerContato = document.getElementById('contact__profile');
+    const containerChat = document.getElementById('chat_place');
     const cardsChat = contatos[indice].messages.map(criarChat);
+    // const profileContact = contatos.map(carregarPerfilContato);
+
 
     containerChat.replaceChildren(...cardsChat);
+    // headerContato.replaceChild(profileContact)
 
     console.log(contatos[indice].messages)
 }

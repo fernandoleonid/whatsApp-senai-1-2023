@@ -3,17 +3,10 @@
     width: 100%;
     margin: 1rem;
     border-radius: 5px;
-    border: 1px solid #958F83;
-    background-color: #FFEEE6;
+    background-color: #FFE7B3;
 }
 
-.contact__profile {
-    box-shadow: 0px 1px 5px #000;
-    height: 80px;
-    width: 100%;
-    background-color: #fff;
-    /* position: absolute; */
-}
+
 
 .messages_place {
     height: 60%;
@@ -39,11 +32,10 @@
 .user__message,
 .contact__message {
     border-radius: 2px;
-    max-width: 20rem;
     height: max-content;
     width: max-content;
-    display: flex;
     font-size: 1rem;
+    margin: 10px;
 }
 
 .user__message {
@@ -52,6 +44,7 @@
     margin: 10px;
     background-color:#fff;
     background-clip: padding-box;
+    align-items: end;
 }
 .contact__message {
     border-top: 10px solid #EEA04E;
@@ -59,10 +52,27 @@
     margin: 10px;
     background-color: #EEA04E;
     background-clip: padding-box;
+    justify-content: end;
+    align-items: flex-end;
+    
 }
 
 .message {
     margin: 10px;
     max-width: 90%;
     word-wrap: break-word;
+}
+
+.message-time{
+    font-size: .8rem;
+    width: 2rem;
+    margin: .3rem;
+    word-wrap: break-word;float: right;
+}
+.contact__message .message-time{
+        float: right;
+}
+
+.user__message .message-time{
+    float: left;
 }

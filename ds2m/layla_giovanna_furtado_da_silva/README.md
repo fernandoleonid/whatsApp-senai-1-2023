@@ -2,7 +2,7 @@
 
 ![Imagem do Projeto](./recursos/prints/print-do-whatsapp.png)
 
-[Clique aqui](./recursos/prints/print-lighthouse.png) para conhecer o site
+[Clique aqui](https://laylagiovanna.github.io/whatsApp-senai-1-2023/ds2m/layla_giovanna_furtado_da_silva/) para conhecer o site
 
 
 
@@ -27,7 +27,7 @@
 
 ## LightHouse
 
-![Imagem nota Lighthouse](./recursos/prints/print-lighthouse.png)
+![Imagem nota Lighthouse](./recursos/prints/print-lighthouse.jpeg)
 
 
 ## Tecnologias utilizadas 

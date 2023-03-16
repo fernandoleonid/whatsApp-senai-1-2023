@@ -103,6 +103,8 @@ const loadingContact = () => {
                     navegation.classList.add('display__block')
                 }
                 getClickContainerChat.onclick = () => {
+                    const createConversation = document.createElement('div')
+                    createConversation.classList.add('chat__user')
                     navegation.classList.add('display__none')
                     navegation.classList.remove('display__block')
                     getChat.classList.add('display__block')
@@ -190,7 +192,9 @@ const backPage = () => {
 }
 
 const tryingClear = () =>{
-    if(width <= 640){
+    let pixelsSize = "max-width:640px"
+    let mediaQuery = window.matchMedia(pixelsSize)
+    if(width <= mediaQuery){
         const allUser = document.getElementById("chat")
         allUser.remove()
     }

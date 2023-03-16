@@ -111,12 +111,12 @@ main {
     gap: 30px;  
 }
 
-.mensagem {
+/* .mensagem {
     grid-area: mensagem;
     display: flex;
     background-color: #0001;
     flex-direction: column;
-}
+} */
 
 .card__image {
     grid-area: foto;

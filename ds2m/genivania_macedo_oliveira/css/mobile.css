@@ -1,0 +1,24 @@
+@media (max-width: 640px) {
+    .container {
+        width: 65vh;
+    }
+
+    footer{
+        display: none;
+    }
+    .mensagem{
+        display: none;
+    }
+    .text{
+        display: none;
+    }
+    .menu_conversa{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+    }
+}

@@ -1,6 +1,6 @@
 'use strict'
 
-import{contatos} from "./recursos/contatos.js"
+import{contatos} from "./contatos.js"
 
 const criarCard = (contato) => {
 

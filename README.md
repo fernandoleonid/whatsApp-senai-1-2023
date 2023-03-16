@@ -4,4 +4,4 @@
 
 | Nome          | Código                        | Site                              |
 | --------------| ------------------------------|-----------------------------------|
-| [Luiz Gustavo da Silva](https://github.com/luyz-gusta)   | [![](https://skillicons.dev/icons?i=js)](./luiz_gustavo_da_silva/) | [<img src="./luiz_gustavo_da_silva/img/printProjeto.webp" width="300">](https://fernandoleonid.github.io/whatsApp-senai-1-2023/ds2t/luiz_gustavo_da_silva/)|
+| [Luiz Gustavo da Silva](https://github.com/luyz-gusta)   | [![](https://skillicons.dev/icons?i=js)](./luiz_gustavo_da_silva/) | [<img src="/luiz_gustavo_da_silva/img/printProjeto.webp" width="300">](https://fernandoleonid.github.io/whatsApp-senai-1-2023/ds2t/luiz_gustavo_da_silva/)|

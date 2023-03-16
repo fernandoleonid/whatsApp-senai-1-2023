@@ -117,7 +117,7 @@
 .message__sent {
     place-self: end;
     background-color: var(--color-message-send);
-    padding: 13px;
+    padding: 11px;
     border-radius: 8px 0 8px 8px;
     box-shadow: 1px 1px 7px #D0D0D0;
     max-width: 35vw;
@@ -130,7 +130,7 @@
 
 .message__received {
     background-color: #fff;
-    padding: 13px;
+    padding: 11px;
     border-radius: 0 8px 8px 8px;
     box-shadow: 1px 1px 7px #D0D0D0;
     max-width: 35vw;
@@ -145,11 +145,10 @@
     display: none;
 }
 
-/* .time{
+.time{
     color: #4f4e4e;
-    font-size: 34px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-top: 14px;
 }
 
-.message__received_span {}
-
-.message__sent_span {} */

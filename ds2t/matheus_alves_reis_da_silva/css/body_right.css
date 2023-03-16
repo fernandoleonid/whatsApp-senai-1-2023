@@ -1,0 +1,96 @@
+.body_right {
+    grid-area: body_right;
+    background-color: var(--body-right-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../img/cover-wpp.png);
+}
+
+.nav_icons_right {
+    display: flex;
+}
+
+.nav_icons_right li {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: var(--nav-icons-left-color);
+    font-size: 1.25rem;
+}
+
+.header_right {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    border-left: .5px solid #d1d7db;
+}
+
+.chat_input .input_message {
+    background: var(--input-chat-input-color);
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding-left: 15px;
+}
+
+.chat_input {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--chat-input-color);
+    gap: 16px;
+    padding: 16px;
+}
+.chat_input i {
+    font-size: 24px;
+    color: var(--nav-icons-left-color);
+    cursor: pointer;
+}
+
+.chat_input_none {
+    display: none;
+}
+
+.contact_right_info {
+    display: flex;
+    align-items: center;
+}
+
+.contact_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+    color: var(--text-contacts-color);
+}
+
+.nav_icons_right {
+    display: flex;
+    gap: 32px;
+    padding-right: 16px;
+}
+
+.nav_icons_right i {
+    font-size: 18px;
+    color: var(--nav-icons-left-color);
+}
+
+.name_contact_right  {
+    font-weight: 500;
+    line-height: 1.2rem;
+    cursor: pointer;
+}
+
+.status_contact_right {
+    font-size: 0.8rem;
+    color: var(--nav-icons-left-color);
+}

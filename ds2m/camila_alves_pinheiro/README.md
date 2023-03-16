@@ -1,6 +1,10 @@
 # Clone do WhatsApp - Pay Pal Web
 
-![](./img/screenshot.png)
+|      MOBILE         |          DESKTOP       |
+|:-------------------:|:-----------------------:
+|![](./img/screenshot_mobile.png)|![](./img/screenshot_desktop.png)|
+|                     |                        |
+
 
 [Clique aqui](https://camilapinh3iro.github.io/whatsApp-senai-1-2023/ds2m/camila_alves_pinheiro/) para acessar o site. 
 

@@ -12,7 +12,7 @@ O site desenvolvido foi um clone do whatsapp, uma atividade proposta pelo profes
 - [✓] Foi criado variáveis pensando nas boas praticas?
 - [✓] `Foi criado funções pensando em responsabilidade única?`
 - [✓] `Foi criado funções pensando no principio de funções puras?`
-- [ ] O texto do README é objetivo e sucinto?
+- [✓] O texto do README é objetivo e sucinto?
 - [✓] O screenshot mostra um pouco do projeto?
 - [✓] Existe um link para o github page no README?
 - [✓] Existe um link do autor do projeto no README?

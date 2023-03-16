@@ -41,7 +41,7 @@ const carregarContatos = () => {
 const criarChat = function (chat) {
 
 
-    if (chat.sender == 'me') {
+    if (chat.sender === 'me') {
 
         const rightMessages = document.createElement('div');
         rightMessages.classList.add('right__messages');

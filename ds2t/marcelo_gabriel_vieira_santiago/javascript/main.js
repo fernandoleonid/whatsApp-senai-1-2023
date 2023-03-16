@@ -34,7 +34,7 @@ const criarContato = (contato, indice) => {
     
     const foto = document.createElement('img')
     foto.classList.add('contato__img')
-    foto.src = `../img/${contato.image}`
+    foto.src = contato.image
     foto.setAttribute("alt", "foto_de_perfil")
 
     const titulo = document.createElement('h5')
@@ -82,7 +82,7 @@ const criarHeader = (indice) => {
 
     const topFoto = document.createElement('img')
     topFoto.classList.add('img__mensagens')
-    topFoto.src = `../img/${contatos[indice].image}`
+    topFoto.src = indice.image
 
     const topDescricao = document.createElement('div')
     topDescricao.classList.add('descricao__top__mensagens')

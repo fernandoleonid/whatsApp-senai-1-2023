@@ -24,6 +24,9 @@
     padding: 10px;
     width: 100%;
 }
+.icons__end li i:hover{
+    color: white;
+}
 
 .header__icons li i:hover {
     color: white;

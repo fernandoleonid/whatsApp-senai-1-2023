@@ -41,7 +41,7 @@
 @media(max-width: 640px){
     .card{
         display: flex;
-        width: 350px;
+        width: 450px;
         height: 80px;
         border: 1px solid whitesmoke; 
         align-items: center;

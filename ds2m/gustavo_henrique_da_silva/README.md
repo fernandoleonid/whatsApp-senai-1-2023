@@ -1,35 +1,49 @@
-# Projeto_WhatsApp
-
-## Objetivo:
-
-Realizar a elaboração de uma interface semelhante ão WhatsApp utilizando : HTML, CSS e JAVASCRIPT.
-E criar uma interface de usuário que seja intuitiva e agradável de usar, de forma a facilitar a comunicação entre os funcionários da empresa e aumentar a produtividade da equipe.
+# DS2M - A - Gustavo Henrique
 
 ---
 
-![](./imagens_aplicativo/Project.png)
+# Portfólio
 
-### Critérios da avaliação:
+![](./imagens_aplicativo/Screenshot.png)
 
-- [S] `Codificou o app conforme o original?`
-- [S] Nomeou as classes CSS utilizando o padrão BEM?
-- [S] `O app está responsivo?`
-- [N] Utilizou algum framework CSS?
-- [S] `Consumiu o JSON para mostrar todos os contatos?`
-- [N] Criou outros itens, na lista de contatos, como a quantidade de mensagens lidas?
-- [S] `Consumiu o JSON para mostrar as mensagens de cada contato?`
-- [S] Foi criado variáveis pensando nas boas praticas?
-- [S] `Foi criado funções pensando em responsabilidade única?`
-- [S] `Foi criado funções pensando no principio de funções puras?`
-- [S] O texto do README é objetivo e sucinto?
-- [S] O screenshot mostra um pouco do projeto?
-- [S] Existe um link para o github page no README?
-- [S] Existe um link do autor do projeto no README?
-- [S] `Fez a autoavaliação?`
-  
-> *Os textos em destaque são critérios críticos, ou seja, precisam ser atingidos.* <br>
-> *Os demais, são critérios desejáveis, não necessários para aprovação, mas importantes para se destacar entre os demais desenvolvedores.* ]
+[Clique aqui](https://gustavohenriqueprojects.github.io/Projeto_WhatsApp/) para visitar o site.
 
 ---
-### Link para o github: https://gustavohenriqueprojects.github.io/Projeto_WhatsApp/
-### Link para o autor do projeto: https://github.com/GustavoHenriqueProjects
+
+## Sobre
+Site do WhatsApp. O objetivo deste projeto é colocar em prática os conhecimentos adquiridos no curso do [SENAI Jandira](https://jandira.sp.senai.br/) na criação de web sites e adquirir conhecimento sobre outras coisas das quais não foram abordadas no curso.
+
+---
+## Tecnologias
+- HTML
+- CSS
+- Responsividade
+- JS
+- Markdown
+- JSON
+
+---
+## Itens Adicionais
+- Pesquisa
+
+![Screenshot](./imagens_aplicativo/Screenshot2.png)
+
+## Equipe
+- [Gustavo Henrique](https://github.com/fernandoleonid/whatsApp-senai-1-2023/tree/main/ds2m/gustavo_henrique_da_silva)
+
+# Critérios de Avaliação
+- [x] `Codificou o app conforme o original?`
+- [ ] Nomeou as classes CSS utilizando o padrão BEM?
+- [x] `O app está responsivo?`
+- [ ] Utilizou algum framework CSS?
+- [x] `Consumiu o JSON para mostrar todos os contatos?`
+- [ ] Criou outros itens, na lista de contatos, como a quantidade de mensagens lidas?
+- [x] `Consumiu o JSON para mostrar as mensagens de cada contato?`
+- [x] Foi criado variáveis pensando nas boas praticas?
+- [x] `Foi criado funções pensando em responsabilidade única?`
+- [x] `Foi criado funções pensando no principio de funções puras?`
+- [x] O texto do README é objetivo e sucinto?
+- [x] O screenshot mostra um pouco do projeto?
+- [x] Existe um link para o github page no README?
+- [x] Existe um link do autor do projeto no README?
+- [x] `Fez a autoavaliação?`

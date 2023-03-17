@@ -19,14 +19,6 @@ O objetivo deste projeto é colocar em prática os conhecimentos adquiridos em a
 - CSS3
 - JS
 - JSON
-<!-- ---
-## Lighthouse
-O LightHouse basicamente analisa todo o seu site, indicando como está determinados aspectos do mesmo. 
-
-Segue o relatório:
-
-![Relatório Lighthouse](../clara_martins_oliveira/img/)
---- -->
 
 # Critérios de Avaliação
 - [x] `Codificou o app conforme o original?`

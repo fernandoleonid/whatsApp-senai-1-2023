@@ -13,7 +13,6 @@ const criarHeader = (indice) => {
     imagemPerfil.classList.add('img_perfil')
     imagemPerfil.src = `./img/${contatos[indice].image}`
 
-
     const containerPerfil = document.createElement('div')
     containerPerfil.classList.add('container_perfil')
 
@@ -35,62 +34,59 @@ const criarHeader = (indice) => {
 }
 
 const criarMensagem = (indice) => {
-    const containerMensagensDireita = document.getElementById('id_container')
-    containerMensagensDireita.classList.remove('container_direito_none')
-    containerMensagensDireita.classList.add('container_mensagens_direita')
+    const containerMensagemDireita = document.getElementById('id_container')
 
     const chatBox = document.createElement('div')
-    chatBox.classList.add('chat_box')
+    chatBox.classList.add('chat_box');
 
     contatos[indice].messages.forEach((mensagem) => {
 
-        const caixaMinhaMensagem = document.createElement('div')
-        caixaMinhaMensagem.classList.add('caixa_minha_mensagem')
+        const caixaMensagensMinha = document.createElement('div')
+        caixaMensagensMinha.classList.add('caixa_minha_mensagem')
 
-        const caixaSuaMensagem = document.createElement('div')
-        caixaSuaMensagem.classList.add('caixa_sua_mensagem')
+        const caixaMensagensSua = document.createElement('div')
+        caixaMensagensSua.classList.add('caixa_sua_mensagem')
 
         const msgMinha = document.createElement('p')
         msgMinha.classList.add('msg_minha')
 
-        const msgSua = document.createElement('p')
-        msgSua.classList.add('msg_sua')
-
         const horaMinha = document.createElement('span')
         horaMinha.classList.add('hora_minha')
+
+        const msgSua = document.createElement('p')
+        msgSua.classList.add('msg_sua')
 
         const horaSua = document.createElement('span')
         horaSua.classList.add('hora_sua')
 
-        if(mensagem.sender == 'me') {
+        if (mensagem.sender == 'me') {
+
             msgMinha.classList.add('msg_minha')
             msgMinha.textContent = mensagem.content
 
             horaMinha.classList.add('hora_minha')
             horaMinha.textContent = mensagem.time
 
-            containerMensagensDireita.appendChild(chatBox)
+            chatBox.append(caixaMensagensMinha, caixaMensagensSua)
 
-            chatBox.append(caixaMinhaMensagem, caixaSuaMensagem)
-
-            caixaMinhaMensagem.append(msgMinha, horaMinha)
+            caixaMensagensMinha.append(msgMinha, horaMinha)
 
         } else if (mensagem.sender == contatos[indice].name) {
+
             msgSua.classList.add('msg_sua')
             msgSua.textContent = mensagem.content
 
             horaSua.classList.add('hora_sua')
             horaSua.textContent = mensagem.time
 
-            containerMensagensDireita.appendChild(chatBox)
+            chatBox.append(caixaMensagensMinha, caixaMensagensSua)
 
-            chatBox.append(caixaMinhaMensagem, caixaSuaMensagem)
+            caixaMensagensSua.append(msgSua, horaSua)
 
-            caixaSuaMensagem.append(msgSua, horaSua)
         }
     })
-
-    return containerMensagensDireita
+    
+    return chatBox
 }
 
 const criarContato = (contato, indice) => {
@@ -99,7 +95,8 @@ const criarContato = (contato, indice) => {
 
     cardContato.addEventListener('click', () => {
         var container = document.getElementById('container_chat')
-        container.replaceChildren(criarHeader(indice), criarMensagem(indice), carregarBarraDeMensagem())
+        container.replaceChildren(criarHeader(indice), criarMensagem(indice), carregarBarraDeMensagem(),
+        barraDeRolagem())
     })
 
     const list = document.createElement('div')
@@ -137,8 +134,11 @@ const criarContato = (contato, indice) => {
 const carregarContatos = () => {
     const contatoCard = document.getElementById('contatoCard')
     const mensagensContatos = contatos.map(criarContato)
-
     contatoCard.replaceChildren(...mensagensContatos)
+}
+
+const barraDeRolagem = () => {
+    window.scroll(0, document.body.scrollHeight);
 }
 
 const carregarBarraDeMensagem = () => {

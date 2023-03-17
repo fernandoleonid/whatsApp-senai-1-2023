@@ -162,7 +162,7 @@ body {
 /* Lado direito */
 .chat_box{
     display: flex;
-    height: 100%;
+    height: 80vh;
     flex-direction: column;
     padding: 16px;
     gap: 16px;
@@ -175,13 +175,6 @@ body {
 
 .chat_box::-webkit-scrollbar-thumb{
     background-color: rgba(0, 0, 0, 0.2);
-}
-.container_mensagens_direita{
-    display: flex;
-    height: 80vh;
-    flex-direction: column;
-    padding: 16px;
-    gap: 16px;
 }
 
 .caixa_minha_mensagem{

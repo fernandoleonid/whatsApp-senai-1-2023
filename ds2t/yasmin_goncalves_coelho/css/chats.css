@@ -67,3 +67,6 @@
     font-size: .7rem;
     color: gray;
 }
+.message_me p{
+    text-align: right;
+}

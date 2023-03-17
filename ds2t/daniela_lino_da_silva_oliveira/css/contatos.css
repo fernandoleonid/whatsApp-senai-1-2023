@@ -59,8 +59,13 @@
 
 .contact__description {
     font-size: .7rem;
+    height: 1rem;
+    width: 80%;
     color: #FFAE03;
     display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .contact {
@@ -68,7 +73,7 @@
     margin-top: 4%;
     margin-left: 5%;
     margin-right: 5%;
-    width: 90%;
+    width: 12rem;
     gap: 2rem;
     display: flex;
     justify-content: space-around;
@@ -76,5 +81,13 @@
     cursor: pointer;
 }
 
-/* 
- */
+/* TABLET */
+@media (max-width: 960px) {
+    .contact__box{
+        width: 15rem;
+    }
+    .contacts__container {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}

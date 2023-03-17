@@ -1,9 +1,29 @@
+.welcome_banner {
+    display: flex;
+    align-self: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.welcome_text_banner {
+    display: flex;
+    align-self: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #E67F0D;
+}
+
 .chat__box {
     height: 100%;
     width: 100%;
-    margin: 1rem;
+    margin: 3rem;
     border-radius: 5px;
     background-color: #FFE7B3;
+    justify-content: center;
 }
 
 .messages_place {
@@ -30,7 +50,7 @@
 
 .user__message,
 .contact__message {
-    border-radius: 2px;
+    border-radius: 4px;
     height: max-content;
     width: max-content;
     font-size: 1rem;
@@ -41,10 +61,11 @@
     border-top: 10px solid #fff;
     border-right: 10px solid transparent;
     margin: 10px;
-    background-color:#fff;
+    background-color: #fff;
     background-clip: padding-box;
     align-items: end;
 }
+
 .contact__message {
     border-top: 10px solid #EEA04E;
     border-left: 10px solid transparent;
@@ -53,7 +74,7 @@
     background-clip: padding-box;
     justify-content: end;
     align-items: flex-end;
-    
+
 }
 
 .message {
@@ -62,16 +83,34 @@
     word-wrap: break-word;
 }
 
-.message-time{
+.message-time {
     font-size: .8rem;
     width: max-content;
     margin: .3rem;
-    word-wrap: break-word;float: right;
-}
-.contact__message .message-time{
-        float: right;
+    word-wrap: break-word;
+    float: right;
 }
 
-.user__message .message-time{
+.contact__message .message-time {
+    float: right;
+}
+
+.user__message .message-time {
     float: left;
+}
+
+/* TABLET */
+@media (max-width: 960px) {
+    .chat__box {
+        width: 80%;
+    }
+
+    .user__message,
+    .contact__message {
+        max-width: 8rem;
+    }
+
+    .welcome_banner {
+        margin-top: 20%;
+    }
 }

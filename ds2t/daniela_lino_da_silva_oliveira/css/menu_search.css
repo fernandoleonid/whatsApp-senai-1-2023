@@ -29,3 +29,12 @@
 }
 
 
+/* TABLET */
+@media (max-width: 960px) {
+    .search_box__contacts,
+    .search_contacts__entry,
+    .search_group,
+    .search_box__contacts {
+        display: none;
+    }
+}

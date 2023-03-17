@@ -2,7 +2,7 @@
 
 |      MOBILE         |          DESKTOP       |
 |:-------------------:|:-----------------------:
-|![](./img/mobile.png)|![](./img/)|
+|![](./img/mobile.png)|![](./img/desktop.png)|
 |                     |                        |
 
 ### [Clique aqui](https://leticia-evelin.github.io/whatsApp-senai-1-2023/ds2m/let%C3%ADcia_evelin_aguiar_e_silva/) para acessar o site!

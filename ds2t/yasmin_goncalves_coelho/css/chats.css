@@ -40,33 +40,35 @@
 }
 
 .chats__messages{
-    display: grid;
-    width: 100%;
     height: 83vh;
-    grid-template-columns: 1fr 1fr;
-    align-self: center;
 }
-.message_me{
-    width: 1fr;
-    height: 100%;
-}
-.message_contact{
-    width: 1fr;
-    height: 100%;
-}
-.message{
-    background-color: #d8fdd2;
+
+.chats__messages div{
+    display: flex;
+    justify-content: end;
     width: auto;
-    height: auto;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    gap: 10px;
+    margin: .1%;
+    padding: 1%;
 }
-.message__time{
+.chats__messages div p{
+    display: flex;
+    justify-content: end;
+    width: auto;
+    margin: .1%;
+    padding: 1%;
+    background-color: #d8fdd2;
+    padding: 1%;
+}
+/* .messages__me p{
+    background-color: #d8fdd2;
+    padding: 1%;
+}
+.messages__contact p{
+    background-color: #d8fdd2;
+    padding: 1%;
+} */
+.messages__time{
     font-size: .7rem;
     color: gray;
-}
-.message_me p{
-    text-align: right;
+    position: end;
 }

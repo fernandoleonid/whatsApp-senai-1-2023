@@ -1,14 +1,14 @@
 .container{
     grid-area: content;
-    width: 80vw;
-    height: 88vh;
+    width: 70vw;
+    height: 80vh;
     background-color: #f0f2f2;
     display: flex;
     align-self: center;
 }
 
-.container__chat{
-    height: 88vh;
+.container__nav{
+    height: 80vh;
     width: 21vw;
     background-color: #ffff;
 }

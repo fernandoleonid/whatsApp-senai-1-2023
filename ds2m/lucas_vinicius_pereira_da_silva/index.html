@@ -2,18 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script 
-        src="https://kit.fontawesome.com/4ea9540e8d.js" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="./css/reset.css"
+    >
+    <link rel="stylesheet" href="./css/style.css"
+    >
+    <link rel="stylesheet" href="./css/container.css"
+    >
+    <link rel="stylesheet" href="./css/menu.css"
+    >
+    <link rel="stylesheet" href="./css/searchChat.css"
+    >
+    <link rel="stylesheet" href="./css/chat.css"
+    >
+    <link rel="stylesheet" href="./css/conversation.css">
+
+    <script src="https://kit.fontawesome.com/4ea9540e8d.js" crossorigin="anonymous"
+    >
     </script>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/container.css">
-    <link rel="stylesheet" href="./css/config.css">
-    <link rel="stylesheet" href="./css/searchChat.css">
-    <link rel="stylesheet" href="./css/chat_conversation.css">
-    <script src="app.js" defer type="module"></script>
+    <script src="./index.js" defer type="module"
+    >
+    </script>
+
+    <link rel="shortcut icon" href="./img/whatsapp.ico" type="image/x-icon" />
     <title>WhatsApp</title>
 </head>
 
@@ -21,21 +36,21 @@
     <header></header>
     <main>
         <div class="container" id="container">
-            <div class="container__chat" id="container__chat">
-                <div class="config">
-                    <div class="photo_profile">
-                        <img src="./img/zap.jpg" alt="photo" class="img__photo">
+            <div class="container__nav">
+                <div class="menu">
+                    <div class="profile">
+                        <img src="./img/zap.jpg" alt="photo" class="photo__profile">
                     </div>
-                    <div class="menu">
-                        <div class="img_menu">
+                    <div class="icon">
+                        <div class="icons">
                             <a href="#">
                                 <i class="fas fa-users"></i>
                             </a>
                             <a href="#">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-circle-notch"></i>
                             </a>
                             <a href="#">
-                                <i class="fas fa-comment-alt"></i>
+                                <i class="far fa-comment-dots"></i>
                             </a>
                             <a href="#">
                                 <i class="fas fa-ellipsis-v"></i>
@@ -43,29 +58,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="search_chat">
+                <div class="search__chat">
                     <div>
                         <input type="text" placeholder="Search or start new chat">
                         <ion-icon name="search-outline"></ion-icon>
                     </div>
                 </div>
                 <div class="chat" id="chat">
-                    <div class="photo__chat">
-                        
-                    </div>
-                    <div class="name__chat">
-                        <h4 class="name">
-                            
-                        </h4>
-                    </div>
+                    <div class="linha"></div>
                 </div>
-                <div class="linha"></div>   
             </div>
             <div class="conversation">
-                
+
             </div>
         </div>
-        
+
     </main>
 </body>
 

@@ -1,4 +1,4 @@
-.config{
+.menu{
     height: 7vh;
     width: 21vw;
     background-color: #e9edef;
@@ -6,12 +6,12 @@
     
 }
 
-.photo_profile{
+.profile{
     width: 29vh;
     display: flex;
 }
 
-.img__photo{
+.photo__profile{
     height: 3.8vh;
     border-radius: 50%;
     display: flex;
@@ -20,7 +20,7 @@
     margin-left: 8px;
 }
 
-.menu{
+.icon{
     width: 12vw;
     height: 7vh;
     display: flex;
@@ -28,9 +28,9 @@
     justify-content: center;
 }
 
-.img_menu{
+.icons{
     font-size: 1.1rem;
-    color: gray;
+    color: #667781;
     width: 12vw;
     display: flex;
     justify-content: space-around;

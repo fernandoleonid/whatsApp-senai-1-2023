@@ -1,4 +1,4 @@
-.search_chat{
+.search__chat{
     position: relative;
     width: 100%;
     height: 50px;
@@ -9,11 +9,11 @@
     padding: 0 15px;
 }
 
-.search_chat div{
+.search__chat div{
     width: 100%;
 }
 
-.search_chat div input{
+.search__chat div input{
     width: 100%;
     outline: none;
     border: none;
@@ -25,12 +25,12 @@
     padding-left: 40px;
 }
 
-.search_chat div input::placeholder{
+.search__chat div input::placeholder{
     color: #bbb;
     
 }
 
-.search_chat div ion-icon{
+.search__chat div ion-icon{
     position: absolute;
     left: 30px;
     top: 14px;

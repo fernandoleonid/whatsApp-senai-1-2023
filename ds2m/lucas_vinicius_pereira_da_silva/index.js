@@ -2,19 +2,6 @@
 
 import { contatos } from "./recursos/contatos.js"
 
-{/* <div class="photo__chat">
-    <img src="./img/zapzap.jpg" alt="p" class="photo">
-</div>
-<div class="name__chat">
-    <h5 class="name">
-        Lucas Vinicius
-    </h5>
-    <h6>
-        System Developer
-    </h6>
-</div> */}
-
-const cont = 0
 
 const createCard = (contacts) => {
     const card = document.createElement('button')
@@ -41,12 +28,16 @@ const createCard = (contacts) => {
     const linha = document.createElement('div')
     linha.classList.add('linha')
 
-    photo__chat.append(photo)
+    // photo__chat.append(photo)
     name__chat.append(name, description)
     card.append(photo__chat, name__chat, linha)
 
     return card
 } 
+
+const seeMessage = (dados) => {
+    console.log('aaaaaa')
+}
 
 
 const loadContacts = () => {
@@ -57,3 +48,12 @@ const loadContacts = () => {
 }
 
 loadContacts()
+
+
+const el = document.querySelectorAll('.chat__box');
+el.forEach(item => {
+    item.addEventListener("click", elem =>{
+        console.log(elem.target.value);
+    });
+})
+

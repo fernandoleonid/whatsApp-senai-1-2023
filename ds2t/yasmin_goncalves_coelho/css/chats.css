@@ -1,7 +1,7 @@
 .chats{
     height: 100%;
     width: 75%;
-    background-color: #efeae2;
+    background-color: #efebe2;
     border-radius: 10px;
     border: 1px #f0f2f5 solid;
 }
@@ -41,34 +41,37 @@
 
 .chats__messages{
     height: 83vh;
+    overflow-x: auto;
 }
-
 .chats__messages div{
     display: flex;
-    justify-content: end;
     width: auto;
     margin: .1%;
     padding: 1%;
 }
-.chats__messages div p{
-    display: flex;
-    justify-content: end;
-    width: auto;
-    margin: .1%;
-    padding: 1%;
-    background-color: #d8fdd2;
-    padding: 1%;
-}
-/* .messages__me p{
-    background-color: #d8fdd2;
-    padding: 1%;
+.messages__contact{
+    justify-content: start;
 }
 .messages__contact p{
     background-color: #d8fdd2;
     padding: 1%;
-} */
+}
+.messages__me{
+    justify-content: end;
+    
+}
+.messages__me p{
+    background-color: #d8fdd2;
+    padding: 1%;
+}
 .messages__time{
     font-size: .7rem;
     color: gray;
     position: end;
+}
+.messages__time{
+    border-radius: 0px 10px 10px 0px;
+}
+.messages__text{
+    border-radius: 10px 0px 0px 10px;
 }

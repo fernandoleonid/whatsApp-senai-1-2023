@@ -27,7 +27,7 @@ const criarContato = (contact) => {
 
     contato.addEventListener('click', () => {
         const chat = document.getElementById('chats')
-        chat.replaceChild(carregarHeader(getIndex(contact, contatos)))
+        chat.replaceChild(carregarConversa(getIndex(contact, contatos)))
         console.log(contact)
     })
 
@@ -63,6 +63,50 @@ const criarHeaderContato = (contact) => {
 
 }
 
+const criarMainContato = (contact) => {
+    const container = document.createElement('nav')
+    container.classList.add('chats__messages')
+
+    contact.messages.forEach(function(message){
+
+        if(message.sender == 'me'){
+            const messages__me = document.createElement('div')
+            messages__me.classList.add('messages__me')
+
+            const message__text = document.createElement('p')
+            message__text.classList.add('messages__text')
+            message__text.textContent = message.content
+
+            const message__time = document.createElement('p')
+            message__time.classList.add('messages__time')
+            message__time.textContent = message.time
+
+            messages__me.append(message__text,message__time)
+            container.append(messages__me)
+
+
+        } else{
+            const messages_contact = document.createElement('div')
+            messages_contact.classList.add('messages__contact')
+
+            const message__text = document.createElement('p')
+            message__text.classList.add('messages__text')
+            message__text.textContent = message.content
+
+            const message__time = document.createElement('p')
+            message__time.classList.add('messages__time')
+            message__time.textContent = message.time
+
+            messages_contact.append(message__text, message__time)
+            container.append(messages_contact)
+
+        }
+
+    })
+
+    return container
+}   
+
 const carregarContatos = () => {
     const containerContatos = document.getElementById('contacts__container')
     const contacts = contatos.map(criarContato)
@@ -71,11 +115,13 @@ const carregarContatos = () => {
     containerContatos.replaceChildren(...contacts)
 }
 
-const carregarHeader = (indice) => {
+const carregarConversa = (indice) => {
     const containerChats = document.getElementById('chats')
 
-    containerChats.replaceChildren(criarHeaderContato(contatos[indice]))
+    containerChats.replaceChildren(criarHeaderContato(contatos[indice]), criarMainContato(contatos[indice]))
+    
 }
+
 
 const getIndex = (contact, lista) => {
     return lista.indexOf(contact)

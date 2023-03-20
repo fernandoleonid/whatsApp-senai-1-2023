@@ -17,8 +17,8 @@
     padding: 20px;
 }
 .chats__info img{
-    height: 7vh;
-    width: auto;
+    height: 5vh;
+    width: 2.5vw;
     border-radius: 50%;
     border: 1px #F0F2F5 solid;
 }

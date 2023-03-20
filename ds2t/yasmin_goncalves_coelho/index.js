@@ -28,7 +28,6 @@ const criarContato = (contact) => {
     contato.addEventListener('click', () => {
         const chat = document.getElementById('chats')
         chat.replaceChild(carregarConversa(getIndex(contact, contatos)))
-        console.log(contact)
     })
 
     return contato
@@ -107,9 +106,18 @@ const criarMainContato = (contact) => {
     return container
 }   
 
+const criarFooterContatos = () => {
+    const footer = document.getElementById('chats__footer')
+    footer.classList.remove('chats__footer_none')
+    footer.classList.add('chats__footer')
+    
+    return footer
+}
+
 const carregarContatos = () => {
     const containerContatos = document.getElementById('contacts__container')
     const contacts = contatos.map(criarContato)
+    
 
     
     containerContatos.replaceChildren(...contacts)
@@ -118,7 +126,7 @@ const carregarContatos = () => {
 const carregarConversa = (indice) => {
     const containerChats = document.getElementById('chats')
 
-    containerChats.replaceChildren(criarHeaderContato(contatos[indice]), criarMainContato(contatos[indice]))
+    containerChats.replaceChildren(criarHeaderContato(contatos[indice]), criarMainContato(contatos[indice]), criarFooterContatos())
     
 }
 

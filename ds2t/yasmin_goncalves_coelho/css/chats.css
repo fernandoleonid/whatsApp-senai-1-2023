@@ -75,3 +75,29 @@
 .messages__text{
     border-radius: 10px 0px 0px 10px;
 }
+
+.chats__footer_none{
+    display: none;
+}
+.chats__footer{
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    background-color: #f1f2f6;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+}
+.chats__footer i{
+    font-size: 1.5rem;
+    color: #54656f;
+}
+.chats__footer input{
+    width: 80%;
+    background-color: #ffffff;
+    border: 0px;
+    height: 80%;
+    border-radius: 8px;
+    padding-left: 20px;
+    outline: 0;
+}

@@ -19,3 +19,8 @@
 .info__icons i{
     cursor: pointer;
 }
+.info img{
+    height: 6vh;
+    width: auto;
+    border-radius: 50%;
+}

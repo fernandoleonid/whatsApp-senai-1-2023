@@ -17,8 +17,8 @@
     
 }
 .contact__picture{
-    height: 50px;
-    width: 50px;
+    height: 7vh;
+    width: auto;
     border-radius: 50%;
     border: 1px #F0F2F5 solid;
     align-self: center;

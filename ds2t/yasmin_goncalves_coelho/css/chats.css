@@ -1,7 +1,7 @@
 .chats{
     height: 100%;
     width: 75%;
-    background-color: #efebe2;
+    background-color: #f1f2f6;
     border-radius: 10px;
     border: 1px #f0f2f5 solid;
 }
@@ -17,8 +17,8 @@
     padding: 20px;
 }
 .chats__info img{
-    width: 50px;
-    height: 50px;
+    height: 7vh;
+    width: auto;
     border-radius: 50%;
     border: 1px #F0F2F5 solid;
 }
@@ -100,4 +100,27 @@
     border-radius: 8px;
     padding-left: 20px;
     outline: 0;
+}
+.chats__inicio{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.chats__inicio h3{
+    color: #6e7986;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.chats__inicio p{
+    color: #6e7986;
+    font-weight: 200;
+    font-size: .8rem;
+    max-width: 80%;
+}
+.chats__inicio img{
+    width: 40vw;
 }

@@ -66,6 +66,9 @@ const criarMainContato = (contact) => {
     const container = document.createElement('nav')
     container.classList.add('chats__messages')
 
+    const chats = document.getElementById('chats')
+    chats.style.backgroundColor = '#f1ece6'
+
     contact.messages.forEach(function(message){
 
         if(message.sender == 'me'){
@@ -110,7 +113,7 @@ const criarFooterContatos = () => {
     const footer = document.getElementById('chats__footer')
     footer.classList.remove('chats__footer_none')
     footer.classList.add('chats__footer')
-    
+
     return footer
 }
 

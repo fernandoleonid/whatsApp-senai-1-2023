@@ -95,8 +95,7 @@ const criarContato = (contato, indice) => {
 
     cardContato.addEventListener('click', () => {
         var container = document.getElementById('container_chat')
-        container.replaceChildren(criarHeader(indice), criarMensagem(indice), carregarBarraDeMensagem(),
-        barraDeRolagem())
+        container.replaceChildren(criarHeader(indice), criarMensagem(indice), carregarBarraDeMensagem())
     })
 
     const list = document.createElement('div')
@@ -135,10 +134,6 @@ const carregarContatos = () => {
     const contatoCard = document.getElementById('contatoCard')
     const mensagensContatos = contatos.map(criarContato)
     contatoCard.replaceChildren(...mensagensContatos)
-}
-
-const barraDeRolagem = () => {
-    window.scroll(0, document.body.scrollHeight);
 }
 
 const carregarBarraDeMensagem = () => {

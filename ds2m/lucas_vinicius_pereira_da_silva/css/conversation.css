@@ -31,7 +31,7 @@
     justify-content: center;
     padding-top: 6px;
 }
-.name__conversation{
+#name__conversation{
     font-size: 1rem;
 }
 
@@ -56,7 +56,7 @@
     display: flex;
 }
 
-.baloons{
+#baloons{
     width: 49vw;
     height: 35vh;
     display: flex;
@@ -102,4 +102,6 @@
     justify-content: center;
 }
 
-
+.d-none {
+    display: none;
+}

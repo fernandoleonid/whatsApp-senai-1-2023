@@ -1,85 +1,85 @@
 export const contatos = [
-      {
-        "name": "Ana Maria",
-        "description": "Frontend Developer",
-        "image": "img/contact1.png",
-        "messages": [
-          {
-            "sender": "me",
-            "content": "Hello Leonid, how are you doing today?",
-            "timestamp": "2022-02-17T14:20:00.000Z"
-          },
-          {
-            "sender": "Ana Maria",
-            "content": "Hi, I'm doing fine. Thanks for asking.",
-            "timestamp": "2022-02-17T14:25:00.000Z"
-          },
-          {
-            "sender": "me",
-            "content": "Great to hear that. Do you have any plans for the weekend?",
-            "timestamp": "2022-02-17T14:30:00.000Z"
-          },
-          {
-            "sender": "Ana Maria",
-            "content": "Not yet. I'm thinking about going to the beach. What about you?",
-            "timestamp": "2022-02-17T14:35:00.000Z"
-          }
-        ]
-      },
-      {
-        "name": "Jane Smith",
-        "description": "UI Designer",
-        "image": "img/contact2.png",
-        "messages": [
-          {
-            "sender": "me",
-            "content": "Hi Jane, how's it going?",
-            "timestamp": "2022-02-16T09:00:00.000Z"
-          },
-          {
-            "sender": "Jane Smith",
-            "content": "I'm good, thanks. How about you?",
-            "timestamp": "2022-02-16T09:05:00.000Z"
-          },
-          {
-            "sender": "me",
-            "content": "I'm doing well. By the way, have you seen the latest designs for the new project?",
-            "timestamp": "2022-02-16T09:10:00.000Z"
-          },
-          {
-            "sender": "Jane Smith",
-            "content": "Yes, I have. They look great!",
-            "timestamp": "2022-02-16T09:15:00.000Z"
-          }
-        ]
-      },
-      {
-        "name": "Mark Johnson",
-        "description": "Backend Developer",
-        "image": "img/contact3.png",
-        "messages": [
-          {
-            "sender": "me",
-            "content": "Hi Mark, how's everything going?",
-            "timestamp": "2022-02-15T13:00:00.000Z"
-          },
-          {
-            "sender": "Mark Johnson",
-            "content": "Everything's going well. How about you?",
-            "timestamp": "2022-02-15T13:05:00.000Z"
-          },
-          {
-            "sender": "me",
-            "content": "I'm doing fine. By the way, do you have any updates on the API development?",
-            "timestamp": "2022-02-15T13:10:00.000Z"
-          },
-          {
-            "sender": "Mark Johnson",
-            "content": "Yes, we're making good progress. We should be able to deliver it on schedule.",
-            "timestamp": "2022-02-15T13:15:00.000Z"
-          }
-        ]
-      },
+    {
+      "name": "Ana Maria",
+      "description": "Frontend Developer",
+      "image": "img/contact1.png",
+      "messages": [
+        {
+          "sender": "me",
+          "content": "Hello Leonid, how are you doing today?",
+          "timestamp": "2022-02-17T14:20:00.000Z"
+        },
+        {
+          "sender": "Ana Maria",
+          "content": "Hi, I'm doing fine. Thanks for asking.",
+          "timestamp": "2022-02-17T14:25:00.000Z"
+        },
+        {
+          "sender": "me",
+          "content": "Great to hear that. Do you have any plans for the weekend?",
+          "timestamp": "2022-02-17T14:30:00.000Z"
+        },
+        {
+          "sender": "Ana Maria",
+          "content": "Not yet. I'm thinking about going to the beach. What about you?",
+          "timestamp": "2022-02-17T14:35:00.000Z"
+        }
+      ]
+    },
+    {
+      "name": "Jane Smith",
+      "description": "UI Designer",
+      "image": "img/contact2.png",
+      "messages": [
+        {
+          "sender": "me",
+          "content": "Hi Jane, how's it going?",
+          "timestamp": "2022-02-16T09:00:00.000Z"
+        },
+        {
+          "sender": "Jane Smith",
+          "content": "I'm good, thanks. How about you?",
+          "timestamp": "2022-02-16T09:05:00.000Z"
+        },
+        {
+          "sender": "me",
+          "content": "I'm doing well. By the way, have you seen the latest designs for the new project?",
+          "timestamp": "2022-02-16T09:10:00.000Z"
+        },
+        {
+          "sender": "Jane Smith",
+          "content": "Yes, I have. They look great!",
+          "timestamp": "2022-02-16T09:15:00.000Z"
+        }
+      ]
+    },
+    {
+      "name": "Mark Johnson",
+      "description": "Backend Developer",
+      "image": "img/contact3.png",
+      "messages": [
+        {
+          "sender": "me",
+          "content": "Hi Mark, how's everything going?",
+          "timestamp": "2022-02-15T13:00:00.000Z"
+        },
+        {
+          "sender": "Mark Johnson",
+          "content": "Everything's going well. How about you?",
+          "timestamp": "2022-02-15T13:05:00.000Z"
+        },
+        {
+          "sender": "me",
+          "content": "I'm doing fine. By the way, do you have any updates on the API development?",
+          "timestamp": "2022-02-15T13:10:00.000Z"
+        },
+        {
+          "sender": "Mark Johnson",
+          "content": "Yes, we're making good progress. We should be able to deliver it on schedule.",
+          "timestamp": "2022-02-15T13:15:00.000Z"
+        }
+      ]
+    },
     {
     "name": "Sarah Lee",
     "description": "Software Engineer",

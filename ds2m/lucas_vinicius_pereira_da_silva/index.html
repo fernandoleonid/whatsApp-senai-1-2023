@@ -7,25 +7,18 @@
 
 
 
-    <link rel="stylesheet" href="./css/reset.css"
-    >
-    <link rel="stylesheet" href="./css/style.css"
-    >
-    <link rel="stylesheet" href="./css/container.css"
-    >
-    <link rel="stylesheet" href="./css/menu.css"
-    >
-    <link rel="stylesheet" href="./css/searchChat.css"
-    >
-    <link rel="stylesheet" href="./css/chat.css"
-    >
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/searchChat.css">
+    <link rel="stylesheet" href="./css/chat.css">
     <link rel="stylesheet" href="./css/conversation.css">
+    <link rel="stylesheet" href="./css/responsividade.css">
 
-    <script src="https://kit.fontawesome.com/4ea9540e8d.js" crossorigin="anonymous"
-    >
+    <script src="https://kit.fontawesome.com/4ea9540e8d.js" crossorigin="anonymous">
     </script>
-    <script src="./index.js" defer type="module"
-    >
+    <script src="./index.js" defer type="module">
     </script>
 
     <link rel="shortcut icon" href="./img/whatsapp.ico" type="image/x-icon" />
@@ -68,16 +61,15 @@
                     <div class="linha"></div>
                 </div>
             </div>
-            <div class="conversation">
+            <div class="conversation d-none" id="conversation">
                 <div class="conversation__header">
                     <div class="photo__conversation">
-                        <img src="./img/zapzap.jpg" alt="img" class="img__conversation">
+                        <img src="" alt="img" class="img__conversation">
                     </div>
                     <div class="conversation__name">
-                        <h4 class="name__conversation">
-                            aaaaaaaaa
-                        </h4>
+                        <h4 id="name__conversation"></h4>
                     </div>
+
                     <div class="conversation__icon">
                         <div class="conversation__icons">
                             <a href="#">
@@ -86,17 +78,12 @@
                             <a href="#">
                                 <i class="fas fa-ellipsis-v"></i>
                             </a>
-                        </div>    
+                        </div>
                     </div>
                 </div>
                 <div class="conversation__main">
-                    <div class="baloons">
-                        <div class="me_baloon">
-                            <h1 class="text">AAAAAAAA</h1>
-                        </div>
-                        <div class="other_baloon">
-                            <h2 class="textTwo">BBBBBB</h2>
-                        </div>
+                    <div id="baloons">
+
                     </div>
                 </div>
                 <div class="conversation__footer">

@@ -2,10 +2,10 @@
 
 import { contatos } from "./recursos/contatos.js"
 
-
-const createCard = (contacts) => {
+// adicionei o index dos elementos
+const createCard = (contacts, index) => {
     const card = document.createElement('button')
-    card.classList.add('chat__box')
+    card.classList.add('chat__box');
 
     const photo__chat = document.createElement('div')
     photo__chat.classList.add('photo__chat')
@@ -28,17 +28,62 @@ const createCard = (contacts) => {
     const linha = document.createElement('div')
     linha.classList.add('linha')
 
-    // photo__chat.append(photo)
+    photo__chat.append(photo)
     name__chat.append(name, description)
     card.append(photo__chat, name__chat, linha)
 
-    return card
-} 
+    card.onclick = function () {
+        seeMessage(index);
+    };
 
-const seeMessage = (dados) => {
-    console.log('aaaaaa')
+    return card
 }
 
+const seeMessage = (index) => {
+
+    let conversation = document.getElementById('conversation');
+    conversation.classList.remove('d-none');
+
+    let name__conversation = document.getElementById('name__conversation');
+    let container_baloons = document.getElementById('baloons');
+
+    name__conversation.textContent = contatos[index].name;
+
+    // VERIFICAR SE EXISTE UMA CONVERSA ANTIGA
+    // SE TIVER, APAGAR ELA
+
+
+    contatos[index].messages.forEach(element => {
+
+        if (element.sender == 'me') {
+            const me_baloon = document.createElement('div');
+            me_baloon.classList.add('me_baloon');
+
+            const me_text = document.createElement('h1')
+            me_text.classList.add('text');
+            me_text.textContent = element.content
+
+            me_baloon.append(me_text)
+            container_baloons.append(me_baloon)
+        }
+        else {
+            const other_baloon = document.createElement('div');
+            other_baloon.classList.add('other_baloon');
+
+            const other_text = document.createElement('h1')
+            other_text.classList.add('textTwo');
+            other_text.textContent = element.content
+
+            other_baloon.append(other_text)
+            container_baloons.append(other_baloon)
+        }
+
+    });
+
+
+
+
+}
 
 const loadContacts = () => {
     const container = document.getElementById('chat')
@@ -48,12 +93,3 @@ const loadContacts = () => {
 }
 
 loadContacts()
-
-
-const el = document.querySelectorAll('.chat__box');
-el.forEach(item => {
-    item.addEventListener("click", elem =>{
-        console.log(elem.target.value);
-    });
-})
-

@@ -53,7 +53,7 @@
     justify-content: start;
 }
 .messages__contact p{
-    background-color: #d8fdd2;
+    background-color: #fff;
     padding: 1%;
 }
 .messages__me{
@@ -123,4 +123,18 @@
 }
 .chats__inicio img{
     width: 40vw;
+}
+@media (max-width: 960px){
+    .chats{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+    }
+    .search{
+        width: 100%;
+    }
+    .search input{
+        width: 90%;
+    }
 }

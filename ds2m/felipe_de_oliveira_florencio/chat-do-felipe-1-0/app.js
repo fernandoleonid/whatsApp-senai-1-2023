@@ -12,7 +12,7 @@ const buildHome = function(){
 }
 
 const buildContact = (contact) => {
-    const contactDiv = document.createElement('div')
+    const contactDiv = document.createElement('li')
     contactDiv.classList.add('contact')
 
     const info = document.createElement('div')
@@ -95,8 +95,8 @@ const buildChat = (contato) => {
 }
 const buildHeader = (contact) =>{
     const header = document.createElement('header')
-    // header.classList.add(
-    //     'chat__header',
+     header.classList.add(
+         'chat__header')
     //     't-border-and-color', 
     //     'd-flex' ,
     //     'justify-content-between',
@@ -175,7 +175,7 @@ const buildInputChat = () =>{
 
     const emojis = document.createElement('a')
     const emojiImage = document.createElement('img')
-    emojiImage.src = `./resources/components/chat-input/emojis.png`
+    emojiImage.src = `./img/emojis.png`
     emojis.append(
         emojiImage
     )
@@ -183,7 +183,7 @@ const buildInputChat = () =>{
 
     const anexos = document.createElement('a')  
     const anexoImage = document.createElement('img')
-    anexoImage.src = `./resources/components/chat-input/anexos.png`
+    anexoImage.src = `./img/anexos.png`
     anexos.append(
         anexoImage
     )

@@ -24,6 +24,7 @@ const criarContato = (contato, indice) => {
 
     let cont = 0
     const tamanho = contato.messages.length;
+    console.log(tamanho)
 
     while (cont < tamanho) {
         contactDescription.textContent = contato.messages[cont].content 
@@ -87,7 +88,6 @@ const criarChat = function (chat) {
         timer.classList.add('message-time')
         timer.textContent = chat.time
 
-        console.log(chat)
         contactMessage.append(message, timer);
         leftMessages.append(contactMessage);
 
@@ -96,13 +96,7 @@ const criarChat = function (chat) {
     }
 
 }
-//Carregas as mensagens para a tela com o clique no criar contatos(que chama essa função)
-const carregarChat = (indice) => {
-    // const headerContato = document.getElementById('contact__profile');
-    const containerChat = document.getElementById('chat_place');
-    const cardsChat = contatos[indice].messages.map(criarChat);
-    // const profileContact = contatos.map(carregarPerfilContato);
-
+const criarPerfilContato = (indice) => {
     const cardContact = document.createElement('div')
     cardContact.classList.add('contact__profile')
     cardContact.setAttribute('id', 'contact__profile')
@@ -125,11 +119,20 @@ const carregarChat = (indice) => {
     cardTitle.append(nameContact, contactDescription);
     cardContact.append(foto, cardTitle);
 
+    console.log(indice)
+     
+    return cardContact;
+}
+//Carregas as mensagens para a tela com o clique no criar contatos(que chama essa função)
+const carregarChat = (indice) => {
 
-    console.log(indice);
+    const containerChat = document.getElementById('chat_place');
+    const cardsChat = contatos[indice].messages.map(criarChat);
 
-    containerChat.replaceChildren(cardContact, ...cardsChat);
-    // headerContato.replaceChild(profileContact)
+    //Chamando a função que cria o perfil do contato no chat
+    const cardProfileContact = criarPerfilContato(indice);
+
+    containerChat.replaceChildren(cardProfileContact, ...cardsChat);
 
     console.log(contatos[indice].messages)
 }

@@ -143,5 +143,12 @@
     .chats__footer{
         height: 9vh;
     }
-
+}
+@media (max-width: 420px){
+    .chats__messages div{
+        padding-top: 4vh;
+    }
+    .chats__footer i{
+        font-size: 1.2rem;
+    }
 }

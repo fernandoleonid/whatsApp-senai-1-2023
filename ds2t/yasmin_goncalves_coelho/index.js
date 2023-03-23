@@ -59,8 +59,11 @@ const criarHeaderContato = (contact) => {
     const descricao = document.createElement('p')
     descricao.textContent = contact.description
 
-    const back = document.getElementById('back')
-    back.style.display = 'grid'
+    if(window.innerWidth <= 960){
+        const back = document.getElementById('back')
+        back.style.display = 'grid'
+    }
+    
 
     container.append(info__contact)
     info__texts.append(nome, descricao)

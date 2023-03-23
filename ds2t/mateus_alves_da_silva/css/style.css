@@ -1,0 +1,384 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(
+        #009688 0%,
+        #009688 130px,
+        #D9DBD5 130px,
+        #D9DBD5 100%)
+}
+
+.container{
+    display: grid;
+    width: 95vw;
+    max-width: 100%;
+    height: 95vh;
+    background-color: #ffffffff;
+    grid-template-areas: 
+    'container_contatos container_mensagens';
+    grid-template-columns: 480px 1fr;
+}
+
+.container_chat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_contatos{
+    grid-area: container_contatos;
+    background-color: #ffffffff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.container_mensagens{
+    grid-area: container_mensagens;
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #efeae2;
+    background-image: url(../img/fundo-whats.png);
+}
+
+.header_contatos{
+    display: flex;
+    width: 100%;
+    height: 59px;
+    background-color: #f0f2f5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacao_perfil{
+    display: flex;
+    width: 190px;
+    justify-content: space-around;
+    margin-right: 16px;
+}
+
+.navegacao_perfil i{
+    display: flex;
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.imagem_perfil{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.barra_pesquisa{
+    display: flex;
+    width: 100%;
+    height: 49px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pesquisa i{
+    position: absolute;
+    color: #54656f;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.filtro i{
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.caixa_pesquisa{
+    width: 380px;
+    border: none;
+    outline: 0;
+    background-color: #F0F2F5;
+    height: 35px;
+    border-radius: 8px;
+    font-size: .9rem;
+    padding-left: 64px;
+    text-overflow: ellipsis;
+}
+
+/* Cards de conversas */
+
+.chat_list{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contato_list:hover{
+    background: #e9edef;
+}
+
+.contato_list{
+    display: flex;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.imagem_contato{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.chat_detail{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.descricao_contato{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aaa;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    font-size: 0.9rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Lado direito */
+.chat_box{
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+.chat_box::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+
+.chat_box::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.caixa_minha_mensagem{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+}
+
+.caixa_sua_mensagem{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.msg_minha{
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #d9fdd3;
+}
+
+.msg_sua{
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.hora_minha{
+    padding-left: 4px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+.hora_sua{
+    padding-left: 4px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+/* Header */
+.header_mensagens{
+    display: flex;
+    width: 100%;
+    height: 59px;
+    background: #F0F2F5;
+    align-items: center;
+    justify-content: space-between;
+    border-left: .5px solid #d1d7db;
+}
+
+.container_header{
+    display: flex;
+}
+
+.img_perfil{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.container_perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 8px;
+}
+
+.info_nome{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.info_conversa{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3B4A54;
+}
+
+.nav_perfil_direito{
+    display: flex;
+    gap: 32px;
+    padding-right: 16px;
+}
+
+.nav_perfil_direito i {
+    font-size: 18px;
+    color: #54656f;
+}
+
+/* Main */ 
+.mensagem-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 168%;
+    background-color: #F0F2F5;
+    border-bottom: solid 6px #25d366;
+}
+
+.img_notebook{
+    align-items: center;
+    justify-content: center;
+}
+
+.main-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: #41525D;
+}
+
+.main-descricao{
+    font-size: 14px;
+    color: #667781;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Footer */
+.footer_direito{
+    display: flex;
+    width: 100%;
+    height: 64px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F0F2F5;
+    gap: 16px;
+    padding: 16px;
+}
+
+.footer_direito i{
+    font-size: 24px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.footer_direito_none{
+    display: none;
+}
+
+.back{
+    display: none;
+}
+
+.footer-mensagens i{
+    font-size: 24px;
+    color: #54656f;
+}
+
+.caixa_digitar_mensagem{
+    width: 100%;
+    border: none;
+    outline: 0;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding-left: 16px;
+}
+
+@media (max-width:960px){
+    .container{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        'container_contatos' 'container_mensagens';
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container_mensagens{
+        width: 100vw;
+        height: 92vh;
+    }
+
+    .container_contatos{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .caixa_pesquisa{
+        width: 80vw;
+    }
+
+    .container_intro{
+        display: none;
+    }
+
+    .back{
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        background-color: #00A884;
+        display: grid;
+        place-content: center;
+        color: black;
+        border-radius: 50%;
+        z-index: 666;
+        right: 16px;
+        bottom: 86px;
+        transition: opacity 0.8s;
+    }
+}

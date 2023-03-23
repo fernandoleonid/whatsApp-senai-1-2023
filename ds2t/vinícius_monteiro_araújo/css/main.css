@@ -1,0 +1,233 @@
+main{
+    display: grid;
+    grid-template-areas: 
+    "messages apresentation";
+    grid-template-columns: 
+    1fr 2fr;
+}
+
+
+.messages{
+    grid-area: "messages";
+    width: 25vw;
+    height: 80vh;
+    background-color: #000000;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: #B4B4B4;
+    width: 20vw;
+    height: 3.5vh;
+    margin-left: 2.5vw;
+    border-radius: 10px;
+    
+}
+.icon-search{
+    margin-left: 0.5vw;
+}
+
+.spacer{
+    height: 0.5vh;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 2vh;
+}
+
+.card{
+
+    display: grid;
+    grid-template-areas: 
+    "imagem nome"
+    "imagem legenda";
+    grid-template-columns: 
+    1fr 5.5fr;
+    width: 100%;
+    height: 9.5vh;
+    border-bottom: 1px solid #ffffff;
+    transition: .5s;
+    
+    
+}
+
+.card:hover{
+   background-color: #ffffff; 
+}
+
+.img-card{
+    grid-area: imagem;
+    padding-left: 1vw;
+    display: flex;
+    align-self: center;
+
+}
+
+.name-card{
+    grid-area: nome;
+    padding-top: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+     display: flex;
+     align-self: center;
+    
+}
+
+.subtitle-card{
+    grid-area: legenda;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+
+
+.apresentation{
+    width: 59vw;
+    background-image: url(../img/conversapng.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    display: grid;
+    grid-template-areas: 
+    "chat"
+    "container";
+    grid-template-rows: 5fr 0fr;
+}
+    
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Junge', serif;
+    font-size: 12.5vh;
+    color: #455473;
+    padding-top: 17vh;
+}
+
+.subtitle{
+    display: flex;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 8vh;
+    letter-spacing: 3vh;
+}
+.legend{
+    display: flex;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 5vh;
+    letter-spacing: 1vh;
+}
+
+.info-1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
+}
+
+.info-2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
+}
+
+.final-legend{
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.send{
+    width: 100%;
+    background-color: #000000; 
+    height:8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 15px;
+    
+}
+
+.send-message{
+    width:  45vw;
+    background-color: #ffffff;
+    height: 4vh;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    
+    
+
+}
+.message-text{
+    font-size: 1rem;
+    padding-left: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-message-receive{
+    
+    background-color: #ffffff;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2px;
+    padding: 5px;
+    margin-left: 2vw;
+    margin-top: 12vh;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1vh;
+    
+}
+
+.box-message-sent{
+    
+    background-color: #D9D9D9;
+    width: 20vw;
+    height: 5vh;
+    padding: 5px;
+    border-radius: 2px;
+    margin-left: 36.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.chat-container{
+    grid-area: chat;
+
+    
+}
+
+.container-messages{
+    grid-area: container;
+}
+
+
+
+
+
+
+
+@media (max-width: 640px){
+    main{
+        width: 87vw;
+        height: 100%;
+    }
+    .messages{
+        width: 100vw;
+    }
+    .apresentation{
+        display: none;
+    }
+    .spacer{
+        width: 56vh;
+    }
+    .search{
+        width: 95vw;
+    }
+}

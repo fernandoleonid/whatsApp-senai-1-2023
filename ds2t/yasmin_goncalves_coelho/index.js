@@ -3,8 +3,9 @@
 import { contatos } from "./contatos.js"
 
 const criarContato = (contact) => {
-    const contato = document.createElement('div')
+    const contato = document.createElement('a')
     contato.classList.add('contact')
+    contato.href = "#chats"
 
     const foto = document.createElement('img')
     foto.classList.add('contact__picture')
@@ -19,7 +20,10 @@ const criarContato = (contact) => {
 
     const descricao = document.createElement('p')
     descricao.classList.add('contact__description')
-    descricao.textContent = contact.description
+    descricao.textContent = contact.messages[contact.messages.length - 1].content
+    
+    const back = document.getElementById('back')
+    back.style.display = 'none'
 
     textos.append(nome, descricao)
 
@@ -28,7 +32,10 @@ const criarContato = (contact) => {
     contato.addEventListener('click', () => {
         const chat = document.getElementById('chats')
         chat.replaceChild(carregarConversa(getIndex(contact, contatos)))
+
+        
     })
+    
 
     return contato
 }
@@ -52,6 +59,8 @@ const criarHeaderContato = (contact) => {
     const descricao = document.createElement('p')
     descricao.textContent = contact.description
 
+    const back = document.getElementById('back')
+    back.style.display = 'grid'
 
     container.append(info__contact)
     info__texts.append(nome, descricao)
@@ -68,6 +77,8 @@ const criarMainContato = (contact) => {
 
     const chats = document.getElementById('chats')
     chats.style.backgroundColor = '#f1ece6'
+    chats.style.display = 'block'
+
 
     contact.messages.forEach(function(message){
 

@@ -14,9 +14,9 @@ O intuito era colocar em prática os conhecimentos adquiridos em sala, consumind
 - [X] `Codificou o app conforme o original?`
 - [X]  Nomeou as classes CSS utilizando o padrão BEM?
 - [X] `O app está responsivo?`
-- []  Utilizou algum framework CSS?
+- [ ]  Utilizou algum framework CSS?
 - [X] `Consumiu o JSON para mostrar todos os contatos?`
-- []  Criou outros itens, na lista de contatos, como a quantidade de mensagens lidas?
+- [ ]  Criou outros itens, na lista de contatos, como a quantidade de mensagens lidas?
 - [X] `Consumiu o JSON para mostrar as mensagens de cada contato?`
 - [x]  Foi criado variáveis pensando nas boas praticas?
 - [X] `Foi criado funções pensando em responsabilidade única?`

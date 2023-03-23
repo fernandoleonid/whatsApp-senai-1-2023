@@ -1,0 +1,14 @@
+main{
+    display: grid;
+    grid-template-areas: 
+    "lower-info container-message";
+    grid-template-columns: 1fr 2.25fr;
+}
+
+.lower-info{
+    grid-area: lower-info;
+}
+.container-message{
+    width: 60vw;
+    grid-area: container-message;
+}

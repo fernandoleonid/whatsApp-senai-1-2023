@@ -12,20 +12,43 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/upper-info.css">
     <link rel="stylesheet" href="./css/lower-info.css">
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script src="./module/index.js" defer type="module"></script>
 </head>
 
 <body>
-    <main>
-        <div class="upper-info">
+    <header>
+        <div class="header-left">
 
-            <img class="profile-img" src="./img/img-profile.png" alt="profile image">
-            <div class="imgs">
-                <img class="users-img" src="./img/img-users.png" alt="">
-                <img class="newmg-img" src="./img/img-newmsg.png" alt="">
-                <img class="settings-img" src="./img/img-settings.png" alt="">
+                <div class="profile">
+                    <img class="profile-img" src="./img/img-profile.png" alt="profile image">
+                </div>
+                
+                <div class="icons">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+
+                
             </div>
+
+       
         </div>
+        <div class="header-right">
+            <img class="image-header-right" src="./img/contact5.png" alt="">
+            <span class="header-name">Joelintona</span>
+            <div class="header-right-icons">
+                <i class="fa-solid fa-phone-volume"></i>
+                <i class="fa-solid fa-video"></i>
+            </div>
+            
+        </div>
+
+    </header>
+    <main>
 
         <div class="lower-info">
             <div class="left-side" id="left-side">
@@ -37,16 +60,16 @@
                 <div class="spacer"></div>
 
                 <div class="card">
-                    
-                        <img class="img-card" src="./img/contato3.png" alt="">
-                        <span class="name-card">Mtz</span>
-                        <span class="subtitle-card">Pro Player at C9</span>
-                    
-                    
+
+                    <img class="img-card" src="./img/contato3.png" alt="">
+                    <span class="name-card">Mtz</span>
+                    <span class="subtitle-card">Pro Player at C9</span>
+
+
                 </div>
             </div>
 
-            <div class="right-side" id="right-side">
+            <!-- <div class="right-side" id="right-side">
                 <img src="/img/img-back.png" alt="">
             </div>
 
@@ -59,10 +82,39 @@
                     <p class="info-3">Basta conectar o QR Code!</p>
                 </div>
 
+            </div> -->
+        </div>
+            <div class="container-message">
+
+                <div class="container-chat">
+                    <div class="box-message-receive">
+                        Eai man tranquilo
+                    </div>
+                    <div class="box-message-sent">
+                        Oq se quer cara
+                    </div>
+                    <div class="box-message-receive">
+                        jogar futebola vamo mano jogar futebola
+                    </div>
+                    <div class="box-message-sent">
+                        não cara mds oq foi 
+                    </div>
+                </div>
+
+                
+                <div class="footer-right">
+                    <div class="send">
+                        <a href="#"><i class="fa-solid fa-face-smile"></i></a>
+                        <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+                        <input class="send-message" type="text" placeholder="Message">
+                        <a href="#"><i class="fa-solid fa-microphone"></i></a>
+                    </div>
+                </div>
+
             </div>
 
 
-        </div>
+        
 
 
 

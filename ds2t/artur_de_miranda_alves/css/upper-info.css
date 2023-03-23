@@ -5,13 +5,15 @@
     margin-top: 3vh;
     margin-left: 3vw;
 }
-.imgs{
-    height: 60px;
+.icons{
+    height: 30px;
     width: 20vw;
     margin-left: 10vw;
-    margin-top: -5vh;
+    margin-top: -4vh;
     display: flex;
     justify-content: space-evenly;
+    font-size: 24px;
+    color: rgb(247, 247, 247);
 }
 .profile-img{
     height: 44px;

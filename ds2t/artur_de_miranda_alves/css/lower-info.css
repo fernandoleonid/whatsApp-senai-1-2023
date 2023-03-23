@@ -3,15 +3,16 @@
     grid-template-areas:
     "left right"
     "left info";
+    grid-template-columns: 
+    2fr 10fr;
 }
 .left-side{
     grid-area: left;
     height: 85vh;
     width: 30vw;
     margin-left: 3vw;
-    background-color: #82a8a1;
-    border: 4px solid#446d65;
-    box-shadow: 3px 3px #79a89f;
+    background-color: #222324;
+    
 }
 .search-bar{
     position: relative;
@@ -87,6 +88,7 @@
 
 }
 .spacer{
+   
     height: 0.5vh;
     width: 100%;
     background-color: #b8b8b8;
@@ -100,18 +102,24 @@
     grid-template-columns: 
     1fr 6fr;
     width: 100%;
-    height: 7vh;
-    margin-top: 2vh;
-    border-bottom: 1px solid #d3d3d3;
+    height: 9.3vh;
+    border-bottom: 1px solid #d4cdcd;
+    transition: .75s;
+}
+.card:hover{
+    background-color: #cecece83
 }
 .img-card{
+    display: flex;
+    align-self: center;
     margin-left: .75vw;
     grid-area: img;
-    padding-top: 1vh;
 }
 .name-card{
+    display: flex;
+    align-self: center;
     grid-area: nome;
-    padding-top: 1vh;
+    padding-top: 2vh;
     color: #e9e9e9;
     font-family: Arial, Helvetica, sans-serif;
 }

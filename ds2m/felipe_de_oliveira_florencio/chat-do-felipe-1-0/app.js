@@ -1,13 +1,20 @@
 'use strict'
 
 import {contatos} from "./api/contatos.js"
+import { searchUser } from "./api/whatsapp.js"
 
 
 
 
-const buildHome = function(){
+const buildHome = async function(){
     const contactContainer = document.getElementById('contact')
-    const contacts = contatos.map(buildContact)
+    const user = await searchUser(1)
+    console.log(user.contacts)
+    const myContacts = user.contacts;
+    const contacts = myContacts.map(buildContact)
+
+    const profileHeader = document.getElementById('profile-header')
+    profileHeader.style.backgroundColor = user.background
     contactContainer.append(...contacts)
 }
 
@@ -113,7 +120,7 @@ const buildHeader = (contact) =>{
         'contact__photo',
         'info'
         )
-    image.src = `./api/${contact.image}`
+    image.src = contact.image
 
     const name = document.createElement('h2')
     name.classList.add('contact__name')

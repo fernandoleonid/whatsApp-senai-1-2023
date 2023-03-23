@@ -1,0 +1,111 @@
+.container__mensagens{
+    width: 100%;
+    display: grid;
+    background-color: azure;
+    /* position: relative; */
+    /* line-height: 10%; */
+    display: grid;
+    grid-template-areas:
+        "content";
+}
+
+.mensagem__contato{
+    z-index: 1;
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+} 
+
+.enviar{
+    display: flex;
+    align-items: center;
+    place-self: end center; 
+    justify-content: space-between;
+    padding: 0 15px;
+    width: 100%;
+} 
+
+.enviar__mensagem{
+    display: flex;
+    padding: 13px;
+    place-self: end;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    align-items: end;
+    border-radius: 8px 0 8px 8px; 
+    box-shadow: 1px 1px 7px grey;
+    max-width: 55vw; 
+    width: 45%; 
+    height: auto; 
+    margin: 50px 450px ;
+     
+}
+
+.mensagem__entregue{
+    display: flex;
+    padding: 13px;
+    place-self: end;
+    background-color: papayawhip; 
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 1px 1px 7px black;
+    max-width: 35vw;
+    font-family: 'Inter', sans-serif;
+    width: fit-content;
+    height: auto;
+    align-items: center;
+    margin: 20px 50px;
+}
+
+.digitar__mensagem{
+    display: flex;
+    color: grey;
+    font-size: 20px;
+    width: 48vw;
+    height: 5vh;
+    padding: 15px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5px;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.icons__mensagens {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.icons__mensagens li i {
+    font-size: 1.7rem;
+    color: #000;
+}
+.icon_microphone{
+    font-size: 1.7rem;
+    color: #000;
+}
+
+.icon_microphone li i:hover{
+    color: plum;
+}
+.icons__mensagens li i:hover {
+    color: plum;
+}
+
+.time{
+    color: grey;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+    margin-right: 25%;
+}
+
+
+@media(max-width: 640px){
+    .container__mensagens{
+        display: none;
+    }
+}

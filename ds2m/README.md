@@ -10,3 +10,5 @@
 | [Caio Palermo Lemos](https://github.com/HasegawaTaizou)   | [![](https://skillicons.dev/icons?i=js)](./caio_palermo_lemos/) | [<img src="./caio_palermo_lemos/img/SCREENSHOT.PNG" width="300">](https://hasegawataizou.github.io/whatsApp-senai-1-2023/ds2m/caio_palermo_lemos)|
 | [Vinicius Nunes De Oliveira](https://github.com/viniciusnunes137)   | [![](https://skillicons.dev/icons?i=js)](./vinicius_nunes_de_oliveira/) | [<img src="./vinicius_nunes_de_oliveira/img/desktop.png" width="300">](https://viniciusnunes137.github.io/whatsApp-senai-1-2023/ds2m/vinicius_nunes_de_oliveira/)|
 | [Clara Martins Oliveira](https://github.com/oliveiraclara)   | [![](https://skillicons.dev/icons?i=js)](./clara_martins_oliveira/) | [<img src="./clara_martins_oliveira/img/desktop.png" width="300">](https://oliveiraclara.github.io/whatsApp-senai-1-2023/ds2m/clara_martins_oliveira/))|
+| [Letícia Evelin ](https://github.com/leticia-evelin)   | [![](https://skillicons.dev/icons?i=js)](./letícia_evelin_aguiar_e_silva/) | [<img src="./letícia_evelin_aguiar_e_silva/img/desktop.png" width="300">](https://leticia-evelin.github.io/whatsApp-senai-1-2023/ds2m/letícia_evelin_aguiar_e_silva/)|
+

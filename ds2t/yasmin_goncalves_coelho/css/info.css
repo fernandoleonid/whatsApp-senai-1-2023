@@ -1,0 +1,26 @@
+.info{
+    display: flex;
+    align-items: center;
+    align-self: baseline;
+    width: 25vw;
+    height: 7vh;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #F0F2F5;
+    justify-content: space-between;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.info__icons{
+    display: flex;
+    font-size: 1.2rem;
+    color: #54656F;
+    gap: 2vw;
+}
+.info__icons i{
+    cursor: pointer;
+}
+.info img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}

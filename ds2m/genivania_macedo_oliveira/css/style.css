@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    grid-template-areas: 'header''main''footer';
+    grid-template-rows: 85px 1fr 65px;
+    background-color: #e7d5df;
+    display: none;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 'header main';
+    grid-template-columns: minmax(300px, 350px) minmax(400px, 1fr);
+    transition: background 0.2s linear;
+}
+
+header {
+    display: block;
+    height: 100vh;
+    background-image: linear-gradient(to bottom , #C71D75, #751346);
+    border-right: 0.8px solid #a8a5a555;
+    overflow-y: scroll;
+    border-bottom: 2px solid #a8a5a5;
+    border-radius: 10px;
+}
+.main__header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 65px 1fr 65px;
+    gap: 20px;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to bottom , #C71D75, #751346);
+    border-right: 0.8px solid #a8a5a555;
+    
+}
+
+.main__icons {
+    display: flex;
+    font-size: 24px;
+    gap: 40px;
+    position: fixed;
+    right: 30px;
+}
+
+.main__mensagem {
+    grid-area: main;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: end;
+}
+
+.main__mensagem__contact,
+.main__mensagem__contact__end {
+    max-width: 400px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #a8a5a5;
+}
+
+.main__mensagem__contact__end {
+    background-color: #e08bf1;
+    align-self: flex-end;
+}
+
+.main__mensagem__sender {
+    font-weight: 900;
+    padding-bottom: 2px;
+}
+
+.main__mensagem__hora {
+    display: flex;
+    justify-content: end;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.main__footer {
+    color: var(--font__color);
+    padding: 10px;
+    grid-area: footer;
+    background-color: var(--primary__color);
+    display: grid;
+    grid-template-columns: 50px minmax(350px, 1fr);
+    align-items: center;
+    font-size: 24px;
+    gap: 20px;
+    position: fixed;
+    bottom: 0%;
+    width: 100vw;
+}
+
+.main__footer__envio {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.camp__main {
+    background-color: #a8a5a555;
+    height: 40px;
+    width: 70%;
+    min-width: 500px;
+    border-radius: 8px;
+}
+
+.panel__header {
+    background-image: linear-gradient(to bottom , #C71D75, #751346);
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status {
+    display: flex;
+    gap: 50px;
+}
+
+header img,
+main img {
+    width: 60px;
+    height: 60px;
+}
+
+header span {
+    font-size: 24px;
+    color: var(--font__color);
+}
+
+.panel__header__finder {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 50px;
+    gap: 20px;
+    background-image: linear-gradient(to bottom , #C71D75, #751346);
+    border-right: 0.8px solid #a8a5a555;
+}
+
+.camp__finder {
+    background-color: var(--font__color);
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.contact {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    display: flex;
+    align-items: center;
+    height: 92px;
+    padding: 10px 15px;
+    gap: 30px;
+    border-bottom: 1px solid #a8a5a5;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: inset 0 0 50px #c8bcc2;
+    background-color: rgb(184, 146, 167);
+}
+
+.contact:hover {
+    box-shadow: 2px 2px 8px rgb(231, 51, 201) ;
+}
+
+.contact__image {
+    border-radius: 50%;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.label {
+    background-color: #111;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    /* transform: scale(1.5); */
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+

@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jura', sans-serif;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+ 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #131312 0%, #034032 28.65%, #005357 52.6%, #00354D 78.65%, #131312 100%);
+    background-blend-mode: darken;
+}
+
+header {
+    width: 100%;
+    height: 23vh;
+    width: 100%;
+    background: linear-gradient(white, white) padding-box,
+              linear-gradient(to top, #0CD7E8,#00DB71 ) border-box;
+    border-radius: 0px 0px 4px 4px;
+    border: 3px solid transparent;
+}
+
+.cabecalho {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #1D1B1A;
+    
+    padding-left: 25%;
+    padding-top: 13px;
+}
+
+.titulo__cabecalho {
+    background: linear-gradient(90deg, #00DB71 0%, #0CD7E8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-top: 5px;
+    font-size: 2rem
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.borda__card {
+    position: absolute;
+    height: 700px;
+    width: 50%;
+    background: linear-gradient(rgba(255, 255, 255, 0), #ffffff00) padding-box,
+    linear-gradient(to right, #00DB71, #0CF2C4,  #0CD7E8) border-box;
+    border-radius: 0.5em;
+    border: 3px solid transparent;
+    top: 10%;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    background-color: #313237;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    left: center;
+    border-radius: 10px;
+   
+}
+
+.bem__vindo {
+    color: #00DB71;
+    align-self: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.descricao {
+    width: 45%;
+    color: #00DB71;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 5%;
+}
+
+.botao__entrar {
+    align-self: center;
+    width: 20vw;
+    text-align: center;
+    padding-top: 10px;
+    height: 62px;
+    background-color: #076750;
+    color: #00DB71;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ;
+}
+
+.botao__entrar:hover {
+    background-color: #00354D;
+    color: #076750;
+}
+
+.contatos {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+.contatos h3 {
+    color: #00DB71;
+}
+
+.contatos ul {
+    display: flex;
+    gap: 15px;
+}
+
+.contatos span {
+    color: #00DB71;
+}
+
+.twitter {
+    color: #0CDAE3;
+}
+
+.facebook {
+    color: #2E81CE;
+}
+
+.linkedin {
+    color: #7385C3;
+}
+
+.figma {
+    color: #BF17DB;
+}
+
+.link {
+    font-size: 1.2rem;
+}
+
+.link:hover {
+    color: #00DB71;
+    transition: 0.2s;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4f821b9693.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="index.js" defer type="module"></script>
+    <title>WhatsApp</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container_contatos" id="container_contatos">
+            <div class="header_contatos">
+                <div class="imagem_perfil">
+                    <img src="./img/fotoPerfil.png" alt="foto de perfil">
+                </div>
+                <ul class="navegacao_perfil">
+                    <li>
+                        <i class="fa-solid fa-users"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-circle-notch"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-message"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="barra_pesquisa">
+                <div class="pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Pesquisar ou começar uma nova conversa" class="caixa_pesquisa">
+                </div>
+                <div class="filtro">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+            </div>
+            
+            <ul class="chat_list" id="contatoCard" ></ul>
+        </div>
+
+        <div class="container_mensagens">
+
+            <div class="container-intro" id="container_chat">
+                <!-- <div class="mensagem-main">
+                    <img src="./img/notebook.png" alt="Imagem de um celular e um notebook" class="img-notebook">
+                    <p class="main-titulo">WhatsApp Web</p>
+                    <div class="main-descricao">
+                        <p class="main-criptografia">Envie e receba mensagens sem precisar manter seu celular conectado à internet.</p>
+                        <p class="main-criptografia">Use o WhatsApp em até quatro aparelhos conectados e um celular ao mesmo tempo.</p>
+                    </div>
+                </div> -->
+                <div class="container_mensagens_direita" id="id_container"></div> 
+            </div>
+
+            <div class="footer_direito_none" id="footer">
+                <i class="fa-regular fa-face-smile"></i>
+                <i class="fa-sharp fa-solid fa-paperclip"></i>
+                <input type="text" placeholder="Mensagem" class="caixa_digitar_mensagem">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+        <a href="#container_contatos" class="back">
+            <i class="fas fa-angle-double-up" aria-hidden="true"></i>
+        </a>
+    </div>
+</body>
+</html>

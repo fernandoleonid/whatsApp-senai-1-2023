@@ -23,7 +23,7 @@
     height: 80px;
     width: 100%;
     background-color: #fff;
-    border: 1px solid #E78A38;
+    border-bottom: 1px solid #E78A38;
     display: flex;
 }
 .chat-contact_name{

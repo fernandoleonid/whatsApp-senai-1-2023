@@ -125,9 +125,12 @@ const criarPerfilContato = (indice) => {
 }
 //Carregas as mensagens para a tela com o clique no criar contatos(que chama essa função)
 const carregarChat = (indice) => {
-
+    
     const containerChat = document.getElementById('chat_place');
     const cardsChat = contatos[indice].messages.map(criarChat);
+
+    const fundoChat = document.getElementById('chat__box')
+    fundoChat.style.backgroundColor = '#FFE7B'
 
     //Chamando a função que cria o perfil do contato no chat
     const cardProfileContact = criarPerfilContato(indice);

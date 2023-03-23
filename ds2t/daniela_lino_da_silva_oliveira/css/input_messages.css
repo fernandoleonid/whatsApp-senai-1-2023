@@ -12,20 +12,27 @@
 .input_box{
     border-radius: 15px;
     height: 3rem;
-    width: 98%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 1%;
-    border: 2px solid #FFBA29;
+    border: 1.9px solid #E78A38;
 }
 .message__entry{
     grid-area: chat;
-    justify-content: end;
+    justify-content: center;
+    display: flex;
     align-items: center;
     font-size: 2rem;
     
 }
 .input_chat::placeholde{
     color: #FFBA29;
+}
+/* TABLET */
+@media (max-width: 960px) {
+    .input_box{
+        width: 85%;
+    }
 }

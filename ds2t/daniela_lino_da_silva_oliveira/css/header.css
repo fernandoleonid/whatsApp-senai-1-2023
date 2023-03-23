@@ -36,3 +36,12 @@
     margin: 1rem;
     width: 40px;
 }
+
+@media (max-width: 760px) {
+    .search__entry{
+        height: 40px;
+    }
+    .search__box{
+        height: 3rem;
+    }
+}

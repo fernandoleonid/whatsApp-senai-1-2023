@@ -4,9 +4,6 @@
 
 }
 
-.user_profile__box {
-    min-height: 20vh;
-}
 
 .contacts__list {
     min-height: max-content;
@@ -21,7 +18,7 @@
     margin-bottom: 5rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    /* position: absolute; */
+    overflow-x: hidden;
     border-top: 1px solid #FFAE03;
     border-bottom: 1px solid #FFAE03;
 }
@@ -61,7 +58,7 @@
     font-size: .7rem;
     height: 1rem;
     width: 80%;
-    color: #FFAE03;
+    color: #F6B300;
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -84,10 +81,26 @@
 /* TABLET */
 @media (max-width: 960px) {
     .contact__box{
-        width: 15rem;
+        width: 10rem;
     }
     .contacts__container {
         overflow-x: hidden;
-        overflow-y: hidden;
+        width: 12rem;
+        border-bottom: none;
     }
+}
+@media (max-width: 760px) {
+    .contacts__container{
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        height: max-content;
+    }
+    .contacts__list {
+        height: max-content;
+    }
+    .contact__box{
+        height: 10rem;
+    }
+
 }

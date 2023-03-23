@@ -40,7 +40,7 @@ nav {
         "nav main main"
         "nav main main"
         "nav chat chat";
-    grid-template-rows: 80px 1fr 1fr 70px;
+    grid-template-rows: 80px 2fr 2fr 70px;
     grid-template-columns: 20%;
     position: fixed;
 }
@@ -57,11 +57,22 @@ nav {
         grid-template-rows: 80px 1fr 2fr 70px;
         grid-template-columns: 20%;
     }
-
     .search_box__contacts,
     .search_contacts__entry,
     .search_group,
     .search_box__contacts {
         display: none;
+    }
+}
+@media (max-width: 760px) {
+    .screen_chat{
+        grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "chat chat chat";
+    grid-template-rows: 60px 2fr 1fr 60px;
+    grid-template-columns: 20%;
+    position: absolute;
     }
 }

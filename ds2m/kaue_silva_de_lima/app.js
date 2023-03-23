@@ -1,6 +1,6 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js"
 
 let i = 0
 
@@ -153,6 +153,7 @@ const carregarContatos = () => {
     });
 
 }
+
 
 
 

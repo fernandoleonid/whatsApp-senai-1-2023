@@ -33,7 +33,7 @@ header {
 
 .panel__header {
     background-color: var(--primary__color);
-    padding: 10px 16px;
+    padding: 20px 160px;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -2,7 +2,7 @@
 
 ![](./img/capturawhatsapp.PNG)
 
-[Link do Projeto](https://github.com/ClaudioSousa44/whatsApp-senai-1-2023.git)
+[Link do Projeto](https://oswaldbarbosa.github.io/whatsApp-senai-1-2023/ds2t/oswaldo_da_silva_barbosa_dos_santos)
 
 # Sobre
 
@@ -14,7 +14,7 @@ O intuito era colocar em prática os conhecimentos adquiridos em sala, consumind
 - [X] `Codificou o app conforme o original?`
 - [X]  Nomeou as classes CSS utilizando o padrão BEM?
 - [X] `O app está responsivo?`
-- [ ]  Utilizou algum framework CSS?
+- []  Utilizou algum framework CSS?
 - [X] `Consumiu o JSON para mostrar todos os contatos?`
 - []  Criou outros itens, na lista de contatos, como a quantidade de mensagens lidas?
 - [X] `Consumiu o JSON para mostrar as mensagens de cada contato?`

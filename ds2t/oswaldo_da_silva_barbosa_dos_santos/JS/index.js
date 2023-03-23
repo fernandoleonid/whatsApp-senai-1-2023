@@ -7,7 +7,7 @@ const criarCard = (contatos, indice) => {
     card.classList.add('card-contacts')
 
     const foto = document.createElement('img')
-    foto.classList.add('card-image')
+    foto.classList.add('card-image') 
     foto.src = `./${contatos.image}`
     foto.alt = "Foto de Perfil"
 

@@ -1,0 +1,14 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    background: #111B21;
+}
+
+@media (max-width: 640px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 150vh;
+    }
+}

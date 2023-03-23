@@ -1,11 +1,13 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+// import { contatos } from "./contatos.js"
+import { contactWhat } from "./api-whatsapp/api.js"
 
 const contactRespon = document.getElementById('responsive')
-// console.log(contatos[1].messages)
 
-const criarContatos = (contatos, indice) => {
+let contatos = await contactWhat('11987876567')
+
+const criarContatos = async (contatos, indice) => {
 
     const card = document.createElement('a')
 
@@ -16,7 +18,7 @@ const criarContatos = (contatos, indice) => {
     const foto = document.createElement('img')
     foto.classList.add('card-icon')
     foto.src = `./images/${contatos.image}`
-
+    
     const cardIdentificador = document.createElement('div')
     cardIdentificador.classList.add('card-identification')
 
@@ -34,7 +36,6 @@ const criarContatos = (contatos, indice) => {
     let timer = contatos.messages
     const time = document.createElement('span')
 
-
     while (cont < timer.length) {
         time.classList.add('time')
 
@@ -42,21 +43,28 @@ const criarContatos = (contatos, indice) => {
         cont++
     }
 
-    card.onclick = () => (carregarChat(indice))
-    card.append(foto, cardIdentificador, time)
+    card.onclick = async function () {
+        const indiceClick = await carregarChat(indice)
+        console.log(indiceClick);
+    }
+    
+    card.append( foto, cardIdentificador, time)
+    console.log(card)
     return card
+    
 
 }
 
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
     const cards = contatos.map(criarContatos)
+    console.log(cards)
 
     container.replaceChildren(...cards)
 
 }
 
-const criarMensagens = (mensagens) => {
+const criarMensagens = async (mensagens) => {
 
     if (mensagens.sender == 'me') {
 
@@ -98,10 +106,10 @@ const criarMensagens = (mensagens) => {
 
 }
 
-const carregarChat = (indice) => {
+const carregarChat = async (indice) => {
     const plane = document.getElementById('welcome')
     const messagesChat = document.getElementById('messages')
-    const cardsChat = contatos[indice].messages.map(criarMensagens)
+    const cardsChat = await contatos[indice].messages.map(criarMensagens)
 
     plane.style.display = 'none'
     messagesChat.style.display = 'flex'

@@ -70,8 +70,9 @@
     margin-top: 4%;
     margin-left: 5%;
     margin-right: 5%;
-    width: 12rem;
-    gap: 2rem;
+    min-width: 10rem;
+    max-width: 20rem;
+    /* gap: .5rem; */
     display: flex;
     border-radius: 15px;
     background-color: #ECECEC;
@@ -81,7 +82,7 @@
 }
 
 /* TABLET */
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
     .contact__box{
         min-width: 10rem;
     }
@@ -115,7 +116,8 @@
         font-size: .9rem;
     }
     .contact {
-        height: 3.5rem;
+        width: 10rem;
+        height: 4.5rem;
         border-radius: 15px;
         margin: 1rem;
     }

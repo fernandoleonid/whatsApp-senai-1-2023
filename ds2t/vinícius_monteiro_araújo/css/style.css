@@ -3,29 +3,40 @@ body{
     padding-top: 5vh;
     padding-right: 8vw;
     padding-left: 8vw;
-}
-
-header{
     display: grid;
     grid-template-areas: 
     "left right";
-    height: 8vh;
+    grid-template-columns: 
+    1fr 2fr;
 }
+
+.body-left{
+    grid-area: left;
+    
+}
+.body-right{
+    grid-area: right;
+    height: 78vh;
+    
+
+}
+
+
 .header-left{
 
     display: flex;
     width: 25vw;    
     background-color: #000;
     align-items: center;
-    grid-area: left;
+    
 
 }
 
 .header-right{
-
+    height: 8vh;
     width: 59vw;
     background-color: #000000;
-    grid-area: right;
+    
     
 }
 
@@ -37,30 +48,30 @@ main{
     background-color: #858585;
 }
 
-a{
-    color: #ffffff;
-}
 
-i{
-    color: #ffff;
-}
 @media (max-width: 640px){
 
     body{
-        height: 88vh;
+      
         padding: 0;
-        background-color: #455473;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 150vh;
     }
 
     header{
         width: 100%;
     }
 
-    .header-right{
-        display: none;
-    }
+    
     .header-left{
         width: 100%;
     }
+
+    
+
+    
 }
 

@@ -1,11 +1,14 @@
 'use strict'
 
 // import { contatos } from "./contatos.js"
-import { contactWhat } from "./api-whatsapp/api.js"
+import { contactWhat, user } from "./api-whatsapp/api.js"
 
 // const contactRespon = document.getElementById('responsive')
 
-let contatos = await contactWhat('11987876567')
+let numero = '11966578996'
+
+let contatos = await contactWhat(numero)
+let userMe = await user(numero)
 
 const criarContatos = (contatos, indice) => {
 
@@ -145,9 +148,45 @@ const carregarChat = (indice) => {
     header.append(iconHeader, cardHeader)
     textInput.append(inputPurple, enviar)
 
+
+
+
     messagesChat.replaceChildren(header, ...cardsChat, textInput)
 
 }
 
+const getUsuario = () => {
+    console.log(userMe)
+    const avatar = document.getElementById('avatar')
+    const pesquisa = document.getElementById('pesquisa')
+
+    const avatarImg = document.createElement('img')
+    avatarImg.classList.add('img-avatar')
+    avatarImg.src = `./images/${userMe.image}`
+
+    const avatarName = document.createElement('p')
+    avatarName.classList.add('name-user')
+    avatarName.textContent = userMe.name
+
+    const avatarNumber = document.createElement('p')
+    avatarNumber.classList.add('number-user')
+    avatarNumber.textContent = userMe.number
+
+    const divUser = document.createElement('div')
+    divUser.classList.add('div-user')
+    divUser.append(avatarName, avatarNumber)
+
+    avatar.style.backgroundColor = userMe.color
+    pesquisa.style.backgroundColor = userMe.color
+
+
+
+    avatar.append(avatarImg, divUser)
+    console.log(avatar)
+    return avatar
+
+}
+
+getUsuario()
 carregarCards()
 

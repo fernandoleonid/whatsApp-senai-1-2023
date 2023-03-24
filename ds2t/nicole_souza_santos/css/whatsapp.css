@@ -16,6 +16,10 @@
     flex-direction: column;
     place-self: center;
 }
+
+.name-user{
+    font-weight: bold;
+}
 .chat{
     border: 1px solid #979797;
     width: 788px;
@@ -42,10 +46,10 @@
     text-align: center;
 }
 .avatar{
-    display: grid;
+    display: flex;
     align-items: center;
+    gap: 15px;
     padding-left: 21px;
-    background-color: #865DFF;
     height: 70px;
 }
 .header-contact{
@@ -110,7 +114,7 @@
     position: absolute;
     margin-left: 25.5rem;
 }
-.card-icon,
+.card-icon, .img-avatar,
 .chat .icon-header{
     width: 50px;
     height: 50px;

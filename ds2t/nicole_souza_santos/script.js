@@ -71,7 +71,7 @@ const criarMensagens = (mensagens) => {
 
         const user = document.createElement('div')
         user.classList.add('me')
-
+        content.style.backgroundColor = userMe.color
 
         const sender = document.createElement('p')
         sender.classList.add('sender')
@@ -118,6 +118,7 @@ const carregarChat = (indice) => {
     const header = document.createElement('div')
     header.setAttribute('id', 'headerContact')
     header.classList.add('header-contact')
+    header.style.backgroundColor = userMe.color
 
     const iconHeader = document.createElement('img')
     iconHeader.classList.add('icon-header')
@@ -139,6 +140,7 @@ const carregarChat = (indice) => {
 
     const inputPurple = document.createElement('input')
     inputPurple.classList.add('mensagensTexto')
+    textInput.style.backgroundColor = userMe.color
 
     const enviar = document.createElement('img')
     enviar.classList.add('enviar')
@@ -148,9 +150,6 @@ const carregarChat = (indice) => {
     header.append(iconHeader, cardHeader)
     textInput.append(inputPurple, enviar)
 
-
-
-
     messagesChat.replaceChildren(header, ...cardsChat, textInput)
 
 }
@@ -159,6 +158,9 @@ const getUsuario = () => {
     console.log(userMe)
     const avatar = document.getElementById('avatar')
     const pesquisa = document.getElementById('pesquisa')
+    const cabecalho = document.getElementById('cabecalho')
+    const now = document.getElementById('now')
+    
 
     const avatarImg = document.createElement('img')
     avatarImg.classList.add('img-avatar')
@@ -178,8 +180,9 @@ const getUsuario = () => {
 
     avatar.style.backgroundColor = userMe.color
     pesquisa.style.backgroundColor = userMe.color
-
-
+    cabecalho.style.backgroundColor = userMe.color
+    now.style.color = userMe.color
+    
 
     avatar.append(avatarImg, divUser)
     console.log(avatar)

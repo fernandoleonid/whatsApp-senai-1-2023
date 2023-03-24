@@ -35,12 +35,11 @@
     height: 312px;
 }
 .miss{
-    color: #865DFF;
+    color: #000;
     font-size: 1rem;
     text-align: center;
 }
 .now{
-    color: #FFA3FD;
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
@@ -58,7 +57,6 @@
     align-items: center;
     width: 788px;
     height: 70px;
-    background: #865DFF;
     border: 1px solid rgba(151, 151, 151, 0.4);
     gap: 20px;
 }
@@ -71,7 +69,7 @@
 }
 .card{
     display: flex;
-    color: #865DFF;
+    color: #fff;
     border-bottom: 1px solid rgba(151, 151, 151, 0.4);
     padding-left: 10px;
     height: 60px;
@@ -84,7 +82,7 @@
     border-radius: 10px;
     margin: 10px;
     background-color: #191825;
-    color: #865DFF;
+    color: #000;
 
 }
 .textInput{
@@ -104,7 +102,7 @@
     border-radius: 10px;
     padding: 10px;
     background-color: #191825;
-    color: #865DFF;
+    color: #fff;
 }
 .chat .enviar{
     width: 24px;

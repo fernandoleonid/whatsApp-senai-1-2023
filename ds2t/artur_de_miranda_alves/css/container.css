@@ -1,45 +1,78 @@
-.container-message{
+.container-message {
+    height: 75.3vh;
     display: grid;
-    grid-template-areas:
+    /* grid-template-areas:
     "chat"
     "footer" ;
-    grid-template-rows: 7.4fr 1fr;
-    background-color: #8ca09c
+    grid-template-rows: 7.4fr 1fr; */
+    align-content: flex-end;
+    background-image: url('/img/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.container-right{
+
+.container-right {
     height: 3vh;
     width: 3vh;
     background-color: rebeccapurple;
 }
-.footer-right{
+
+.footer-right {
     grid-area: footer;
-    height: 10.1vh;
+    height: 12vh;
     width: 60vw;
     background-color: #1f2020;
 
 }
-.send{
+
+.send {
     height: 100%;
-    width: 100%;
+    width: 60vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.5rem;
     padding: 20px;
-    
+    background-color: #1f2020;
+
 }
-.send-message{
+
+.emoji-anexar {
+    display: none;
+}
+
+.emoji-anexar-on {
+    width: 5vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.microfone-none {
+    display: none;
+}
+
+.microfone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-message {
     width: 45vw;
     height: 4vh;
     border-radius: 3px;
     padding: 5px;
 }
-.box-message{
+
+.box-message {
     background-color: rgb(121, 121, 121);
     width: 15vw;
     height: 7vh;
 }
-.box-message-receive{
+
+.box-message-receive {
     background-color: white;
     width: 20vw;
     height: 5vh;
@@ -50,7 +83,8 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 1vh;
 }
-.box-message-sent{
+
+.box-message-sent {
     background-color: rgb(82, 136, 167);
     width: 20vw;
     height: 5vh;
@@ -59,10 +93,30 @@
     margin-left: 36.5vw;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container-chat{
-    grid-area: chat;
-    background-image: url('/img/back.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 
+.container-chat {
+    grid-area: chat;
+}
+@media(max-width: 640px){
+    .container-body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 150vh;
+    }
+    .container-message{
+        display: grid;
+        height: 80vh;
+        width: 100vw;
+        margin-right: 1px;
+    }
+    .container-chat{
+        width: 100vw;
+        display: grid;
+        background-size: cover;
+
+    }
+    .send{
+        display: none;
+    }
 }

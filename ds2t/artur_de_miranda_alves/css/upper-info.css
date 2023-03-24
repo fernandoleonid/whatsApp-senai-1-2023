@@ -5,34 +5,7 @@
     margin-top: 3vh;
     margin-left: 3vw;
 }
-.icons{
-    height: 30px;
-    width: 20vw;
-    margin-left: 10vw;
-    margin-top: -4vh;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 24px;
-    color: rgb(247, 247, 247);
-}
-.profile-img{
-    height: 44px;
-    width: 44px;
-    margin-top: 2vh;
-    margin-left: 1vw;
-}
-.users-img{
-    height: 40px;
-    width: 40px;
-}
-.newmg-img{
-    height: 40px;
-    width: 40px;
-}
-.settings-img{
-    height: 40px;
-    width: 40px;
-}
+
 @media(max-width: 640px){
     .upper-info{
         width: 96vw;

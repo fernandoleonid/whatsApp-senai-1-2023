@@ -25,19 +25,27 @@
 }
 .right-side{
    grid-area: right;
-    height: 20vh;
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 15vh;
+    height: 93vh;
+    width: 60vw;
+    display: grid;
+    grid-template-areas: 
+    "image"
+    "infos";
+    grid-template-rows: 
+    3fr 2fr;
+    background-color: #707070;
 }
 .info-text{
-    grid-area: info;
+    grid-area: infos;
     width: 800px;
-    margin-left: 6vw;
-    margin-top: -4vh;
+    margin-left: 10vw;
 
+}
+.image-background{
+    grid-area: image;
+    display: flex;
+    justify-self: center;
+    margin-top: 14vh;
 }
 .title-info{
     font-size: 2rem;
@@ -145,8 +153,7 @@
     .left-side{
         grid-area: left;
         height: 86vh;
-        width: 96vw;
-        box-shadow: 0px 4px #79a89f;
+        width: 90vw;
         
     }
     .search-bar{
@@ -158,6 +165,6 @@
         
     }
     .card{
-        height: 9vh;
+        height: 12vh;
     }
 }

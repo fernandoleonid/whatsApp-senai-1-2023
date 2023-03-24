@@ -1,9 +1,10 @@
 'use scrict'
 
-import { contatos } from "./recursos/contatos.js"
+// import { contatos } from "./recursos/contatos.js"
 
 // adicionei o index dos elementos
 const createCard = (contacts, index) => {
+    
     const card = document.createElement('button')
     card.classList.add('chat__box');
 
@@ -78,14 +79,18 @@ const seeMessage = (index) => {
             container_baloons.append(other_baloon)
         }
 
+        replaceChildren(container_baloons)
     });
-
-
 
 
 }
 
 const loadContacts = () => {
+    
+    // const url = `http://localhost:8080/v1/whats/contatos/?id=2`
+    // const response = await fetch(url)
+    // const contatos = await response.json()
+    
     const container = document.getElementById('chat')
     const cards = contatos.map(createCard)
 

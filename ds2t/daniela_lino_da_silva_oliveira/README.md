@@ -1,6 +1,6 @@
 # WhatsApp Web Clone 
 
-> Segue o link para o _[Prótotipo Figma](https://www.figma.com/file/ekgsYueRFnufsFVZERk904/WhatsApp-2.0?node-id=0-1&t=BtvBXRvhzTSBroov-0)_
+> Clique _[aqui](https://d4kii.github.io/whatsApp-senai-1-2023/ds2t/daniela_lino_da_silva_oliveira/)_ para vizualizar o Projeto
 
 ![](./img/screenshot.PNG)
 

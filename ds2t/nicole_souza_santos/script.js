@@ -3,22 +3,24 @@
 // import { contatos } from "./contatos.js"
 import { contactWhat } from "./api-whatsapp/api.js"
 
-const contactRespon = document.getElementById('responsive')
+// const contactRespon = document.getElementById('responsive')
 
 let contatos = await contactWhat('11987876567')
 
-const criarContatos = async (contatos, indice) => {
+const criarContatos = (contatos, indice) => {
 
     const card = document.createElement('a')
 
     card.classList.add('card')
     card.setAttribute('id', 'card')
     card.setAttribute('href', '#chatMensagens')
+    console.log(indice)
+    card.onclick = () => carregarChat(indice)
 
     const foto = document.createElement('img')
     foto.classList.add('card-icon')
     foto.src = `./images/${contatos.image}`
-    
+
     const cardIdentificador = document.createElement('div')
     cardIdentificador.classList.add('card-identification')
 
@@ -43,20 +45,16 @@ const criarContatos = async (contatos, indice) => {
         cont++
     }
 
-    card.onclick = async function () {
-        const indiceClick = await carregarChat(indice)
-        console.log(indiceClick);
-    }
-    
-    card.append( foto, cardIdentificador, time)
-    console.log(card)
+    card.append(foto, cardIdentificador, time)
+
     return card
-    
+
 
 }
 
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
+
     const cards = contatos.map(criarContatos)
     console.log(cards)
 
@@ -64,7 +62,7 @@ const carregarCards = () => {
 
 }
 
-const criarMensagens = async (mensagens) => {
+const criarMensagens = (mensagens) => {
 
     if (mensagens.sender == 'me') {
 
@@ -106,10 +104,10 @@ const criarMensagens = async (mensagens) => {
 
 }
 
-const carregarChat = async (indice) => {
+const carregarChat = (indice) => {
     const plane = document.getElementById('welcome')
     const messagesChat = document.getElementById('messages')
-    const cardsChat = await contatos[indice].messages.map(criarMensagens)
+    const cardsChat = contatos[indice].messages.map(criarMensagens)
 
     plane.style.display = 'none'
     messagesChat.style.display = 'flex'

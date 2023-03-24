@@ -1,6 +1,6 @@
 'use strict'
 
-export const contactWhat = async (numero) =>{
+export const contactWhat = async (numero) => {
     console.log(numero)
     const url = `http://localhost:8080/v1/whatsapp/contatos/telefone?numero=${numero}`
 
@@ -8,7 +8,5 @@ export const contactWhat = async (numero) =>{
 
     const data = await response.json()
 
-    console.log(data)
-    
     return data
 }

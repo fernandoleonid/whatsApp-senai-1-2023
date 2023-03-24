@@ -39,4 +39,4 @@ O intuito era colocar em prática os conhecimentos adquiridos em sala, consumind
 
 # Autor
 
-- [Oswaldo Barbosa]()
+- [Oswaldo Barbosa](https://www.linkedin.com/in/oswaldo-barbosa-265115242/)

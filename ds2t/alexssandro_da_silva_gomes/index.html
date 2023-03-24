@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js" defer type="module"></script>
+    <script src="./js/cardContato.js" defer type="module"></script>
+    <script src="./js/mensagens.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/be4450fc4f.js" crossorigin="anonymous"></script>
     <title>Whatsapp Web</title>
 </head>
@@ -56,12 +57,8 @@
                 <div class="section-tela-inicial__text">
                     <h1 class="section-tela-inicial__text--title">Whatsapp Web</h1>
                     <div>
-                        <p class="section-tela-inicial__text--descriptions">Envie e receba mensagens sem precisar manter
-                            seu
-                            celular conectado à internet.</p>
-                        <p class="section-tela-inicial__text--description">Use o WhatsApp em até quatro aparelhos
-                            conectados
-                            e um celular ao mesmo tempo.</p>
+                        <p class="section-tela-inicial__text--descriptions">Envie e receba mensagens sem precisar manter seu celular conectado à internet.</p>
+                        <p class="section-tela-inicial__text--description">Use o WhatsApp em até quatro aparelhos conectado se um celular ao mesmo tempo.</p>
                     </div>
                 </div>
 
@@ -70,18 +67,19 @@
             <div class="section-tela-inicial__footer">
                 <p class="section-tela-inicial__footer--criptography">
                     <i class="fa-solid fa-lock"></i>
-                    Protegido com a criptografia de ponta a ponta</p>
+                    Protegido com a criptografia de ponta a ponta
+                </p>
             </div>
         </section>
         <section class="section-chat-box">
             <header class="section-chat-box__header">
-                <div class="section-chat-box--user">
-                    <div class="section-chat-box--user--pic">
-                        <img src="./img/herobrine-minecraft-capa.jpg" alt="">
+                <div class="section-chat-box--user" id="section-chat-box--user">
+                    <!-- <div class="section-chat-box--user--pic" id="section-chat-box--user--pic">
+                        <img src="./img/herobrine-minecraft-capa.jpg" alt="" id="image">
                     </div>
-                    <div class="section-chat-box--user--name">
+                    <div class="section-chat-box--user--name" id="section-chat-box--user--name">
                         <p>Claudio</p>
-                    </div>
+                    </div> -->
                     <div class="section-chat-box--user--icons">
                         <span>
                             <i class="fas fa-search"></i>
@@ -92,8 +90,21 @@
                     </div>
                 </div>
             </header>
-            <main class="section-chat-box__main">
+            <main class="section-chat-box__main" id="section-chat-box__main">
                 
+                    <div class="balao-conversa contato borda" id="balao-conversa contato borda">
+                        <!-- <div class="balao-conversa__conversa" id="balao-conversa__conversa-contato">
+                            <p classe="suaMensagem">This one adds a right triangle on the left, flush at the top by using .tri-right and.left-top to specify the location.</p>
+                        </div> -->
+                    </div>
+     
+                    <div class="balao-conversa me borda" id="balao-conversa me borda">
+                        <!-- <div class="balao-conversa__conversa" id="balao-conversa__conversa-me">
+                            <p classe="minhaMensagem">This one adds a right triangle on the left, flush at the top by using .tri-right and.left-top to specify the location.</p>
+                        </div> -->
+                    </div>
+                
+
             </main>
             <div class="section-chat-box__chat-box-message">
                 <div class="section-chat-box__chat-box-message--icons">

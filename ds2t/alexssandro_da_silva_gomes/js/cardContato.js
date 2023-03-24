@@ -2,13 +2,17 @@
 
 import { contatos } from "./contatos.js"
 
-const criarContato = (contato) => {
+const criarContato = (contato, indice) => {
 
     const card = document.createElement('div')
     card.classList.add("aside__main")
 
     const contact = document.createElement('div')
     contact.classList.add("aside__main--contact")
+
+    card.addEventListener('click', (contact) => {
+        contact.replaceChildren(criarHeader())
+    })
 
     const pic = document.createElement('div')
     pic.classList.add("aside__main--contact-pic")
@@ -33,8 +37,6 @@ const criarContato = (contato) => {
 
     return contact
 }
-
-
 
 const carregarContatos = () => {
     const container = document.getElementById('aside__main')

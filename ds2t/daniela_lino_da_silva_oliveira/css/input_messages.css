@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 1%;
-    border: 1.9px solid #E78A38;
+    border: 1.9px solid #F6B300;
 }
 .message__entry{
     grid-area: chat;

@@ -25,7 +25,6 @@ main {
 
 nav {
     grid-area: nav;
-    display: flex;
     width: 100%;
     font-size: 2rem;
     position: relative;
@@ -71,7 +70,7 @@ nav {
         "nav nav nav"
         "main main main"
         "chat chat chat";
-    grid-template-rows: 60px 2fr 1fr 60px;
+    grid-template-rows: 60px 20vh 60vh 80px;
     grid-template-columns: 20%;
     position: absolute;
     }

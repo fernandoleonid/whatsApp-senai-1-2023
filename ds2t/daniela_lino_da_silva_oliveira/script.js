@@ -5,11 +5,12 @@ const criarContato = (contato, indice) => {
 
     const cardContact = document.createElement('div')
     cardContact.classList.add('contact')
-    cardContact.setAttribute('id', 'contact')
+    cardContact.setAttribute(`id`, `contact_${indice}`)
 
     const foto = document.createElement('img')
     foto.classList.add('contact__image')
     foto.src = `../../recursos/image/${contato.image}`
+    foto.setAttribute(`alt`, `foto de perfil do contato ${contato.name}`)
 
     const cardTitle = document.createElement('div')
     cardTitle.classList.add('card__title')
@@ -33,7 +34,11 @@ const criarContato = (contato, indice) => {
 
     cardTitle.append(nameContact, contactDescription);
 
-    cardContact.onclick = () => (carregarChat(indice))
+    cardContact.onclick = () => {
+        carregarChat(indice)
+        const contatoLido = document.getElementById(`contact_${indice}`)
+        contatoLido.style.backgroundColor = '#fff'
+    }
 
     cardContact.append(foto, cardTitle);
 
@@ -128,9 +133,8 @@ const carregarChat = (indice) => {
     
     const containerChat = document.getElementById('chat_place');
     const cardsChat = contatos[indice].messages.map(criarChat);
-
-    const fundoChat = document.getElementById('chat__box')
-    fundoChat.style.backgroundColor = '#FFE7B'
+    
+   
 
     //Chamando a função que cria o perfil do contato no chat
     const cardProfileContact = criarPerfilContato(indice);

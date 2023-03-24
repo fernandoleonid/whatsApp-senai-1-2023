@@ -1,13 +1,12 @@
 .welcome_banner {
     display: flex;
     align-self: center;
-    width: 60%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15%;
     color: #E67F0D;
 }
 
 .welcome_text_banner {
-    display: flex;
     align-self: center;
     justify-content: center;
     display: flex;
@@ -17,7 +16,7 @@
     margin-top: 2px;
     font-size: 2.5rem;
     font-family: 'Delicious Handrawn', cursive;
-    color: #F6B300;
+    color: #FFC801;
 }
 
 .chat__box {
@@ -25,7 +24,7 @@
     width: 100%;
     margin: 3rem;
     border-radius: 5px;
-    border: 1.8px solid #E78A38;
+    border: 1.8px solid #F6B300;
     justify-content: center;
 }
 
@@ -61,10 +60,10 @@
 }
 
 .user__message {
-    border-top: 10px solid #FFE7B3;
+    border-top: 10px solid #ECECEC;
     border-right: 10px solid transparent;
     margin: 10px;
-    background-color: #FFE7B3;
+    background-color: #ECECEC;
     background-clip: padding-box;
     align-items: end;
 }
@@ -104,8 +103,24 @@
 
 /* TABLET */
 @media (max-width: 960px) {
+    .welcome_banner {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .welcome_text_banner {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 2px;
+        font-size: 1.5rem;
+    }
     .chat__box {
-        width: 30rem;
+        max-width: 30rem;
+        min-width: 15rem;
+        min-height: 15rem;
+        max-height: 30rem;
+        overflow-y: scroll;
     }
 
     .user__message,
@@ -114,13 +129,13 @@
     }
     
     .welcome_banner {
-        margin-top: 40%;
+        margin-top: 15%;
     }
 }
 /* MOBILE*/
 @media (max-width: 760px) {
     .chat__box {
         overflow-y: scroll;
-        max-height: 90%;
+        height: 90%;
     }
 }

@@ -3,12 +3,17 @@
 // import { contatos } from "./contatos.js"
 import { contactWhat, user } from "./api-whatsapp/api.js"
 
-// const contactRespon = document.getElementById('responsive')
+// let numero = '11966578996'
+// let numero = '11987876567'
+// let numero = '11955577796'
+// let numero = '1194457796'
 
-let numero = '11966578996'
+const numero = prompt('Digite seu número de telefone para acessar sua conta')
 
+console.log(numero)
 let contatos = await contactWhat(numero)
 let userMe = await user(numero)
+
 
 const criarContatos = (contatos, indice) => {
 
@@ -71,7 +76,7 @@ const criarMensagens = (mensagens) => {
 
         const user = document.createElement('div')
         user.classList.add('me')
-        content.style.backgroundColor = userMe.color
+
 
         const sender = document.createElement('p')
         sender.classList.add('sender')
@@ -79,11 +84,11 @@ const criarMensagens = (mensagens) => {
         const content = document.createElement('p')
         content.classList.add('content')
         content.textContent = mensagens.content
+        content.style.backgroundColor = userMe.color
 
         const timer = document.createElement('p')
         timer.classList.add('timer-timestamp')
         timer.textContent = mensagens.time
-
 
         user.append(sender, content, timer)
         return user
@@ -156,11 +161,11 @@ const carregarChat = (indice) => {
 
 const getUsuario = () => {
     console.log(userMe)
+
     const avatar = document.getElementById('avatar')
     const pesquisa = document.getElementById('pesquisa')
     const cabecalho = document.getElementById('cabecalho')
     const now = document.getElementById('now')
-    
 
     const avatarImg = document.createElement('img')
     avatarImg.classList.add('img-avatar')
@@ -182,13 +187,14 @@ const getUsuario = () => {
     pesquisa.style.backgroundColor = userMe.color
     cabecalho.style.backgroundColor = userMe.color
     now.style.color = userMe.color
-    
+
 
     avatar.append(avatarImg, divUser)
     console.log(avatar)
     return avatar
 
 }
+
 
 getUsuario()
 carregarCards()

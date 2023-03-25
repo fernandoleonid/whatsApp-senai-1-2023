@@ -91,7 +91,7 @@
     place-content: center;
     width: 100%;
     height: 52px;
-    background-color: #865DFF;
+    
     gap: 10px;
 }
 .mensagensTexto{
@@ -101,7 +101,7 @@
     height: 32px;
     border-radius: 10px;
     padding: 10px;
-    background-color: #191825;
+    background-color: #000;
     color: #fff;
 }
 .chat .enviar{
@@ -144,7 +144,7 @@
     margin-right: 29rem;
 }
 .other-user .content{
-    background-color: #191825;
+    background-color: #000;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;

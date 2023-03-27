@@ -1,5 +1,28 @@
 'use strict'
-import { contatos } from "../../recursos/contatos.js";
+// import { contatos } from "../../recursos/contatos.js";
+
+
+const numeroCelular = 11987876567;
+
+const getContatos = async (numero) => {
+
+    const urlContatos = `http://localhost:8080/v1/whatsapp/usuario/contatos/mensagens/celularUsuario/${numero}`
+    const responseContatos = await fetch(urlContatos);
+    const dataContatos = await responseContatos.json();
+
+    const urlUser = `http://localhost:8080/v1/whatsapp/usuario/celularUsuario/${numero}`
+    const responseUser = await fetch(urlUser);
+    const dataUser = await responseUser.json();
+
+    return {
+        id: dataUser.id,
+        name: dataUser.nameaccount,
+        nickname: dataUser.nickname,
+        number: dataUser.number,
+        background: dataUser.background,
+        contatos: dataContatos.contatos
+    }
+}
 
 const criarContato = (contato, indice) => {
 
@@ -9,7 +32,7 @@ const criarContato = (contato, indice) => {
 
     const foto = document.createElement('img')
     foto.classList.add('contact__image')
-    foto.src = `../../recursos/image/${contato.image}`
+    foto.src = `../../recursos/${contato.image}`
     foto.setAttribute(`alt`, `foto de perfil do contato ${contato.name}`)
 
     const cardTitle = document.createElement('div')
@@ -28,7 +51,7 @@ const criarContato = (contato, indice) => {
     console.log(tamanho)
 
     while (cont < tamanho) {
-        contactDescription.textContent = contato.messages[cont].content 
+        contactDescription.textContent = contato.messages[cont].content
         cont++
     }
 
@@ -45,7 +68,10 @@ const criarContato = (contato, indice) => {
     return cardContact;
 
 }
-const carregarContatos = () => {
+const carregarContatos = async () => {
+    const dados = await getContatos(numeroCelular)
+    const contatos = dados.contatos;
+
     const containerContatos = document.getElementById('contacts__container')
     const cardsContato = contatos.map(criarContato);
 
@@ -101,14 +127,24 @@ const criarChat = function (chat) {
     }
 
 }
-const criarPerfilContato = (indice) => {
+
+//Carregas as mensagens para a tela com o clique no criar contatos(que chama essa função)
+const carregarChat = async (indice) => {
+    const dados = await getContatos(numeroCelular);
+    const contatos = await dados.contatos;
+
+    const containerChat = document.getElementById('chat_place');
+    const cardsChat = await contatos[indice].messages.map(criarChat);
+
+
     const cardContact = document.createElement('div')
     cardContact.classList.add('contact__profile')
     cardContact.setAttribute('id', 'contact__profile')
 
     const foto = document.createElement('img')
     foto.classList.add('chat-contact_image')
-    foto.src = `../../recursos/image/${contatos[indice].image}`
+    foto.src = `../../recursos/${contatos[indice].image}`
+    
 
     const cardTitle = document.createElement('div')
     cardTitle.classList.add('chat-card__title')
@@ -124,23 +160,9 @@ const criarPerfilContato = (indice) => {
     cardTitle.append(nameContact, contactDescription);
     cardContact.append(foto, cardTitle);
 
-    console.log(indice)
-     
-    return cardContact;
+
+    containerChat.replaceChildren( cardContact, ...cardsChat);
+
 }
-//Carregas as mensagens para a tela com o clique no criar contatos(que chama essa função)
-const carregarChat = (indice) => {
-    
-    const containerChat = document.getElementById('chat_place');
-    const cardsChat = contatos[indice].messages.map(criarChat);
-    
-   
 
-    //Chamando a função que cria o perfil do contato no chat
-    const cardProfileContact = criarPerfilContato(indice);
-
-    containerChat.replaceChildren(cardProfileContact, ...cardsChat);
-
-    console.log(contatos[indice].messages)
-}
 carregarContatos();

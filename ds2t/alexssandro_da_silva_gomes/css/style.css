@@ -10,15 +10,15 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 480px 1fr;
+    display: flex;
+    flex-direction: row;
     padding: 20px 160px;
     height: 100%;
     width: 100%;
 }
 
 .section-tela-inicial {
-    display: none;
+    display: grid;
     height: 100%;
     width: 100%;
     background-color: var(--background-tela-inicial);
@@ -59,7 +59,7 @@ body {
 }
 
 .section-chat-box {
-    display: grid;
+    display: none;
     grid-template-areas:
     "chat-box-header" 
     "chat-box-main"
@@ -79,7 +79,21 @@ body {
     padding: 10px 16px;
     flex: 40px 1 90px;
     background-color: var(--input-color-grey);
-    color: var(--icon-color)
+    
+}
+
+.section-chat-box__arrow-left {
+    display: none;
+    padding: 8px 8px 8px 0px;
+}
+
+.section-chat-box__arrow-left i {
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    height:34px;
+    width: 34px;
+    color: var(--icon-color);
 }
 
 .section-chat-box--user {
@@ -118,10 +132,12 @@ body {
 
 .section-chat-box--user--icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     height: 100%;
+    width: 90px;
+    color: var(--icon-color)
 }
 
 .section-chat-box--user--icons span {
@@ -141,47 +157,68 @@ body {
     grid-area: chat-box-main;
     background-image: url(../img/image.webp);
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
+    justify-content: flex-end;  
     width: 100%;
     height: 100%;
     padding: 0px 63px;
 }
 
 /* CSS talk bubble */
-.balao-conversa {
+.balao-conversa-contato {
     display: flex;
     align-self: flex-start;
     position: relative;
 	width: fit-content;
     max-width: 500px;
-    min-width: 250px;
+    min-width: fit-content;
 	height: fit-content;
 	background-color: var(--background-color-white);
     border-radius: 15px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
     margin-bottom: 12px;
+    border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 }
 
-.balao-conversa.me {
+.balao-conversa-me {
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+	width: fit-content;
+    max-width: 500px;
+    min-width: fit-content;
+	height: fit-content;
+    border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+    margin-bottom: 12px;
+    background-color: var(--background-chat-me);
+    border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+/* .balao-conversa.me {
     display: flex;
     align-self: flex-end;
     position: relative;
 	width: fit-content;
     max-width: 500px;
 	height: auto;
-	background-color: var(--background-chat-me);
-}
+	
+} */
 
-.borda {
+/* .borda {
     border-radius: 15px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
-}
+} */
 
 /* Right triangle placed top left flush. */
-.contato:after{
+.balao-conversa-contato:after{
 	content: ' ';
 	position: absolute;
 	width: 0;
@@ -194,7 +231,7 @@ body {
 	border-color: var(--background-color-white) transparent transparent transparent;
 }
 
-.me:after{
+.balao-conversa-me:after{
 	content: ' ';
 	position: absolute;
 	width: 0;
@@ -208,12 +245,19 @@ body {
 }
 
 /* talk bubble contents */
-.balao-conversa__conversa {
+.balao-conversa__conversa-contato {
     padding: 14px 12px;
 	text-align: left;
     line-height: 1.5em;
 }
-.balao-conversa__conversa p{
+
+.balao-conversa__conversa-me {
+    padding: 14px 12px;
+	text-align: left;
+    line-height: 1.5em;
+}
+
+.balao-conversa__conversa-me p, .balao-conversa-contato p{
   /* remove webkit p margins */
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
@@ -265,6 +309,7 @@ body {
         "aside-main";
     grid-template-rows: 60px 50px 1fr;
     height: 100vh;
+    width: 680px;
     background-color: var(--background-color-white);
 }
 
@@ -273,7 +318,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 480px;
+    width: 100%;
     padding: 10px 16px;
     background-color: var(--input-color-grey);
 }
@@ -405,8 +450,3 @@ body {
     font-size: 0.8rem;
 }
 
-@media screen and (max-height:768px) {
-    .container {
-        padding: 0px;
-    }
-}

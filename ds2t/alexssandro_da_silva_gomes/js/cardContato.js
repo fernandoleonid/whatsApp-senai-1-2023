@@ -1,6 +1,9 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+// import { contatos } from "./contatos.js"
+import {preencherDados} from "./apiLink.js"
+
+const contatos = await preencherDados('1')
 
 const btnReturn = document.querySelector('.section-chat-box__arrow-left')
 

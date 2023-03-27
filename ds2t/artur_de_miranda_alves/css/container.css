@@ -1,20 +1,15 @@
 .container-message {
+    width: 60vw;
     height: 75.3vh;
     display: grid;
-    /* grid-template-areas:
+    grid-template-areas:
     "chat"
     "footer" ;
-    grid-template-rows: 7.4fr 1fr; */
+    grid-template-rows: 7.4fr 1fr;
     align-content: flex-end;
     background-image: url('/img/back.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.container-right {
-    height: 3vh;
-    width: 3vh;
-    background-color: rebeccapurple;
 }
 
 .footer-right {
@@ -102,21 +97,36 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 150vh;
+        height: 100vh;
     }
     .container-message{
-        display: grid;
-        height: 80vh;
         width: 100vw;
-        margin-right: 1px;
+        height: 80vh;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
     }
     .container-chat{
         width: 100vw;
+        height: 80vh;
         display: grid;
-        background-size: cover;
-
     }
     .send{
-        display: none;
+        height: 10vh;
+        width: 100vw;
     }
+    .box-message-receive{
+        height: 12vh;
+        width: 40vw;
+        padding: 1vh;
+        margin-left: 5vw;
+        font-size: 14px;
+    }
+    .box-message-sent{
+        height: 12vh;
+        width: 40vw;
+        padding: 1vh;
+        margin-left: 45vw;
+        font-size: 14px;
+    }
+  
 }

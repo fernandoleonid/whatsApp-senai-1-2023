@@ -97,16 +97,16 @@ body{
         display: flex;
     }
     .body-right{
-        display: grid;
+        display: flex;
         width: 100vw;
-        height: 50vh;
+        height: 100vh;
     }
     .header-left{
-        width: 90vw;
+        width: 100vw;
+        margin-left: 0px;
     }
     .header-right{
-        width: 90vw;
-        margin-left: 3vw;
+        width: 100vw;
     }
     .header-name{
         margin-left: 4vw;
@@ -115,8 +115,7 @@ body{
         width: 50vw;
     }
     .main-right{
-        display: flex;
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
     }
 }

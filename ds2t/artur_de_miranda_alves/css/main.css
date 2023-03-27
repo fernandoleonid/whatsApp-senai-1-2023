@@ -2,7 +2,5 @@
 .lower-info{
     grid-area: lower-info;
 }
-.container-message{
-    width: 60vw;
-    grid-area: container-message;
-}
+
+

@@ -3,7 +3,7 @@
 // import { contatos } from "./contatos.js"
 import {preencherDados} from "./apiLink.js"
 
-const contatos = await preencherDados('1')
+const contatos = await preencherDados('2')
 
 const btnReturn = document.querySelector('.section-chat-box__arrow-left')
 
@@ -49,6 +49,7 @@ const criarContato = (contato, indice) => {
     const image = document.createElement('img')
     image.classList.add('image')
     image.src = `./${contato.image}`
+    image.alt = 'foto de perfil';
 
     const content = document.createElement('div')
     content.classList.add("aside__main--contact-content")
@@ -76,6 +77,7 @@ const criarChatHeader = (indice) => {
 
     const image = document.createElement('img')
     image.src = `./${contatos[indice].image}`
+    image.alt = 'foto de perfil';
 
     const contact_name = document.createElement('div')
     contact_name.classList.add('section-chat-box--user--name')

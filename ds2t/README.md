@@ -1,0 +1,1 @@
+| [Alexssandro da Silva Gomes](https://github.com/AlexssandroSilvaGomes)   | [![](https://skillicons.dev/icons?i=js)](./alexssandro_da_silva_gomes/) | [<img src="./img/whatsapp-screenshot.PNG" width="300">](https://fernandoleonid.github.io/whatsApp-senai-1-2023/ds2t/alexssandro_da_silva_gomes/)|

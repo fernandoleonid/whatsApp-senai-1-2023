@@ -65,7 +65,7 @@ body {
     "chat-box-main"
     "chat-box-message";
     grid-template-rows: 60px 1fr 65px;
-    height: 100vh;
+    height: 99.2%;
     width: 100%;
 }
 
@@ -308,7 +308,7 @@ body {
         "aside-search-area"
         "aside-main";
     grid-template-rows: 60px 50px 1fr;
-    height: 100vh;
+    height: 95vh;
     width: 680px;
     background-color: var(--background-color-white);
 }

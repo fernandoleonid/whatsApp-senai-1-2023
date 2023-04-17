@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: rgb(247, 247, 247);
+}
+
+body{
+    margin-left: 2vw;
+    margin-top: 3vh;
+    background-image: url(/img/back-back.png);
+   
+}
+.container-body{
+    display: grid;
+    grid-template-areas: 
+    "body-left body-right";
+    grid-template-columns: 1fr 2fr;
+}
+.body-left{
+    grid-area: body-left;
+
+}
+.body-right{
+    grid-area: body-right;
+}
+
+.header-right{
+    height: 7.9vh;
+    display: grid;
+    grid-template-areas: 
+    "image name icons";
+    grid-template-columns: 1fr 9.9fr 2fr;
+    width: 60vw;
+    grid-area: right;
+    background-color: #151817;
+
+}
+.image-header-right{
+    padding-top: 1.5vh;
+    padding-left: 1vw;
+    grid-area: image;
+}
+.header-name{
+    font-family: Arial, Helvetica, sans-serif;
+    grid-area: name;
+    padding-top: 2.7vh;
+    color: #ffffff;
+}
+.header-left{
+    width: 30vw;
+    margin-left: 3vw;
+    grid-area: left;
+    background-color: #151817;
+    display: grid;
+    grid-template-areas: 
+    "profile icon";
+    grid-template-columns: 1fr 2fr;
+
+}
+.icons{
+    margin-top: 2vh;
+    grid-area: icon;
+    height: 30px;
+    width: 20vw;
+    margin-left: 7vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 24px;
+    color: rgb(247, 247, 247);
+}
+.profile-img{
+    height: 44px;
+    width: 44px;
+    margin-top: 2vh;
+    margin-left: 1vw;
+}
+.profile{
+    grid-area: profile;
+    width: 5vw;
+}
+.header-right-icons{
+    margin-top: 2vh;
+    grid-area: icons;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(247, 247, 247);
+}
+@media (max-width: 640px){
+    body{
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0;
+        display: flex;
+    }
+    .body-right{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+    .header-left{
+        width: 100vw;
+        margin-left: 0px;
+    }
+    .header-right{
+        width: 100vw;
+    }
+    .header-name{
+        margin-left: 4vw;
+    }
+    .icons{
+        width: 50vw;
+    }
+    .main-right{
+        width: 100vw;
+        height: 80vh;
+    }
+}

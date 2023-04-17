@@ -1,9 +1,19 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+// import { contatos } from "./contatos.js"
+import { contactWhat, user } from "./api-whatsapp/api.js"
 
-const contactRespon = document.getElementById('responsive')
-// console.log(contatos[1].messages)
+// let numero = '11966578996'
+// let numero = '11987876567'
+// let numero = '11955577796'
+// let numero = '1194457796'
+
+const numero = prompt('Digite seu número de telefone para acessar sua conta')
+
+console.log(numero)
+let contatos = await contactWhat(numero)
+let userMe = await user(numero)
+
 
 const criarContatos = (contatos, indice) => {
 
@@ -12,6 +22,8 @@ const criarContatos = (contatos, indice) => {
     card.classList.add('card')
     card.setAttribute('id', 'card')
     card.setAttribute('href', '#chatMensagens')
+    console.log(indice)
+    card.onclick = () => carregarChat(indice)
 
     const foto = document.createElement('img')
     foto.classList.add('card-icon')
@@ -34,7 +46,6 @@ const criarContatos = (contatos, indice) => {
     let timer = contatos.messages
     const time = document.createElement('span')
 
-
     while (cont < timer.length) {
         time.classList.add('time')
 
@@ -42,15 +53,18 @@ const criarContatos = (contatos, indice) => {
         cont++
     }
 
-    card.onclick = () => (carregarChat(indice))
     card.append(foto, cardIdentificador, time)
+
     return card
+
 
 }
 
 const carregarCards = () => {
     const container = document.getElementById('contatoPessoas')
+
     const cards = contatos.map(criarContatos)
+    console.log(cards)
 
     container.replaceChildren(...cards)
 
@@ -70,11 +84,11 @@ const criarMensagens = (mensagens) => {
         const content = document.createElement('p')
         content.classList.add('content')
         content.textContent = mensagens.content
+        content.style.backgroundColor = userMe.color
 
         const timer = document.createElement('p')
         timer.classList.add('timer-timestamp')
         timer.textContent = mensagens.time
-
 
         user.append(sender, content, timer)
         return user
@@ -109,6 +123,7 @@ const carregarChat = (indice) => {
     const header = document.createElement('div')
     header.setAttribute('id', 'headerContact')
     header.classList.add('header-contact')
+    header.style.backgroundColor = userMe.color
 
     const iconHeader = document.createElement('img')
     iconHeader.classList.add('icon-header')
@@ -130,6 +145,7 @@ const carregarChat = (indice) => {
 
     const inputPurple = document.createElement('input')
     inputPurple.classList.add('mensagensTexto')
+    textInput.style.backgroundColor = userMe.color
 
     const enviar = document.createElement('img')
     enviar.classList.add('enviar')
@@ -143,5 +159,43 @@ const carregarChat = (indice) => {
 
 }
 
+const getUsuario = () => {
+    console.log(userMe)
+
+    const avatar = document.getElementById('avatar')
+    const pesquisa = document.getElementById('pesquisa')
+    const cabecalho = document.getElementById('cabecalho')
+    const now = document.getElementById('now')
+
+    const avatarImg = document.createElement('img')
+    avatarImg.classList.add('img-avatar')
+    avatarImg.src = `./images/${userMe.image}`
+
+    const avatarName = document.createElement('p')
+    avatarName.classList.add('name-user')
+    avatarName.textContent = userMe.name
+
+    const avatarNumber = document.createElement('p')
+    avatarNumber.classList.add('number-user')
+    avatarNumber.textContent = userMe.number
+
+    const divUser = document.createElement('div')
+    divUser.classList.add('div-user')
+    divUser.append(avatarName, avatarNumber)
+
+    avatar.style.backgroundColor = userMe.color
+    pesquisa.style.backgroundColor = userMe.color
+    cabecalho.style.backgroundColor = userMe.color
+    now.style.color = userMe.color
+
+
+    avatar.append(avatarImg, divUser)
+    console.log(avatar)
+    return avatar
+
+}
+
+
+getUsuario()
 carregarCards()
 

@@ -1,0 +1,84 @@
+.main-rigth {
+    height: 96%;
+    width: 90%;
+    margin-top: 2vh;
+    background-color: #222E35;
+    border-left: 1px solid #313D45;
+    border-bottom: 5px solid #00A884;
+}
+
+.image-whatsapp {
+    display: flex;
+    padding-top: 30vh;
+    justify-content: center;
+    grid-area: image;
+}
+
+.whatsapp-web {
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
+    font-size: 3vh;
+    color: #fff;
+    grid-area: description;
+}
+
+.description-um {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5vh;
+    font-size: 1.4vh;
+    color: #8696A0;
+}
+
+.description-dois {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5vh;
+    font-size: 1.4vh;
+    color: #8696A0;
+}
+
+.text-criptografia {
+    display: flex;
+    justify-content: center;
+    padding-top: 24vh;
+    font-size: 1.5vh;
+    color: #8696A0;
+}
+
+.icon-cadeado{
+    padding-top: 0.4vh;
+    padding-right: 0.5vh;
+    font-size: 0.8vh;
+}
+
+@media (max-width: 640px) {
+    .main-rigth{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .image-whatsapp {
+        display: none;
+    }
+
+    .whatsapp-web {
+        display: none;
+    }
+
+    .description-um {
+        display: none;
+    }
+
+    .description-dois {
+        display: none;
+    }
+    
+    .text-criptografia {
+        display: none;
+    }
+
+}

@@ -1,0 +1,62 @@
+.card{
+    display: flex;
+    height: 110px;
+    border: 1px solid gray; 
+    border-radius: 5px;
+    /* box-shadow: 1px 1px 3px grey; */
+    padding: 10px;
+    cursor: pointer;
+}
+.card:hover {
+    background-color: white;
+    border: 3px solid #000;
+    color: black;
+    transition: all 0.1s ease-in;
+    transition-delay: 0.05s;
+}
+
+.contato__image{
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    object-fit: contain;
+}
+
+.card__titulo{
+    display: flex;
+    font-size: 1.20rem;
+    font-family: 'Inter', sans-serif;
+    width: 150px;
+    align-self: center;  
+}
+
+.card__profissao{
+    width: 150px;
+    font-size: 0.85rem;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    align-self: center;
+}
+
+@media(max-width: 640px){
+    .card{
+        display: flex;
+        width: 450px;
+        height: 80px;
+        border: 1px solid whitesmoke; 
+        align-items: center;
+        gap: 8px;
+    }
+    .contato__image{
+        width: 50px;
+        height: 50px;
+    }
+    .card__titulo{
+        display: flex;
+        font-size: 0.95rem;
+    }
+    
+    .card__profissao{
+        font-size: 0.75rem;
+    }
+}

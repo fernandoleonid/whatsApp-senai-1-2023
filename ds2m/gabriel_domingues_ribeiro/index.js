@@ -12,9 +12,11 @@ const criaContato = (contato) => {
     const imgbx = document.createElement('div')
     imgbx.classList.add('imgbx')
 
+
     const image = document.createElement('img')
     image.classList.add('cover')
     image.src = `./${contato.image}`
+    image.alt = "imagem aluno"
 
     const detail = document.createElement('div')
     detail.classList.add('details')
@@ -73,6 +75,7 @@ const criaConversa = (contato) => {
     const contactPic = document.createElement('img')
     contactPic.classList.add('cover')
     contactPic.src = `./${contato.image}`
+
 
     const contactName = document.createElement('h4')
     contactName.textContent = contato.name

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resert.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/pesquisa.css">
+    <link rel="stylesheet" href="./css/contatos.css">
+    <link rel="stylesheet" href="./css/texto.css">
+    <link rel="stylesheet" href="./css/mensagem.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <script src="./script/contatos.js" defer type="module"></script>
+    <script src="./script/main.js" defer type="module"></script>
+    <link rel="icon" href="./img/icon-whatsapp.png">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>WhatsApp</title>
+</head>
+
+
+<body>
+    <main>
+        <article>
+            <div class="container-perfil">
+                <h4 class="title">WhatsApp</h4>
+                <img class="fotos-perfil" src="./img/vini.png" alt="">
+                <ul class="icons">
+                    <li>
+                        <ion-icon name="scan-circle-outline"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="chatbox-outline"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    </li>
+                </ul>
+                <ul class="icons-celular">
+                    <li>
+                        <ion-icon name="search-outline"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="pesquisa-celular">
+                <li>Conversas</li>
+                <li>Status</li>
+                <li>Chamadas</li>
+            </ul>
+
+            <div class="container-pesquisa">
+                <input type="search" name="search" id="search" placeholder="Pesquisar ou começar uma nova conversa">
+                <ion-icon class="icons-pesquisa" name="filter-outline"></ion-icon>
+
+            </div>
+
+            <div class="container-contatos" id="container-contatos">
+
+
+
+
+                <div class="contato">
+                    <img class="fotos-perfil" src="./img/senai.png" alt="">
+                    <div class="detalhes">
+                        <div class="nome-tempo">
+                            <h4 class="nome">DS2M - Turma A e B</h4>
+                            <p class="tempo">9:25</p>
+                        </div>
+                        <div class="mensagem-notificacao">
+                            <p class="mensagem">AÇÃO SOLIDÁRIA: O município de São Sebastião está em estado de calamidade pública...</p>
+                            <p class="notificacao">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+        <aside id="aside">
+            <div class="container-perfil">
+                <div class="icone-perfil">
+                    <img class="fotos-perfil" src="./img/contact4.png" alt="">
+                    <h4 class="nome">Sarah lee<br><span>Online</span></h4>
+                </div>
+                <ul class="icons">
+                    <li>
+                        <ion-icon name="search-outline"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container-mensagens" id="container-mensagens">
+
+            </div>
+
+            <div class="container-texto">
+                <div class="icons-texto">
+                    <ion-icon name="happy-outline"></ion-icon>
+                    <ion-icon name="attach-outline"></ion-icon>
+                </div>
+                <input type="search" name="search" id="search" placeholder="Mensagem">
+                <div class="icons-texto">
+                    <ion-icon name="mic-outline"></ion-icon>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>

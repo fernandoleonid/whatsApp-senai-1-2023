@@ -1,0 +1,37 @@
+.message.container{
+    display: flex;
+    flex-direction: column;
+    height: 55vw;
+}
+.message{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 1rem;
+    
+}
+.receiver{
+    max-width: 60vw;
+    background-color: #272727;
+    align-self: start;
+}
+.sender{ 
+    max-width: 45vw;
+    background-color: #036825;
+    align-self: flex-end;
+    text-align: end;
+}
+.chat-header{
+    background-color: tomato;
+    height: 6rem;
+}
+
+/* @media (max-width:768px) {
+    .message.container{
+        height: 100vh;
+        width: 100vw;
+    }
+} */

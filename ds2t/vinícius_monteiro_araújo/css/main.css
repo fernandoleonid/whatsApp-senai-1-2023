@@ -1,0 +1,274 @@
+.messages{
+    grid-area: "messages";
+    width: 25vw;
+    height: 80vh;
+    background-color: #000000;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: #B4B4B4;
+    width: 20vw;
+    height: 3.5vh;
+    margin-left: 2.5vw;
+    border-radius: 10px;
+    
+}
+.icon-search{
+    margin-left: 0.5vw;
+}
+
+.spacer{
+    height: 0.5vh;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 2vh;
+}
+
+.card{
+
+    display: grid;
+    grid-template-areas: 
+    "imagem nome"
+    "imagem legenda";
+    grid-template-columns: 
+    1fr 5.5fr;
+    width: 100%;
+    height: 9.5vh;
+    border-bottom: 1px solid #ffffff;
+    transition: .5s;
+    
+    
+}
+
+.card:hover{
+   background-color: #b3b3b3; 
+}
+
+.img-card{
+    grid-area: imagem;
+    padding-left: 1vw;
+    display: flex;
+    align-self: center;
+
+}
+
+.name-card{
+    grid-area: nome;
+    padding-top: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+     display: flex;
+     align-self: center;
+    
+}
+
+.subtitle-card{
+    grid-area: legenda;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+
+
+.apresentation{
+    height: 86.5vh;
+    width: 59vw;   
+    display: grid;
+    background-color: #b3b3b3;
+    grid-template-areas: 
+    "chat"
+    "container";
+    grid-template-rows: 5fr 5fr;
+}
+    
+.title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Junge', serif;
+    font-size: 12.5vh;
+    color: #455473;
+    padding-top: 28vh;
+}
+
+.legend{
+    display: flex;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 5vh;
+    letter-spacing: 1vh;
+}
+
+.info-1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
+}
+
+.info-2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
+}
+
+.final-legend{
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.send{
+    width: 100%;
+    background-color: #000000; 
+    height:7.7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 15px;
+    
+}
+
+.send-message{
+    width:  45vw;
+    background-color: #ffffff;
+    height: 4vh;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    
+    
+
+}
+.message-text{
+    font-size: 1rem;
+    padding-left: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-message-receive{
+    
+    background-color: #ffffff;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2px;
+    padding: 5px;
+    margin-left: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1vh;
+    
+}
+
+.box-message-sent{
+    
+    background-color: #D9D9D9;
+    width: 20vw;
+    height: 5vh;
+    padding: 5px;
+    border-radius: 2px;
+    margin-left: 36.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.chat-container{
+    grid-area: chat;
+    height: 70.5vh;
+    background-image: url(../img/conversapng.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.container-chat{
+    
+    display: flex;
+    align-items: flex-end;
+}
+
+.container-messages{
+    grid-area: container;
+}
+
+.microfone-none{
+    display: none;
+}
+
+.emoji-anexar{
+
+    display: none;
+
+}
+
+.emoji-anexar-on{
+    display: flex;
+    gap: 4vw;
+    padding: 2vw;
+    font-size: 2.5vh;
+}
+
+.microfone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vh;
+    
+}
+
+
+
+
+
+
+
+@media (max-width: 640px){
+    main{
+        width: 78vw;
+        height: 100%;
+    }
+    .messages{
+        width: 100vw;
+        
+    }
+    .apresentation{
+        display: none;
+    }
+    .search{
+        width: 95vw;
+    }
+    .card{
+        height: 9vh;
+    }
+
+    .box-message-receive{
+        height: 13vh;
+        width: 40vw;
+    }
+
+    .box-message-sent{
+        height: 13vh;
+        width: 40vw;
+
+    }
+
+    .chat-container{
+        padding: 5vh;
+        display: flex;
+        row-gap: 2vh;
+        background-image: url(../img/tigrewalpaper2.png);
+    }
+    
+
+
+
+
+
+}

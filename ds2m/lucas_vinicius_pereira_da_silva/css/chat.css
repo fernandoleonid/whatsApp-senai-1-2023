@@ -1,0 +1,46 @@
+.chat{
+    width: 21vw;
+    height: 60vh;
+}
+
+.chat__box{
+    width: 20.7vw;
+    height: 9vh;
+    display: flex;
+    padding-top: 10px;
+}
+
+.photo__chat{
+    width: 4.5vw;
+}
+
+.photo{
+    height: 5vh;
+    border-radius: 50%;
+    margin-left: 8px;   
+}
+
+
+.name__chat{
+    display: flex;
+    width: 6vw;
+    height: 6vh;;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h5{
+    font-size: 0.8rem;
+    width: 8vw;
+}
+h6{
+    font-size: 0.6rem;
+    width: 8vw;
+}
+
+.linha{
+    display: flex;
+    background-color: #e9edef;
+    width: 20.7vw;
+    height: 0.1vh;
+}

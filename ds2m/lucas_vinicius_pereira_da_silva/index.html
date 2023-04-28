@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/searchChat.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    <link rel="stylesheet" href="./css/conversation.css">
+    <link rel="stylesheet" href="./css/responsividade.css">
+
+    <script src="https://kit.fontawesome.com/4ea9540e8d.js" crossorigin="anonymous">
+    </script>
+    <script src="./index.js" defer type="module">
+    </script>
+
+    <link rel="shortcut icon" href="./img/whatsapp.ico" type="image/x-icon" />
+    <title>WhatsApp</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container" id="container">
+            <div class="container__nav">
+                <div class="menu">
+                    <div class="profile">
+                        <img src="./img/zap.jpg" alt="photo" class="photo__profile">
+                    </div>
+                    <div class="icon">
+                        <div class="icons">
+                            <a href="#">
+                                <i class="fas fa-users"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fas fa-circle-notch"></i>
+                            </a>
+                            <a href="#">
+                                <i class="far fa-comment-dots"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search__chat">
+                    <div>
+                        <input type="text" placeholder="Search or start new chat">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="chat" id="chat">
+                    <div class="linha"></div>
+                </div>
+            </div>
+            <div class="conversation d-none" id="conversation">
+                <div class="conversation__header">
+                    <div class="photo__conversation">
+                        <img src="" alt="img" class="img__conversation">
+                    </div>
+                    <div class="conversation__name">
+                        <h4 id="name__conversation"></h4>
+                    </div>
+
+                    <div class="conversation__icon">
+                        <div class="conversation__icons">
+                            <a href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="conversation__main">
+                    <div id="baloons">
+
+                    </div>
+                </div>
+                <div class="conversation__footer">
+                    <div class="write">
+                        <input type="Type a message" class="typeMessage">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

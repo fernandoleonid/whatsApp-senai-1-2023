@@ -1,0 +1,59 @@
+.footer-mensagens {
+    width: 100%;
+    height: 6.5vh;
+    background-color: #202C33;
+    display: grid;
+    grid-template-areas:
+    "emoji input microfone";
+    grid-template-columns:
+    2fr 12fr 1fr;
+}
+
+.emoji-anexar {
+    display: none
+}
+
+.emoji-anexar-on {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2.5vh;
+    color: #AEBAC1;
+}
+
+.input-mensagem {
+    margin-top: 0.5vh;
+    height: 5vh;
+    border-radius: 10px;
+    color: #AEBAC1;
+    background-color: #2A3942;
+    grid-area: input;
+}
+
+.microfone-none {
+    display: none
+}
+
+.microfone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    color: #AEBAC1;
+}
+
+@media (max-width: 640px) {
+    .emoji-anexar-on {
+        padding-top: 2vh;
+        font-size: 2vh;
+    }
+
+    .input-mensagem {
+        margin-top: 1.5vh;
+    }
+
+    .microfone {
+        padding-top: 2vh;
+        font-size: 2vh;
+    }
+}

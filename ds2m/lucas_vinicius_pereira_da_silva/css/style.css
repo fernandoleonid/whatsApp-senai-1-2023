@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+    background-color:#d1d7db;
+    display: grid;
+    grid-template-areas: 'content';
+    
+}
+
+header{
+    grid-area: content;
+    height: 10vh;
+    background-color:#00a884;
+    box-shadow: 3px 2px 2px 2px #00a884;
+}
+
+main{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+

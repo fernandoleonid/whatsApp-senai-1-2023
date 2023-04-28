@@ -1,0 +1,80 @@
+.card-contacts {
+    width: 30vw;
+    height: 7vh;
+    margin-top: 2vh;
+    margin-left: 6vw;
+    background-color: #111B21;
+    border-bottom: 1px solid #313D45;
+    cursor: pointer;
+    display: grid;
+    grid-template-areas:
+    "image text";
+    grid-template-columns:
+    1fr 6fr;
+    transition: 0.5s;
+}
+
+.card-contacts:hover{
+    background: #202C33;
+    border-bottom: none;
+}
+
+.card-contacts:houver{
+    background-color: #000000;
+    transition: 1s;
+}
+
+.card-image {
+    margin-top: 1vh;
+    margin-left: 1vw;
+    height: 5vh;
+    border-radius: 25px;
+    grid-area: image;
+}
+
+.card-name {
+    padding-top: 1.5vh;
+    padding-left: 1vw;
+    font-size: 1.8vh;
+    color: #fff;
+    grid-area: text;
+}
+
+.card-description {
+    padding-top: 4vh;
+    padding-left: 1vw;
+    font-size: 1.2vh;
+    color: #8696A0;
+    grid-area: text;
+}
+
+.conversas {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .card-contacts{
+        width: 94vw;
+        height: 8vh;
+    }
+
+    .card-contacts:houver {
+        background: #202C33;
+        border-bottom: none;
+    }
+
+    .card-image {
+        height: 6vh;
+    }
+
+    .card-name {
+        font-size: 2.5vh;
+    }
+
+    .card-description {
+        font-size: 1.5vh;
+    }
+    .main-left{
+        height: 100vh;
+    }
+}

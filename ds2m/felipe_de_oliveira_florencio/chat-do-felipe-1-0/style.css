@@ -1,0 +1,131 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-color : #090909;
+    --header-color : #00000025;
+    --pure-white: #FFFFFF;
+    --body-grey: #1E1E1E;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+    display:flex;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.home{
+    height: 100vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.container-fluid{
+    background-color: sienna;
+}
+
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    gap: 16px;
+}
+
+.t-border-and-color{
+    background-color: var(--header-color);
+    border: 1px solid #202020;
+    border-radius: 10px;
+}
+.t-align-section { 
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}   
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.logo__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #99FFAF;
+}
+/* .logo__image{
+
+} */
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile__image{
+    height: 90%;
+    width: 90%;
+}
+.profile__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--pure-white);
+    transform: rotate(-90deg);
+}
+
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    height: 75%;
+    width: 100%;
+    margin-top: 1rem;
+}  
+.header__button{
+    background-color : none;
+}
+/* @media (max-width:768px){
+    body{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .home{
+        z-index: 1;
+    }
+    .chat{
+        position: absolute;
+        transform: translateX(100%);
+        animation-delay: 10ms;
+        height: 100vh;
+        z-index: 1;
+    }
+    .home.load .chat{
+        grid-area: home;
+    }
+    
+    .main-header{
+        width: 100vw;
+    }
+    
+} */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5c84213cbd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/info.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/chats.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <script src="./index.js" defer type="module"></script>
+    <link rel="icon" href="./img/logo.webp">
+    <title>WhatsApp</title>
+</head>
+
+<body>
+    <span class="background"></span>
+
+    <a href="#container" class="back" title="Back" id="back">
+        <i class="fas fa-angle-double-up"></i>
+    </a>
+
+    <div class="container" id='container'>
+        <nav class="contacts" id="contatos">
+            <div class="info">
+                <img src="./img/perfil.png" alt="Profile picture" class="info__picture">
+                <div class="info__icons">
+                    <i class="fas fa-users"></i>
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="search" class="search__input" placeholder="Search or start a new chat">
+            </div>
+            <div class="linha"></div>
+
+            <nav id="contacts__container"></nav>
+
+            <div class="contacts__encrypted-message">
+                <i class="fa-solid fa-lock"></i>
+                <p>Your personal messages are end-to-end encrypted</p>
+            </div>
+        </nav>
+
+        <nav class="chats" id="chats">
+
+            <div class="chats__inicio">
+                <img src="./img/inicio.png" alt="Tela de inicio.">
+                <h3>WhatsApp Web</h3>
+                <p>Send and receive messages without having to keep your phone connected to the internet. Use whatsapp on up to four connected devices and one mobile phone at the same time.</p>    
+            </div>
+            
+            <div class="chats__footer_none" id="chats__footer">
+                <i class="fa-regular fa-face-smile"></i>
+                <i class="fa-solid fa-paperclip"></i>
+                <input type="search" class="footes__input" placeholder="Message">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+
+        </nav>
+    </div>
+</body>
+
+</html>

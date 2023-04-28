@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #111B21;
+    --second-color: #202C33;
+    --third-color: #8696A0;
+    --icon-color: #AEBAC1;
+    --name-color: #E9EDEF;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 98vh;
+    width: 85vw;
+}
+
+.contato__container {
+    grid-column: 1;
+    background-color: var(--primary-color);
+}
+
+.conversa {
+    grid-column: 2;
+    background-image: url(../img/fundo.webp);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    background-color: var(--second-color);
+    justify-content: space-between;
+    padding: 0px 30px 0px 10px;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.3rem;
+    gap: 30px;
+    color: var(--icon-color);
+}
+
+.foto__perfil {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+
+@media(max-width: 960px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+@media(max-width: 768px) {
+    .main__responsive {
+        width: 90vw;
+        grid-template-columns: 100% 0%;
+    }
+
+    .conversa {
+        display: none;
+        grid-column: 2;
+    }
+
+    .main__responsive__active {
+        width: 90vw;
+        grid-template-columns: 0% 100%;
+    }
+
+    .conversa__active {
+        grid-column: 2;
+        background-image: url(../img/fundo.webp);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contato__container__active {
+        display: none;
+        background-color: transparent;
+    }
+
+    .contato__container {
+        grid-column: 1;
+        background-color: var(--primary-color);
+    }
+}

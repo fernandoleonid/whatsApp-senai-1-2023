@@ -1,0 +1,100 @@
+<!--************************************************************************************
+ * Objetivo: WhatsApp
+ * Autor: Luiz Gustavo
+ * Data: 25/02/2023
+ * Versão: 1.0
+************************************************************************************-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site com a finalidade estudantil, para praticar o aprendizado, fazendo um clone do WhatsApp Web">
+    <link rel="shortcut icon" href="./img/whatsapp.webp" type="image/x-icon">
+    
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/search-chat.css">
+    <link rel="stylesheet" href="./css/header-chat.css">
+    <link rel="stylesheet" href="./css/main-chat.css">
+    <link rel="stylesheet" href="./css/message-bar.css">
+    
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js" defer type="module"></script>
+    <title>WhatsApp</title>
+</head>
+
+<body>
+    <main class="main__responsive" id="main2">
+        <section class="contato__container" id="box__left">
+            <div class="perfil">
+                <img src="./img/foto-de-perfil.webp" alt="foto de perfil" class="foto__perfil">
+                <div class="icons">
+                    <i class="fa-solid fa-users"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="search__chat" id="search__chat">
+                <div class="control">
+                    <i class="fa-solid fa-magnifying-glass" id="icon__search"></i>
+                    <input type="text" placeholder="Pesquisar ou começar uma nova conversa">
+                </div>
+            </div>
+            <ul class="contatos" id="contatos">
+                <!-- <li class="chat" id="chat">
+                    <img src="./recursos/images/contact1.png" alt="contato1" class="foto__contato" id="contact1">
+                    <div class="conversa__contato" id="contact__conversation-1">
+                        <h1 class="nome__contato">Ana Maria</h1>
+                        <p class="ultima__mensagem" id="description">Frontend Developer</p>
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+        <section class="conversa" id="conversa">
+            <img src="./img/setas.webp" alt="seta de voltar" id="arrowHtml" class="arrow">
+            <!-- <div class="header__chat">
+                <img src="./img/contact1.png" alt="contato1" class="foto__contato__chat">
+                <div class="contato__chat">
+                    <h1 class="nome__contato__chat">Ana Maria</h1>
+                    <p class="descricao__contato__chat" id="description">Frontend Developer</p>
+                </div>
+            </div> -->
+            <!-- <div class="main__chat">
+                <div class="container__contato">
+                    <div class="mensagens__contato">
+                        <p class="chat__mensagens__contato">Not yet. I'm thinking about going to the beach. What about
+                            you?
+                        </p>
+                        <span class="hora__chat__contato">14:35</span>
+                    </div>
+                </div>
+                <div class="container__me">
+                    <div class="mensagens__me">
+                        <p class="chat__mensagens__me">Not yet. I'm thinking about going to the beach. What about you?</p>
+                        <span class="hora__chat__me">14:30</span>
+                    </div>
+                </div>
+                <div class="container__contato">
+                    <div class="container__me">
+                        <p class="chat__mensagens__contato">Not yet. I'm thinking about going to the beach. What about
+                            you?
+                        </p>
+                        <span class="hora__chat__contato">14:35</span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="message__bar__none" id="messageBar">
+                <i class="fa-regular fa-face-laugh"></i>
+                <i class="fa-sharp fa-solid fa-paperclip"></i>
+                <input type="text" placeholder="Mensagem">
+                <i class="fa-solid fa-microphone"></i>
+            </div> 
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+.header__chat{
+    height: 4rem;
+    background-color: var(--second-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.foto__contato__chat{
+    width: auto;
+    height: 2.5rem;
+    border-radius: 100%;
+    margin-left: 15px;
+}
+
+.contato__chat{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nome__contato__chat{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--name-color);
+}
+
+.descricao__contato__chat{
+    color: var(--third-color);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@media(max-width: 620px) {
+    .header__chat{
+        gap: 20px;
+    }
+    .foto__contato__chat{
+        width: auto;
+        height: 2.5rem;
+    }
+}

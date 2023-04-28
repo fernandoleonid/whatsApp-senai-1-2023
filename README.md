@@ -84,6 +84,3 @@ O site desenvolvido foi um clone do whatsapp, uma atividade proposta pelo profes
   
 ![](./recursos/images/resultado.png.PNG) 
 [Trabalho]
-
-## Autor
-- [Bianca Duarte](https://github.com/biiaduartez)
